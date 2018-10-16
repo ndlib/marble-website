@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo "Running Tests"
+echo "----- Tests ------"
 
-yarn test || { echo "React Tests Failed"; exit 1; }
+yarn test-inline || { echo "React Tests Failed"; exit 1; }
