@@ -1,0 +1,24 @@
+#Title {
+  font: bold 20px helvetica, sans-serif;
+  padding: 0px 0px 15px 0px;
+}
+.container {
+  padding: 2px;
+}
+
+#entry {
+  background-color: #eee;
+  padding: 5px;
+  font: 10px georgia, serif;
+}
+#author, #description, #type  {
+  font: 14px helvetica, sans-serif;
+  padding: 10px;
+  text-align: justify;
+  color: #000;
+}
+
+div.label {
+  color: #555;
+
+}

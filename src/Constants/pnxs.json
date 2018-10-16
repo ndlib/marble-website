@@ -1,0 +1,4267 @@
+{
+  "rtaResultsLink": "http://onesearch.library.nd.edu/primo_library/libweb/webservices/rest/v1/rta/NDU?recordInformation=$$V003455663$$Ondu_aleph003455663|$$VMIU01-001386591$$Ohathi_pubMIU01-001386591|,|$$Vndu_aleph$$Ondu_aleph003455663|$$Vhathi_pub$$Ohathi_pubMIU01-001386591|,|$$VNDU01$$Ondu_aleph003455663|$$VHATHI$$Ohathi_pubMIU01-001386591|,|$$VAleph$$Ondu_aleph003455663|$$VAleph$$Ohathi_pubMIU01-001386591|,|dedupmrg98366480|,|__NO_VALUE__|,|__NO_VALUE__|,|__NO_VALUE__|,|$$VNDU$$Ondu_aleph003455663|$$VMALC$$Ohathi_pubMIU01-001386591|$$VNDU$$Ohathi_pubMIU01-001386591|,|__NO_VALUE__|,|$$V$$Taleph_holdings$$Ondu_aleph003455663|$$V$$Taleph_holdings$$Ohathi_pubMIU01-001386591|,|$$VNDU01003455663$$Ondu_aleph003455663|$$VHATHIMIU01-001386591$$Ohathi_pubMIU01-001386591|,|__NO_VALUE__|,|__NO_VALUE__|;|000925985|,|ndu_aleph|,|NDU01|,|Aleph|,|ndu_aleph000925985|,|$$INDU$$LANNEX$$1$$2Use Request$$Savailable$$31$$40$$5N$$60$$XNDU50$$YANNEX$$ZHESB|,|$$INDU$$Savailable|,|__NO_VALUE__|,|NDU|,|__NO_VALUE__|,|$$Taleph_holdings$$INDU|$$Taleph_holdings|,|NDU01000925985|,|__NO_VALUE__|,|__NO_VALUE__|;|004361839|,|ndu_aleph|,|NDU01|,|Aleph|,|ndu_aleph004361839|,|$$INDU$$LHESB$$1General Collection$$2PS 3566 .E737 A6 2015$$Savailable$$31$$40$$5N$$60$$XNDU50$$YHESB$$ZGEN|,|$$INDU$$Savailable|,|__NO_VALUE__|,|NDU|,|__NO_VALUE__|,|$$Taleph_holdings$$INDU|$$Taleph_holdings|,|NDU01004361839|,|__NO_VALUE__|,|__NO_VALUE__|;|",
+  "highlights": {
+    "creator": [
+      "know thyself",
+      "know",
+      "thyself",
+      "know",
+      "thyself"
+    ],
+    "contributor": [
+      "know",
+      "know thyself",
+      "thyself",
+      "know",
+      "thyself"
+    ],
+    "vertitle": [
+      "Know thyself",
+      "knows",
+      "know",
+      "Know Thyself",
+      "knew",
+      "Know thyself",
+      "Know",
+      "know",
+      "know thyself",
+      "thyself",
+      "Thyself",
+      "thyself"
+    ],
+    "description": [
+      "know"
+    ],
+    "termsUnion": [
+      "Know Thyself",
+      "Know",
+      "know",
+      "thyself",
+      "know",
+      "Know thyself",
+      "Thyself",
+      "Know",
+      "Know thyself",
+      "knows",
+      "thyself",
+      "know thyself",
+      "knew"
+    ],
+    "title": [
+      "Know thyself",
+      "Know Thyself",
+      "know thyself",
+      "thyself",
+      "Thyself",
+      "Know thyself",
+      "thyself",
+      "know",
+      "knew",
+      "knows",
+      "Know",
+      "know"
+    ],
+    "relation": [
+      "Know"
+    ]
+  },
+  "docs": [
+    {
+      "enrichment": {
+        "virtualBrowseObject": {
+          "callNumber": "",
+          "isVirtualBrowseEnabled": false,
+          "callNumberBrowseField": "browse_callnumber"
+        }
+      },
+      "context": "PC",
+      "adaptor": "primo_central_multiple_fe",
+      "pnx": {
+        "delivery": {
+          "fulltext": [
+            "fulltext"
+          ],
+          "delcategory": [
+            "Remote Search Resource"
+          ]
+        },
+        "search": {
+          "sourceid": [
+            "jstor_csp"
+          ],
+          "lsr50": [
+            "overview2010"
+          ],
+          "creatorcontrib": [
+            "Timothy M. Beardsley"
+          ],
+          "creationdate": [
+            "2011"
+          ],
+          "citation": [
+            "pf 499 pt 499 vol 61 issue 7"
+          ],
+          "rsrctype": [
+            "article"
+          ],
+          "title": [
+            "Know Thyself"
+          ],
+          "startdate": [
+            "20110701"
+          ],
+          "lsr30": [
+            "VSR-Enriched:[pqid, description, subject]"
+          ],
+          "recordid": [
+            "jstor_csp10.1525/bio.2011.61.7.1"
+          ],
+          "general": [
+            "eng",
+            "Current Journals (JSTOR)",
+            "University of California Press",
+            "10.1525/bio.2011.61.7.1",
+            "JSTOR Current Journals"
+          ],
+          "enddate": [
+            "20110731"
+          ],
+          "issn": [
+            "0006-3568",
+            "00063568",
+            "1525-3244",
+            "15253244"
+          ],
+          "scope": [
+            "jstor",
+            "jstor_csp"
+          ],
+          "recordtype": [
+            "article"
+          ]
+        },
+        "display": {
+          "identifier": [
+            "<b>ISSN:</b> 00063568 ; <b>E-ISSN:</b> 15253244 ; <b>DOI:</b> 10.1525/bio.2011.61.7.1"
+          ],
+          "creator": [
+            "Beardsley, Timothy M."
+          ],
+          "subject": [
+            "Quantitative Distribution ; Body Size ; Rare Species ; Inland Water Environment ; Species Extinction ; Phylogenetics ; Risks ; Phylogeny ; Demography ; Age ; Data Processing ; Extinction ; Freshwater Environments ; Abundance ; Body Size ; Maturity ; Risk ; Roads ; Assessments ; Mammals ; Density ; Fish ; Birds ; Model Studies ; Risk ; Roads ; Assessments ; Mammals ; Density ; Fish ; Birds ; Model Studies ; Anw, Canada ; Reproduction and Development ; Water Resources and Supplies ; Properties of Water ; Ecosystem and Ecology Studies ; Life History ; Mammals ; Fishes ; Birds ; Human Impact ; Cosewic;"
+          ],
+          "lds50": [
+            "peer_reviewed"
+          ],
+          "ispartof": [
+            "BioScience  July  2011, Vol.61(7), pp.499-499"
+          ],
+          "description": [
+            "Species status assessments are often hindered by a paucity of demographic, abundance, or distributional data. Although extinction-risk correlates have been identified, their wide applicability may be compromised by differences in the variables examined, modeling technique, and phylogenetic or distributional scale. Here, we apply a common analytical approach to examine 14 possible extinction-risk correlates for mammals, fishes, and birds throughout Canada. Among mammals, risk is positively and strongly correlated with road density and age at maturity for land animals and weakly with body size for sea dwellers. Delayed maturity is of primary importance to predicting risk status in fishes, with small body size of secondary importance in freshwater environments. For birds, road density is the dominant correlate of risk. Logistic regression in a multimo del framework offers an instructive means of identifying risk correlates and of applying them in a practicable, empirically defensible manner, thus enhancing support for species-independent risk criteria."
+          ],
+          "language": [
+            "eng"
+          ],
+          "source": [
+            ""
+          ],
+          "title": [
+            "Know Thyself"
+          ],
+          "type": [
+            "article"
+          ],
+          "version": [
+            "9"
+          ]
+        },
+        "links": {
+          "openurl": [
+            "$$Topenurl_article"
+          ],
+          "thumbnail": [
+            "$$TPCamazon_thumb",
+            "$$TPCgoogle_thumb"
+          ],
+          "openurlfulltext": [
+            "$$Topenurlfull_article"
+          ]
+        },
+        "control": {
+          "recordid": [
+            "TN_jstor_csp10.1525/bio.2011.61.7.1"
+          ],
+          "sourceid": [
+            "jstor_csp"
+          ],
+          "sourceformat": [
+            "XML"
+          ],
+          "pqid": [
+            "893279875"
+          ],
+          "sourcerecordid": [
+            "10.1525/bio.2011.61.7.1"
+          ],
+          "sourcesystem": [
+            "Other"
+          ]
+        },
+        "sort": {
+          "creationdate": [
+            "20110700"
+          ],
+          "author": [
+            "Beardsley, Timothy M."
+          ],
+          "title": [
+            "Know Thyself"
+          ],
+          "lso01": [
+            "20110700"
+          ]
+        },
+        "addata": {
+          "date": [
+            "2011-07"
+          ],
+          "aulast": [
+            "Beardsley"
+          ],
+          "issue": [
+            "7"
+          ],
+          "ristype": [
+            "JOUR"
+          ],
+          "format": [
+            "journal"
+          ],
+          "eissn": [
+            "15253244"
+          ],
+          "spage": [
+            "499"
+          ],
+          "atitle": [
+            "Know Thyself"
+          ],
+          "aufirst": [
+            "Timothy M."
+          ],
+          "volume": [
+            "61"
+          ],
+          "pages": [
+            "499-499"
+          ],
+          "issn": [
+            "00063568"
+          ],
+          "au": [
+            "Beardsley, Timothy M."
+          ],
+          "epage": [
+            "499"
+          ],
+          "genre": [
+            "article"
+          ],
+          "jtitle": [
+            "BioScience"
+          ],
+          "risdate": [
+            "201107"
+          ],
+          "pub": [
+            "University of California Press"
+          ],
+          "doi": [
+            "10.1525/bio.2011.61.7.1"
+          ]
+        },
+        "facets": {
+          "frbrtype": [
+            "5"
+          ],
+          "creatorcontrib": [
+            "Beardsley, Timothy M."
+          ],
+          "creationdate": [
+            "2011"
+          ],
+          "toplevel": [
+            "peer_reviewed"
+          ],
+          "frbrgroupid": [
+            "4784277500395102336"
+          ],
+          "rsrctype": [
+            "articles"
+          ],
+          "language": [
+            "eng"
+          ],
+          "jtitle": [
+            "Bioscience"
+          ],
+          "collection": [
+            "JSTOR Current Journals"
+          ],
+          "prefilter": [
+            "articles"
+          ]
+        }
+      },
+      "@id": "http://onesearch.library.nd.edu/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/PC/TN_jstor_csp10.1525/bio.2011.61.7.1"
+    },
+    {
+      "enrichment": {
+        "virtualBrowseObject": {
+          "callNumber": "BD 164",
+          "isVirtualBrowseEnabled": true,
+          "callNumberBrowseField": "browse_callnumber.0"
+        }
+      },
+      "@rta_link": "http://onesearch.library.nd.edu/primo_library/libweb/webservices/rest/v1/rta/NDU?recordInformation=$$V003455663$$Ondu_aleph003455663|$$VMIU01-001386591$$Ohathi_pubMIU01-001386591|,|$$Vndu_aleph$$Ondu_aleph003455663|$$Vhathi_pub$$Ohathi_pubMIU01-001386591|,|$$VNDU01$$Ondu_aleph003455663|$$VHATHI$$Ohathi_pubMIU01-001386591|,|$$VAleph$$Ondu_aleph003455663|$$VAleph$$Ohathi_pubMIU01-001386591|,|dedupmrg98366480|,|__NO_VALUE__|,|__NO_VALUE__|,|__NO_VALUE__|,|$$VNDU$$Ondu_aleph003455663|$$VMALC$$Ohathi_pubMIU01-001386591|$$VNDU$$Ohathi_pubMIU01-001386591|,|__NO_VALUE__|,|$$V$$Taleph_holdings$$Ondu_aleph003455663|$$V$$Taleph_holdings$$Ohathi_pubMIU01-001386591|,|$$VNDU01003455663$$Ondu_aleph003455663|$$VHATHIMIU01-001386591$$Ohathi_pubMIU01-001386591|,|__NO_VALUE__|,|__NO_VALUE__",
+      "context": "L",
+      "adaptor": "Local Search Engine",
+      "pnx": {
+        "delivery": {
+          "institution": [
+            "$$VNDU$$Ondu_aleph003455663",
+            "$$VMALC$$Ohathi_pubMIU01-001386591",
+            "$$VNDU$$Ohathi_pubMIU01-001386591"
+          ],
+          "delcategory": [
+            "$$VOnline Resource$$Ondu_aleph003455663",
+            "$$VOnline Resource$$Ohathi_pubMIU01-001386591"
+          ]
+        },
+        "display": {
+          "creationdate": [
+            "1915"
+          ],
+          "creator": [
+            "Bernardino Varisco 1850-1933."
+          ],
+          "subject": [
+            "Philosophy of mind",
+            "Knowledge, Theory of",
+            "Thought and thinking"
+          ],
+          "format": [
+            "1 online resource (xxix, 327 p.) ; 23 cm.."
+          ],
+          "language": [
+            "eng"
+          ],
+          "title": [
+            "Know thyself"
+          ],
+          "type": [
+            "book"
+          ],
+          "relation": [
+            "$$Cseries $$VLibrary of philosophy."
+          ],
+          "contributor": [
+            "American Theological Library Association."
+          ],
+          "lds31": [
+            "Varisco, Bernardino, 1850-1933. -- Conosci te stesso. -- English"
+          ],
+          "publisher": [
+            "London : G. Allen and Unwin"
+          ],
+          "lds30": [
+            "Library of philosophy."
+          ],
+          "availpnx": [
+            "unavailable"
+          ],
+          "lds02": [
+            "ndu_aleph003455663",
+            "hathi_pubMIU01-001386591"
+          ],
+          "lds01": [
+            "Translation of: Conosci te stesso."
+          ],
+          "unititle": [
+            "Conosci te stesso. English"
+          ]
+        },
+        "control": {
+          "recordid": [
+            "dedupmrg98366480"
+          ],
+          "sourceid": [
+            "$$Vndu_aleph$$Ondu_aleph003455663",
+            "$$Vhathi_pub$$Ohathi_pubMIU01-001386591"
+          ],
+          "ilsapiid": [
+            "$$VNDU01003455663$$Ondu_aleph003455663",
+            "$$VHATHIMIU01-001386591$$Ohathi_pubMIU01-001386591"
+          ],
+          "originalsourceid": [
+            "$$VNDU01$$Ondu_aleph003455663",
+            "$$VHATHI$$Ohathi_pubMIU01-001386591"
+          ],
+          "sourceformat": [
+            "$$VMARC21$$Ondu_aleph003455663",
+            "$$VMARC21$$Ohathi_pubMIU01-001386591"
+          ],
+          "sourcerecordid": [
+            "$$V003455663$$Ondu_aleph003455663",
+            "$$VMIU01-001386591$$Ohathi_pubMIU01-001386591"
+          ],
+          "sourcesystem": [
+            "$$VAleph$$Ondu_aleph003455663",
+            "$$VAleph$$Ohathi_pubMIU01-001386591"
+          ]
+        },
+        "sort": {
+          "creationdate": [
+            "1915"
+          ],
+          "author": [
+            "Varisco, Bernardino, 1850-1933."
+          ],
+          "title": [
+            "Know thyself"
+          ],
+          "lso02": [
+            "BD0 000164 -- DLC"
+          ],
+          "lso01": [
+            "1915"
+          ]
+        },
+        "frbr": {
+          "t": [
+            99
+          ],
+          "k1": [
+            "$$Kndu_aleph003455663$$AA",
+            "$$Khathi_pubmiu01 001386591$$AA"
+          ],
+          "k3": [
+            "$$Kconosci te stesso english$$AT",
+            "$$Kknow thyself$$AT"
+          ]
+        },
+        "dedup": {
+          "c3": [
+            "knowthyself"
+          ],
+          "f6": [
+            "1915"
+          ],
+          "c4": [
+            "1915"
+          ],
+          "f7": [
+            "know thyself"
+          ],
+          "f8": [
+            "enk"
+          ],
+          "t": [
+            1
+          ],
+          "f10": [
+            "g allen and unwin"
+          ],
+          "f11": [
+            "varisco bernardino 1850 1933"
+          ],
+          "f3": [
+            "0790597276"
+          ],
+          "f4": [
+            "0790597276"
+          ],
+          "c2": [
+            "0790597276"
+          ],
+          "f5": [
+            "knowthyself"
+          ]
+        },
+        "facets": {
+          "frbrtype": [
+            "6"
+          ],
+          "creatorcontrib": [
+            "American Theological Library Association",
+            "Varisco, B"
+          ],
+          "creationdate": [
+            "1915"
+          ],
+          "newrecords": [
+            "20130627_718",
+            "20130805_865"
+          ],
+          "rsrctype": [
+            "books",
+            "ebook"
+          ],
+          "classificationlcc": [
+            "B - Philosophy. Psychology. Religion–Speculative philosophy–Epistemology. Theory of knowledge"
+          ],
+          "language": [
+            "eng"
+          ],
+          "lfc04": [
+            "Conosci te stesso.",
+            "ATLA historical monographs collection. Series 2, 1894-1922."
+          ],
+          "lfc03": [
+            "Library of philosophy"
+          ],
+          "prefilter": [
+            "electronic",
+            "books",
+            "ebook"
+          ],
+          "toplevel": [
+            "online_resources"
+          ],
+          "frbrgroupid": [
+            "98400323"
+          ],
+          "topic": [
+            "Philosophy of mind",
+            "Knowledge, Theory of",
+            "Thought and thinking"
+          ]
+        },
+        "enrichment": {
+          "classificationlcc": [
+            "BD164"
+          ]
+        },
+        "search": {
+          "sourceid": [
+            "ndu_aleph",
+            "hathi_pub"
+          ],
+          "creatorcontrib": [
+            "Bernardino,  Varisco  1850-1933.",
+            "by Bernardino Varisco ; translated by Guglielmo Salvadori.",
+            "American Theological Library Association.",
+            "ATLA",
+            "A.T.L.A.",
+            "Barnardino,  Varisco  1850-",
+            "Varisco, B"
+          ],
+          "creationdate": [
+            "1915"
+          ],
+          "subject": [
+            "Philosophy of mind.",
+            "Knowledge, Theory of.",
+            "Thought and thinking.",
+            "Theory of mind",
+            "Mind, Philosophy of",
+            "Mind, Theory of",
+            "Theory of knowledge",
+            "Epistemology",
+            "Mind",
+            "Thoughts",
+            "Thinking"
+          ],
+          "isbn": [
+            "0790597276"
+          ],
+          "lsr04": [
+            "Conosci te stesso. English",
+            "ATLA historical monographs collection. Series 2, 1894-1922."
+          ],
+          "lsr03": [
+            "Library of philosophy",
+            "Library of philosophy."
+          ],
+          "lsr02": [
+            "Varisco Know thyself",
+            "Know thyself Varisco"
+          ],
+          "title": [
+            "Know thyself",
+            "Know thyself,"
+          ],
+          "startdate": [
+            "19150101"
+          ],
+          "lsr31": [
+            "Varisco, Bernardino, 1850-1933. Conosci te stesso. English"
+          ],
+          "addtitle": [
+            "Library of philosophy",
+            "ATLA historical monographs collection. Series 2, 1894-1922.",
+            "Library of philosophy."
+          ],
+          "lsr30": [
+            "Library of philosophy",
+            "Library of philosophy."
+          ],
+          "recordid": [
+            "ndu_aleph003455663",
+            "003455663",
+            "3455663",
+            "hathi_pubMIU01-001386591",
+            "MIU01-001386591"
+          ],
+          "general": [
+            "G. Allen and Unwin,",
+            "[electronic resource] /",
+            "(ATLA)P000018416",
+            "ATLAP000018416",
+            "P000018416",
+            "Translation of: Conosci te stesso.",
+            "G. Allen and Unwin, limited,",
+            "(MiU)001386591",
+            "MiU001386591",
+            "001386591",
+            "01386591",
+            "sdr-miu001386591",
+            "sdrmiu001386591",
+            "(OCoLC)490585",
+            "OCoLC490585",
+            "490585",
+            "(SAZTEC)004403550",
+            "SAZTEC004403550",
+            "004403550",
+            "04403550",
+            "(CaOTULAS)176372961",
+            "CaOTULAS176372961",
+            "176372961",
+            "AllDocuments"
+          ],
+          "lsr08": [
+            "London :",
+            "London,"
+          ],
+          "lsr07": [
+            "Varisco Know thyself",
+            "Know thyself Varisco"
+          ],
+          "alttitle": [
+            "Conosci te stesso. English"
+          ],
+          "lsr06": [
+            "G. Allen and Unwin,",
+            "G. Allen and Unwin, limited,"
+          ],
+          "scope": [
+            "ndu_aleph",
+            "hathi_pub",
+            "MALC",
+            "NDU",
+            "ebook",
+            "MALCebook",
+            "NDUebook"
+          ]
+        },
+        "ranking": {
+          "booster2": [
+            "1"
+          ],
+          "booster1": [
+            "1"
+          ]
+        },
+        "links": {
+          "openurl": [
+            "$$V$$Topenurl_journal$$Ondu_aleph003455663",
+            "$$V$$Topenurl_journal$$Ohathi_pubMIU01-001386591"
+          ],
+          "thumbnail": [
+            "$$Tgoogle_thumb"
+          ],
+          "backlink": [
+            "$$V$$Taleph_backlink$$DNotre Dame Catalog [electronic resource]$$Ondu_aleph003455663",
+            "$$V$$Thathi_backlink$$Ehathi_backlink$$Ohathi_pubMIU01-001386591"
+          ],
+          "linktorsrc": [
+            "$$V$$INDU$$Uhttp://proxy.library.nd.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=h8h&bquery=(HJ+5U62)&type=1&site=ehost-live$$DNotre Dame Online Access$$Ondu_aleph003455663",
+            "$$V$$Uhttp://catalog.hathitrust.org/Record/001386591$$Ehathipub$$Ohathi_pubMIU01-001386591"
+          ],
+          "lln01": [
+            "$$Tfindit_link$$Ondu_aleph003455663",
+            "$$Tfindit_link$$Ohathi_pubMIU01-001386591"
+          ],
+          "linktoholdings": [
+            "$$V$$Taleph_holdings$$Ondu_aleph003455663",
+            "$$V$$Taleph_holdings$$Ohathi_pubMIU01-001386591"
+          ],
+          "openurlfulltext": [
+            "$$V$$Topenurlfull_journal$$Ondu_aleph003455663",
+            "$$V$$Topenurlfull_journal$$Ohathi_pubMIU01-001386591"
+          ],
+          "linktoholdsnotexist": [
+            "$$V$$Taleph_holdings_not_in_user_institution$$Ohathi_pubMIU01-001386591"
+          ],
+          "linktouc": [
+            "$$Tworldcat_oclc$$Eworldcat"
+          ]
+        },
+        "addata": {
+          "date": [
+            "1915"
+          ],
+          "aulast": [
+            "Varisco"
+          ],
+          "notes": [
+            "Includes bibliographical references."
+          ],
+          "cop": [
+            "London"
+          ],
+          "isbn": [
+            "0790597276"
+          ],
+          "ristype": [
+            "BOOK"
+          ],
+          "format": [
+            "book"
+          ],
+          "oclcid": [
+            "490585"
+          ],
+          "aufirst": [
+            "Bernardino,",
+            "Barnardino,"
+          ],
+          "lad01": [
+            "001386591"
+          ],
+          "lccn": [
+            "15005305"
+          ],
+          "seriestitle": [
+            "Library of philosophy"
+          ],
+          "au": [
+            "Varisco, Bernardino",
+            "Varisco, Barnardino"
+          ],
+          "btitle": [
+            "Know thyself",
+            "Know thyself,"
+          ],
+          "risdate": [
+            "1915."
+          ],
+          "pub": [
+            "G. Allen and Unwin",
+            "G. Allen and Unwin, limited"
+          ]
+        },
+        "browse": {
+          "institution": [
+            "NDU"
+          ],
+          "subject": [
+            "$$DPhilosophy of mind$$EPhilosophy of mind$$UNDU",
+            "$$DKnowledge, Theory of$$EKnowledge, Theory of$$UNDU",
+            "$$DThought and thinking$$EThought and thinking$$UNDU"
+          ],
+          "author": [
+            "$$DVarisco, Bernardino, 1850-1933$$EVarisco, Bernardino, 1850-1933$$UNDU",
+            "$$DAmerican Theological Library Association$$EAmerican Theological Library Association$$UNDU",
+            "$$DVarisco, Barnardino, 1850-$$EVarisco, Barnardino, 1850-$$UNDU"
+          ],
+          "callnumber": [
+            "$$INDU$$DBD 164$$E0bd   00164$$T0",
+            "$$INDU$$DB 3653 .C6 E6$$E0b    03653.c  60000  e6 $$T0"
+          ],
+          "title": [
+            "$$DConosci te stesso. English$$EConosci te stesso. English$$UNDU",
+            "$$DATLA historical monographs collection. Series 2, 1894-1922$$EATLA historical monographs collection. Series 2, 1894-1922$$UNDU",
+            "$$DLibrary of philosophy [series]$$ELibrary of philosophy [series]$$UNDU",
+            "$$DKnow thyself$$EKnow thyself$$UNDU"
+          ]
+        }
+      },
+      "@id": "http://onesearch.library.nd.edu/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/L/dedupmrg98366480"
+    },
+    {
+      "enrichment": {
+        "virtualBrowseObject": {
+          "callNumber": "",
+          "isVirtualBrowseEnabled": false,
+          "callNumberBrowseField": "browse_callnumber"
+        }
+      },
+      "context": "PC",
+      "adaptor": "primo_central_multiple_fe",
+      "pnx": {
+        "delivery": {
+          "fulltext": [
+            "fulltext"
+          ],
+          "delcategory": [
+            "Remote Search Resource"
+          ]
+        },
+        "search": {
+          "sourceid": [
+            "medline"
+          ],
+          "lsr50": [
+            "overview2010"
+          ],
+          "creatorcontrib": [
+            "Garcia-Blanco, Mariano A"
+          ],
+          "creationdate": [
+            "2015"
+          ],
+          "citation": [
+            "pf 525 vol 21 issue 4"
+          ],
+          "subject": [
+            "RNA -- physiology"
+          ],
+          "rsrctype": [
+            "article"
+          ],
+          "title": [
+            "Know thyself."
+          ],
+          "startdate": [
+            "20150401"
+          ],
+          "addtitle": [
+            "RNA (New York, N.Y.)"
+          ],
+          "lsr30": [
+            "VSR-Enriched:[pqid, description]"
+          ],
+          "lsr41": [
+            "201504"
+          ],
+          "recordid": [
+            "medline25780123"
+          ],
+          "general": [
+            "25780123",
+            "PMC4371265",
+            "English",
+            "MEDLINE/PubMed (U.S. National Library of Medicine)",
+            "10.1261/rna.050138.115",
+            "MEDLINE/PubMed (NLM)"
+          ],
+          "enddate": [
+            "20150431"
+          ],
+          "issn": [
+            "14699001",
+            "1469-9001"
+          ],
+          "scope": [
+            "medline",
+            "nlm_medline",
+            "MEDLINE"
+          ]
+        },
+        "display": {
+          "identifier": [
+            "<b>E-ISSN:</b> 1469-9001 ; <b>PMID:</b> 25780123 Version:1 ; <b>DOI:</b> 10.1261/rna.050138.115"
+          ],
+          "creator": [
+            "Garcia-Blanco, Mariano A"
+          ],
+          "subject": [
+            "RNA -- Physiology"
+          ],
+          "lds50": [
+            "peer_reviewed"
+          ],
+          "ispartof": [
+            "RNA (New York, N.Y.), April  2015, Vol.21(4), pp.525-6"
+          ],
+          "description": [
+            "The realization that RNA molecules could be enzymes as well as genetic material suggested that RNAs were likely the earliest genomes to evolve on earth. The implications for evolution are many and very interesting, but here I will focus on one that I consider the most interesting: the central role of RNA in the ability of genomes (even latecomer DNA genomes) to encode systems that recognize signatures of foreign genomes and by inference to know themselves."
+          ],
+          "language": [
+            "eng"
+          ],
+          "source": [
+            ""
+          ],
+          "title": [
+            "Know thyself"
+          ],
+          "type": [
+            "article"
+          ],
+          "version": [
+            "4"
+          ]
+        },
+        "links": {
+          "openurl": [
+            "$$Topenurl_article"
+          ],
+          "backlink": [
+            "$$Uhttp://pubmed.gov/25780123$$EView_this_record_in_MEDLINE/PubMed"
+          ],
+          "openurlfulltext": [
+            "$$Topenurlfull_article"
+          ],
+          "addlink": [
+            "$$Uhttp://exlibris-pub.s3.amazonaws.com/aboutMedline.html$$EView_the_MEDLINE/PubMed_Copyright_Statement"
+          ]
+        },
+        "control": {
+          "recordid": [
+            "TN_medline25780123"
+          ],
+          "sourceid": [
+            "medline"
+          ],
+          "sourceformat": [
+            "XML"
+          ],
+          "pqid": [
+            "1680461278"
+          ],
+          "sourcerecordid": [
+            "25780123"
+          ],
+          "sourcesystem": [
+            "Other"
+          ]
+        },
+        "sort": {
+          "creationdate": [
+            "20150400"
+          ],
+          "author": [
+            "Garcia-Blanco, Mariano A"
+          ],
+          "title": [
+            "Know thyself"
+          ],
+          "lso01": [
+            "20150400"
+          ]
+        },
+        "addata": {
+          "date": [
+            "2015-04"
+          ],
+          "aulast": [
+            "Garcia-Blanco"
+          ],
+          "issue": [
+            "4"
+          ],
+          "ristype": [
+            "JOUR"
+          ],
+          "format": [
+            "journal"
+          ],
+          "eissn": [
+            "1469-9001"
+          ],
+          "spage": [
+            "525"
+          ],
+          "pmid": [
+            "25780123"
+          ],
+          "atitle": [
+            "Know thyself."
+          ],
+          "aufirst": [
+            "Mariano A"
+          ],
+          "volume": [
+            "21"
+          ],
+          "pages": [
+            "525-6"
+          ],
+          "au": [
+            "Garcia-Blanco, Mariano A"
+          ],
+          "genre": [
+            "article"
+          ],
+          "jtitle": [
+            "RNA (New York, N.Y.)"
+          ],
+          "risdate": [
+            "201504"
+          ],
+          "doi": [
+            "10.1261/rna.050138.115"
+          ]
+        },
+        "facets": {
+          "frbrtype": [
+            "5"
+          ],
+          "creatorcontrib": [
+            "Garcia-Blanco, Mariano A"
+          ],
+          "creationdate": [
+            "2015"
+          ],
+          "newrecords": [
+            "20180101"
+          ],
+          "toplevel": [
+            "peer_reviewed"
+          ],
+          "frbrgroupid": [
+            "8351409751870289101"
+          ],
+          "rsrctype": [
+            "articles"
+          ],
+          "topic": [
+            "RNA–Physiology"
+          ],
+          "language": [
+            "eng"
+          ],
+          "jtitle": [
+            "Rna (New York, N.Y.)"
+          ],
+          "collection": [
+            "MEDLINE/PubMed (NLM)"
+          ],
+          "prefilter": [
+            "articles"
+          ]
+        }
+      },
+      "@id": "http://onesearch.library.nd.edu/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/PC/TN_medline25780123"
+    },
+    {
+      "enrichment": {
+        "virtualBrowseObject": {
+          "callNumber": "",
+          "isVirtualBrowseEnabled": false,
+          "callNumberBrowseField": "browse_callnumber"
+        }
+      },
+      "context": "PC",
+      "adaptor": "primo_central_multiple_fe",
+      "pnx": {
+        "delivery": {
+          "fulltext": [
+            "fulltext"
+          ],
+          "delcategory": [
+            "Remote Search Resource"
+          ]
+        },
+        "search": {
+          "sourceid": [
+            "crossref"
+          ],
+          "lsr40": [
+            "20080711"
+          ],
+          "creationdate": [
+            "2008"
+          ],
+          "citation": [
+            "pf 172j pt 172j vol 321 issue 5886"
+          ],
+          "rsrctype": [
+            "article"
+          ],
+          "lsr45": [
+            "20080711"
+          ],
+          "title": [
+            "Know Thyself"
+          ],
+          "startdate": [
+            "20080711"
+          ],
+          "lsr43": [
+            "20080711"
+          ],
+          "addtitle": [
+            "Science"
+          ],
+          "lsr41": [
+            "20080711"
+          ],
+          "recordid": [
+            "crossref10.1126/science.321.5886.172j"
+          ],
+          "general": [
+            "English",
+            "10.1126/science.321.5886.172j",
+            "American Association for the Advancement of Science (via CrossRef)",
+            "American Association for the Advancement of Science (CrossRef)"
+          ],
+          "enddate": [
+            "20080711"
+          ],
+          "issn": [
+            "00368075",
+            "0036-8075",
+            "10959203",
+            "1095-9203"
+          ],
+          "scope": [
+            "crossref_aafas",
+            "CrossRef",
+            "Crossref",
+            "crossref"
+          ]
+        },
+        "display": {
+          "identifier": [
+            "<b>ISSN:</b> 0036-8075 ; <b>E-ISSN:</b> 1095-9203 ; <b>DOI:</b> http://dx.doi.org/10.1126/science.321.5886.172j"
+          ],
+          "lds50": [
+            "peer_reviewed"
+          ],
+          "ispartof": [
+            "Science, 07/11/2008, Vol.321(5886), pp.172j-172j"
+          ],
+          "language": [
+            "eng"
+          ],
+          "source": [
+            "American Association for the Advancement of Science (via CrossRef)"
+          ],
+          "title": [
+            "Know Thyself"
+          ],
+          "type": [
+            "article"
+          ]
+        },
+        "links": {
+          "openurl": [
+            "$$Topenurl_article"
+          ],
+          "thumbnail": [
+            "$$TPCamazon_thumb",
+            "$$TPCgoogle_thumb"
+          ],
+          "openurlfulltext": [
+            "$$Topenurlfull_article"
+          ],
+          "addlink": [
+            "$$Uhttp://exlibris-pub.s3.amazonaws.com/aboutCrossref.html$$EView_CrossRef_copyright_notice"
+          ]
+        },
+        "control": {
+          "recordid": [
+            "TN_crossref10.1126/science.321.5886.172j"
+          ],
+          "sourceid": [
+            "crossref"
+          ],
+          "sourceformat": [
+            "XML"
+          ],
+          "sourcerecordid": [
+            "10.1126/science.321.5886.172j"
+          ],
+          "sourcesystem": [
+            "Other"
+          ]
+        },
+        "sort": {
+          "creationdate": [
+            "20080711"
+          ],
+          "title": [
+            "Know Thyself"
+          ],
+          "lso01": [
+            "20080711"
+          ]
+        },
+        "addata": {
+          "date": [
+            "2008-07-11"
+          ],
+          "issue": [
+            "5886"
+          ],
+          "ristype": [
+            "JOUR"
+          ],
+          "format": [
+            "journal"
+          ],
+          "eissn": [
+            "1095-9203"
+          ],
+          "spage": [
+            "172j"
+          ],
+          "atitle": [
+            "Know Thyself"
+          ],
+          "volume": [
+            "321"
+          ],
+          "pages": [
+            "172j-172j"
+          ],
+          "issn": [
+            "0036-8075"
+          ],
+          "stitle": [
+            "Science"
+          ],
+          "epage": [
+            "172j"
+          ],
+          "genre": [
+            "article"
+          ],
+          "jtitle": [
+            "Science"
+          ],
+          "risdate": [
+            "20080711"
+          ],
+          "adddate": [
+            "20080711"
+          ],
+          "doi": [
+            "10.1126/science.321.5886.172j"
+          ]
+        },
+        "facets": {
+          "frbrtype": [
+            "6"
+          ],
+          "creationdate": [
+            "2008"
+          ],
+          "toplevel": [
+            "peer_reviewed"
+          ],
+          "frbrgroupid": [
+            "4935711728242895793"
+          ],
+          "rsrctype": [
+            "articles"
+          ],
+          "language": [
+            "eng"
+          ],
+          "jtitle": [
+            "Science"
+          ],
+          "collection": [
+            "American Association for the Advancement of Science (CrossRef)"
+          ],
+          "prefilter": [
+            "articles"
+          ]
+        }
+      },
+      "@id": "http://onesearch.library.nd.edu/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/PC/TN_crossref10.1126/science.321.5886.172j"
+    },
+    {
+      "enrichment": {
+        "virtualBrowseObject": {
+          "callNumber": "",
+          "isVirtualBrowseEnabled": false,
+          "callNumberBrowseField": "browse_callnumber"
+        }
+      },
+      "context": "PC",
+      "adaptor": "primo_central_multiple_fe",
+      "pnx": {
+        "delivery": {
+          "fulltext": [
+            "fulltext"
+          ],
+          "delcategory": [
+            "Remote Search Resource"
+          ]
+        },
+        "search": {
+          "sourceid": [
+            "crossref"
+          ],
+          "creationdate": [
+            "2000"
+          ],
+          "citation": [
+            "pf 1929j pt 1929 vol 288 issue 5473"
+          ],
+          "rsrctype": [
+            "article"
+          ],
+          "lsr45": [
+            "20000616"
+          ],
+          "title": [
+            "Know Thyself"
+          ],
+          "startdate": [
+            "20000616"
+          ],
+          "lsr43": [
+            "20000616"
+          ],
+          "addtitle": [
+            "Science"
+          ],
+          "recordid": [
+            "crossref10.1126/science.288.5473.1929j"
+          ],
+          "general": [
+            "10.1126/science.288.5473.1929j",
+            "American Association for the Advancement of Science (via CrossRef)",
+            "American Association for the Advancement of Science (CrossRef)"
+          ],
+          "enddate": [
+            "20000616"
+          ],
+          "issn": [
+            "00368075",
+            "0036-8075",
+            "10959203",
+            "1095-9203"
+          ],
+          "scope": [
+            "crossref_aafas",
+            "CrossRef",
+            "Crossref",
+            "crossref"
+          ]
+        },
+        "display": {
+          "identifier": [
+            "<b>ISSN:</b> 00368075 ; <b>E-ISSN:</b> 10959203 ; <b>DOI:</b> http://dx.doi.org/10.1126/science.288.5473.1929j"
+          ],
+          "lds50": [
+            "peer_reviewed"
+          ],
+          "ispartof": [
+            "Science, 6/16/2000, Vol.288(5473), pp.1929j-1929"
+          ],
+          "source": [
+            "American Association for the Advancement of Science (via CrossRef)"
+          ],
+          "title": [
+            "Know Thyself"
+          ],
+          "type": [
+            "article"
+          ]
+        },
+        "links": {
+          "openurl": [
+            "$$Topenurl_article"
+          ],
+          "thumbnail": [
+            "$$TPCamazon_thumb",
+            "$$TPCgoogle_thumb"
+          ],
+          "openurlfulltext": [
+            "$$Topenurlfull_article"
+          ],
+          "addlink": [
+            "$$Uhttp://exlibris-pub.s3.amazonaws.com/aboutCrossref.html$$EView_CrossRef_copyright_notice"
+          ]
+        },
+        "control": {
+          "recordid": [
+            "TN_crossref10.1126/science.288.5473.1929j"
+          ],
+          "sourceid": [
+            "crossref"
+          ],
+          "sourceformat": [
+            "XML"
+          ],
+          "sourcerecordid": [
+            "10.1126/science.288.5473.1929j"
+          ],
+          "sourcesystem": [
+            "Other"
+          ]
+        },
+        "sort": {
+          "creationdate": [
+            "20000616"
+          ],
+          "title": [
+            "Know Thyself"
+          ],
+          "lso01": [
+            "20000616"
+          ]
+        },
+        "addata": {
+          "date": [
+            "2000-06-16"
+          ],
+          "issue": [
+            "5473"
+          ],
+          "ristype": [
+            "JOUR"
+          ],
+          "format": [
+            "journal"
+          ],
+          "eissn": [
+            "10959203"
+          ],
+          "spage": [
+            "1929j"
+          ],
+          "atitle": [
+            "Know Thyself"
+          ],
+          "volume": [
+            "288"
+          ],
+          "pages": [
+            "1929j-1929"
+          ],
+          "issn": [
+            "00368075"
+          ],
+          "epage": [
+            "1929"
+          ],
+          "genre": [
+            "article"
+          ],
+          "jtitle": [
+            "Science"
+          ],
+          "risdate": [
+            "20000616"
+          ],
+          "adddate": [
+            "20000616"
+          ],
+          "doi": [
+            "10.1126/science.288.5473.1929j"
+          ]
+        },
+        "facets": {
+          "frbrtype": [
+            "6"
+          ],
+          "creationdate": [
+            "2000"
+          ],
+          "toplevel": [
+            "peer_reviewed"
+          ],
+          "frbrgroupid": [
+            "1876581624816514662"
+          ],
+          "rsrctype": [
+            "articles"
+          ],
+          "jtitle": [
+            "Science"
+          ],
+          "collection": [
+            "American Association for the Advancement of Science (CrossRef)"
+          ],
+          "prefilter": [
+            "articles"
+          ]
+        }
+      },
+      "@id": "http://onesearch.library.nd.edu/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/PC/TN_crossref10.1126/science.288.5473.1929j"
+    },
+    {
+      "enrichment": {
+        "virtualBrowseObject": {
+          "callNumber": "",
+          "isVirtualBrowseEnabled": false,
+          "callNumberBrowseField": "browse_callnumber"
+        }
+      },
+      "context": "PC",
+      "adaptor": "primo_central_multiple_fe",
+      "pnx": {
+        "delivery": {
+          "fulltext": [
+            "fulltext"
+          ],
+          "delcategory": [
+            "Remote Search Resource"
+          ]
+        },
+        "search": {
+          "sourceid": [
+            "scopus"
+          ],
+          "creatorcontrib": [
+            "Crawford, G."
+          ],
+          "creationdate": [
+            "2016"
+          ],
+          "citation": [
+            "pf <xocs:firstpage xmlns:xocs=\"\"/> vol 412 issue 8976"
+          ],
+          "rsrctype": [
+            "article"
+          ],
+          "title": [
+            "Know thyself"
+          ],
+          "startdate": [
+            "20160312"
+          ],
+          "lsr43": [
+            "Crawford, G."
+          ],
+          "lsr42": [
+            "G."
+          ],
+          "addtitle": [
+            "Economist (United Kingdom)",
+            "Economist"
+          ],
+          "recordid": [
+            "scopus2-s2.0-85020086639"
+          ],
+          "general": [
+            "Scopus (Elsevier)"
+          ],
+          "enddate": [
+            "20160312"
+          ],
+          "issn": [
+            "0013-0613",
+            "00130613"
+          ],
+          "scope": [
+            "scopus"
+          ]
+        },
+        "display": {
+          "identifier": [
+            "<b>ISSN: </b>00130613"
+          ],
+          "creator": [
+            "Crawford, G."
+          ],
+          "rights": [
+            "Copyright 2017 Elsevier B.V., All rights reserved."
+          ],
+          "ispartof": [
+            "Economist (United Kingdom), 12 March 2016, Vol.412(8976)"
+          ],
+          "source": [
+            "Scopus (Elsevier B.V)<img src=\"https://exlibris-pub.s3.amazonaws.com/Scopus.jpg\" style=\"vertical-align:middle;margin-left:7px\">"
+          ],
+          "title": [
+            "Know thyself"
+          ],
+          "type": [
+            "article"
+          ]
+        },
+        "links": {
+          "openurl": [
+            "$$Topenurl_article"
+          ],
+          "backlink": [
+            "$$Uhttp://www.scopus.com/scopus/openurl/link.url?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.abstract=yes&rft_id=info:eid/2-s2.0-85020086639&rfr_dat=partnerID:45$$EView_record_in_Scopus"
+          ],
+          "openurlfulltext": [
+            "$$Topenurlfull_article"
+          ]
+        },
+        "control": {
+          "recordid": [
+            "TN_scopus2-s2.0-85020086639"
+          ],
+          "sourceid": [
+            "scopus"
+          ],
+          "sourcerecordid": [
+            "2-s2.0-85020086639"
+          ],
+          "sourcesystem": [
+            "Other"
+          ]
+        },
+        "sort": {
+          "creationdate": [
+            "20160312"
+          ],
+          "author": [
+            "Crawford, G."
+          ],
+          "title": [
+            "Know thyself"
+          ],
+          "lso01": [
+            "20160312"
+          ]
+        },
+        "addata": {
+          "date": [
+            "2016-03-12"
+          ],
+          "aulast": [
+            "Crawford"
+          ],
+          "issue": [
+            "8976"
+          ],
+          "ristype": [
+            "JOUR"
+          ],
+          "format": [
+            "journal"
+          ],
+          "spage": [
+            "<xocs:firstpage xmlns:xocs=\"\"/>"
+          ],
+          "auinit": [
+            "G"
+          ],
+          "atitle": [
+            "Know thyself"
+          ],
+          "aufirst": [
+            "Gregory"
+          ],
+          "volume": [
+            "412"
+          ],
+          "pages": [
+            "<xocs:firstpage xmlns:xocs=\"\"/>"
+          ],
+          "issn": [
+            "00130613"
+          ],
+          "au": [
+            "Crawford, G."
+          ],
+          "genre": [
+            "article"
+          ],
+          "jtitle": [
+            "Economist (United Kingdom)",
+            "Economist"
+          ],
+          "risdate": [
+            "20160312"
+          ],
+          "pub": [
+            "Economist Newspaper Ltd"
+          ]
+        },
+        "facets": {
+          "frbrtype": [
+            "6"
+          ],
+          "creatorcontrib": [
+            "Crawford, G."
+          ],
+          "creationdate": [
+            "2016"
+          ],
+          "newrecords": [
+            "20170621"
+          ],
+          "frbrgroupid": [
+            "2994411847039258288"
+          ],
+          "rsrctype": [
+            "articles"
+          ],
+          "jtitle": [
+            "Economist (United Kingdom)",
+            "Economist"
+          ],
+          "collection": [
+            "Scopus (Elsevier)"
+          ],
+          "prefilter": [
+            "articles"
+          ]
+        }
+      },
+      "@id": "http://onesearch.library.nd.edu/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/PC/TN_scopus2-s2.0-85020086639"
+    },
+    {
+      "enrichment": {
+        "virtualBrowseObject": {
+          "callNumber": "",
+          "isVirtualBrowseEnabled": false,
+          "callNumberBrowseField": "browse_callnumber"
+        }
+      },
+      "context": "PC",
+      "adaptor": "primo_central_multiple_fe",
+      "pnx": {
+        "delivery": {
+          "fulltext": [
+            "fulltext"
+          ],
+          "delcategory": [
+            "Remote Search Resource"
+          ]
+        },
+        "search": {
+          "recordid": [
+            "scopus2-s2.0-84872441157"
+          ],
+          "sourceid": [
+            "scopus"
+          ],
+          "general": [
+            "Scopus (Elsevier)"
+          ],
+          "creationdate": [
+            "2012"
+          ],
+          "enddate": [
+            "20121215"
+          ],
+          "issn": [
+            "0013-0613",
+            "00130613"
+          ],
+          "citation": [
+            "vol 405 issue 8815"
+          ],
+          "scope": [
+            "scopus"
+          ],
+          "rsrctype": [
+            "article"
+          ],
+          "title": [
+            "Know thyself"
+          ],
+          "startdate": [
+            "20121215"
+          ],
+          "addtitle": [
+            "Economist (United Kingdom)"
+          ]
+        },
+        "display": {
+          "identifier": [
+            "<b>ISSN: </b>00130613"
+          ],
+          "rights": [
+            "Copyright 2013 Elsevier B.V., All rights reserved."
+          ],
+          "ispartof": [
+            "Economist (United Kingdom), 15 December 2012, Vol.405(8815)"
+          ],
+          "source": [
+            "Scopus (Elsevier B.V)<img src=\"http://exlibris-pub.s3.amazonaws.com/Scopus.jpg\" style=\"vertical-align:middle;margin-left:7px\">"
+          ],
+          "title": [
+            "Know thyself"
+          ],
+          "type": [
+            "article"
+          ]
+        },
+        "links": {
+          "openurl": [
+            "$$Topenurl_article"
+          ],
+          "backlink": [
+            "$$Uhttp://www.scopus.com/scopus/openurl/link.url?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.abstract=yes&rft_id=info:eid/2-s2.0-84872441157&rfr_dat=partnerID:45$$EView_record_in_Scopus"
+          ],
+          "openurlfulltext": [
+            "$$Topenurlfull_article"
+          ]
+        },
+        "control": {
+          "recordid": [
+            "TN_scopus2-s2.0-84872441157"
+          ],
+          "sourceid": [
+            "scopus"
+          ],
+          "sourcerecordid": [
+            "2-s2.0-84872441157"
+          ],
+          "sourcesystem": [
+            "Other"
+          ]
+        },
+        "sort": {
+          "creationdate": [
+            "20121215"
+          ],
+          "title": [
+            "Know thyself"
+          ],
+          "lso01": [
+            "20121215"
+          ]
+        },
+        "addata": {
+          "volume": [
+            "405"
+          ],
+          "date": [
+            "2012-12-15"
+          ],
+          "issue": [
+            "8815"
+          ],
+          "issn": [
+            "00130613"
+          ],
+          "genre": [
+            "article"
+          ],
+          "ristype": [
+            "JOUR"
+          ],
+          "format": [
+            "journal"
+          ],
+          "jtitle": [
+            "Economist (United Kingdom)"
+          ],
+          "atitle": [
+            "Know thyself"
+          ]
+        },
+        "facets": {
+          "frbrtype": [
+            "6"
+          ],
+          "creationdate": [
+            "2012"
+          ],
+          "frbrgroupid": [
+            "2945277293960492757"
+          ],
+          "rsrctype": [
+            "articles"
+          ],
+          "jtitle": [
+            "Economist (United Kingdom)"
+          ],
+          "collection": [
+            "Scopus (Elsevier)"
+          ],
+          "prefilter": [
+            "articles"
+          ]
+        }
+      },
+      "@id": "http://onesearch.library.nd.edu/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/PC/TN_scopus2-s2.0-84872441157"
+    },
+    {
+      "enrichment": {
+        "virtualBrowseObject": {
+          "callNumber": "",
+          "isVirtualBrowseEnabled": false,
+          "callNumberBrowseField": "browse_callnumber"
+        }
+      },
+      "@rta_link": "http://onesearch.library.nd.edu/primo_library/libweb/webservices/rest/v1/rta/NDU?recordInformation=000925985|,|ndu_aleph|,|NDU01|,|Aleph|,|ndu_aleph000925985|,|$$INDU$$LANNEX$$1$$2Use Request$$Savailable$$31$$40$$5N$$60$$XNDU50$$YANNEX$$ZHESB|,|$$INDU$$Savailable|,|__NO_VALUE__|,|NDU|,|__NO_VALUE__|,|$$Taleph_holdings$$INDU|$$Taleph_holdings|,|NDU01000925985|,|__NO_VALUE__|,|__NO_VALUE__",
+      "context": "L",
+      "adaptor": "Local Search Engine",
+      "pnx": {
+        "delivery": {
+          "institution": [
+            "NDU"
+          ],
+          "delcategory": [
+            "Physical Item"
+          ]
+        },
+        "display": {
+          "identifier": [
+            "$$COCLC $$V317340456"
+          ],
+          "creationdate": [
+            "c1927"
+          ],
+          "creator": [
+            "John Mills 1880-"
+          ],
+          "availinstitution": [
+            "$$INDU$$Savailable"
+          ],
+          "subject": [
+            "Personnel management"
+          ],
+          "format": [
+            "4 p. ; cm.."
+          ],
+          "availlibrary": [
+            "$$INDU$$LANNEX$$1$$2Use Request$$Savailable$$31$$40$$5N$$60$$XNDU50$$YANNEX$$ZHESB"
+          ],
+          "language": [
+            "eng"
+          ],
+          "title": [
+            "Know thyself,"
+          ],
+          "type": [
+            "book"
+          ],
+          "publisher": [
+            "New York : Bell telephone laboratories"
+          ],
+          "availpnx": [
+            "available"
+          ],
+          "lds02": [
+            "ndu_aleph000925985"
+          ],
+          "lds01": [
+            "(On cover: Bell telephone laboratories, incorporated, Jan. 1928).",
+            "Reprint of paper presented at a conference on leadership,University Club, Boston, Mass.,Nov.1927. Pub. in The management review, v.16,pp.395-399. Dec. 1927."
+          ]
+        },
+        "control": {
+          "recordid": [
+            "ndu_aleph000925985"
+          ],
+          "sourceid": [
+            "ndu_aleph"
+          ],
+          "ilsapiid": [
+            "NDU01000925985"
+          ],
+          "originalsourceid": [
+            "NDU01"
+          ],
+          "sourceformat": [
+            "MARC21"
+          ],
+          "sourcerecordid": [
+            "000925985"
+          ],
+          "sourcesystem": [
+            "Aleph"
+          ]
+        },
+        "sort": {
+          "creationdate": [
+            "1927"
+          ],
+          "author": [
+            "Mills, John, 1880-"
+          ],
+          "title": [
+            "Know thyself,"
+          ],
+          "lso02": [
+            "HF0 005549 M00 626000K -- DLC"
+          ],
+          "lso01": [
+            "1927"
+          ]
+        },
+        "frbr": {
+          "t": [
+            99
+          ],
+          "k1": [
+            "$$Kndu_aleph000925985$$AA"
+          ],
+          "k3": [
+            "$$Kknow thyself$$AT"
+          ]
+        },
+        "dedup": {
+          "c3": [
+            "knowthyself"
+          ],
+          "f6": [
+            "1927"
+          ],
+          "c4": [
+            "1927"
+          ],
+          "f7": [
+            "know thyself"
+          ],
+          "f8": [
+            "nyu"
+          ],
+          "t": [
+            1
+          ],
+          "f10": [
+            "bell telephone laboratories"
+          ],
+          "f11": [
+            "mills john 1880"
+          ],
+          "f5": [
+            "knowthyself"
+          ]
+        },
+        "facets": {
+          "frbrtype": [
+            "6"
+          ],
+          "creatorcontrib": [
+            "Mills, J"
+          ],
+          "creationdate": [
+            "1927"
+          ],
+          "newrecords": [
+            "20120622_900"
+          ],
+          "toplevel": [
+            "request"
+          ],
+          "library": [
+            "ANNEX"
+          ],
+          "frbrgroupid": [
+            "249842448"
+          ],
+          "rsrctype": [
+            "books",
+            "print",
+            "pbook"
+          ],
+          "topic": [
+            "Personnel management"
+          ],
+          "classificationlcc": [
+            "H - Social sciences.–Commerce"
+          ],
+          "language": [
+            "eng"
+          ],
+          "prefilter": [
+            "books",
+            "print",
+            "pbook"
+          ]
+        },
+        "enrichment": {
+          "classificationlcc": [
+            "HF 5549"
+          ]
+        },
+        "search": {
+          "sourceid": [
+            "ndu_aleph"
+          ],
+          "creatorcontrib": [
+            "John,  Mills  1880-",
+            "Mills, J",
+            "by John Mills. Know thyself - a mutual requirement for an employer and an employee."
+          ],
+          "creationdate": [
+            "1927"
+          ],
+          "subject": [
+            "Personnel management.",
+            "Human resource management",
+            "Human resources management",
+            "Manpower utilization",
+            "Personnel administration",
+            "Corporations Personnel management",
+            "Employment management"
+          ],
+          "lsr02": [
+            "Mills Know thyself",
+            "Know thyself Mills"
+          ],
+          "lsr01": [
+            "ANNEX HESB",
+            "ANNEX"
+          ],
+          "title": [
+            "Know thyself,"
+          ],
+          "startdate": [
+            "19270101"
+          ],
+          "recordid": [
+            "ndu_aleph000925985",
+            "000925985",
+            "925985"
+          ],
+          "general": [
+            "Bell telephone laboratories",
+            "(OCoLC)317340456",
+            "OCoLC317340456",
+            "317340456",
+            "AEF5465",
+            "AllDocuments",
+            "(On cover: Bell telephone laboratories, incorporated, Jan. 1928).",
+            "Reprint of paper presented at a conference on leadership,University Club, Boston, Mass.,Nov.1927. Pub. in The management review, v.16,pp.395-399. Dec. 1927."
+          ],
+          "lsr09": [
+            "00000034020222"
+          ],
+          "lsr08": [
+            "[New York :"
+          ],
+          "lsr07": [
+            "Mills Know thyself",
+            "Know thyself Mills"
+          ],
+          "lsr06": [
+            "Bell telephone laboratories"
+          ],
+          "scope": [
+            "ANNEX",
+            "ndu_aleph",
+            "NDU"
+          ],
+          "lsr05": [
+            "HF 5549 .M626k",
+            "HF5549.M626k",
+            "HF5549 .M626k :"
+          ]
+        },
+        "ranking": {
+          "booster2": [
+            "1"
+          ],
+          "booster1": [
+            "1"
+          ]
+        },
+        "links": {
+          "openurl": [
+            "$$Topenurl_journal"
+          ],
+          "thumbnail": [
+            "$$Tgoogle_thumb"
+          ],
+          "backlink": [
+            "$$Taleph_backlink$$DNotre Dame Catalog"
+          ],
+          "lln01": [
+            "$$Tfindit_link"
+          ],
+          "linktoholdings": [
+            "$$Taleph_holdings$$INDU",
+            "$$Taleph_holdings"
+          ],
+          "openurlfulltext": [
+            "$$Topenurlfull_journal"
+          ],
+          "linktouc": [
+            "$$Tworldcat_oclc$$Eworldcat"
+          ]
+        },
+        "addata": {
+          "date": [
+            "1927"
+          ],
+          "aulast": [
+            "Mills"
+          ],
+          "au": [
+            "Mills, John"
+          ],
+          "cop": [
+            "New York"
+          ],
+          "ristype": [
+            "BOOK"
+          ],
+          "format": [
+            "book"
+          ],
+          "btitle": [
+            "Know thyself,"
+          ],
+          "oclcid": [
+            "317340456"
+          ],
+          "risdate": [
+            "c1927]"
+          ],
+          "pub": [
+            "Bell telephone laboratories"
+          ],
+          "aufirst": [
+            "John,"
+          ]
+        },
+        "browse": {
+          "institution": [
+            "NDU"
+          ],
+          "subject": [
+            "$$DPersonnel management$$EPersonnel management"
+          ],
+          "author": [
+            "$$DMills, John, 1880-$$EMills, John, 1880-"
+          ],
+          "callnumber": [
+            "$$I$$DHF 5549 .M626k$$E0hf   05549.m  62600 k$$T0"
+          ],
+          "title": [
+            "$$DKnow thyself$$EKnow thyself"
+          ]
+        }
+      },
+      "@id": "http://onesearch.library.nd.edu/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/L/ndu_aleph000925985"
+    },
+    {
+      "enrichment": {
+        "virtualBrowseObject": {
+          "callNumber": "PS 3566 .E737 A6 2015",
+          "isVirtualBrowseEnabled": true,
+          "callNumberBrowseField": "browse_callnumber.0"
+        }
+      },
+      "@rta_link": "http://onesearch.library.nd.edu/primo_library/libweb/webservices/rest/v1/rta/NDU?recordInformation=004361839|,|ndu_aleph|,|NDU01|,|Aleph|,|ndu_aleph004361839|,|$$INDU$$LHESB$$1General Collection$$2PS 3566 .E737 A6 2015$$Savailable$$31$$40$$5N$$60$$XNDU50$$YHESB$$ZGEN|,|$$INDU$$Savailable|,|__NO_VALUE__|,|NDU|,|__NO_VALUE__|,|$$Taleph_holdings$$INDU|$$Taleph_holdings|,|NDU01004361839|,|__NO_VALUE__|,|__NO_VALUE__",
+      "context": "L",
+      "adaptor": "Local Search Engine",
+      "pnx": {
+        "delivery": {
+          "institution": [
+            "NDU"
+          ],
+          "delcategory": [
+            "Physical Item"
+          ]
+        },
+        "display": {
+          "identifier": [
+            "$$CISBN $$V0887486037; $$CISBN $$V9780887486036; $$COCLC $$V907094416"
+          ],
+          "creationdate": [
+            "2015"
+          ],
+          "creator": [
+            "Joyce Peseroff"
+          ],
+          "availinstitution": [
+            "$$INDU$$Savailable"
+          ],
+          "subject": [
+            "Poetry"
+          ],
+          "format": [
+            "81 pages ; 22 cm.."
+          ],
+          "availlibrary": [
+            "$$INDU$$LHESB$$1General Collection$$2PS 3566 .E737 A6 2015$$Savailable$$31$$40$$5N$$60$$XNDU50$$YHESB$$ZGEN"
+          ],
+          "language": [
+            "eng"
+          ],
+          "title": [
+            "Know thyself"
+          ],
+          "type": [
+            "book"
+          ],
+          "relation": [
+            "$$Cseries $$VCarnegie Mellon poetry."
+          ],
+          "lds31": [
+            "Peseroff, Joyce, -- Poems. -- Selections"
+          ],
+          "publisher": [
+            "Pittsburgh : Carnegie Mellon University Press"
+          ],
+          "lds30": [
+            "Carnegie Mellon poetry."
+          ],
+          "availpnx": [
+            "available"
+          ],
+          "lds02": [
+            "ndu_aleph004361839"
+          ],
+          "unititle": [
+            "Poems."
+          ],
+          "lds03": [
+            "Nymphs of Kezar Lake -- Know thyself -- Margin of error -- Two ways to play Shylock -- The yin and yang of it -- Solve for x -- Evidence -- Baby shoes, never worn -- Summer ends in Martins Ferry -- Fairy tale economics -- Your add here -- Italian nobody -- Three questions -- Memorial bench -- Your first motherless day -- A dry bones case -- Ft. Myers flight -- Alex Katz on painting sunsets -- Sound net sequence -- Gloss -- Returning to live in the country -- Brownfield sonnets -- Horse, alone, November -- Egg candling -- Fly -- Source of the positrons -- After spring break, driving my daughter to school -- Zeus persuades Hades underground -- Exit interview -- The Dutch -- Elegy -- Soft candy for bees -- Bite force -- Cool story, -- No more water -- Willing heart -- Summer communication: harborside -- August landscape with tractor, logger, daylilies -- Sailing from Lake Tashmoo."
+          ]
+        },
+        "control": {
+          "recordid": [
+            "ndu_aleph004361839"
+          ],
+          "sourceid": [
+            "ndu_aleph"
+          ],
+          "ilsapiid": [
+            "NDU01004361839"
+          ],
+          "originalsourceid": [
+            "NDU01"
+          ],
+          "sourceformat": [
+            "MARC21"
+          ],
+          "sourcerecordid": [
+            "004361839"
+          ],
+          "sourcesystem": [
+            "Aleph"
+          ]
+        },
+        "sort": {
+          "creationdate": [
+            "2015"
+          ],
+          "author": [
+            "Peseroff, Joyce, author."
+          ],
+          "title": [
+            "Know thyself /"
+          ],
+          "lso02": [
+            "PS0 003566 E00 737000 A00 600000 2015 -- DLC"
+          ],
+          "lso01": [
+            "2015"
+          ]
+        },
+        "frbr": {
+          "t": [
+            99
+          ],
+          "k1": [
+            "$$Kndu_aleph004361839$$AA"
+          ],
+          "k3": [
+            "$$Kknow thyself$$AT"
+          ]
+        },
+        "dedup": {
+          "f10": [
+            "carnegie mellon university press"
+          ],
+          "f11": [
+            "peseroff joyce"
+          ],
+          "f1": [
+            "2015932694"
+          ],
+          "f3": [
+            "0887486037;9780887486036"
+          ],
+          "c1": [
+            "2015932694"
+          ],
+          "c2": [
+            "0887486037;9780887486036"
+          ],
+          "f5": [
+            "knowthyself"
+          ],
+          "c3": [
+            "knowthyself"
+          ],
+          "f6": [
+            "2015"
+          ],
+          "c4": [
+            "2015"
+          ],
+          "f7": [
+            "know thyself"
+          ],
+          "f8": [
+            "pau"
+          ],
+          "t": [
+            1
+          ]
+        },
+        "facets": {
+          "frbrtype": [
+            "6"
+          ],
+          "creatorcontrib": [
+            "Peseroff, J"
+          ],
+          "creationdate": [
+            "2015"
+          ],
+          "newrecords": [
+            "20160311_80"
+          ],
+          "rsrctype": [
+            "books",
+            "print",
+            "pbook"
+          ],
+          "classificationlcc": [
+            "P - Language and literature.–American literature"
+          ],
+          "language": [
+            "eng"
+          ],
+          "lfc04": [
+            "Poems."
+          ],
+          "lfc03": [
+            "Carnegie Mellon poetry"
+          ],
+          "prefilter": [
+            "books",
+            "print"
+          ],
+          "toplevel": [
+            "available"
+          ],
+          "library": [
+            "HESB"
+          ],
+          "frbrgroupid": [
+            "253881088"
+          ],
+          "topic": [
+            "Poetry"
+          ]
+        },
+        "enrichment": {
+          "classificationlcc": [
+            "PS 3566 .E737"
+          ]
+        },
+        "search": {
+          "sourceid": [
+            "ndu_aleph"
+          ],
+          "creatorcontrib": [
+            "Joyce,  Peseroff  author.",
+            "Peseroff, Jauthor.",
+            "Joyce Peseroff."
+          ],
+          "creationdate": [
+            "2015"
+          ],
+          "subject": [
+            "Poetry.",
+            "Poems",
+            "Poetry Philosophy",
+            "Verses (Poetry)"
+          ],
+          "isbn": [
+            "0887486037",
+            "9780887486036"
+          ],
+          "lsr04": [
+            "Poems. Selections"
+          ],
+          "lsr03": [
+            "Carnegie Mellon poetry series",
+            "Carnegie Mellon poetry."
+          ],
+          "toc": [
+            "Nymphs of Kezar Lake -- Know thyself -- Margin of error -- Two ways to play Shylock -- The yin and yang of it -- Solve for x -- Evidence -- Baby shoes, never worn -- Summer ends in Martins Ferry -- Fairy tale economics -- Your add here -- Italian nobody -- Three questions -- Memorial bench -- Your first motherless day -- A dry bones case -- Ft. Myers flight -- Alex Katz on painting sunsets -- Sound net sequence -- Gloss -- Returning to live in the country -- Brownfield sonnets -- Horse, alone, November -- Egg candling -- Fly -- Source of the positrons -- After spring break, driving my daughter to school -- Zeus persuades Hades underground -- Exit interview -- The Dutch -- Elegy -- Soft candy for bees -- Bite force -- Cool story, -- No more water -- Willing heart -- Summer communication: harborside -- August landscape with tractor, logger, daylilies -- Sailing from Lake Tashmoo."
+          ],
+          "lsr02": [
+            "Peseroff Know thyself",
+            "Know thyself Peseroff"
+          ],
+          "lsr01": [
+            "HESB GEN",
+            "HESB General Collection"
+          ],
+          "title": [
+            "Know thyself /"
+          ],
+          "startdate": [
+            "20150101"
+          ],
+          "lsr31": [
+            "Peseroff, Joyce, Poems. Selections"
+          ],
+          "addtitle": [
+            "Carnegie Mellon poetry series",
+            "Carnegie Mellon poetry."
+          ],
+          "lsr30": [
+            "Carnegie Mellon poetry series",
+            "Carnegie Mellon poetry."
+          ],
+          "recordid": [
+            "ndu_aleph004361839",
+            "004361839",
+            "4361839"
+          ],
+          "general": [
+            "Carnegie Mellon University Press,",
+            "(OCoLC)907094416",
+            "OCoLC907094416",
+            "907094416",
+            "(ybp)99966552139",
+            "ybp99966552139",
+            "99966552139",
+            "AllDocuments",
+            "rdarules"
+          ],
+          "lsr09": [
+            "00000035568914"
+          ],
+          "lsr08": [
+            "Pittsburgh :"
+          ],
+          "lsr07": [
+            "Peseroff Know thyself",
+            "Know thyself Peseroff"
+          ],
+          "alttitle": [
+            "Poems. Selections"
+          ],
+          "lsr06": [
+            "Carnegie Mellon University Press,"
+          ],
+          "scope": [
+            "HESB",
+            "ndu_aleph",
+            "NDU"
+          ],
+          "lsr05": [
+            "PS 3566 .E737 A6 2015",
+            "PS3566.E737A62015",
+            "PS3566 .E737 A6 2015 :"
+          ]
+        },
+        "ranking": {
+          "booster2": [
+            "1"
+          ],
+          "booster1": [
+            "1"
+          ]
+        },
+        "links": {
+          "openurl": [
+            "$$Topenurl_journal"
+          ],
+          "linktoabstract": [
+            "$$Tsyndetics_abstract$$Elinktoabstract"
+          ],
+          "linktoexcerpt": [
+            "$$Tsyndetics_excerpt$$Elinktoexcerpt"
+          ],
+          "thumbnail": [
+            "$$Tamazon_thumb",
+            "$$Tsyndetics_thumb",
+            "$$Tgoogle_thumb"
+          ],
+          "backlink": [
+            "$$Taleph_backlink$$DNotre Dame Catalog"
+          ],
+          "lln01": [
+            "$$Tfindit_link"
+          ],
+          "linktoholdings": [
+            "$$Taleph_holdings$$INDU",
+            "$$Taleph_holdings"
+          ],
+          "openurlfulltext": [
+            "$$Topenurlfull_journal"
+          ],
+          "linktouc": [
+            "$$Tworldcat_isbn$$Eworldcat"
+          ]
+        },
+        "addata": {
+          "date": [
+            "2015"
+          ],
+          "aulast": [
+            "Peseroff"
+          ],
+          "cop": [
+            "Pittsburgh"
+          ],
+          "isbn": [
+            "0887486037",
+            "9780887486036"
+          ],
+          "ristype": [
+            "BOOK"
+          ],
+          "format": [
+            "book"
+          ],
+          "oclcid": [
+            "907094416"
+          ],
+          "aufirst": [
+            "Joyce,"
+          ],
+          "lccn": [
+            "2015932694"
+          ],
+          "seriestitle": [
+            "Carnegie Mellon poetry"
+          ],
+          "au": [
+            "Peseroff, Joyce"
+          ],
+          "btitle": [
+            "Know thyself"
+          ],
+          "risdate": [
+            "2015."
+          ],
+          "pub": [
+            "Carnegie Mellon University Press"
+          ]
+        },
+        "browse": {
+          "institution": [
+            "NDU"
+          ],
+          "subject": [
+            "$$DPoetry$$EPoetry"
+          ],
+          "author": [
+            "$$DPeseroff, Joyce$$EPeseroff, Joyce"
+          ],
+          "callnumber": [
+            "$$INDU$$DPS 3566 .E737 A6 2015$$E0ps   03566.e  73700  a6 2015 $$T0"
+          ],
+          "title": [
+            "$$DKnow thyself$$EKnow thyself",
+            "$$DPoems. Selections$$EPoems. Selections",
+            "$$DCarnegie Mellon poetry [series]$$ECarnegie Mellon poetry [series]"
+          ]
+        }
+      },
+      "@id": "http://onesearch.library.nd.edu/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/L/ndu_aleph004361839"
+    },
+    {
+      "enrichment": {
+        "virtualBrowseObject": {
+          "callNumber": "",
+          "isVirtualBrowseEnabled": false,
+          "callNumberBrowseField": "browse_callnumber"
+        }
+      },
+      "context": "PC",
+      "adaptor": "primo_central_multiple_fe",
+      "pnx": {
+        "delivery": {
+          "fulltext": [
+            "fulltext"
+          ],
+          "delcategory": [
+            "Remote Search Resource"
+          ]
+        },
+        "search": {
+          "recordid": [
+            "nature_a10.1038/359108a0"
+          ],
+          "sourceid": [
+            "nature_a"
+          ],
+          "creatorcontrib": [
+            "David Jones"
+          ],
+          "general": [
+            "Nature Publishing Group",
+            "10.1038/359108a0",
+            "nature.com (Nature Publishing Group)"
+          ],
+          "creationdate": [
+            "1992"
+          ],
+          "issn": [
+            "0028-0836",
+            "00280836",
+            "1476-4687",
+            "14764687"
+          ],
+          "scope": [
+            "nature_a"
+          ],
+          "rsrctype": [
+            "article"
+          ],
+          "title": [
+            "Know thyself!"
+          ],
+          "lsr30": [
+            "VSR-Enriched:[pages]"
+          ]
+        },
+        "display": {
+          "identifier": [
+            "<b>ISSN: </b>0028-0836 ; <b>E-ISSN: </b>1476-4687 ; <b>DOI: </b>10.1038/359108a0"
+          ],
+          "creator": [
+            "David Jones"
+          ],
+          "lds50": [
+            "peer_reviewed"
+          ],
+          "ispartof": [
+            "Nature, 1992, Vol.359(6391), p.108"
+          ],
+          "source": [
+            ""
+          ],
+          "title": [
+            "Know thyself!"
+          ],
+          "type": [
+            "article"
+          ],
+          "version": [
+            "3"
+          ]
+        },
+        "links": {
+          "openurl": [
+            "$$Topenurl_article"
+          ],
+          "backlink": [
+            "$$Uhttp://dx.doi.org/10.1038/359108a0$$EView_this_record_in_Nature"
+          ],
+          "openurlfulltext": [
+            "$$Topenurlfull_article"
+          ]
+        },
+        "control": {
+          "recordid": [
+            "TN_nature_a10.1038/359108a0"
+          ],
+          "sourceid": [
+            "nature_a"
+          ],
+          "sourcerecordid": [
+            "10.1038/359108a0"
+          ],
+          "sourcesystem": [
+            "Other"
+          ]
+        },
+        "sort": {
+          "creationdate": [
+            "19920910"
+          ],
+          "author": [
+            "David Jones"
+          ],
+          "title": [
+            "Know thyself!"
+          ]
+        },
+        "addata": {
+          "date": [
+            "1992-09-10"
+          ],
+          "issue": [
+            "6391"
+          ],
+          "ristype": [
+            "JOUR"
+          ],
+          "eissn": [
+            "1476-4687"
+          ],
+          "spage": [
+            "108"
+          ],
+          "atitle": [
+            "Know thyself!"
+          ],
+          "volume": [
+            "359"
+          ],
+          "pages": [
+            "108"
+          ],
+          "issn": [
+            "0028-0836"
+          ],
+          "au": [
+            "David Jones"
+          ],
+          "genre": [
+            "article"
+          ],
+          "jtitle": [
+            "Nature"
+          ],
+          "risdate": [
+            "19920910"
+          ],
+          "pub": [
+            "Nature Publishing Group"
+          ],
+          "doi": [
+            "10.1038/359108a0"
+          ]
+        },
+        "facets": {
+          "frbrtype": [
+            "5"
+          ],
+          "creatorcontrib": [
+            "David Jones"
+          ],
+          "creationdate": [
+            "1992"
+          ],
+          "toplevel": [
+            "peer_reviewed"
+          ],
+          "frbrgroupid": [
+            "9212401339231248001"
+          ],
+          "rsrctype": [
+            "articles"
+          ],
+          "jtitle": [
+            "Nature"
+          ],
+          "collection": [
+            "nature.com (Nature Publishing Group)"
+          ],
+          "prefilter": [
+            "articles"
+          ]
+        }
+      },
+      "@id": "http://onesearch.library.nd.edu/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/PC/TN_nature_a10.1038/359108a0"
+    }
+  ],
+  "timelog": {
+    "CalculateRtaLinks1DeltaTime": 23,
+    "BriefSearchDeltaTime": 37,
+    "DoSearchPrimoResultDeltaTime": 13,
+    "StartBriefSearch": 1537904701814,
+    "retrieveHighLightsDeltaTime": 24,
+    "retrieveDidUMeanDeltaTime": 24,
+    "GetSearchStatusDeltaTime": 13,
+    "StartTranslationTime": 1537904701827,
+    "AddSearchStatusDeltaTime": 0,
+    "retrieveFacetsDeltaTime": 23
+  },
+  "lang3": "eng",
+  "info": {
+    "total": 76976,
+    "last": "10",
+    "maxTotal": 0,
+    "first": "1"
+  },
+  "facets": [
+    {
+      "values": [
+        {
+          "count": 1,
+          "value": "Terrace, Herbert S"
+        },
+        {
+          "count": 2,
+          "value": "Measom, G"
+        },
+        {
+          "count": 2,
+          "value": "Avnon, Dan"
+        },
+        {
+          "count": 1,
+          "value": "Crupi, Vincenzo"
+        },
+        {
+          "count": 1,
+          "value": "Son, Lisa K"
+        },
+        {
+          "count": 3,
+          "value": "Beliaev, D. K."
+        },
+        {
+          "count": 1,
+          "value": "Frith, J"
+        },
+        {
+          "count": 2,
+          "value": "Lapthorne, Debra"
+        },
+        {
+          "count": 2,
+          "value": "Greene, R"
+        },
+        {
+          "count": 7,
+          "value": "Tubbs, Nigel"
+        },
+        {
+          "count": 3,
+          "value": "Wilkins, E"
+        },
+        {
+          "count": 4,
+          "value": "Tattersall, Ian"
+        },
+        {
+          "count": 2,
+          "value": "Zou, Zhimin"
+        },
+        {
+          "count": 2,
+          "value": "Kim, Young-Hoon"
+        },
+        {
+          "count": 2,
+          "value": "Robison-Greene, R"
+        },
+        {
+          "count": 1,
+          "value": "Hadnagy, C"
+        },
+        {
+          "count": 17,
+          "value": "Sherman, Claudia"
+        },
+        {
+          "count": 401,
+          "value": "Anonymous"
+        },
+        {
+          "count": 1,
+          "value": "Reisch, G"
+        },
+        {
+          "count": 1,
+          "value": "Royster, J"
+        },
+        {
+          "count": 4,
+          "value": "Cocroft, S"
+        },
+        {
+          "count": 1,
+          "value": "Rossellini, I"
+        },
+        {
+          "count": 1,
+          "value": "Waters, B"
+        },
+        {
+          "count": 5,
+          "value": "Gale (Firm)"
+        },
+        {
+          "count": 1,
+          "value": "Dalziel Brothers"
+        },
+        {
+          "count": 2,
+          "value": "Khrustov, G. F."
+        },
+        {
+          "count": 3,
+          "value": "More, H"
+        },
+        {
+          "count": 2,
+          "value": "During, Elie"
+        },
+        {
+          "count": 1,
+          "value": "Religious Tract Society (Great Britain)"
+        },
+        {
+          "count": 2,
+          "value": "D'Esposito, Mark"
+        },
+        {
+          "count": 1,
+          "value": "Faizullaev, Alisher"
+        },
+        {
+          "count": 2,
+          "value": "Creeley, R"
+        },
+        {
+          "count": 1,
+          "value": "Elia, Fabrizio"
+        },
+        {
+          "count": 1,
+          "value": "Lamperti, G"
+        },
+        {
+          "count": 4,
+          "value": "Chiu, Chi-Yue"
+        },
+        {
+          "count": 2,
+          "value": "Wisnewski, J"
+        },
+        {
+          "count": 4,
+          "value": "Macdonald, Heidi"
+        },
+        {
+          "count": 1,
+          "value": "Verhovez, Andrea"
+        },
+        {
+          "count": 4,
+          "value": "Bell, C"
+        },
+        {
+          "count": 2,
+          "value": "Modern Poetry Collection (University of Notre Dame. Library)"
+        }
+      ],
+      "name": "creator"
+    },
+    {
+      "values": [
+        {
+          "count": 364,
+          "value": "1989"
+        },
+        {
+          "count": 354,
+          "value": "1988"
+        },
+        {
+          "count": 365,
+          "value": "1987"
+        },
+        {
+          "count": 330,
+          "value": "1986"
+        },
+        {
+          "count": 1689,
+          "value": "1920"
+        },
+        {
+          "count": 385,
+          "value": "1985"
+        },
+        {
+          "count": 360,
+          "value": "1984"
+        },
+        {
+          "count": 288,
+          "value": "1983"
+        },
+        {
+          "count": 369,
+          "value": "1982"
+        },
+        {
+          "count": 330,
+          "value": "1981"
+        },
+        {
+          "count": 358,
+          "value": "1980"
+        },
+        {
+          "count": 311,
+          "value": "1979"
+        },
+        {
+          "count": 312,
+          "value": "1978"
+        },
+        {
+          "count": 319,
+          "value": "1977"
+        },
+        {
+          "count": 345,
+          "value": "1976"
+        },
+        {
+          "count": 3265,
+          "value": "1910"
+        },
+        {
+          "count": 338,
+          "value": "1975"
+        },
+        {
+          "count": 341,
+          "value": "1974"
+        },
+        {
+          "count": 337,
+          "value": "1973"
+        },
+        {
+          "count": 339,
+          "value": "1972"
+        },
+        {
+          "count": 306,
+          "value": "1971"
+        },
+        {
+          "count": 297,
+          "value": "1970"
+        },
+        {
+          "count": 311,
+          "value": "1969"
+        },
+        {
+          "count": 268,
+          "value": "1968"
+        },
+        {
+          "count": 244,
+          "value": "1967"
+        },
+        {
+          "count": 214,
+          "value": "1966"
+        },
+        {
+          "count": 30889,
+          "value": "1900"
+        },
+        {
+          "count": 199,
+          "value": "1965"
+        },
+        {
+          "count": 214,
+          "value": "1964"
+        },
+        {
+          "count": 138,
+          "value": "1963"
+        },
+        {
+          "count": 189,
+          "value": "1962"
+        },
+        {
+          "count": 174,
+          "value": "1961"
+        },
+        {
+          "count": 156,
+          "value": "1960"
+        },
+        {
+          "count": 77,
+          "value": "1800"
+        },
+        {
+          "count": 2,
+          "value": "1700"
+        },
+        {
+          "count": 1,
+          "value": "1600"
+        },
+        {
+          "count": 454,
+          "value": "2018"
+        },
+        {
+          "count": 803,
+          "value": "2017"
+        },
+        {
+          "count": 854,
+          "value": "2016"
+        },
+        {
+          "count": 994,
+          "value": "2015"
+        },
+        {
+          "count": 1,
+          "value": "1500"
+        },
+        {
+          "count": 1079,
+          "value": "2014"
+        },
+        {
+          "count": 945,
+          "value": "2013"
+        },
+        {
+          "count": 1084,
+          "value": "2012"
+        },
+        {
+          "count": 133,
+          "value": "1959"
+        },
+        {
+          "count": 1113,
+          "value": "2011"
+        },
+        {
+          "count": 169,
+          "value": "1958"
+        },
+        {
+          "count": 1277,
+          "value": "2010"
+        },
+        {
+          "count": 147,
+          "value": "1957"
+        },
+        {
+          "count": 156,
+          "value": "1956"
+        },
+        {
+          "count": 143,
+          "value": "1955"
+        },
+        {
+          "count": 118,
+          "value": "1954"
+        },
+        {
+          "count": 149,
+          "value": "1953"
+        },
+        {
+          "count": 120,
+          "value": "1952"
+        },
+        {
+          "count": 131,
+          "value": "1951"
+        },
+        {
+          "count": 989,
+          "value": "1950"
+        },
+        {
+          "count": 1238,
+          "value": "2009"
+        },
+        {
+          "count": 1209,
+          "value": "2008"
+        },
+        {
+          "count": 1217,
+          "value": "2007"
+        },
+        {
+          "count": 1348,
+          "value": "2006"
+        },
+        {
+          "count": 1641,
+          "value": "2005"
+        },
+        {
+          "count": 1560,
+          "value": "2004"
+        },
+        {
+          "count": 1135,
+          "value": "2003"
+        },
+        {
+          "count": 1000,
+          "value": "2002"
+        },
+        {
+          "count": 949,
+          "value": "2001"
+        },
+        {
+          "count": 1145,
+          "value": "2000"
+        },
+        {
+          "count": 1075,
+          "value": "1940"
+        },
+        {
+          "count": 868,
+          "value": "1999"
+        },
+        {
+          "count": 873,
+          "value": "1998"
+        },
+        {
+          "count": 760,
+          "value": "1997"
+        },
+        {
+          "count": 731,
+          "value": "1996"
+        },
+        {
+          "count": 1404,
+          "value": "1930"
+        },
+        {
+          "count": 647,
+          "value": "1995"
+        },
+        {
+          "count": 604,
+          "value": "1994"
+        },
+        {
+          "count": 571,
+          "value": "1993"
+        },
+        {
+          "count": 463,
+          "value": "1992"
+        },
+        {
+          "count": 427,
+          "value": "1991"
+        },
+        {
+          "count": 429,
+          "value": "1990"
+        }
+      ],
+      "name": "creationdate"
+    },
+    {
+      "values": [
+        {
+          "count": 2481,
+          "value": "open_access"
+        },
+        {
+          "count": 12429,
+          "value": "peer_reviewed"
+        },
+        {
+          "count": 63456,
+          "value": "online_resources"
+        },
+        {
+          "count": 45,
+          "value": "available"
+        }
+      ],
+      "name": "tlevel"
+    },
+    {
+      "values": [
+        {
+          "count": 18,
+          "value": "30 days back"
+        },
+        {
+          "count": 8,
+          "value": "07 days back"
+        },
+        {
+          "count": 351,
+          "value": "90 days back"
+        }
+      ],
+      "name": "newrecords"
+    },
+    {
+      "values": [
+        {
+          "count": 42526,
+          "value": "articles"
+        },
+        {
+          "count": 3,
+          "value": "microform"
+        },
+        {
+          "count": 6,
+          "value": "websites"
+        },
+        {
+          "count": 189,
+          "value": "conference_proceedings"
+        },
+        {
+          "count": 23,
+          "value": "reference_entrys"
+        },
+        {
+          "count": 1,
+          "value": "research_datasets"
+        },
+        {
+          "count": 16437,
+          "value": "dissertations"
+        },
+        {
+          "count": 36,
+          "value": "audio_video"
+        },
+        {
+          "count": 2564,
+          "value": "books"
+        },
+        {
+          "count": 1,
+          "value": "government_documents"
+        },
+        {
+          "count": 10514,
+          "value": "newspaper_articles"
+        },
+        {
+          "count": 1,
+          "value": "images"
+        },
+        {
+          "count": 1,
+          "value": "cd"
+        },
+        {
+          "count": 1,
+          "value": "streaming_audio"
+        },
+        {
+          "count": 1,
+          "value": "scores"
+        },
+        {
+          "count": 2,
+          "value": "journals"
+        },
+        {
+          "count": 5457,
+          "value": "reviews"
+        },
+        {
+          "count": 36,
+          "value": "electronic"
+        },
+        {
+          "count": 2,
+          "value": "audio"
+        }
+      ],
+      "name": "pfilter"
+    },
+    {
+      "values": [
+        {
+          "count": 11,
+          "value": "Q - Science."
+        },
+        {
+          "count": 16,
+          "value": "N - Fine arts."
+        },
+        {
+          "count": 7,
+          "value": "K - Law."
+        },
+        {
+          "count": 6,
+          "value": "L - Education."
+        },
+        {
+          "count": 3,
+          "value": "S - Agriculture."
+        },
+        {
+          "count": 6,
+          "value": "J - Political science."
+        },
+        {
+          "count": 313,
+          "value": "B - Philosophy. Psychology. Religion"
+        },
+        {
+          "count": 2,
+          "value": "U - Military science."
+        },
+        {
+          "count": 11,
+          "value": "R - Medicine."
+        },
+        {
+          "count": 20,
+          "value": "M - Music."
+        },
+        {
+          "count": 11,
+          "value": "C - Auxiliary sciences of history"
+        },
+        {
+          "count": 24,
+          "value": "H - Social sciences."
+        },
+        {
+          "count": 83,
+          "value": "D - History (general) and history of europe."
+        },
+        {
+          "count": 38,
+          "value": "E - History: America"
+        },
+        {
+          "count": 1077,
+          "value": "P - Language and literature."
+        }
+      ],
+      "name": "lcc"
+    },
+    {
+      "values": [
+        {
+          "count": 42185,
+          "value": "articles"
+        },
+        {
+          "count": 3,
+          "value": "microform"
+        },
+        {
+          "count": 21,
+          "value": "book_chapters"
+        },
+        {
+          "count": 6,
+          "value": "websites"
+        },
+        {
+          "count": 100,
+          "value": "conference_proceedings"
+        },
+        {
+          "count": 23,
+          "value": "reference_entrys"
+        },
+        {
+          "count": 16,
+          "value": "other"
+        },
+        {
+          "count": 1,
+          "value": "research_datasets"
+        },
+        {
+          "count": 190,
+          "value": "text_resources"
+        },
+        {
+          "count": 34,
+          "value": "media"
+        },
+        {
+          "count": 16437,
+          "value": "dissertations"
+        },
+        {
+          "count": 2537,
+          "value": "books"
+        },
+        {
+          "count": 1,
+          "value": "government_documents"
+        },
+        {
+          "count": 10358,
+          "value": "newspaper_articles"
+        },
+        {
+          "count": 1,
+          "value": "images"
+        },
+        {
+          "count": 1,
+          "value": "cd"
+        },
+        {
+          "count": 1,
+          "value": "streaming_audio"
+        },
+        {
+          "count": 1,
+          "value": "scores"
+        },
+        {
+          "count": 45,
+          "value": "ebook"
+        },
+        {
+          "count": 2,
+          "value": "journals"
+        },
+        {
+          "count": 5061,
+          "value": "reviews"
+        },
+        {
+          "count": 2,
+          "value": "audio"
+        }
+      ],
+      "name": "rtype"
+    },
+    {
+      "values": [
+        {
+          "count": 4,
+          "value": "HCC"
+        },
+        {
+          "count": 3,
+          "value": "NDLAW"
+        },
+        {
+          "count": 2,
+          "value": "ANNEX"
+        },
+        {
+          "count": 1,
+          "value": "Institute for Latino Studies, 204 McKenna Hall"
+        },
+        {
+          "count": 3,
+          "value": "MUSIC"
+        },
+        {
+          "count": 52,
+          "value": "HESB"
+        }
+      ],
+      "name": "library"
+    },
+    {
+      "values": [
+        {
+          "count": 527,
+          "value": "ERIC (U.S. Dept. of Education)"
+        },
+        {
+          "count": 6425,
+          "value": "OneFile (GALE)"
+        },
+        {
+          "count": 5684,
+          "value": "Scopus (Elsevier)"
+        },
+        {
+          "count": 446,
+          "value": "ProQuest Historical Newspapers: Times of India"
+        },
+        {
+          "count": 2107,
+          "value": "JSTOR Current Journals"
+        },
+        {
+          "count": 2150,
+          "value": "ABI/INFORM Global"
+        },
+        {
+          "count": 870,
+          "value": "ABI/INFORM Trade & Industry"
+        },
+        {
+          "count": 907,
+          "value": "MEDLINE/PubMed (NLM)"
+        },
+        {
+          "count": 659,
+          "value": "Ethnic NewsWatch"
+        },
+        {
+          "count": 6346,
+          "value": "Periodicals Index Online"
+        },
+        {
+          "count": 16404,
+          "value": "ProQuest Dissertations & Theses Full Text"
+        },
+        {
+          "count": 2678,
+          "value": "JSTOR Archival Journals"
+        },
+        {
+          "count": 1252,
+          "value": "ProQuest Education Journals"
+        },
+        {
+          "count": 1305,
+          "value": "ProQuest Historical Newspapers: New York Times (1851-2011)"
+        },
+        {
+          "count": 561,
+          "value": "Science Citation Index Expanded (Web of Science)"
+        },
+        {
+          "count": 1497,
+          "value": "Social Sciences Citation Index (Web of Science)"
+        },
+        {
+          "count": 381,
+          "value": "Alt-PressWatch"
+        },
+        {
+          "count": 1308,
+          "value": "Arts & Humanities Citation Index (Web of Science)"
+        },
+        {
+          "count": 22331,
+          "value": "American Periodicals"
+        },
+        {
+          "count": 10540,
+          "value": "British Periodicals"
+        }
+      ],
+      "name": "domain"
+    },
+    {
+      "values": [
+        {
+          "count": 8,
+          "value": "Self (Philosophy)"
+        },
+        {
+          "count": 4596,
+          "value": "Philosophy, Religion and Theology"
+        },
+        {
+          "count": 53,
+          "value": "Soul"
+        },
+        {
+          "count": 85,
+          "value": "Conduct of life"
+        },
+        {
+          "count": 157,
+          "value": "Self Concept"
+        },
+        {
+          "count": 21,
+          "value": "Classical literature"
+        },
+        {
+          "count": 100,
+          "value": "Shakespeare, William, 1564-1616"
+        },
+        {
+          "count": 3,
+          "value": "Identity (Psychology)"
+        },
+        {
+          "count": 469,
+          "value": "Medicine"
+        },
+        {
+          "count": 205,
+          "value": "Physicians"
+        },
+        {
+          "count": 2785,
+          "value": "Philosophy"
+        },
+        {
+          "count": 319,
+          "value": "Women"
+        },
+        {
+          "count": 61,
+          "value": "Virtue"
+        },
+        {
+          "count": 6,
+          "value": "Self-knowledge, Theory of"
+        },
+        {
+          "count": 15,
+          "value": "Christian ethics"
+        },
+        {
+          "count": 684,
+          "value": "Ethics"
+        },
+        {
+          "count": 145,
+          "value": "Managerial Skills"
+        },
+        {
+          "count": 16,
+          "value": "Customer relations"
+        },
+        {
+          "count": 203,
+          "value": "Guidelines"
+        },
+        {
+          "count": 535,
+          "value": "Us"
+        },
+        {
+          "count": 535,
+          "value": "Spirituality"
+        },
+        {
+          "count": 177,
+          "value": "Biology"
+        },
+        {
+          "count": 2,
+          "value": "Self-knowledge in literature"
+        },
+        {
+          "count": 8,
+          "value": "Phrenology"
+        },
+        {
+          "count": 5,
+          "value": "New Thought"
+        },
+        {
+          "count": 4,
+          "value": "God (Christianity)"
+        },
+        {
+          "count": 164,
+          "value": "books"
+        },
+        {
+          "count": 3799,
+          "value": "Education"
+        },
+        {
+          "count": 566,
+          "value": "Higher Education"
+        },
+        {
+          "count": 273,
+          "value": "Sociology & Social History"
+        },
+        {
+          "count": 2561,
+          "value": "Psychology"
+        },
+        {
+          "count": 3106,
+          "value": "Religion"
+        },
+        {
+          "count": 10,
+          "value": "Theological anthropology"
+        },
+        {
+          "count": 548,
+          "value": "Leadership"
+        },
+        {
+          "count": 5,
+          "value": "United States"
+        },
+        {
+          "count": 503,
+          "value": "Christian life"
+        }
+      ],
+      "name": "topic"
+    },
+    {
+      "values": [
+        {
+          "count": 6,
+          "value": "International Journal of Children's Spirituality"
+        },
+        {
+          "count": 19,
+          "value": "Notes and Queries"
+        },
+        {
+          "count": 172,
+          "value": "Washington Post (1923-1954)"
+        },
+        {
+          "count": 17,
+          "value": "Music Educators Journal"
+        },
+        {
+          "count": 33,
+          "value": "Economist"
+        },
+        {
+          "count": 12,
+          "value": "Philosophy & Social Criticism"
+        },
+        {
+          "count": 7,
+          "value": "Science"
+        },
+        {
+          "count": 10,
+          "value": "New Scientist"
+        },
+        {
+          "count": 425,
+          "value": "Times of India (1861-current)"
+        },
+        {
+          "count": 4,
+          "value": "Current Biology"
+        },
+        {
+          "count": 6,
+          "value": "Phi Delta Kappan"
+        },
+        {
+          "count": 14,
+          "value": "Psychology Today"
+        },
+        {
+          "count": 4,
+          "value": "Early Science and Medicine"
+        },
+        {
+          "count": 17,
+          "value": "Political Theory"
+        },
+        {
+          "count": 5,
+          "value": "Harvard Business Review"
+        },
+        {
+          "count": 164,
+          "value": "Phrenological Journal and Science of Health (1870-1911)"
+        },
+        {
+          "count": 11,
+          "value": "Journal of Personality and Social Psychology"
+        },
+        {
+          "count": 6,
+          "value": "Academy of Management Proceedings"
+        },
+        {
+          "count": 744,
+          "value": "New York Times (1923-Current file)"
+        },
+        {
+          "count": 8,
+          "value": "Nature"
+        }
+      ],
+      "name": "jtitle"
+    },
+    {
+      "values": [
+        {
+          "count": 3,
+          "value": "lit"
+        },
+        {
+          "count": 3,
+          "value": "hun"
+        },
+        {
+          "count": 48,
+          "value": "und"
+        },
+        {
+          "count": 92,
+          "value": "fre"
+        },
+        {
+          "count": 75601,
+          "value": "eng"
+        },
+        {
+          "count": 1,
+          "value": "cze"
+        },
+        {
+          "count": 2,
+          "value": "lim"
+        },
+        {
+          "count": 1,
+          "value": "nor"
+        },
+        {
+          "count": 1,
+          "value": "ben"
+        },
+        {
+          "count": 10,
+          "value": "por"
+        },
+        {
+          "count": 1,
+          "value": "ara"
+        },
+        {
+          "count": 6,
+          "value": "jpn"
+        },
+        {
+          "count": 6,
+          "value": "rus"
+        },
+        {
+          "count": 5,
+          "value": "pol"
+        },
+        {
+          "count": 24,
+          "value": "ita"
+        },
+        {
+          "count": 2,
+          "value": "kor"
+        },
+        {
+          "count": 3,
+          "value": "tur"
+        },
+        {
+          "count": 3,
+          "value": "gre"
+        },
+        {
+          "count": 17,
+          "value": "dut"
+        },
+        {
+          "count": 1,
+          "value": "grc"
+        },
+        {
+          "count": 50,
+          "value": "spa"
+        },
+        {
+          "count": 2,
+          "value": "may"
+        },
+        {
+          "count": 1,
+          "value": "heb"
+        },
+        {
+          "count": 3,
+          "value": "fin"
+        },
+        {
+          "count": 103,
+          "value": "ger"
+        },
+        {
+          "count": 11,
+          "value": "chi"
+        },
+        {
+          "count": 6,
+          "value": "swe"
+        }
+      ],
+      "name": "lang"
+    },
+    {
+      "values": [
+        {
+          "count": 1,
+          "value": "Early American imprints. Second series"
+        },
+        {
+          "count": 1,
+          "value": "Modern spiritual masters series"
+        },
+        {
+          "count": 1,
+          "value": "Jossey-Bass business & management series"
+        },
+        {
+          "count": 1,
+          "value": "Bell, C. Cousin Kate's library"
+        },
+        {
+          "count": 1,
+          "value": "American Academy of Religion academy series"
+        },
+        {
+          "count": 2,
+          "value": "History of women"
+        },
+        {
+          "count": 1,
+          "value": "University of Texas bulletin"
+        },
+        {
+          "count": 2,
+          "value": "Blackwell philosophy and popculture series"
+        },
+        {
+          "count": 1,
+          "value": "Contemporary Christian thought series"
+        },
+        {
+          "count": 1,
+          "value": "Library of philosophy"
+        },
+        {
+          "count": 1,
+          "value": "Oxford philosophical concepts"
+        },
+        {
+          "count": 4,
+          "value": "Know thyself series"
+        },
+        {
+          "count": 1,
+          "value": "Chicago studies in practices of meaning"
+        },
+        {
+          "count": 1,
+          "value": "Princeton Studies in International History and Politics Ser"
+        },
+        {
+          "count": 1,
+          "value": "Law and public policy"
+        },
+        {
+          "count": 2,
+          "value": "Popular culture and philosophy"
+        },
+        {
+          "count": 1,
+          "value": "A Wall Street journal book"
+        },
+        {
+          "count": 1,
+          "value": "Ancient philosophy"
+        },
+        {
+          "count": 1,
+          "value": "Early English books, 1641-1700"
+        },
+        {
+          "count": 1,
+          "value": "The Blackwell philosophy and popculture series"
+        }
+      ],
+      "name": "local3"
+    },
+    {
+      "values": [
+        {
+          "count": 2,
+          "value": "Poems."
+        },
+        {
+          "count": 1,
+          "value": "Tutti pazzi per Gödel!"
+        },
+        {
+          "count": 1,
+          "value": "Oxford scholarship online."
+        },
+        {
+          "count": 1,
+          "value": "Selections."
+        },
+        {
+          "count": 1,
+          "value": "American pamphlets. Series 1, 1820-1922."
+        },
+        {
+          "count": 2,
+          "value": "Eighteenth century collections online."
+        },
+        {
+          "count": 1,
+          "value": "Joint Publications Research Service (JPRS)"
+        },
+        {
+          "count": 1,
+          "value": "Momentum Press."
+        },
+        {
+          "count": 5,
+          "value": "Nineteenth Century collections online."
+        },
+        {
+          "count": 8,
+          "value": "ProQuest ebook central."
+        },
+        {
+          "count": 1,
+          "value": "University press scholarship online."
+        },
+        {
+          "count": 1,
+          "value": "ATLA historical monographs collection. Series 2, 1894-1922."
+        },
+        {
+          "count": 2,
+          "value": "Wiley eBooks 2018."
+        },
+        {
+          "count": 1,
+          "value": "American song."
+        },
+        {
+          "count": 1,
+          "value": "Wiley eBooks 2016."
+        },
+        {
+          "count": 2,
+          "value": "American broadsides and ephemera. Series 1."
+        },
+        {
+          "count": 1,
+          "value": "Purānas. Bhāgavatapurāna."
+        },
+        {
+          "count": 1,
+          "value": "Contentes of thys boke."
+        },
+        {
+          "count": 1,
+          "value": "Wall Street journal."
+        },
+        {
+          "count": 2,
+          "value": "Early English books online."
+        }
+      ],
+      "name": "local4"
+    }
+  ],
+  "beaconO22": "54"
+}

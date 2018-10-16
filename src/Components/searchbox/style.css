@@ -1,0 +1,33 @@
+#Search{
+  border: 2px solid #eee;
+}
+
+#SearchComponent {
+  width:600px
+}
+
+#Searchbar {
+    width:500;
+    height:40;
+    border: none;
+    font: 16px helvetica;
+    vertical-align: top
+}
+
+#AdvancedSearch {
+  text-align: right;
+}
+
+#AdvancedSearch a {
+  text-decoration: none;
+  color: #000;
+}
+
+#SearchIMG {
+  width: 30px;
+  height: 30px
+}
+
+#SearchSubmit {
+  border:none
+}
