@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import './style.css';
+
+import './style.css'
+import searchImage from './search.png'
 
 import { submitSearch } from '../../Store/actions/searchActions'
 
@@ -10,7 +12,7 @@ export const SearchComponent = ({ dispatch }) => {
   return (
     <form id="SearchComponent" onSubmit={ e => { formSearchSubmit(e, input, dispatch) }} >
       <div id="Search">
-        <button id="SearchSubmit" type="submit"><img  id="SearchIMG" src="src/searchbox/search.png" alt="Search" value="submit"/></button>
+        <button id="SearchSubmit" type="submit"><img  id="SearchIMG" src={ searchImage } alt="Search" value="submit"/></button>
         <input ref={node => input = node} type="text" id="Searchbar" placeholder="Search the Collection" />
       </div>
 
