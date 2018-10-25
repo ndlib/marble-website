@@ -1,5 +1,9 @@
 import { Component } from 'react'
+<<<<<<< HEAD:src/Components/Shared/ErrorBoundary/index.js
 import { PropTypes } from 'prop-types'
+=======
+import PropTypes from 'prop-types'
+>>>>>>> UI showing first page of results in place:src/Components/ErrorBoundary/index.js
 
 class ErrorBoundary extends Component {
   static get propTypes () {

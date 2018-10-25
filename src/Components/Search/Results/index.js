@@ -12,7 +12,11 @@ export const Results = ({ searchResults }) => {
       <ErrorBoundary>
         <div className='container' key={doc['@id']}>
           <div id='entry'>
+<<<<<<< HEAD:src/Components/Search/Results/index.js
             <span>{index + 1}</span>
+=======
+            <span> { index + 1 } </span>
+>>>>>>> UI showing first page of results in place:src/Components/results/index.js
             <div id='title'>{doc.title}</div>
             <div className='label'>Creator:<span id='author'>{doc.creator}</span></div>
             <div className='label'>Format:<span id='type'>{doc.type}</span></div>
@@ -47,7 +51,11 @@ const mapValidResults = (searchResults, rowDisplayFunction) => {
   })
 }
 
+<<<<<<< HEAD:src/Components/Search/Results/index.js
 Results.propTypes = {
+=======
+ResultsComponent.propTypes = {
+>>>>>>> UI showing first page of results in place:src/Components/results/index.js
   searchResults: PropTypes.array.isRequired,
 }
 

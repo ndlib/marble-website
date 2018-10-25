@@ -1,0 +1,43 @@
+.MenuBar{
+  background-color : #000000;
+  font-family : serif;
+  font-weight : bold;
+  font-size : 24px;
+  padding-left : 200px;
+  color : #ffffff;
+  display : flex;
+}
+
+.Menu{
+  text-align : center;
+  margin-left: auto;
+  margin-right: auto;
+  display : inherit;
+  padding : 16px;
+}
+
+.Menu a{
+  text-decoration: none;
+  color : #ffffff;
+  font-size : 20px;
+  font-family: Geneva;
+  padding: 16px;
+}
+
+.Menu a:hover{
+  color : #aaaaaa;
+}
+
+.LoginButton {
+  display : inherit;
+  margin-left : auto;
+  text-align : right;
+  padding : 20px;
+}
+
+.LoginButton button{
+  font-size : 20px;
+  padding : 10px;
+  height : 40px;
+
+}
