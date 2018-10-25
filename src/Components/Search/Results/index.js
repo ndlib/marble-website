@@ -24,7 +24,8 @@ export const Results = ({ searchResults }) => {
 }
 
 const mapStateToProps = (state) => {
-  return { searchResults: (state.searchReducer.results && state.searchReducer.results.docs) ? state.searchReducer.results.docs : [] }
+  return { searchResults: (state.searchReducer.results && state.searchReducer.results.docs)
+    ? state.searchReducer.results.docs : [] }
 }
 
 // validates if each record can be displayed.
@@ -35,12 +36,12 @@ const validateDoc = (doc, index, rowDisplayFunction) => {
   return rowDisplayFunction(doc, index)
 }
 
-// validates if the search result itself cand be mapped.
+// validates if the search result itself can be mapped.
 const mapValidResults = (searchResults, rowDisplayFunction) => {
   if (!searchResults && !searchResults.map) {
     return {}
   }
-
+  console.log(searchResults)
   return searchResults.map((doc, index) => {
     return validateDoc(doc, index, rowDisplayFunction)
   })

@@ -2,6 +2,12 @@ import { Component } from 'react'
 import { PropTypes } from 'prop-types'
 
 class ErrorBoundary extends Component {
+  static get propTypes () {
+    return {
+      children: PropTypes.any,
+    }
+  }
+
   constructor (props) {
     super(props)
     this.state = { hasCatastrophicError: false }

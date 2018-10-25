@@ -1,11 +1,12 @@
 export const SUBMIT_SEARCH = 'SUBMIT_SEARCH'
 export const RESULTS_READY = 'RESULTS_READY'
 export const CLEAR_SEARCH = 'CLEAR_SEARCH'
+export const PER_PAGE_CHANGE = 'PER_PAGE_CHANGE'
 
 const searchBaseURL = 'http://onesearch.library.nd.edu/primo_library/libweb/webservices/rest/v1/pnxs'
 let searchCriteria = '?inst=NDU&search_scope=spec_coll'
 
-export const submitSearch = (terms) => {
+export const submitSearch = (terms, numResults) => {
   return dispatch => {
     dispatch(startSearch(terms))
 
