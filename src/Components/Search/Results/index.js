@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import ErrorBoundary from '../ErrorBoundary'
+import ErrorBoundary from 'Components/ErrorBoundary'
 
 import './style.css'
 
-export const ResultsComponent = ({ searchResults }) => {
+export const Results = ({ searchResults }) => {
   return (
     mapValidResults(searchResults, (doc, index) =>
       <ErrorBoundary>
@@ -46,8 +46,8 @@ const mapValidResults = (searchResults, rowDisplayFunction) => {
   })
 }
 
-ResultsComponent.propTypes = {
+Results.propTypes = {
   searchResults: PropTypes.array.isRequired,
 }
 
-export default connect(mapStateToProps)(ResultsComponent)
+export default connect(mapStateToProps)(Results)

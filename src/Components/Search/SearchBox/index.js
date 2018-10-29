@@ -4,9 +4,9 @@ import { connect } from 'react-redux'
 import './style.css'
 import searchImage from './search.png'
 
-import { submitSearch } from '../../Store/actions/searchActions'
+import { submitSearch } from 'Store/actions/searchActions'
 
-export const SearchComponent = ({ dispatch }) => {
+export const SearchBox = ({ dispatch }) => {
   let input
 
   return (
@@ -26,7 +26,7 @@ export const SearchComponent = ({ dispatch }) => {
   )
 }
 
-export default connect()(SearchComponent)
+export default connect()(SearchBox)
 
 const formSearchSubmit = (e, input, dispatch) => {
   e.preventDefault()
