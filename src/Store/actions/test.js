@@ -12,28 +12,28 @@ describe('searchActions', () => {
   test('startSearch dispatches the correct payload', () => {
     const expected = {
       type: searchActions.SUBMIT_SEARCH,
-      terms: "terms",
+      terms: 'terms',
     }
 
-    store.dispatch(searchActions.startSearch("terms"))
+    store.dispatch(searchActions.startSearch('terms'))
     expect(store.getActions()[0]).toEqual(expected)
   })
 
   test('returnSearch dispatches the correct payload', () => {
     const expected = {
       type: searchActions.RESULTS_READY,
-      results: "results",
+      results: 'results',
     }
 
-    store.dispatch(searchActions.returnResults("results"))
+    store.dispatch(searchActions.returnResults('results'))
     expect(store.getActions()[0]).toEqual(expected)
   })
 
   test('clearSearch dispatches the correct payload', () => {
     const expected = {
       type: searchActions.CLEAR_SEARCH,
-      terms: "",
-      results: []
+      terms: '',
+      results: [],
     }
 
     store.dispatch(searchActions.clearSearch())
