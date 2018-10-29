@@ -1,4 +1,5 @@
 import React from 'react'
+import { PropTypes } from 'prop-types'
 import { withRouter } from 'react-router'
 
 const Help = (props) => {
@@ -11,4 +12,9 @@ const Help = (props) => {
   )
 }
 
+Help.propTypes = {
+  match: PropTypes.shape(
+    { params: PropTypes.object }
+  ),
+}
 export default withRouter(Help)

@@ -1,4 +1,5 @@
 import React from 'react'
+import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux'
 
 import './style.css'
@@ -26,6 +27,9 @@ export const SearchBox = ({ dispatch }) => {
   )
 }
 
+SearchBox.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+}
 export default connect()(SearchBox)
 
 const formSearchSubmit = (e, input, dispatch) => {
