@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { PropTypes } from 'prop-types'
 
 class Page extends Component {
   componentDidUpdate (prevProps) {
@@ -19,4 +20,11 @@ class Page extends Component {
   }
 }
 
+Page.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  location: PropTypes.object,
+}
 export default Page
