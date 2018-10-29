@@ -3,7 +3,7 @@ import './App.css'
 
 // redux store
 import { Provider } from 'react-redux'
-import configureStore from '../../Store/configureStore'
+import configureStore from 'Store/configureStore'
 
 //
 import SearchComponent from '../searchbox'
