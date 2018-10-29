@@ -9,17 +9,17 @@ import './style.css'
 export const ResultsComponent = ({ searchResults }) => {
   return (
     mapValidResults(searchResults, (doc, index) =>
-    <ErrorBoundary>
-      <div className="container" key={doc["@id"]}>
-        <div id="entry">
-          <span>{index+1}</span>
-          <div id="title">{doc.title}</div>
-          <div className="label">Creator:<span id="author">{doc.creator}</span></div>
-          <div className="label">Format:<span id="type">{doc.type}</span></div>
-          <div id="description">{doc.description}</div>
+      <ErrorBoundary>
+        <div className='container' key={doc['@id']}>
+          <div id='entry'>
+            <span>{index + 1}</span>
+            <div id='title'>{doc.title}</div>
+            <div className='label'>Creator:<span id='author'>{doc.creator}</span></div>
+            <div className='label'>Format:<span id='type'>{doc.type}</span></div>
+            <div id='description'>{doc.description}</div>
+          </div>
         </div>
-      </div>
-    </ErrorBoundary>)
+      </ErrorBoundary>)
   )
 }
 
@@ -45,7 +45,6 @@ const mapValidResults = (searchResults, rowDisplayFunction) => {
     return validateDoc(doc, index, rowDisplayFunction)
   })
 }
-
 
 ResultsComponent.propTypes = {
   searchResults: PropTypes.array.isRequired,

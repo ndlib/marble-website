@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
 
 // redux store
 import { Provider } from 'react-redux'
@@ -14,7 +14,7 @@ import ErrorBoundary from '../ErrorBoundary'
 const store = configureStore()
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <Provider store={store}>
         <React.Fragment>
@@ -28,4 +28,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App

@@ -4,8 +4,8 @@ import { shallow } from 'enzyme'
 import { SearchComponent } from './'
 
 test('SearchComponent Renders a form ', () => {
-  const sc = shallow(<SearchComponent /> )
-  expect(sc.find("form").exists()).toBeTruthy()
+  const sc = shallow(<SearchComponent />)
+  expect(sc.find('form').exists()).toBeTruthy()
 })
 
 test('Search Component has an input', () => {})
