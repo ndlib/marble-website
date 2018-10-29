@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import ErrorBoundary from 'Components/ErrorBoundary'
+import ErrorBoundary from 'Components/Shared/ErrorBoundary'
 
 import './style.css'
 

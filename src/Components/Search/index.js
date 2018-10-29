@@ -1,7 +1,7 @@
 import React from 'react'
 import SearchBox from './SearchBox'
 import Results from './Results'
-import ErrorBoundary from 'Components/ErrorBoundary'
+import ErrorBoundary from 'Components/Shared/ErrorBoundary'
 const Search = (props) => {
   return (
     <React.Fragment>
