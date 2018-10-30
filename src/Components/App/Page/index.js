@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { PropTypes } from 'prop-types'
 
+import { INNER_PAGE_WIDTH } from 'Configurations/styles'
+import './style.css'
 class Page extends Component {
   componentDidUpdate (prevProps) {
   // reset page to top after navigation
@@ -10,12 +12,18 @@ class Page extends Component {
   }
 
   render () {
+    console.log(INNER_PAGE_WIDTH)
     return (
-      <div>
+      <React.Fragment>
         <div>This is a header</div>
-        {this.props.children}
+        <div
+          className='mainContent'
+          style={{ width: INNER_PAGE_WIDTH || '75vw' }}
+        >
+          {this.props.children}
+        </div>
         <div> This is a footer</div>
-      </div>
+      </React.Fragment>
     )
   }
 }

@@ -1,0 +1,6 @@
+nav.sideBar {
+ display: inline-block;
+}
+nav.sideBar a {
+  display: block;
+}
