@@ -1,20 +1,19 @@
 import React from 'react'
-import { PropTypes } from 'prop-types'
-import { withRouter } from 'react-router'
 
-const Help = (props) => {
-  const { topic } = props.match.params
-  if (!topic) {
-    return (<div>Default Help Page</div>)
-  }
+import HelpText from './HelpText'
+import Sidebar from 'Components/Shared/Sidebar'
+import { topics } from 'Configurations/Help'
+
+const Help = () => {
   return (
-    <div>Help page for {topic}</div>
+    <div className='helpTopics'>
+      <Sidebar
+        title='Help'
+        items={topics}
+      />
+      <HelpText />
+    </div>
   )
 }
 
-Help.propTypes = {
-  match: PropTypes.shape(
-    { params: PropTypes.object }
-  ),
-}
-export default withRouter(Help)
+export default Help
