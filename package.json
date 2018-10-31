@@ -41,11 +41,7 @@
     "eslint-plugin-flowtype": "2.50.1",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
-<<<<<<< HEAD
     "eslint-plugin-node": "^8.0.0",
-=======
-    "eslint-plugin-node": "^7.0.1",
->>>>>>> UI showing first page of results in place
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "7.11.1",
     "eslint-plugin-standard": "^4.0.0",

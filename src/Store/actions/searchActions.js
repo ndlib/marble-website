@@ -9,17 +9,12 @@ let searchCriteria = '?inst=NDU&search_scope=spec_coll'
 export const submitSearch = (terms, numResults) => {
   return dispatch => {
     dispatch(startSearch(terms))
-<<<<<<< HEAD
 
-    let searchterm = '&q=any,contains,' + terms
-    let perpage = '&limit=10'
-=======
     let searchterm = '&q=any,contains,' + terms
     if (!numResults) {
       numResults = '10'
     }
     let perpage = '&limit=' + numResults
->>>>>>> UI showing first page of results in place
     let url = encodeURI(searchBaseURL + searchCriteria + searchterm + perpage)
 
     return fetch(
@@ -61,8 +56,6 @@ export const clearSearch = () => {
     type: CLEAR_SEARCH,
     terms: '',
     results: [],
-<<<<<<< HEAD
-=======
   }
 }
 
@@ -70,6 +63,5 @@ export const formChangePerPage = (perpage) => {
   return {
     type: PER_PAGE_CHANGE,
     resultspp: perpage,
->>>>>>> UI showing first page of results in place
   }
 }

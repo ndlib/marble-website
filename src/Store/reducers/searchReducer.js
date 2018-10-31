@@ -2,6 +2,7 @@ import {
   SUBMIT_SEARCH,
   RESULTS_READY,
   CLEAR_SEARCH,
+  PER_PAGE_CHANGE,
 } from '../actions/searchActions'
 
 export default(state = {}, action) => {
