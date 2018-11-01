@@ -2,6 +2,7 @@ import {
   SUBMIT_SEARCH,
   RESULTS_READY,
   CLEAR_SEARCH,
+  PER_PAGE_CHANGE,
 } from '../actions/searchActions'
 
 export default(state = {}, action) => {
@@ -26,6 +27,15 @@ export default(state = {}, action) => {
         searching: false,
         results: [],
       }
+    case PER_PAGE_CHANGE:
+      return {
+        ...state,
+        terms: [],
+        searching: true,
+        results: [],
+        perpage: action.perpage,
+      }
+
     default:
       return state
   }

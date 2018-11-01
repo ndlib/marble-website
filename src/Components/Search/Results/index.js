@@ -10,12 +10,15 @@ export const Results = ({ searchResults }) => {
   return (
     mapValidResults(searchResults, (doc, index) =>
       <ErrorBoundary>
-        <div className='container' key={doc['@id']}>
+        <div className='container' key={doc.id}>
           <div id='entry'>
-            <span>{index + 1}</span>
+            <span>{ index + 1 }</span>
             <div id='title'>{doc.title}</div>
+            <div className='label'>Owner:<span id='owner'>Special Collections</span></div>
             <div className='label'>Creator:<span id='author'>{doc.creator}</span></div>
-            <div className='label'>Format:<span id='type'>{doc.type}</span></div>
+            <div className='label'>Date:<span id='date'>{doc.date}</span></div>
+            <div className='label'>Format:<span id='type'>{doc['@TYPE']}</span></div>
+            <div className='label'>Collection:<span id='owner'>{doc.collection}</span></div>
             <div id='description'>{doc.description}</div>
           </div>
         </div>
@@ -24,7 +27,8 @@ export const Results = ({ searchResults }) => {
 }
 
 const mapStateToProps = (state) => {
-  return { searchResults: (state.searchReducer.results && state.searchReducer.results.docs) ? state.searchReducer.results.docs : [] }
+  return { searchResults: (state.searchReducer.results && state.searchReducer.results.docs)
+    ? state.searchReducer.results.docs : [] }
 }
 
 // validates if each record can be displayed.
@@ -35,12 +39,11 @@ const validateDoc = (doc, index, rowDisplayFunction) => {
   return rowDisplayFunction(doc, index)
 }
 
-// validates if the search result itself cand be mapped.
+// validates if the search result itself can be mapped.
 const mapValidResults = (searchResults, rowDisplayFunction) => {
   if (!searchResults && !searchResults.map) {
     return {}
   }
-
   return searchResults.map((doc, index) => {
     return validateDoc(doc, index, rowDisplayFunction)
   })

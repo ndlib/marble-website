@@ -1,9 +1,13 @@
 #Search{
   border: 2px solid #eee;
+
 }
 
 #SearchComponent {
-  width:600px
+  width:600px;
+  padding: 12px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #Searchbar {
@@ -25,7 +29,8 @@
 
 #SearchIMG {
   width: 30px;
-  height: 30px
+  height: 30px;
+  padding: 4px;
 }
 
 #SearchSubmit {

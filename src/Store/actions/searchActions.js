@@ -1,16 +1,20 @@
 export const SUBMIT_SEARCH = 'SUBMIT_SEARCH'
 export const RESULTS_READY = 'RESULTS_READY'
 export const CLEAR_SEARCH = 'CLEAR_SEARCH'
+export const PER_PAGE_CHANGE = 'PER_PAGE_CHANGE'
 
-const searchBaseURL = 'http://onesearch.library.nd.edu/primo_library/libweb/webservices/rest/v1/pnxs'
+const searchBaseURL = 'https://a1fc3ld3d7.execute-api.us-east-1.amazonaws.com/dev/primo/v1/pnxs'
 let searchCriteria = '?inst=NDU&search_scope=spec_coll'
 
-export const submitSearch = (terms) => {
+export const submitSearch = (terms, numResults) => {
   return dispatch => {
     dispatch(startSearch(terms))
 
     let searchterm = '&q=any,contains,' + terms
-    let perpage = '&limit=10'
+    if (!numResults) {
+      numResults = '10'
+    }
+    let perpage = '&limit=' + numResults
     let url = encodeURI(searchBaseURL + searchCriteria + searchterm + perpage)
 
     return fetch(
@@ -52,5 +56,12 @@ export const clearSearch = () => {
     type: CLEAR_SEARCH,
     terms: '',
     results: [],
+  }
+}
+
+export const formChangePerPage = (perpage) => {
+  return {
+    type: PER_PAGE_CHANGE,
+    resultspp: perpage,
   }
 }
