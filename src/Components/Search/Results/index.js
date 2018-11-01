@@ -6,7 +6,7 @@ import ErrorBoundary from 'Components/Shared/ErrorBoundary'
 
 import './style.css'
 
-export const ResultsComponent = ({ searchResults }) => {
+export const Results = ({ searchResults }) => {
   return (
     mapValidResults(searchResults, (doc, index) =>
       <ErrorBoundary>
@@ -44,14 +44,13 @@ const mapValidResults = (searchResults, rowDisplayFunction) => {
   if (!searchResults && !searchResults.map) {
     return {}
   }
-  console.log(searchResults)
   return searchResults.map((doc, index) => {
     return validateDoc(doc, index, rowDisplayFunction)
   })
 }
 
-ResultsComponent.propTypes = {
+Results.propTypes = {
   searchResults: PropTypes.array.isRequired,
 }
 
-export default connect(mapStateToProps)(ResultsComponent)
+export default connect(mapStateToProps)(Results)

@@ -3,26 +3,31 @@ import { PropTypes } from 'prop-types'
 
 import { INNER_PAGE_WIDTH } from 'Configurations/styles'
 import './style.css'
+
+import Header from './Header'
+import NavBar from './NavBar'
+import Footer from './Footer'
+
 class Page extends Component {
   componentDidUpdate (prevProps) {
   // reset page to top after navigation
-    if (this.props.location !== prevProps.loction) {
+    if (this.props.location !== prevProps.location) {
       window.scrollTo(0, 0)
     }
   }
 
   render () {
-    console.log(INNER_PAGE_WIDTH)
     return (
       <React.Fragment>
-        <div>This is a header</div>
+        <Header />
+        <NavBar />
         <div
           className='mainContent'
           style={{ width: INNER_PAGE_WIDTH || '75vw' }}
         >
           {this.props.children}
         </div>
-        <div> This is a footer</div>
+        <Footer />
       </React.Fragment>
     )
   }
