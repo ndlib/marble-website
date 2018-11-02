@@ -1,8 +1,8 @@
 .hamburger {
   position: relative;
-
 }
-.hamburger img {
+
+.hamburger svg {
   display: none;
 }
 
@@ -12,8 +12,10 @@
     width: 100%;
   }
 
-  .hamburger img {
+  .hamburger svg {
+    cursor: pointer;
     display: inline-block;
+    fill: var(--navigation-text-color);
     padding: 16px;
   }
 
