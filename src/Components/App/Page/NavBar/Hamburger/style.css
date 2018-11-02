@@ -1,0 +1,37 @@
+.hamburger {
+  position: relative;
+
+}
+.hamburger img {
+  display: none;
+}
+
+@media (max-width: 780px){
+  .hamburger {
+    text-align: right;
+    width: 100%;
+  }
+
+  .hamburger img {
+    display: inline-block;
+    padding: 16px;
+  }
+
+  .hamburger.open nav{
+    background-color: var(--navigation-main-color);
+    display: block;
+    left: 0;
+    position: fixed;
+    text-align: left;
+    width: 100%
+  }
+  
+  .hamburger.open nav a {
+    display: block;
+    padding: 20px 40px;
+  }
+
+  .hamburger.closed nav{
+    display: none;
+  }
+}
