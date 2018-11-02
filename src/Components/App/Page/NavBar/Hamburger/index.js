@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import hamburgerIcon from './baseline-menu-24px.svg'
 import NavigationLinks from './NavigationLinks'
 import './style.css'
