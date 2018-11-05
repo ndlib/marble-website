@@ -18,7 +18,6 @@ export const SearchBox = ({ dispatch }) => {
         <button id='SearchSubmit' type='submit'><img id='SearchIMG' src={searchImage} alt='Search' value='submit' /></button>
         <input ref={node => (input = node)} type='text' id='Searchbar' placeholder='Search the Collection' />
       </div>
-
       <div id='AdvancedSearch'>
         <a href='*'>Advanced Search</a>
       </div>
