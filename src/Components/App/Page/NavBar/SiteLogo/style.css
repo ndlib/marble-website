@@ -1,0 +1,5 @@
+img.siteLogo {
+  height: var(--site-logo-height);
+  margin: 10px 0;
+  width: var(--site-logo-width);
+}
