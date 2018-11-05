@@ -30,9 +30,6 @@ export default(state = {}, action) => {
     case PER_PAGE_CHANGE:
       return {
         ...state,
-        terms: [],
-        searching: true,
-        results: [],
         perpage: action.perpage,
       }
 

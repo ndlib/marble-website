@@ -22,7 +22,6 @@ export const SearchBox = ({ dispatch }) => {
       <div id='AdvancedSearch'>
         <a href='*'>Advanced Search</a>
       </div>
-
     </form>
   )
 }
