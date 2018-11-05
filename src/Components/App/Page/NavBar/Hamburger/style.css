@@ -22,10 +22,10 @@
   .hamburger.open nav{
     background-color: var(--navigation-main-color);
     display: block;
-    left: 0;
-    position: fixed;
+    left: calc( 0px - var(--site-logo-width) - 80px);
+    position: absolute;
     text-align: left;
-    width: 100%
+    width: 100vw;
   }
 
   .hamburger.open nav a {

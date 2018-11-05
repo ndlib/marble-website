@@ -11,10 +11,12 @@ export const INSTITUTION_LOGO = institutionLogoImage
 export const INSTITUTION_LOGO_ALT_TEXT = 'University of Notre Dame'
 export const INSTITUTION_LOGO_WIDTH = 'auto'
 export const INSTITUTION_LOGO_HEIGHT = '50px'
+
+// If switching logo to a new image don't forget to modify the
+// dimensions for --site-logo-width and --site-logo-height in
+// customizations.css
 export const SITE_LOGO = siteLogoImage
 export const SITE_LOGO_ALT_TEXT = 'Digital Repository Collection'
-export const SITE_LOGO_WIDTH = 'auto'
-export const SITE_LOGO_HEIGHT = '50px'
 
 // Links
 export const INSTITUTION_HOME_PAGE = 'https://nd.edu'
