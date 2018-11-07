@@ -1,4 +1,11 @@
 .mainSide {
   display: inline-block;
   vertical-align: top;
+  width: calc(100% - var(--sidebar-width));
+}
+
+@media (max-width: 780px) {
+  .mainSide {
+    width: 100%;
+  }
 }

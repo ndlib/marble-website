@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { PropTypes } from 'prop-types'
 
-import { INNER_PAGE_WIDTH } from 'Configurations/styles'
 import './style.css'
 
 import Header from './Header'
@@ -18,17 +17,14 @@ class Page extends Component {
 
   render () {
     return (
-      <React.Fragment>
+      <div>
         <Header />
         <NavBar />
-        <div
-          className='mainContent'
-          style={{ width: INNER_PAGE_WIDTH || '75vw' }}
-        >
+        <div className='mainContent'>
           {this.props.children}
         </div>
         <Footer />
-      </React.Fragment>
+      </div>
     )
   }
 }

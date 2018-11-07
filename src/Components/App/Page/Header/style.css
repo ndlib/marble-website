@@ -1,13 +1,23 @@
-.Header{
-  background-color : #0A233F;
-  font-family : Baskerville, Garamond, serif;
-  font-size : 16px;
-  text-decoration: none;
-  text-indent : 200px;
-  padding : 1px;
-  color : #ffffff;
-  letter-spacing : 5px;
+.header {
+  background-color: var(--institution-main-color);
 }
- .Header p{
+.header a {
+  margin: 0 40px;
   text-decoration: none;
+}
+
+.headerInner {
+  width: 100%;
+}
+@media (max-width: 780px) {
+  .header {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1280px) {
+  .headerInner {
+    margin: 0 auto;
+    width: 1280px;
+  }
 }
