@@ -8,6 +8,7 @@ import configureStore from 'Store/configureStore'
 
 import Page from './Page'
 import Home from 'Components/Home'
+import About from 'Components/About'
 import Help from 'Components/Help'
 import Search from 'Components/Search'
 import NotFound from 'Components/Shared/NotFound'
@@ -26,6 +27,7 @@ class App extends Component {
           <Page>
             <Switch>
               <Route exact path='/' component={Home} />
+              <Route exact path='/about' component={About} />
               <Route exact path='/help/:topic?' component={Help} />
               <Route exact path='/search' component={Search} />
               <Route component={NotFound} />

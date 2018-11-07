@@ -27,7 +27,7 @@ const HelpText = ({ match }) => {
       </MainSide>
     )
   } catch (e) {
-    console.warn('Help topic not found.', e)
+    console.error('Help topic not found.', e)
     return (
       <div className='mainHelpContent'>The selected help content could not be found.</div>
     )

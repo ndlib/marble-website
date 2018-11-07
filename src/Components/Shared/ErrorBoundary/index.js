@@ -9,7 +9,7 @@ class ErrorBoundary extends Component {
 
   componentDidCatch (error, info) {
     this.setState({ hasCatastrophicError: true })
-    console.warn('Hit an error boundary: ', error, info)
+    console.error('Hit an error boundary: ', error, info)
   }
 
   // If nothing is broken return unaltered component.
