@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { Switch, Route } from 'react-router'
-import './App.css'
 
 // redux store
 import { Provider } from 'react-redux'
@@ -12,6 +11,9 @@ import Home from '../../Components/Home'
 import Help from '../../Components/Help'
 import Search from '../../Components/Search'
 import NotFound from '../../Components/Shared/NotFound'
+
+import 'Configurations/customizations.css'
+import './style.css'
 
 // create store
 const store = configureStore()

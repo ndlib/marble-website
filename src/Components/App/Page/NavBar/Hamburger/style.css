@@ -1,0 +1,39 @@
+.hamburger {
+  position: relative;
+}
+
+.hamburger svg {
+  display: none;
+}
+
+@media (max-width: 780px){
+  .hamburger {
+    text-align: right;
+    width: 100%;
+  }
+
+  .hamburger svg {
+    cursor: pointer;
+    display: inline-block;
+    fill: var(--navigation-text-color);
+    padding: 16px;
+  }
+
+  .hamburger.open nav{
+    background-color: var(--navigation-main-color);
+    display: block;
+    left: calc( 0px - var(--site-logo-width) - 80px);
+    position: absolute;
+    text-align: left;
+    width: 100vw;
+  }
+
+  .hamburger.open nav a {
+    display: block;
+    padding: 20px 40px;
+  }
+
+  .hamburger.closed nav{
+    display: none;
+  }
+}

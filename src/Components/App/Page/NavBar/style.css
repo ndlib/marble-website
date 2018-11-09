@@ -1,37 +1,45 @@
-.MenuBar{
-  background-color : #000000;
-  font-family : serif;
-  font-weight : bold;
-  font-size : 24px;
-  padding-left : 200px;
-  color : #ffffff;
-  display : flex;
+.navBar {
+  background-color: var(--navigation-main-color);
+  color: var(--navigation-text-color);
 }
- .navBar{
-  text-align : center;
-  margin-left: auto;
-  margin-right: auto;
-  display : inherit;
-  padding : 16px;
+.navBarInner {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
- .navBar a{
+
+.navBar nav {
+  margin: 0 auto;
+}
+.navBar nav a{
   text-decoration: none;
   color : #ffffff;
-  font-size : 20px;
+  font-size : 1rem;
   font-family: Geneva;
   padding: 16px;
 }
- .navBar a:hover{
+.navBar nav a:hover{
   color : #aaaaaa;
 }
- .LoginButton {
-  display : inherit;
+.LoginButton {
   margin-left : auto;
   text-align : right;
-  padding : 20px;
+  padding : 0 40px;
 }
- .LoginButton button{
-  font-size : 20px;
+.LoginButton button{
+  font-size : 1rem;
   padding : 10px;
   height : 40px;
  }
+
+.siteTitle {
+  margin: 0 40px;
+}
+
+@media (min-width: 1280px) {
+  .navBarInner {
+    margin: 0 auto;
+    width: 1280px;
+  }
+}

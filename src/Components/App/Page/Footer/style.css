@@ -1,7 +1,35 @@
 .Footer{
-  background-color : #0A233F;
+  background-color: var(--footer-main-color);
+  color: var(--footer-text-color);
   min-height : 64px;
   position: static;
-  bottom : 0;
-  left : 0;
+  bottom: 0;
+  left: 0;
+}
+
+.footerInner {
+  width: 100%;
+}
+
+.footerText {
+  padding: 20px 40px;
+  position: relative;
+}
+
+.footerText p {
+  line-height: 1.5em;
+  margin: 0 .25em;
+}
+
+@media (max-width: 780px) {
+  .footerText {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footerInner {
+    margin: 0 auto;
+    width: 1280px;
+  }
 }
