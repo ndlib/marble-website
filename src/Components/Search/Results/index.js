@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import ErrorBoundary from 'Components/Shared/ErrorBoundary'
+import ErrorBoundary from '../../../Components/Shared/ErrorBoundary'
 
 import './style.css'
 
@@ -13,7 +13,7 @@ export const Results = ({ searchResults }) => {
         <div className='container' key={doc.id}>
           <div id='entry'>
             <span>{ index + 1 }</span>
-            <div id='title'>{doc.title}</div>
+            <span id='title'>{doc.title}</span>
             <div className='label'>Owner:<span id='owner'>Special Collections</span></div>
             <div className='label'>Creator:<span id='author'>{doc.creator}</span></div>
             <div className='label'>Date:<span id='date'>{doc.date}</span></div>
@@ -27,8 +27,9 @@ export const Results = ({ searchResults }) => {
 }
 
 const mapStateToProps = (state) => {
-  return { searchResults: (state.searchReducer.results && state.searchReducer.results.docs)
-    ? state.searchReducer.results.docs : [] }
+  return { nextpage: state.searchReducer.nextpage,
+    searchResults: (state.searchReducer.results && state.searchReducer.results.docs)
+      ? state.searchReducer.results.docs : [] }
 }
 
 // validates if each record can be displayed.

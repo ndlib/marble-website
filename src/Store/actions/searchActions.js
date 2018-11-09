@@ -22,6 +22,7 @@ export const submitSearch = (terms) => {
     let searchterm = '&q=any,contains,' + terms
     let perpage = '&limit=' + String(parseInt(numResults) + 1)
     let url = encodeURI(searchBaseURL + searchCriteria + searchterm + perpage)
+    let nextpage = false
 
     return fetch(
       url, {
@@ -35,7 +36,15 @@ export const submitSearch = (terms) => {
         }
       })
       .then(json => {
-        dispatch(returnResults(json))
+        console.log(json)
+        if (json.docs.length > numResults) {
+          nextpage = true
+          json.docs.splice(-1, 1)
+        } else {
+          nextpage = false
+        }
+
+        dispatch(returnResults(json, nextpage))
       })
       .catch(e => {
         console.log(e)
@@ -50,10 +59,11 @@ export const startSearch = (terms) => {
   }
 }
 
-export const returnResults = (results) => {
+export const returnResults = (results, nextpage) => {
   return {
     type: RESULTS_READY,
     results: results,
+    nextpage: nextpage,
   }
 }
 

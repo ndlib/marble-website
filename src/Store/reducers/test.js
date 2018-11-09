@@ -4,6 +4,7 @@ import {
   SUBMIT_SEARCH,
   RESULTS_READY,
   CLEAR_SEARCH,
+  PER_PAGE_CHANGE,
 } from '../actions/searchActions'
 
 describe('SUBMIT_SEARCH', () => {
@@ -32,7 +33,7 @@ describe('RESULTS_READY reducer', () => {
 
   test('allows nil results value', () => {
     const action = { type: 'RESULTS_READY' }
-    const testState = { results: undefined, searching: false, terms: undefined }
+    const testState = { nextpage: undefined, results: undefined, searching: false, terms: undefined }
 
     expect(searchReducer(undefined, action)).toEqual(testState)
   })
@@ -41,7 +42,16 @@ describe('RESULTS_READY reducer', () => {
 describe('CLEAR_SEARCH reducer', () => {
   test('base test', () => {
     const action = { type: 'CLEAR_SEARCH' }
-    const testState = { results: [], searching: false, terms: [] }
+    const testState = { nextpage: false, results: [], searching: false, terms: [] }
+
+    expect(searchReducer(undefined, action)).toEqual(testState)
+  })
+})
+
+describe('PER_PAGE_CHANGE reducer', () => {
+  test('base test', () => {
+    const action = { type: 'PER_PAGE_CHANGE' }
+    const testState = { perpage: undefined }
 
     expect(searchReducer(undefined, action)).toEqual(testState)
   })

@@ -5,13 +5,13 @@ import './App.css'
 
 // redux store
 import { Provider } from 'react-redux'
-import configureStore from 'Store/configureStore'
+import configureStore from '../../Store/configureStore'
 
 import Page from './Page'
-import Home from 'Components/Home'
-import Help from 'Components/Help'
-import Search from 'Components/Search'
-import NotFound from 'Components/Shared/NotFound'
+import Home from '../../Components/Home'
+import Help from '../../Components/Help'
+import Search from '../../Components/Search'
+import NotFound from '../../Components/Shared/NotFound'
 
 // create store
 const store = configureStore()

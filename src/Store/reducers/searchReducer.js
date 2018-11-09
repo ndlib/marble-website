@@ -19,6 +19,7 @@ export default(state = {}, action) => {
         ...state,
         searching: false,
         results: action.results,
+        nextpage: action.nextpage,
       }
     case CLEAR_SEARCH:
       return {
@@ -26,6 +27,7 @@ export default(state = {}, action) => {
         terms: [],
         searching: false,
         results: [],
+        nextpage: false,
       }
     case PER_PAGE_CHANGE:
       return {

@@ -4,7 +4,7 @@ import SearchBox from './SearchBox'
 import Results from './Results'
 import PerPage from './PerPage'
 
-import ErrorBoundary from 'Components/Shared/ErrorBoundary'
+import ErrorBoundary from '../../Components/Shared/ErrorBoundary'
 const Search = () => {
   return (
     <React.Fragment>

@@ -2,7 +2,7 @@ import React from 'react'
 import { PropTypes } from 'prop-types'
 import { Link } from 'react-router-dom'
 
-import { SIDEBAR_WIDTH } from 'Configurations/styles'
+import { SIDEBAR_WIDTH } from '../../../Configurations/styles'
 import './style.css'
 
 const Sidebar = ({ items, title }) => {

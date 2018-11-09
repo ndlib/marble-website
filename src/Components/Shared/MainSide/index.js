@@ -1,7 +1,7 @@
 import React from 'react'
 import { PropTypes } from 'prop-types'
 import './style.css'
-import { SIDEBAR_WIDTH } from 'Configurations/styles'
+import { SIDEBAR_WIDTH } from '../../../Configurations/styles'
 const MainSide = ({ children }) => {
   return (
     <div

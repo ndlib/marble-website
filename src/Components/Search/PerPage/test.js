@@ -1,6 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { SearchBox } from './'
+import { PerPage } from './'
+import Select from 'react-select'
 
 const thunk = ({ dispatch, getState }) => next => action => {
   if (typeof action === 'function') {
@@ -19,22 +20,12 @@ const create = () => {
   return { store, next, invoke }
 }
 
-test('SearchComponent Renders a form ', () => {
-  const sc = shallow(<SearchBox />)
-  expect(sc.find('form').exists()).toBeTruthy()
+test('PerPage has React Select', () => {
+  const sc = shallow(<PerPage />)
+  expect(sc.find(Select).exists()).toBeTruthy()
 })
 
-test('Search Component has an input', () => {
-  const sc = shallow(<SearchBox />)
-  expect(sc.find('input').exists()).toBeTruthy()
-})
-
-test('Search Component has an button', () => {
-  const sc = shallow(<SearchBox />)
-  expect(sc.find('button').exists()).toBeTruthy()
-})
-
-test('Search Box dispatches the searchAction#submitSearch function with the value of the input field', () => {
+test('PerPage dispatches with value', () => {
   const { store, invoke } = create()
   invoke((dispatch, getState) => {
     dispatch('TEST DISPATCH')
