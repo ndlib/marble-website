@@ -6,6 +6,9 @@ import { Switch, Route } from 'react-router'
 import { Provider } from 'react-redux'
 import configureStore from 'Store/configureStore'
 
+// error reporting setup
+import * as Sentry from '@sentry/browser'
+
 import Page from './Page'
 import Home from 'Components/Home'
 import About from 'Components/About'
@@ -14,7 +17,15 @@ import Search from 'Components/Search'
 import NotFound from 'Components/Shared/NotFound'
 
 import 'Configurations/customizations.css'
+import { SENTRY_DSN } from 'Configurations/apis.js'
 import './style.css'
+
+// setup error reporting
+Sentry.init({
+  dsn: SENTRY_DSN,
+  environment: 'staging',
+  debug: 'true',
+})
 
 // create store
 const store = configureStore()

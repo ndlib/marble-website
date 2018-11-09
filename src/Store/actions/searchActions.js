@@ -1,9 +1,10 @@
+import { PRIMO_BASE_URL } from '../../Configurations/apis'
 export const SUBMIT_SEARCH = 'SUBMIT_SEARCH'
 export const RESULTS_READY = 'RESULTS_READY'
 export const CLEAR_SEARCH = 'CLEAR_SEARCH'
 export const PER_PAGE_CHANGE = 'PER_PAGE_CHANGE'
 
-const searchBaseURL = 'https://a1fc3ld3d7.execute-api.us-east-1.amazonaws.com/dev/primo/v1/pnxs'
+const searchBaseURL = PRIMO_BASE_URL
 let searchCriteria = '?inst=NDU&search_scope=spec_coll'
 
 export const submitSearch = (terms, numResults) => {
