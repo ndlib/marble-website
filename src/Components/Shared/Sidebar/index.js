@@ -2,11 +2,15 @@ import React from 'react'
 import { PropTypes } from 'prop-types'
 import { HashLink as Link } from 'react-router-hash-link'
 
+import { SIDEBAR_WIDTH } from '../../../Configurations/styles'
 import './style.css'
 
 const Sidebar = ({ items, title }) => {
   return (
-    <nav className='sideBar'>
+    <nav
+      className='sideBar'
+      style={{ width: SIDEBAR_WIDTH || '240px' }}
+    >
       { title ? <h2>{title}</h2> : null }
       {
         items.map(item => {

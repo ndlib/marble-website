@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router'
 
 // redux store
 import { Provider } from 'react-redux'
-import configureStore from 'Store/configureStore'
+import configureStore from '../../Store/configureStore'
 
 // error reporting setup
 import * as Sentry from '@sentry/browser'

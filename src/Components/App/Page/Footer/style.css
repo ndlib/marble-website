@@ -1,6 +1,7 @@
 .Footer{
   background-color: var(--footer-main-color);
   color: var(--footer-text-color);
+  min-height : 64px;
   position: static;
   bottom: 0;
   left: 0;

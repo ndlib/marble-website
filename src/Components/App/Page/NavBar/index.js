@@ -1,5 +1,4 @@
 import React from 'react'
-
 import SiteLogo from './SiteLogo'
 import Hamburger from './Hamburger'
 import './style.css'

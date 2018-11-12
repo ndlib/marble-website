@@ -6,17 +6,24 @@ export const PER_PAGE_CHANGE = 'PER_PAGE_CHANGE'
 
 const searchBaseURL = PRIMO_BASE_URL
 let searchCriteria = '?inst=NDU&search_scope=spec_coll'
+let numResults = '10'
 
-export const submitSearch = (terms, numResults) => {
+export const changePerPage = (results, terms) => {
+  return dispatch => {
+    dispatch(perPageChange(results))
+    numResults = String(results)
+    dispatch(submitSearch(terms))
+  }
+}
+
+export const submitSearch = (terms) => {
   return dispatch => {
     dispatch(startSearch(terms))
 
     let searchterm = '&q=any,contains,' + terms
-    if (!numResults) {
-      numResults = '10'
-    }
-    let perpage = '&limit=' + numResults
+    let perpage = '&limit=' + String(parseInt(numResults) + 1)
     let url = encodeURI(searchBaseURL + searchCriteria + searchterm + perpage)
+    let nextpage = false
 
     return fetch(
       url, {
@@ -30,7 +37,15 @@ export const submitSearch = (terms, numResults) => {
         }
       })
       .then(json => {
-        dispatch(returnResults(json))
+        console.log(json)
+        if (json.docs.length > numResults) {
+          nextpage = true
+          json.docs.splice(-1, 1)
+        } else {
+          nextpage = false
+        }
+
+        dispatch(returnResults(json, nextpage))
       })
       .catch(e => {
         console.log(e)
@@ -45,10 +60,11 @@ export const startSearch = (terms) => {
   }
 }
 
-export const returnResults = (results) => {
+export const returnResults = (results, nextpage) => {
   return {
     type: RESULTS_READY,
     results: results,
+    nextpage: nextpage,
   }
 }
 
@@ -60,9 +76,9 @@ export const clearSearch = () => {
   }
 }
 
-export const formChangePerPage = (perpage) => {
+export const perPageChange = (perpage) => {
   return {
     type: PER_PAGE_CHANGE,
-    resultspp: perpage,
+    perpage: perpage,
   }
 }
