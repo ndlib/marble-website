@@ -1,9 +1,13 @@
 
 import React from 'react'
-import { shallow } from 'enzyme'
-import { ResultsComponent } from './'
+import { mount } from 'enzyme'
+import { Results } from './'
+import configureStore from 'redux-mock-store'
+const mockStore = configureStore()
 
+let store
 test('ResultsComponent Renders a default ', () => {
-  const sc = shallow(<ResultsComponent searchResults={[]} />)
-  expect(sc.exists()).toBeFalsy()
+  store = mockStore({})
+  const sc = mount(<Results searchResults={[]} store={store} />)
+  expect(sc.exists()).toBeTruthy()
 })

@@ -1,10 +1,14 @@
 
 import React from 'react'
-import { shallow } from 'enzyme'
-import { SearchComponent } from './'
+import { mount } from 'enzyme'
+import SearchBox from './'
+import configureStore from 'redux-mock-store'
+const mockStore = configureStore()
 
+let store
 test('SearchComponent Renders a form ', () => {
-  const sc = shallow(<SearchComponent />)
+  store = mockStore({})
+  const sc = mount(<SearchBox store={store} />)
   expect(sc.find('form').exists()).toBeTruthy()
 })
 
