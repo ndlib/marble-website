@@ -7,11 +7,20 @@
 }
 
 .headerInner {
+  position: relative;
   width: 100%;
+}
+
+a.departmentLogo {
+  position: absolute;
+  right: 20px;
 }
 @media (max-width: 780px) {
   .header {
     text-align: center;
+  }
+  a.departmentLogo {
+    display: none;
   }
 }
 

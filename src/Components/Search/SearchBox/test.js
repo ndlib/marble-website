@@ -1,44 +1,33 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import { SearchBox } from './'
+import { mount } from 'enzyme'
+import SearchBox from './'
+import configureStore from 'redux-mock-store'
+const mockStore = configureStore()
 
-const thunk = ({ dispatch, getState }) => next => action => {
-  if (typeof action === 'function') {
-    return action(dispatch, getState)
-  }
-  return next(action)
-}
+let store, wrapper
 
-const create = () => {
-  const store = {
-    getState: jest.fn(() => ({})),
-    dispatch: jest.fn()
-  }
-  const next = jest.fn()
-  const invoke = action => thunk(store)(next)(action)
-  return { store, next, invoke }
-}
+beforeEach(() => {
+  store = mockStore({})
+  wrapper = mount(<SearchBox store={store} />)
+})
 
 test('SearchComponent Renders a form ', () => {
-  const sc = shallow(<SearchBox />)
-  expect(sc.find('form').exists()).toBeTruthy()
+  expect(wrapper.find('form').exists()).toBeTruthy()
 })
 
 test('Search Component has an input', () => {
-  const sc = shallow(<SearchBox />)
-  expect(sc.find('input').exists()).toBeTruthy()
+  expect(wrapper.find('input').exists()).toBeTruthy()
 })
 
 test('Search Component has an button', () => {
-  const sc = shallow(<SearchBox />)
-  expect(sc.find('button').exists()).toBeTruthy()
+  expect(wrapper.find('button').exists()).toBeTruthy()
 })
 
-test('Search Box dispatches the searchAction#submitSearch function with the value of the input field', () => {
-  const { store, invoke } = create()
-  invoke((dispatch, getState) => {
-    dispatch('TEST DISPATCH')
-    getState()
-  })
-  expect(store.dispatch).toHaveBeenCalledWith('TEST DISPATCH')
-})
+// test('Search Box dispatches the searchAction#submitSearch function with the value of the input field', () => {
+//   const { store, invoke } = create()
+//   invoke((dispatch, getState) => {
+//     dispatch('TEST DISPATCH')
+//     getState()
+//   })
+//   expect(store.dispatch).toHaveBeenCalledWith('TEST DISPATCH')
+// })

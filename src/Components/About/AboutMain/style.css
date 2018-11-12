@@ -1,0 +1,25 @@
+.partners {
+  display: flex;
+}
+.partners div {
+  width: calc(33.33% - 20px);
+}
+.partners .partner1 {
+  margin: 0 20px 0 0;
+}
+.partners .partner2 {
+  margin: 0 10px;
+}
+.partners .partner3 {
+  margin: 0 0 0 20px;
+}
+@media (max-width: 1024px) {
+  .partners {
+    display: block;
+  }
+  .partners div {
+    width: 100%;
+    margin: 0 !important;
+  }
+  
+}
