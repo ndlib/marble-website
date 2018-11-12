@@ -5,11 +5,15 @@ import SearchBox from './'
 import configureStore from 'redux-mock-store'
 const mockStore = configureStore()
 
-let store
-test('SearchComponent Renders a form ', () => {
+let store, wrapper
+
+beforeEach(() => {
   store = mockStore({})
-  const sc = mount(<SearchBox store={store} />)
-  expect(sc.find('form').exists()).toBeTruthy()
+  wrapper = mount(<SearchBox store={store} />)
+})
+
+test('SearchComponent Renders a form ', () => {
+  expect(wrapper.find('form').exists()).toBeTruthy()
 })
 
 test('Search Component has an input', () => {})

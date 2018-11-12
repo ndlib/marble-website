@@ -5,9 +5,11 @@ import { Results } from './'
 import configureStore from 'redux-mock-store'
 const mockStore = configureStore()
 
-let store
-test('ResultsComponent Renders a default ', () => {
+let store, wrapper
+beforeEach(() => {
   store = mockStore({})
-  const sc = mount(<Results searchResults={[]} store={store} />)
-  expect(sc.exists()).toBeTruthy()
+  wrapper = mount(<Results searchResults={[]} store={store} />)
+})
+test('ResultsComponent Renders a default ', () => {
+  expect(wrapper.exists()).toBeTruthy()
 })
