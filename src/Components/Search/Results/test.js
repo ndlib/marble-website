@@ -1,10 +1,11 @@
 
 import React from 'react'
-import { mount } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import { Results } from './'
 import configureStore from 'redux-mock-store'
-const mockStore = configureStore()
+import ErrorBoundary from 'Components/Shared/ErrorBoundary'
 
+const mockStore = configureStore()
 let store, wrapper
 beforeEach(() => {
   store = mockStore({})
@@ -15,6 +16,6 @@ test('ResultsComponent Renders a default ', () => {
 })
 
 test('Results contains ErrorBoundary', () => {
-  const sc = shallow(<Results searchResults={['Hello','There']}/>)
+  const sc = mount(<Results searchResults={['Hello', 'There']} />)
   expect(sc.find(ErrorBoundary).exists()).toBeTruthy()
 })

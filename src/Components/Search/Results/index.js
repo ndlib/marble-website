@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import ErrorBoundary from '../../../Components/Shared/ErrorBoundary'
+import ErrorBoundary from 'Components/Shared/ErrorBoundary'
 
 import './style.css'
 
 export const Results = ({ searchResults }) => {
   return (
     mapValidResults(searchResults, (doc, index) =>
-      <ErrorBoundary>
+      <ErrorBoundary key={index}>
         <div className='container' key={doc.id}>
           <div id='entry'>
             <span>{ index + 1 }</span>

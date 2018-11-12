@@ -4,7 +4,7 @@ import Select from 'react-select'
 import { connect } from 'react-redux'
 import { PropTypes } from 'prop-types'
 
-import { changePerPage } from '../../../Store/actions/searchActions'
+import { changePerPage } from 'Store/actions/searchActions'
 
 const options = [
   { value: 10, label: '10/page' },

@@ -2,8 +2,8 @@ import React from 'react'
 import { PropTypes } from 'prop-types'
 import ReactMarkdown from 'react-markdown'
 import { withRouter } from 'react-router'
-import MainSide from '../../../Components/Shared/MainSide'
-import { topics } from '../../../Configurations/Help'
+import MainSide from 'Components/Shared/MainSide'
+import { topics } from 'Configurations/Help'
 
 const HelpText = ({ match }) => {
   // Get the topic slug from the url. If there there is no slug, show first topic in list.

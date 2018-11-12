@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import './style.css'
 import searchImage from './search.png'
 
-import { submitSearch } from '../../../Store/actions/searchActions'
+import { submitSearch } from 'Store/actions/searchActions'
 
 const SearchBox = ({ dispatch }) => {
   let input

@@ -1,4 +1,4 @@
-import { PRIMO_BASE_URL } from '../../Configurations/apis'
+import { PRIMO_BASE_URL } from 'Configurations/apis'
 export const SUBMIT_SEARCH = 'SUBMIT_SEARCH'
 export const RESULTS_READY = 'RESULTS_READY'
 export const CLEAR_SEARCH = 'CLEAR_SEARCH'
