@@ -5,9 +5,15 @@ import { withRouter } from 'react-router'
 import MainSide from 'Components/Shared/MainSide'
 import { topics } from 'Configurations/Help'
 
-const HelpText = ({ match }) => {
+const HelpText = ({ history }) => {
   // Get the topic slug from the url. If there there is no slug, show first topic in list.
-  const { topic } = match.params
+  let topic
+  if (
+    history.location.pathname !== '/' &&
+    history.location.pathname !== '/help'
+  ) {
+    topic = history.location.pathname.replace('/help/', '')
+  }
   let topicObj
   if (!topic) {
     topicObj = topics[0]

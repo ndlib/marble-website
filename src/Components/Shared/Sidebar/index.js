@@ -8,20 +8,20 @@ const Sidebar = ({ items, title }) => {
     <nav className='sideBar'>
       { title ? <h2>{title}</h2> : null }
       {
-        items.map(item => {
+        items ? items.map(item => {
           return (
             <Link
               to={item.link}
               key={item.link}
             >{item.title}</Link>
           )
-        })
+        }) : null
       }
     </nav>
   )
 }
 Sidebar.propTypes = {
-  items: PropTypes.array,
+  items: PropTypes.array.isRequired,
   title: PropTypes.string,
 }
 export default Sidebar
