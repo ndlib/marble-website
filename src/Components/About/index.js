@@ -5,7 +5,7 @@ import AboutMain from './AboutMain'
 import { sections } from 'Configurations/About'
 const About = () => {
   return (
-    <div className=''>
+    <div className='aboutContent'>
       <Sidebar
         title='About This Project'
         items={sections}

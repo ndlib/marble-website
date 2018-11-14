@@ -19,6 +19,7 @@ class Hamburger extends Component {
     return (
       <div className={`hamburger ${this.state.isOpen ? 'open' : 'closed'}`}>
         <span
+          id='hamburgerClickable'
           onClick={this.toggle}>
           <svg
             xmlns='http://www.w3.org/2000/svg'
