@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { navigationLinks } from 'Configurations/Navigation'
-const NavigationLinks = () => {
+const NavigationLinks = ({ closeFunction }) => {
   return (
     <nav>
       {
@@ -9,6 +10,7 @@ const NavigationLinks = () => {
           return (<Link
             to={navLink.link}
             key={navLink.link}
+            onClick={() => closeFunction()}
           >{navLink.title}</Link>)
         })
       }
@@ -16,4 +18,7 @@ const NavigationLinks = () => {
   )
 }
 
+NavigationLinks.propTypes = {
+  closeFunction: PropTypes.func.isRequired,
+}
 export default NavigationLinks

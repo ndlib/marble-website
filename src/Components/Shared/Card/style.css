@@ -1,0 +1,54 @@
+.card {
+  background-color: #efefef;
+  display: inline-block;
+  margin: 10px;
+  vertical-align: top;
+  width: calc((var(--inner-page-width) - var(--sidebar-width))/3 - 20px);
+}
+
+.card img {
+  height: calc((var(--inner-page-width) - var(--sidebar-width))/3 - 40px);
+  margin: 10px;
+  object-fit: cover;
+  object-position: center;
+  width: calc((var(--inner-page-width) - var(--sidebar-width))/3 - 40px);
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card h3 {
+  margin: 0 10px 10px;
+}
+@media (max-width: 1024px) {
+  .card {
+    width: calc((var(--inner-page-width) - var(--sidebar-width))/2 - 20px);
+  }
+
+  .card img {
+    height: calc((var(--inner-page-width) - var(--sidebar-width))/2 - 40px);
+    width: calc((var(--inner-page-width) - var(--sidebar-width))/2 - 40px);
+  }
+}
+@media (max-width: 780px) {
+  .card {
+    width: calc((100vw - 40px)/3 - 20px);
+  }
+
+  .card img {
+    height: calc((100vw - 40px)/3 - 40px);
+    width: calc((100vw - 40px)/3 - 40px);
+  }
+}
+
+@media (max-width: 550px) {
+  .card {
+    width: calc(100vw - 60px);
+  }
+
+  .card img {
+    height: calc(100vw - 80px);
+    width: calc(100vw - 80px);
+  }
+}

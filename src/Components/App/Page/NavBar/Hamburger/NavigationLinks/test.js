@@ -13,7 +13,7 @@ jest.mock('Configurations/Navigation', () => {
 })
 
 const mountWithRouter = node => mount(<MemoryRouter>{node}</MemoryRouter>)
-const wrapper = mountWithRouter(<NavigationLinks />)
+const wrapper = mountWithRouter(<NavigationLinks closeFunction={() => {}} />)
 const texts = wrapper.find(Link).map(node => node.text())
 
 test('Should render a nav and links supplied by configuration', () => {

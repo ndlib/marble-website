@@ -14,6 +14,7 @@ import Home from 'Components/Home'
 import About from 'Components/About'
 import Help from 'Components/Help'
 import Search from 'Components/Search'
+import Collection from 'Components/Collection'
 import NotFound from 'Components/Shared/NotFound'
 
 import 'Configurations/customizations.css'
@@ -41,6 +42,7 @@ class App extends Component {
               <Route exact path='/about' component={About} />
               <Route exact path='/help/:topic?' component={Help} />
               <Route exact path='/search' component={Search} />
+              <Route exact path='/collection/:manifestId/:start?' component={Collection} />
               <Route component={NotFound} />
             </Switch>
           </Page>

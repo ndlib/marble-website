@@ -9,10 +9,14 @@ class Hamburger extends Component {
       isOpen: false,
     }
     this.toggle = this.toggle.bind(this)
+    this.closeHamburger = this.closeHamburger.bind(this)
   }
   toggle () {
-    console.log('click')
     this.setState({ isOpen: !this.state.isOpen })
+  }
+
+  closeHamburger () {
+    this.setState({ isOpen: false })
   }
 
   render () {
@@ -34,7 +38,7 @@ class Hamburger extends Component {
             <path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z' />
           </svg>
         </span>
-        <NavigationLinks />
+        <NavigationLinks closeFunction={this.closeHamburger} />
       </div>
     )
   }
