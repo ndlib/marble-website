@@ -51,7 +51,39 @@ test('Should return full manifest and ready', () => {
   })
 })
 
-test('Does not forget existing manifests', () => {
+test('Does not forget existing manifests on new fetch', () => {
+  const initialState = {
+    manifests: {
+      'manifest_1':  {
+        'data':  {
+          'metadata': 'things',
+        },
+        'status': STATUS_READY,
+      },
+    },
+  }
+  const receiveAction = {
+    type: FETCH_MANIFEST,
+    id: 'manifest_2',
+  }
+
+  expect(reducer(initialState, receiveAction)).toEqual({
+    'manifests':  {
+      'manifest_1':  {
+        'data':  {
+          'metadata': 'things',
+        },
+        'status': STATUS_READY,
+      },
+      'manifest_2':  {
+        'data':  null,
+        'status': STATUS_FETCHING,
+      },
+    },
+  })
+})
+
+test('Does not forget existing manifests on new receive', () => {
   const initialState = {
     manifests: {
       'manifest_1':  {
