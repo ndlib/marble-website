@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 import { Link, MemoryRouter } from 'react-router-dom'
-import NavigationLinks from './'
+import { NavigationLinks } from './'
 
 jest.mock('Configurations/Navigation', () => {
   return {
@@ -13,7 +13,7 @@ jest.mock('Configurations/Navigation', () => {
 })
 
 const mountWithRouter = node => mount(<MemoryRouter>{node}</MemoryRouter>)
-const wrapper = mountWithRouter(<NavigationLinks closeFunction={() => {}} />)
+const wrapper = mountWithRouter(<NavigationLinks dispatch={() => {}} />)
 const texts = wrapper.find(Link).map(node => node.text())
 
 test('Should render a nav and links supplied by configuration', () => {

@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { navigationLinks } from 'Configurations/Navigation'
 import { closeMenu } from 'Store/actions/menuActions'
-const NavigationLinks = ({ dispatch }) => {
+export const NavigationLinks = ({ dispatch }) => {
   return (
     <nav>
       {

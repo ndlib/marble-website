@@ -5,9 +5,9 @@ import { connect } from 'react-redux'
 import { toggleMenu } from 'Store/actions/menuActions'
 import './style.css'
 
-const Hamburger = ({ dispatch, menuReducer }) => {
+export const Hamburger = ({ dispatch, open }) => {
   return (
-    <div className={`hamburger ${menuReducer.open ? 'open' : 'closed'}`}>
+    <div className={`hamburger ${open ? 'open' : 'closed'}`}>
       <span
         id='hamburgerClickable'
         onClick={() => dispatch(toggleMenu())}>
@@ -31,11 +31,11 @@ const Hamburger = ({ dispatch, menuReducer }) => {
 
 Hamburger.propTypes = {
   dispatch: PropTypes.func.isRequired,
-  menuReducer: PropTypes.object.isRequired,
+  open: PropTypes.bool.isRequired,
 }
 
 const mapStateToProps = (state) => {
-  return { ...state }
+  return { open: state.menuReducer.open }
 }
 
 export default connect(mapStateToProps)(Hamburger)
