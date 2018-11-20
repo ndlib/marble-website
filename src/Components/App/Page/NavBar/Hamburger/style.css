@@ -26,6 +26,7 @@
     position: absolute;
     text-align: left;
     width: 100vw;
+    z-index: 1;
   }
 
   .hamburger.open nav a {
