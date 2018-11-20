@@ -31,25 +31,23 @@ Sentry.init({
 // create store
 const store = configureStore()
 
-class App extends Component {
-  render () {
-    return (
-      <BrowserRouter>
-        <Provider store={store}>
-          <Page>
-            <Switch>
-              <Route exact path='/' component={Home} />
-              <Route exact path='/about' component={About} />
-              <Route exact path='/help/:topic?' component={Help} />
-              <Route exact path='/search' component={Search} />
-              <Route exact path='/collection/:manifestId/:start?' component={Collection} />
-              <Route component={NotFound} />
-            </Switch>
-          </Page>
-        </Provider>
-      </BrowserRouter>
-    )
-  }
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Provider store={store}>
+        <Page>
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/about' component={About} />
+            <Route exact path='/help/:topic?' component={Help} />
+            <Route exact path='/search' component={Search} />
+            <Route exact path='/collection/:manifestId/:start?' component={Collection} />
+            <Route component={NotFound} />
+          </Switch>
+        </Page>
+      </Provider>
+    </BrowserRouter>
+  )
 }
 
 export default App
