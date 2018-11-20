@@ -45,7 +45,7 @@ test('Should return full manifest and ready', () => {
         'data':  {
           'metadata': 'stuff',
         },
-        'status': 'STATUS_READY',
+        'status': STATUS_READY,
       },
     },
   })
@@ -58,7 +58,7 @@ test('Does not forget existing manifests', () => {
         'data':  {
           'metadata': 'things',
         },
-        'status': 'STATUS_READY',
+        'status': STATUS_READY,
       },
       'manifest_2': {
         status: STATUS_FETCHING,
@@ -78,13 +78,13 @@ test('Does not forget existing manifests', () => {
         'data':  {
           'metadata': 'things',
         },
-        'status': 'STATUS_READY',
+        'status': STATUS_READY,
       },
       'manifest_2':  {
         'data':  {
           'metadata': 'stuff',
         },
-        'status': 'STATUS_READY',
+        'status': STATUS_READY,
       },
     },
   })
