@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { Page } from './'
+import Page from './'
 import Header from './Header'
 import NavBar from './NavBar'
 import Footer from './Footer'
