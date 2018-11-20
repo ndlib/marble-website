@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { PropTypes } from 'prop-types'
-
+import { withRouter } from 'react-router'
 import './style.css'
 
 import Header from './Header'
 import NavBar from './NavBar'
 import Footer from './Footer'
 
-class Page extends Component {
+export class Page extends Component {
   componentDidUpdate (prevProps) {
   // reset page to top after navigation
     if (this.props.location !== prevProps.location) {
@@ -36,4 +36,4 @@ Page.propTypes = {
   ]),
   location: PropTypes.object,
 }
-export default Page
+export default withRouter(Page)

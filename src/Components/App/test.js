@@ -18,6 +18,7 @@ jest.mock('react-router-dom', () => {
     },
   }
 })
+
 let wrapper
 test('Should render only Home page in Page component for /', () => {
   wrapper = mount(
