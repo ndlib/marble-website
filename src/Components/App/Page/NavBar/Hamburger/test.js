@@ -1,26 +1,18 @@
 import React from 'react'
-import { mount } from 'enzyme'
-import { MemoryRouter } from 'react-router-dom'
-import Hamburger from './'
+import { shallow } from 'enzyme'
+import { Hamburger } from './'
 import NavigationLinks from './NavigationLinks'
-
-const mountWithRouter = node => mount(<MemoryRouter>{node}</MemoryRouter>)
 
 let wrapper
 
-beforeEach(() => {
-  wrapper = mountWithRouter(<Hamburger />)
-})
-
-test('Hamburger contains a NavigationLinks component', () => {
+test('Hamburger contains a NavigationLinks component and is closed', () => {
+  wrapper = shallow(<Hamburger open={false} dispatch={() => {}} />)
   expect(wrapper.find(NavigationLinks).exists()).toBeTruthy()
+  expect(wrapper.find('.closed').exists()).toBeTruthy()
 })
 
-test('Clicking on the hamburger icon opens and closes the menu', () => {
-  expect(wrapper.find('#hamburgerClickable').exists()).toBeTruthy()
-  expect(wrapper.find('.hamburger.closed').exists()).toBeTruthy()
-  wrapper.find('#hamburgerClickable').simulate('click')
-  expect(wrapper.find('.hamburger.open').exists()).toBeTruthy()
-  wrapper.find('#hamburgerClickable').simulate('click')
-  expect(wrapper.find('.hamburger.closed').exists()).toBeTruthy()
+test('Hamburger contains a NavigationLinks component and is open', () => {
+  wrapper = shallow(<Hamburger open dispatch={() => {}} />)
+  expect(wrapper.find(NavigationLinks).exists()).toBeTruthy()
+  expect(wrapper.find('.open').exists()).toBeTruthy()
 })

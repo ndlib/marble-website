@@ -7,6 +7,7 @@ import Home from 'Components/Home'
 import About from 'Components/About'
 import Help from 'Components/Help'
 import Search from 'Components/Search'
+import Collection from 'Components/Collection'
 import NotFound from 'Components/Shared/NotFound'
 jest.mock('react-router-dom', () => {
   const ReactRouterDom = require.requireActual('react-router-dom')
@@ -17,6 +18,7 @@ jest.mock('react-router-dom', () => {
     },
   }
 })
+
 let wrapper
 test('Should render only Home page in Page component for /', () => {
   wrapper = mount(
@@ -86,4 +88,26 @@ test('Should render only NotFound page in Page component for undefined path', ()
   expect(wrapper.find(Help).exists()).toBeFalsy()
   expect(wrapper.find(Search).exists()).toBeFalsy()
   expect(wrapper.find(NotFound).exists()).toBeTruthy()
+})
+
+test('Should render NotFound page in Page component for /collection', () => {
+  wrapper = mount(
+    <MemoryRouter initialEntries={[ '/collection' ]}>
+      <App />
+    </MemoryRouter>
+  )
+
+  expect(wrapper.find(Collection).exists()).toBeFalsy()
+  expect(wrapper.find(NotFound).exists()).toBeTruthy()
+})
+
+test('Should render a Collection page in Page component for /collection/:manifestId', () => {
+  wrapper = mount(
+    <MemoryRouter initialEntries={[ '/collection/b19974760' ]}>
+      <App />
+    </MemoryRouter>
+  )
+
+  expect(wrapper.find(Collection).exists()).toBeTruthy()
+  expect(wrapper.find(NotFound).exists()).toBeFalsy()
 })

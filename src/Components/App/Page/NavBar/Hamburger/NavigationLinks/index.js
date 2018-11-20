@@ -1,7 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { navigationLinks } from 'Configurations/Navigation'
-const NavigationLinks = () => {
+import { closeMenu } from 'Store/actions/menuActions'
+export const NavigationLinks = ({ dispatch }) => {
   return (
     <nav>
       {
@@ -9,6 +12,7 @@ const NavigationLinks = () => {
           return (<Link
             to={navLink.link}
             key={navLink.link}
+            onClick={() => dispatch(closeMenu())}
           >{navLink.title}</Link>)
         })
       }
@@ -16,4 +20,12 @@ const NavigationLinks = () => {
   )
 }
 
-export default NavigationLinks
+NavigationLinks.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+}
+
+const mapStateToProps = (state) => {
+  return { ...state }
+}
+
+export default connect(mapStateToProps)(NavigationLinks)

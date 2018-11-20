@@ -1,0 +1,20 @@
+:root {
+  --collectionImageHeight: 280px;
+}
+.collectionImage img {
+  height: var(--collectionImageHeight);
+  object-fit: cover;
+  object-position: center;
+  width: 70vw;
+}
+
+@media (max-width: 780px) {
+  .collectionImage img {
+    left: 0;
+    position: absolute;
+    width: 100vw;
+  }
+  .sideText {
+    margin-top: var(--collectionImageHeight);
+  }
+}

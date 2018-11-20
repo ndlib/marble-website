@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { Switch, Route } from 'react-router'
+import ScrollToTop from 'react-router-scroll-top'
 
 // redux store
 import { Provider } from 'react-redux'
@@ -14,6 +15,7 @@ import Home from 'Components/Home'
 import About from 'Components/About'
 import Help from 'Components/Help'
 import Search from 'Components/Search'
+import Collection from 'Components/Collection'
 import NotFound from 'Components/Shared/NotFound'
 
 import 'Configurations/customizations.css'
@@ -30,10 +32,10 @@ Sentry.init({
 // create store
 const store = configureStore()
 
-class App extends Component {
-  render () {
-    return (
-      <BrowserRouter>
+const App = () => {
+  return (
+    <BrowserRouter>
+      <ScrollToTop>
         <Provider store={store}>
           <Page>
             <Switch>
@@ -41,13 +43,14 @@ class App extends Component {
               <Route exact path='/about' component={About} />
               <Route exact path='/help/:topic?' component={Help} />
               <Route exact path='/search' component={Search} />
+              <Route exact path='/collection/:manifestId/:start?' component={Collection} />
               <Route component={NotFound} />
             </Switch>
           </Page>
         </Provider>
-      </BrowserRouter>
-    )
-  }
+      </ScrollToTop>
+    </BrowserRouter>
+  )
 }
 
 export default App

@@ -1,32 +1,22 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { PropTypes } from 'prop-types'
-
 import './style.css'
 
 import Header from './Header'
 import NavBar from './NavBar'
 import Footer from './Footer'
 
-class Page extends Component {
-  componentDidUpdate (prevProps) {
-  // reset page to top after navigation
-    if (this.props.location !== prevProps.location) {
-      window.scrollTo(0, 0)
-    }
-  }
-
-  render () {
-    return (
-      <React.Fragment>
-        <Header />
-        <NavBar />
-        <div className='mainContent'>
-          {this.props.children}
-        </div>
-        <Footer />
-      </React.Fragment>
-    )
-  }
+const Page = ({ children }) => {
+  return (
+    <React.Fragment>
+      <Header />
+      <NavBar />
+      <div className='mainContent'>
+        {children}
+      </div>
+      <Footer />
+    </React.Fragment>
+  )
 }
 
 Page.propTypes = {
@@ -34,6 +24,5 @@ Page.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  location: PropTypes.object,
 }
 export default Page
