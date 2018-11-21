@@ -1,8 +1,10 @@
 import {
   FETCH_MANIFEST,
   RECEIVE_MANIFEST,
+  RECEIVE_MANIFEST_ERROR,
   STATUS_FETCHING,
   STATUS_READY,
+  STATUS_ERROR,
 } from 'Store/actions/manifestActions'
 export default(state = {
   manifests: {},
@@ -26,6 +28,16 @@ export default(state = {
           [action.id]: {
             status: STATUS_READY,
             data: action.data,
+          },
+        },
+      }
+    case RECEIVE_MANIFEST_ERROR:
+      return {
+        ...state,
+        manifests: { ...state.manifests,
+          [action.id]: {
+            status: STATUS_ERROR,
+            data: null,
           },
         },
       }
