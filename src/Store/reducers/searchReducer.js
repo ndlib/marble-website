@@ -2,7 +2,7 @@ import {
   SUBMIT_SEARCH,
   RESULTS_READY,
   CLEAR_SEARCH,
-  PER_PAGE_CHANGE,
+  PAGE_CHANGE,
 } from '../actions/searchActions'
 
 export default(state = {}, action) => {
@@ -13,6 +13,7 @@ export default(state = {}, action) => {
         terms: action.terms,
         searching: true,
         results: [],
+        pageindex: action.pageindex,
       }
     case RESULTS_READY:
       return {
@@ -20,6 +21,7 @@ export default(state = {}, action) => {
         searching: false,
         results: action.results,
         nextpage: action.nextpage,
+        pageindex: action.pageindex,
       }
     case CLEAR_SEARCH:
       return {
@@ -28,11 +30,13 @@ export default(state = {}, action) => {
         searching: false,
         results: [],
         nextpage: false,
+        pageindex: 0,
       }
-    case PER_PAGE_CHANGE:
+    case PAGE_CHANGE:
       return {
         ...state,
         perpage: action.perpage,
+        page: action.page,
       }
 
     default:
