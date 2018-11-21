@@ -2,27 +2,33 @@ import { PRIMO_BASE_URL } from 'Configurations/apis'
 export const SUBMIT_SEARCH = 'SUBMIT_SEARCH'
 export const RESULTS_READY = 'RESULTS_READY'
 export const CLEAR_SEARCH = 'CLEAR_SEARCH'
-export const PER_PAGE_CHANGE = 'PER_PAGE_CHANGE'
+export const PAGE_CHANGE = 'PAGE_CHANGE'
 
 const searchBaseURL = PRIMO_BASE_URL
 let searchCriteria = '?inst=NDU&search_scope=spec_coll'
-let numResults = '10'
 
-export const changePerPage = (results, terms) => {
+export const changePage = (results, terms, page) => {
   return dispatch => {
-    dispatch(perPageChange(results))
-    numResults = String(results)
-    dispatch(submitSearch(terms))
+    dispatch(pageChange(results, page))
+    dispatch(submitSearch(results, terms, page))
   }
 }
 
-export const submitSearch = (terms) => {
+export const submitSearch = (results, terms, page) => {
   return dispatch => {
     dispatch(startSearch(terms))
 
+    if (!page) {
+      page = 1
+    }
+    if (!results) {
+      results = 10
+    }
+
+    let offset = '&offset=' + String(results * page)
     let searchterm = '&q=any,contains,' + terms
-    let perpage = '&limit=' + String(parseInt(numResults) + 1)
-    let url = encodeURI(searchBaseURL + searchCriteria + searchterm + perpage)
+    let perpage = '&limit=' + String(results + 1)
+    let url = encodeURI(searchBaseURL + searchCriteria + searchterm + perpage + offset)
     let nextpage = false
 
     return fetch(
@@ -38,13 +44,12 @@ export const submitSearch = (terms) => {
       })
       .then(json => {
         console.log(json)
-        if (json.docs.length > numResults) {
+        if (json.docs.length > results) {
           nextpage = true
           json.docs.splice(-1, 1)
         } else {
           nextpage = false
         }
-
         dispatch(returnResults(json, nextpage))
       })
       .catch(e => {
@@ -53,10 +58,11 @@ export const submitSearch = (terms) => {
   }
 }
 
-export const startSearch = (terms) => {
+export const startSearch = (terms, page) => {
   return {
     type: SUBMIT_SEARCH,
     terms: terms,
+    pageindex : page,
   }
 }
 
@@ -73,12 +79,14 @@ export const clearSearch = () => {
     type: CLEAR_SEARCH,
     terms: '',
     results: [],
+    pageindex : 0,
   }
 }
 
-export const perPageChange = (perpage) => {
+export const pageChange = (perpage, page) => {
   return {
-    type: PER_PAGE_CHANGE,
+    type: PAGE_CHANGE,
     perpage: perpage,
+    page: page,
   }
 }
