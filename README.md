@@ -28,7 +28,9 @@ This website provides an interface to search and browse digital collections and 
 
 This repository is configured for continuous integration and deployment. Code changes are deployed when they reach the master branch with an approval process through [AWS CodePipeline](https://aws.amazon.com/codepipeline/).
 
-Code for the infrastructure deployment process is available in [mellon-blueprints](https://github.com/ndlib/mellon-blueprints). 
+In order for deployment to be successful, all unit tests must be passing.
+
+Code for the infrastructure deployment process is available in [mellon-blueprints](https://github.com/ndlib/mellon-blueprints).
 
 ## License:
 
