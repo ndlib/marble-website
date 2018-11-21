@@ -24,6 +24,10 @@ This website provides an interface to search and browse digital collections and 
 
 `yarn test`
 
+or
+
+`yarn test-coverage` to update `/coverage/lcov.info` for use with: [Coverage Markers](https://github.com/kentaro-m/coverage-markers) in [Atom](https://atom.io/).
+
 ## Deployment
 
 This repository is configured for continuous integration and deployment. Code changes are deployed when they reach the master branch with an approval process through [AWS CodePipeline](https://aws.amazon.com/codepipeline/).
