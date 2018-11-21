@@ -80,7 +80,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "test-coverage": "node scripts/test.js  && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test-coverage": "yarn test --coverage --watch",
     "test-inline": "node scripts/test-inline.js"
   },
   "eslintConfig": {
