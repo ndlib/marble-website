@@ -44,3 +44,11 @@ test('Help renders the right texFile with a subpath', () => {
   expect(wrapper.find('h2').text()).toEqual('Topic 2')
   expect(wrapper.find('ReactMarkdown').text()).toEqual('Fake file text 2')
 })
+
+test('Help renders not found message on error', () => {
+  console.error = jest.fn()
+  mountWithRouter = node => mount(<MemoryRouter initialEntries={[ '/help/topic-3' ]}>{node}</MemoryRouter>)
+  wrapper = mountWithRouter(<HelpText />)
+
+  expect(wrapper.find('.mainHelpContent').text()).toEqual('The selected help content could not be found.')
+})

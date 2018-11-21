@@ -2,8 +2,10 @@ import { MANIFEST_BASE_URL } from 'Configurations/apis.js'
 
 export const FETCH_MANIFEST = 'FETCH_MANIFEST'
 export const RECEIVE_MANIFEST = 'RECEIVE_MANIFEST'
+export const RECEIVE_MANIFEST_ERROR = 'RECEIVE_MANIFEST_ERROR'
 export const STATUS_FETCHING = 'STATUS_FETCHING'
 export const STATUS_READY = 'STATUS_READY'
+export const STATUS_ERROR = 'STATUS_ERROR'
 
 export const getManifest = (id) => {
   return dispatch => {
@@ -22,7 +24,7 @@ export const getManifest = (id) => {
         return dispatch(receiveManifest(id, json))
       })
       .catch(error => {
-        console.error(error)
+        return dispatch(manifestError(id, error))
       })
   }
 }
@@ -39,5 +41,13 @@ export const receiveManifest = (id, data) => {
     type: RECEIVE_MANIFEST,
     id: id,
     data: data,
+  }
+}
+
+export const manifestError = (id, error) => {
+  console.error(error)
+  return {
+    type: RECEIVE_MANIFEST_ERROR,
+    id: id,
   }
 }

@@ -2,8 +2,10 @@ import reducer from './'
 import {
   FETCH_MANIFEST,
   RECEIVE_MANIFEST,
+  RECEIVE_MANIFEST_ERROR,
   STATUS_FETCHING,
   STATUS_READY,
+  STATUS_ERROR,
 } from 'Store/actions/manifestActions'
 
 test('Should return an initial state', () => {
@@ -17,6 +19,20 @@ test('Should return fetching', () => {
       manifests: {
         'fake_id': {
           status: STATUS_FETCHING,
+          data: null,
+        },
+      },
+    }
+  )
+})
+
+test('Should return an error', () => {
+  const action = { type: RECEIVE_MANIFEST_ERROR, id: 'fake_id' }
+  expect(reducer(undefined, action)).toEqual(
+    {
+      manifests: {
+        'fake_id': {
+          status: STATUS_ERROR,
           data: null,
         },
       },
