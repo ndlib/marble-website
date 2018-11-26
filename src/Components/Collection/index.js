@@ -2,25 +2,35 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
-import { getManifest, STATUS_READY } from 'Store/actions/manifestActions'
+import {
+  getManifest,
+  STATUS_READY,
+  STATUS_ERROR,
+} from 'Store/actions/manifestActions'
 import Loading from 'Components/Shared/Loading'
+import NotFound from 'Components/Shared/NotFound/'
 
 import CollectionDisplay from './CollectionDisplay'
 
-const Collection = ({ manifests, match }) => {
+export const Collection = ({ manifests, match }) => {
   const start = parseInt(match.params.start, 10) || 0
   const perPage = 12 // TEMP VARIABLE USE STORE SETTINGS
 
   const currentManifest = manifests[match.params.manifestId]
 
-  if (currentManifest && currentManifest.status === STATUS_READY) {
-    return (
-      <CollectionDisplay
-        currentManifest={currentManifest}
-        start={start}
-        perPage={perPage}
-      />
-    )
+  if (currentManifest) {
+    switch (currentManifest.status) {
+      case STATUS_READY:
+        return <CollectionDisplay
+          currentManifest={currentManifest}
+          start={start}
+          perPage={perPage}
+        />
+      case STATUS_ERROR:
+        return <NotFound />
+      default:
+        return <Loading />
+    }
   }
   return <Loading />
 }
