@@ -2,20 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import SideText from 'Components/Shared/SideText'
 import MainSide from 'Components/Shared/MainSide'
-import Card from 'Components/Shared/Card'
+import CardList from 'Components/Shared/CardList'
 import CollectionImage from './CollectionImage'
-import { MANIFEST_BASE_URL } from 'Configurations/apis'
 
 const CollectionDisplay = ({ currentManifest, start, perPage }) => {
-  let items
-  if (currentManifest.data.viewingHint === 'multi-part') {
-    items = currentManifest.data.collections
-  } else {
-    items = currentManifest.data.manifests
-  }
-
+  let items = defineItems(currentManifest.data)
   return (
     <React.Fragment>
+      { /* add search component */ }
       <CollectionImage
         image={currentManifest.data.image}
         altText={currentManifest.data.label}
@@ -25,20 +19,22 @@ const CollectionDisplay = ({ currentManifest, start, perPage }) => {
         text={currentManifest.data.description}
       />
       <MainSide>
-        {
-          items.slice(start, start + perPage).map(item => {
-            return (
-              <Card
-                key={item['@id']}
-                title={item.label}
-                image={null}
-                url={`/collection${item['@id'].replace(MANIFEST_BASE_URL, '/')}`}
-              />)
-          })
-        }
+        { /* add pagination component */ }
+        <CardList
+          items={items}
+          start={start}
+          perPage={perPage}
+        />
       </MainSide>
     </React.Fragment>
   )
+}
+
+export const defineItems = (data) => {
+  if (data.viewingHint === 'multi-part') {
+    return data.collections
+  }
+  return data.manifests
 }
 
 CollectionDisplay.propTypes = {
