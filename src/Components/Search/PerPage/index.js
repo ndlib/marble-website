@@ -3,6 +3,7 @@ import './style.css'
 import Select from 'react-select'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
+import PropTypes from 'prop-types'
 
 import { changePage } from 'Store/actions/searchActions'
 
@@ -31,6 +32,13 @@ const mapStateToProps = (state) => {
 const handleChange = (e, terms, history, dispatch) => {
   (history.push('/search?terms=' + terms + '&perpage=' + e.value + '&page=1'))
   dispatch(changePage(e.value, terms, 1))
+}
+
+PerPage.propTypes = {
+  dispatch: PropTypes.func,
+  terms: PropTypes.string,
+  perpage: PropTypes.number,
+  history: PropTypes.object,
 }
 
 export default withRouter(connect(mapStateToProps)(PerPage))

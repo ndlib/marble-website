@@ -16,7 +16,7 @@ export const changePage = (results, terms, page) => {
 
 export const submitSearch = (results, terms, page) => {
   return dispatch => {
-    dispatch(startSearch(terms))
+    dispatch(startSearch(String(terms)))
 
     if (!page) {
       page = 1
@@ -25,9 +25,9 @@ export const submitSearch = (results, terms, page) => {
       results = 10
     }
 
-    let offset = '&offset=' + String(results * page)
-    let searchterm = '&q=any,contains,' + terms
-    let perpage = '&limit=' + String(results + 1)
+    let offset = '&offset=' + String(parseInt(results, 10) * parseInt(page, 10))
+    let searchterm = '&q=any,contains,' + String(terms)
+    let perpage = '&limit=' + String(parseInt(results, 10) + 1)
     let url = encodeURI(searchBaseURL + searchCriteria + searchterm + perpage + offset)
     let nextpage = false
 
@@ -62,7 +62,7 @@ export const startSearch = (terms, page) => {
   return {
     type: SUBMIT_SEARCH,
     terms: terms,
-    pageindex : page,
+    page : page,
   }
 }
 
@@ -79,7 +79,7 @@ export const clearSearch = () => {
     type: CLEAR_SEARCH,
     terms: '',
     results: [],
-    pageindex : 0,
+    page : 1,
   }
 }
 

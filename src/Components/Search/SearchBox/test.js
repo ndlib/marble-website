@@ -1,6 +1,6 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import SearchBox from './'
+import { SearchBox } from './'
 import configureStore from 'redux-mock-store'
 const mockStore = configureStore()
 
@@ -22,10 +22,6 @@ test('Search Component has an input', () => {
 test('Search Component has an button', () => {
   expect(wrapper.find('button').exists()).toBeTruthy()
 })
-
-test('Search is submitted'), () => {
-  wrapper.find('button').click()
-}
 
 // test('Search Box dispatches the searchAction#submitSearch function with the value of the input field', () => {
 //   const { store, invoke } = create()

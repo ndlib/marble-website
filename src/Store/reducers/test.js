@@ -42,7 +42,7 @@ describe('RESULTS_READY reducer', () => {
 describe('CLEAR_SEARCH reducer', () => {
   test('base test', () => {
     const action = { type: 'CLEAR_SEARCH' }
-    const testState = { nextpage: false, results: [], searching: false, terms: [] }
+    const testState = { nextpage: false, page: 1, results: [], searching: false, terms: [] }
 
     expect(searchReducer(undefined, action)).toEqual(testState)
   })

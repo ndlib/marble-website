@@ -1,16 +1,19 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { withRouter } from 'react-router'
+import queryString from 'query-string'
+import PropTypes from 'prop-types'
 
 import SearchBox from './SearchBox'
 import Results from './Results'
 import PerPage from './PerPage'
 import PageNum from './PageNum'
-import { submitSearch, changePage } from 'Store/actions/searchActions'
+import { changePage } from 'Store/actions/searchActions'
 import ErrorBoundary from 'Components/Shared/ErrorBoundary'
-import queryString from 'query-string'
 
 class Search extends Component {
   render () {
-    const values = queryString.parse(this.props.location.search)
+    let values = queryString.parse(this.props.location.search)
     return (
       <React.Fragment>
         <SearchBox Searchbar={values.terms} />
@@ -23,4 +26,34 @@ class Search extends Component {
     )
   }
 }
-export default Search
+
+const mapStateToProps = (state) => {
+  return {
+    perpage: state.searchReducer.perpage,
+    page: state.searchReducer.page,
+    terms: state.searchReducer.terms,
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return { dispatch }
+}
+
+const mergeProps = (stateProps, dispatchProps, ownProps) => {
+  let values = queryString.parse(ownProps.location.search)
+  let terms = stateProps.terms || values.terms
+  let page = stateProps.page || values.page
+  let perpage = stateProps.perpage || values.perpage
+
+  dispatchProps.dispatch(changePage(perpage, terms, page))
+
+  return { ...stateProps, ...dispatchProps, ...ownProps }
+}
+
+Search.propTypes = {
+  location: PropTypes.shape({
+    search: PropTypes.string,
+  }),
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps, mergeProps)(Search))
