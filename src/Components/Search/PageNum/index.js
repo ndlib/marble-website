@@ -10,7 +10,6 @@ let pagenav = ''
 let pageprev = ''
 let pagenext = ''
 export const PageNum = ({ dispatch, nextpage, page, terms, perpage, history }) => {
-  console.log(perpage)
   if (page > 1) {
     pageprev = <div className='pageLink' onClick={e => nextPage(e, terms, history, dispatch, perpage, (parseInt(page) - 1))}> &lt; </div>
   } else {
@@ -42,7 +41,7 @@ const mapStateToProps = (state) => {
   return {
     perpage: state.searchReducer.perpage,
     nextpage: state.searchReducer.nextpage,
-    pageindex: state.searchReducer.pageindex,
+    page: state.searchReducer.page,
     terms: state.searchReducer.terms,
   }
 }

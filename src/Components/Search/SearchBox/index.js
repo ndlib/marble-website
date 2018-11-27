@@ -27,9 +27,9 @@ const SearchBox = ({ dispatch, Searchbar, history, perpage }) => {
   )
 }
 
-export default withRouter(connect()(SearchBox))
-
 const formSearchSubmit = (e, input, perpage, dispatch) => {
   e.preventDefault()
   dispatch(changePage(perpage, input.value, 1))
 }
+
+export default withRouter(connect()(SearchBox))

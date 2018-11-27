@@ -7,7 +7,6 @@ import ErrorBoundary from 'Components/Shared/ErrorBoundary'
 import './style.css'
 
 export const Results = ({ searchResults, page, perpage }) => {
-  console.log(page, perpage)
   return (
     mapValidResults(searchResults, (doc, index) =>
       <ErrorBoundary key={index}>
