@@ -5,7 +5,6 @@ import { sections } from 'Configurations/About'
 const About = () => {
   return (
     <ContentLeftSidebar
-      className='aboutContent'
       sidebarTitle='About This Project'
       sidebarItems={sections}
     >

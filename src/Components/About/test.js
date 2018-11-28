@@ -7,7 +7,6 @@ import AboutMain from './AboutMain'
 const wrapper = shallow(<About />)
 
 test('Renders a div with Sidebar and AboutMain componets', () => {
-  expect(wrapper.find('.aboutContent').exists()).toBeTruthy()
   expect(wrapper.find(ContentLeftSidebar).exists()).toBeTruthy()
   expect(wrapper.find(AboutMain).exists()).toBeTruthy()
 })

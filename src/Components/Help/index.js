@@ -6,7 +6,6 @@ import { topics } from 'Configurations/Help'
 const Help = () => {
   return (
     <ContentLeftSidebar
-      className='helpTopics'
       sidebarTitle='Help'
       sidebarItems={topics}
     >
