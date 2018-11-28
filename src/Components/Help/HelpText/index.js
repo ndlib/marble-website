@@ -2,7 +2,6 @@ import React from 'react'
 import { PropTypes } from 'prop-types'
 import ReactMarkdown from 'react-markdown'
 import { withRouter } from 'react-router'
-import MainSide from 'Components/Shared/MainSide'
 import { topics } from 'Configurations/Help'
 
 const HelpText = ({ history }) => {
@@ -26,10 +25,10 @@ const HelpText = ({ history }) => {
   try {
     const textFile = require(`Configurations/Help/Text/${topicObj.textFile}.md`)
     return (
-      <MainSide>
+      <React.Fragment>
         <h2>{topicObj.title}</h2>
         <ReactMarkdown source={textFile} />
-      </MainSide>
+      </React.Fragment>
     )
   } catch (e) {
     console.error('Help topic not found.', e)

@@ -3,10 +3,11 @@ import { PropTypes } from 'prop-types'
 import { HashLink as Link } from 'react-router-hash-link'
 import './style.css'
 
-const Sidebar = ({ items, title }) => {
+const Sidebar = ({ title, items, text }) => {
   return (
-    <nav className='sideBar'>
+    <div className='sideBar'>
       { title ? <h2>{title}</h2> : null }
+      { text ? <div className='sideTextContent'>{ text }</div> : null}
       {
         items ? items.map(item => {
           return (
@@ -17,11 +18,12 @@ const Sidebar = ({ items, title }) => {
           )
         }) : null
       }
-    </nav>
+    </div>
   )
 }
 Sidebar.propTypes = {
-  items: PropTypes.array.isRequired,
   title: PropTypes.string,
+  items: PropTypes.array,
+  text: PropTypes.string,
 }
 export default Sidebar

@@ -1,9 +1,8 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import { MemoryRouter, Route } from 'react-router-dom'
+import { MemoryRouter } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import HelpText from './'
-import MainSide from 'Components/Shared/MainSide'
 
 jest.mock('Configurations/Help', () => {
   return {
@@ -25,7 +24,6 @@ let mountWithRouter
 test('Help renders the correct layout', () => {
   mountWithRouter = node => mount(<MemoryRouter>{node}</MemoryRouter>)
   wrapper = mountWithRouter(<HelpText />)
-  expect(wrapper.find(MainSide).exists()).toBeTruthy()
   expect(wrapper.find('h2').exists()).toBeTruthy()
   expect(wrapper.find(ReactMarkdown).exists()).toBeTruthy()
 })

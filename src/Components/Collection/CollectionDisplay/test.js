@@ -2,8 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import CollectionDisplay, { defineItems } from './'
 import CollectionImage from './CollectionImage'
-import SideText from 'Components/Shared/SideText'
-import MainSide from 'Components/Shared/MainSide'
+import ContentLeftSidebar from 'Components/Layouts/ContentLeftSidebar'
 import CardList from 'Components/Shared/CardList'
 
 test('Selects items from collections if multi-part', () => {
@@ -40,7 +39,6 @@ test('Renders the subcomponents', () => {
   }
   const wrapper = shallow(<CollectionDisplay currentManifest={manifest} start={0} perPage={5} />)
   expect(wrapper.find(CollectionImage).exists()).toBeTruthy()
-  expect(wrapper.find(SideText).exists()).toBeTruthy()
-  expect(wrapper.find(MainSide).exists()).toBeTruthy()
+  expect(wrapper.find(ContentLeftSidebar).exists()).toBeTruthy()
   expect(wrapper.find(CardList).exists()).toBeTruthy()
 })
