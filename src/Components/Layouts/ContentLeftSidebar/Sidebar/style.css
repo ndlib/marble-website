@@ -1,13 +1,13 @@
-.sideText {
+.sideBar {
  display: inline-block;
  width: var(--sidebar-width);
 }
-.sideText a {
+.sideBar a {
   display: block;
 }
 
 @media (max-width: 780px) {
-  .sideText {
+  .sideBar {
     width: 100%;
   }
 }

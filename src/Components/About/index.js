@@ -1,17 +1,15 @@
 import React from 'react'
-
-import Sidebar from 'Components/Shared/Sidebar'
+import ContentLeftSidebar from 'Components/Layouts/ContentLeftSidebar'
 import AboutMain from './AboutMain'
 import { sections } from 'Configurations/About'
 const About = () => {
   return (
-    <div className='aboutContent'>
-      <Sidebar
-        title='About This Project'
-        items={sections}
-      />
+    <ContentLeftSidebar
+      sidebarTitle='About This Project'
+      sidebarItems={sections}
+    >
       <AboutMain />
-    </div>
+    </ContentLeftSidebar>
   )
 }
 

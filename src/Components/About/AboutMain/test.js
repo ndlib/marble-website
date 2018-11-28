@@ -2,12 +2,10 @@ import React from 'react'
 import { mount } from 'enzyme'
 import AboutMain from './'
 import ReactMarkdown from 'react-markdown'
-import MainSide from 'Components/Shared/MainSide'
 
 const wrapper = mount(<AboutMain />)
 
 test('AboutMain renders introduction section stuff', () => {
-  expect(wrapper.find(MainSide).exists()).toBeTruthy()
   expect(wrapper.find('#introduction').exists()).toBeTruthy()
   expect(wrapper.find('h2').exists()).toBeTruthy()
   expect(wrapper.find('h2').first().text()).toEqual('Introduction')

@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import SideText from 'Components/Shared/SideText'
-import MainSide from 'Components/Shared/MainSide'
+import ContentLeftSidebar from 'Components/Layouts/ContentLeftSidebar'
 import CardList from 'Components/Shared/CardList'
 import CollectionImage from './CollectionImage'
 
@@ -14,18 +13,17 @@ const CollectionDisplay = ({ currentManifest, start, perPage }) => {
         image={currentManifest.data.image}
         altText={currentManifest.data.label}
       />
-      <SideText
-        title={currentManifest.data.label}
-        text={currentManifest.data.description}
-      />
-      <MainSide>
+      <ContentLeftSidebar
+        sidebarTitle={currentManifest.data.label}
+        sidebarText={currentManifest.data.description}
+      >
         { /* add pagination component */ }
         <CardList
           items={items}
           start={start}
           perPage={perPage}
         />
-      </MainSide>
+      </ContentLeftSidebar>
     </React.Fragment>
   )
 }

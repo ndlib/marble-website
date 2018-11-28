@@ -1,18 +1,17 @@
 import React from 'react'
 import { mount } from 'enzyme'
 import Sidebar from './'
-import { HashLink as Link } from 'react-router-hash-link'
 import { MemoryRouter } from 'react-router-dom'
 
 test('Sidebar without a title does not render a title', () => {
   const wrapper = mount(<Sidebar items={[]} />)
-  expect(wrapper.find('nav').exists()).toBeTruthy()
+  expect(wrapper.find('div').exists()).toBeTruthy()
   expect(wrapper.find('h2').exists()).toBeFalsy()
 })
 
 test('Sidebar with title renders a title', () => {
   const wrapper = mount(<Sidebar title='TEST TITLE' items={[]} />)
-  expect(wrapper.find('nav').exists()).toBeTruthy()
+  expect(wrapper.find('div').exists()).toBeTruthy()
   expect(wrapper.find('h2').exists()).toBeTruthy()
   expect(wrapper.find('h2').text()).toEqual('TEST TITLE')
 })
@@ -33,9 +32,13 @@ test('Sidebar renders a Link for each item', () => {
 })
 
 test('Sidebar render does\'t fail when no items are passed', () => {
-  // We know React logs an error here, but we can suppress it from output since we know we're doing something bad.
-  console.error = jest.fn()
   const wrapper = mount(<Sidebar title='TEST TITLE' />)
-  expect(wrapper.find('nav').exists()).toBeTruthy()
+  expect(wrapper.find('div').exists()).toBeTruthy()
   expect(wrapper.find('a').exists()).toBeFalsy()
+})
+
+test('Sidebar renders text', () => {
+  const wrapper = mount(<Sidebar text='some text' />)
+  expect(wrapper.find('.sideTextContent').exists()).toBeTruthy()
+  expect(wrapper.find('.sideTextContent').text()).toEqual('some text')
 })
