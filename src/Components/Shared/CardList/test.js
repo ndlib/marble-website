@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import CardList from './'
+import CardList, { itemsForDisplay } from './'
 import Card from 'Components/Shared/Card'
 import NotFound from 'Components/Shared/NotFound'
 
