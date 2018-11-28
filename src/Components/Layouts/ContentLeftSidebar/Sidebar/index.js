@@ -7,7 +7,6 @@ const Sidebar = ({ title, items, text }) => {
   return (
     <div className='sideBar'>
       { title ? <h2>{title}</h2> : null }
-      { text ? <div className='sideTextContent'>{ text }</div> : null}
       {
         items ? items.map(item => {
           return (
@@ -18,6 +17,7 @@ const Sidebar = ({ title, items, text }) => {
           )
         }) : null
       }
+      { text ? <div className='sideTextContent'>{ text }</div> : null}
     </div>
   )
 }
