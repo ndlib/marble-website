@@ -1,10 +1,16 @@
 import React from 'react'
+import { withRouter } from 'react-router'
 import PropTypes from 'prop-types'
 import ContentLeftSidebar from 'Components/Layouts/ContentLeftSidebar'
 import CardList from 'Components/Shared/CardList'
 import CollectionImage from './CollectionImage'
 
-const CollectionDisplay = ({ currentManifest, start, perPage }) => {
+export const CollectionDisplay = ({ currentManifest, match }) => {
+  let start = 0
+  if (match && match.params && match.params.start) {
+    start = parseInt(match.params.start, 10)
+  }
+  const perPage = 12 // TEMP VARIABLE USE STORE SETTINGS
   let items = defineItems(currentManifest.data)
   return (
     <React.Fragment>
@@ -30,8 +36,11 @@ const CollectionDisplay = ({ currentManifest, start, perPage }) => {
 
 CollectionDisplay.propTypes = {
   currentManifest: PropTypes.object.isRequired,
-  start: PropTypes.number.isRequired,
-  perPage: PropTypes.number.isRequired,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      start: PropTypes.string,
+    }).isRequired,
+  }).isRequired,
 }
 
 export const defineItems = (data) => {
@@ -41,4 +50,4 @@ export const defineItems = (data) => {
   return data.manifests
 }
 
-export default CollectionDisplay
+export default withRouter(CollectionDisplay)

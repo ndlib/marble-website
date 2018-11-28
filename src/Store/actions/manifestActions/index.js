@@ -1,5 +1,5 @@
 import { MANIFEST_BASE_URL } from 'Configurations/apis.js'
-
+import fetchJSON from 'Functions/fetchJSON'
 export const FETCH_MANIFEST = 'FETCH_MANIFEST'
 export const RECEIVE_MANIFEST = 'RECEIVE_MANIFEST'
 export const RECEIVE_MANIFEST_ERROR = 'RECEIVE_MANIFEST_ERROR'
@@ -10,22 +10,9 @@ export const STATUS_ERROR = 'STATUS_ERROR'
 export const getManifest = (id) => {
   return dispatch => {
     dispatch(fetchManifest(id))
-    return fetch(
-      `${MANIFEST_BASE_URL}${id}`, {
-        method: 'get',
-      })
-      .then(response => {
-        if (response.status >= 200 && response.status < 400) {
-          return response.json()
-        } else {
-          throw new Error(response.statusText)
-        }
-      }).then(json => {
-        return dispatch(receiveManifest(id, json))
-      })
-      .catch(error => {
-        return dispatch(manifestError(id, error))
-      })
+    return fetchJSON(`${MANIFEST_BASE_URL}${id}`)
+      .then(json => dispatch(receiveManifest(id, json)))
+      .catch(error => dispatch(manifestError(id, error)))
   }
 }
 

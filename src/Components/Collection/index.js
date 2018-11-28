@@ -13,9 +13,6 @@ import NotFound from 'Components/Shared/NotFound/'
 import CollectionDisplay from './CollectionDisplay'
 
 export const Collection = ({ manifests, match }) => {
-  const start = parseInt(match.params.start, 10) || 0
-  const perPage = 12 // TEMP VARIABLE USE STORE SETTINGS
-
   const currentManifest = manifests[match.params.manifestId]
 
   if (currentManifest) {
@@ -23,8 +20,6 @@ export const Collection = ({ manifests, match }) => {
       case STATUS_READY:
         return <CollectionDisplay
           currentManifest={currentManifest}
-          start={start}
-          perPage={perPage}
         />
       case STATUS_ERROR:
         return <NotFound />
@@ -40,7 +35,6 @@ Collection.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
       manifestId: PropTypes.string.isRequired,
-      start: PropTypes.string,
     }).isRequired,
   }).isRequired,
 }

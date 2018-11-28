@@ -1,24 +1,30 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 import Header from './'
+import HeaderImage from './HeaderImage'
 jest.mock('Configurations/customizations', () => {
   return {
     INSTITUTION_LOGO: 'MOCK_INSTITUTION_LOGO.png',
     INSTITUTION_LOGO_ALT_TEXT: 'MOCK INSTITUTION ALT TEXT',
     INSTITUTION_HOME_PAGE: 'http://example.edu',
+    INSTITUTION_LOGO_HEIGHT: '10px',
+    INSTITUTION_LOGO_WIDTH: '10px',
     DEPARTMENT_LOGO: 'MOCK_DEPARTMENT_LOGO.png',
     DEPARTMENT_LOGO_ALT_TEXT: 'MOCK DEPARTMENT ALT TEXT',
     DEPARTMENT_HOME_PAGE: 'http://sample.edu',
+    DEPARTMENT_LOGO_HEIGHT: '10px',
+    DEPARTMENT_LOGO_WIDTH: '10px',
   }
 })
 let wrapper
 beforeEach(() => {
-  wrapper = shallow(<Header />)
+  wrapper = mount(<Header />)
 })
 
 test('Header renders the appropriate divs', () => {
   expect(wrapper.find('.header').exists()).toBeTruthy()
   expect(wrapper.find('.headerInner').exists()).toBeTruthy()
+  expect(wrapper.find(HeaderImage)).toHaveLength(2)
 })
 
 test('Header renders institution logo', () => {
