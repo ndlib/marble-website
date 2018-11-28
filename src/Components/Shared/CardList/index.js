@@ -26,14 +26,15 @@ const CardList = ({ items, start, perPage }) => {
   return <NotFound />
 }
 
-const itemsForDisplay = (items, start, perPage) => {
-  // use Math.min and array length so we don't overshoot the end of the array
-  return items.slice(start, Math.min(start + perPage, items.length))
-}
-
 CardList.propTypes = {
   items: PropTypes.array.isRequired,
   start: PropTypes.number.isRequired,
   perPage: PropTypes.number.isRequired,
 }
+
+const itemsForDisplay = (items, start, perPage) => {
+  // use Math.min and array length so we don't overshoot the end of the array
+  return items.slice(start, Math.min(start + perPage, items.length))
+}
+
 export default CardList

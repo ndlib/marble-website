@@ -30,17 +30,17 @@ const CollectionDisplay = ({ currentManifest, start, perPage }) => {
   )
 }
 
+CollectionDisplay.propTypes = {
+  currentManifest: PropTypes.object.isRequired,
+  start: PropTypes.number.isRequired,
+  perPage: PropTypes.number.isRequired,
+}
+
 export const defineItems = (data) => {
   if (data.viewingHint === 'multi-part') {
     return data.collections
   }
   return data.manifests
-}
-
-CollectionDisplay.propTypes = {
-  currentManifest: PropTypes.object.isRequired,
-  start: PropTypes.number.isRequired,
-  perPage: PropTypes.number.isRequired,
 }
 
 export default CollectionDisplay
