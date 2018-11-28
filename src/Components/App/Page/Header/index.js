@@ -11,35 +11,27 @@ import {
   DEPARTMENT_LOGO_WIDTH,
   DEPARTMENT_HOME_PAGE,
 } from 'Configurations/customizations'
-
+import HeaderImage from './HeaderImage'
 import './style.css'
 const Header = () => {
   return (
     <div className='header'>
       <div className='headerInner'>
-        <a href={INSTITUTION_HOME_PAGE}>
-          <img
-            src={INSTITUTION_LOGO}
-            alt={INSTITUTION_LOGO_ALT_TEXT}
-            style={{
-              height: INSTITUTION_LOGO_HEIGHT,
-              width: INSTITUTION_LOGO_WIDTH,
-            }}
-          />
-        </a>
-        <a
-          href={DEPARTMENT_HOME_PAGE}
+        <HeaderImage
+          image={INSTITUTION_LOGO}
+          altText={INSTITUTION_LOGO_ALT_TEXT}
+          imageHeight={INSTITUTION_LOGO_HEIGHT}
+          imageWidth={INSTITUTION_LOGO_WIDTH}
+          linkPath={INSTITUTION_HOME_PAGE}
+        />
+        <HeaderImage
           className='departmentLogo'
-        >
-          <img
-            src={DEPARTMENT_LOGO}
-            alt={DEPARTMENT_LOGO_ALT_TEXT}
-            style={{
-              height: DEPARTMENT_LOGO_HEIGHT,
-              width: DEPARTMENT_LOGO_WIDTH,
-            }}
-          />
-        </a>
+          image={DEPARTMENT_LOGO}
+          altText={DEPARTMENT_LOGO_ALT_TEXT}
+          imageHeight={DEPARTMENT_LOGO_HEIGHT}
+          imageWidth={DEPARTMENT_LOGO_WIDTH}
+          linkPath={DEPARTMENT_HOME_PAGE}
+        />
       </div>
     </div>
 
