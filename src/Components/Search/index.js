@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
 import queryString from 'query-string'
+import PropTypes from 'prop-types'
 
 import SearchBox from './SearchBox'
 import Results from './Results'
 import PerPage from './PerPage'
 import PageNum from './PageNum'
-import { submitSearch, changePage } from 'Store/actions/searchActions'
+import { changePage } from 'Store/actions/searchActions'
 import ErrorBoundary from 'Components/Shared/ErrorBoundary'
 
 class Search extends Component {
@@ -40,7 +41,6 @@ const mapDispatchToProps = dispatch => {
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
   let values = queryString.parse(ownProps.location.search)
-  console.log(values, stateProps)
   let terms = stateProps.terms || values.terms
   let page = stateProps.page || values.page
   let perpage = stateProps.perpage || values.perpage
@@ -48,6 +48,12 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
   dispatchProps.dispatch(changePage(perpage, terms, page))
 
   return { ...stateProps, ...dispatchProps, ...ownProps }
+}
+
+Search.propTypes = {
+  location: PropTypes.shape({
+    search: PropTypes.string,
+  }),
 }
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps, mergeProps)(Search))

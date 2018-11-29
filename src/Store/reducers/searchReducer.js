@@ -13,7 +13,6 @@ export default(state = {}, action) => {
         terms: action.terms,
         searching: true,
         results: [],
-        pageindex: action.pageindex,
       }
     case RESULTS_READY:
       return {
@@ -21,7 +20,6 @@ export default(state = {}, action) => {
         searching: false,
         results: action.results,
         nextpage: action.nextpage,
-        pageindex: action.pageindex,
       }
     case CLEAR_SEARCH:
       return {
@@ -30,7 +28,7 @@ export default(state = {}, action) => {
         searching: false,
         results: [],
         nextpage: false,
-        pageindex: 0,
+        page: 1,
       }
     case PAGE_CHANGE:
       return {

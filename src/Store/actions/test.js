@@ -31,6 +31,7 @@ describe('searchActions', () => {
 
   test('clearSearch dispatches the correct payload', () => {
     const expected = {
+      page: 1,
       type: searchActions.CLEAR_SEARCH,
       terms: '',
       results: [],
