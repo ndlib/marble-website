@@ -25,9 +25,9 @@ export const submitSearch = (results, terms, page) => {
       results = 10
     }
 
-    let offset = '&offset=' + String(parseInt(results) * parseInt(page), 10)
+    let offset = '&offset=' + String(parseInt(results, 10) * parseInt(page, 10))
     let searchterm = '&q=any,contains,' + String(terms)
-    let perpage = '&limit=' + String(parseInt(results) + 1, 10)
+    let perpage = '&limit=' + String(parseInt(results, 10) + 1)
     let url = encodeURI(searchBaseURL + searchCriteria + searchterm + perpage + offset)
     let nextpage = false
 

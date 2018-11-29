@@ -11,7 +11,7 @@ let pageprev = ''
 let pagenext = ''
 export const PageNum = ({ dispatch, nextpage, page, terms, perpage, history }) => {
   if (page > 1) {
-    pageprev = <div className='pageLink' onClick={() => nextPage(terms, history, dispatch, perpage, (parseInt(page) - 1), 10)}> &lt; </div>
+    pageprev = <div className='pageLink' onClick={() => nextPage(terms, history, dispatch, perpage, (parseInt(page, 10) - 1))}> &lt; </div>
   } else {
     pageprev = ''
   }
@@ -19,7 +19,7 @@ export const PageNum = ({ dispatch, nextpage, page, terms, perpage, history }) =
     pagenav = <div className='pageLink'>Page {page}</div>
   }
   if (nextpage) {
-    pagenext = <div className='pageLink' onClick={() => nextPage(terms, history, dispatch, perpage, (parseInt(page) + 1), 10)}> &gt; </div>
+    pagenext = <div className='pageLink' onClick={() => nextPage(terms, history, dispatch, perpage, (parseInt(page, 10) + 1))}> &gt; </div>
   } else {
     pagenext = ''
   }
@@ -52,7 +52,7 @@ PageNum.propTypes = {
   page: PropTypes.number,
   terms: PropTypes.string,
   perpage: PropTypes.number,
-  history: PropTypes.obj,
+  history: PropTypes.func,
 }
 
 export default withRouter(connect(mapStateToProps)(PageNum))
