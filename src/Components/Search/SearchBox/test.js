@@ -1,6 +1,6 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import SearchBox from './'
+import { SearchBox } from './'
 import configureStore from 'redux-mock-store'
 const mockStore = configureStore()
 

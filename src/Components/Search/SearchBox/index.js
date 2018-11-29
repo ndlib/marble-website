@@ -7,7 +7,7 @@ import searchImage from './search.png'
 
 import { changePage } from 'Store/actions/searchActions'
 
-const SearchBox = ({ dispatch, Searchbar, history, perpage }) => {
+export const SearchBox = ({ dispatch, Searchbar, history, perpage }) => {
   let input
   if (perpage === undefined) {
     perpage = 10
