@@ -23,10 +23,6 @@ test('Search Component has an button', () => {
   expect(wrapper.find('button').exists()).toBeTruthy()
 })
 
-test('Search is submitted'), () => {
-  wrapper.find('button').click()
-}
-
 // test('Search Box dispatches the searchAction#submitSearch function with the value of the input field', () => {
 //   const { store, invoke } = create()
 //   invoke((dispatch, getState) => {
