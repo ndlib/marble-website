@@ -2,7 +2,7 @@ import {
   SUBMIT_SEARCH,
   RESULTS_READY,
   CLEAR_SEARCH,
-  PER_PAGE_CHANGE,
+  PAGE_CHANGE,
 } from '../actions/searchActions'
 
 export default(state = {}, action) => {
@@ -28,11 +28,13 @@ export default(state = {}, action) => {
         searching: false,
         results: [],
         nextpage: false,
+        page: 1,
       }
-    case PER_PAGE_CHANGE:
+    case PAGE_CHANGE:
       return {
         ...state,
         perpage: action.perpage,
+        page: action.page,
       }
 
     default:

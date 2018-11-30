@@ -6,19 +6,19 @@ import ErrorBoundary from 'Components/Shared/ErrorBoundary'
 
 import './style.css'
 
-export const Results = ({ searchResults }) => {
+export const Results = ({ searchResults, page, perpage }) => {
   return (
     mapValidResults(searchResults, (doc, index) =>
       <ErrorBoundary key={index}>
         <div className='container' key={doc.id}>
           <div id='entry'>
-            <span>{ index + 1 }</span>
+            <span>{(perpage * (page - 1)) + index + 1 }</span>
             <span id='title'>{doc.title}</span>
             <div className='label'>Owner:<span id='owner'>Special Collections</span></div>
             <div className='label'>Creator:<span id='author'>{doc.creator}</span></div>
             <div className='label'>Date:<span id='date'>{doc.date}</span></div>
             <div className='label'>Format:<span id='type'>{doc['@TYPE']}</span></div>
-            <div className='label'>Collection:<span id='owner'>{doc.collection}</span></div>
+            <div className='label'>Collection:<span id='owner'>{doc.sourceId}</span></div>
             <div id='description'>{doc.description}</div>
           </div>
         </div>
@@ -27,7 +27,8 @@ export const Results = ({ searchResults }) => {
 }
 
 const mapStateToProps = (state) => {
-  return { nextpage: state.searchReducer.nextpage,
+  return { perpage: state.searchReducer.perpage,
+    page: state.searchReducer.page,
     searchResults: (state.searchReducer.results && state.searchReducer.results.docs)
       ? state.searchReducer.results.docs : [] }
 }
