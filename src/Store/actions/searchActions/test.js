@@ -1,5 +1,5 @@
 import configureStore from 'redux-mock-store'
-import * as searchActions from './searchActions'
+import * as searchActions from './'
 
 const mockStore = configureStore()
 const store = mockStore()
