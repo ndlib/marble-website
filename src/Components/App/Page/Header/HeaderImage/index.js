@@ -1,13 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-const HeaderImage = ({
-  className,
-  image,
-  altText,
-  imageHeight,
-  imageWidth,
-  linkPath,
-}) => {
+const HeaderImage = ({ className, image, altText, imageHeight, imageWidth, linkPath }) => {
   return (
     <a href={linkPath} className={className}>
       <img
