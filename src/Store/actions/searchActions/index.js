@@ -44,7 +44,7 @@ export const submitSearch = (results, terms, page) => {
         dispatch(returnResults(json, nextpage))
       })
       .catch(e => {
-        console.log(e)
+        console.error(e)
       })
   }
 }
