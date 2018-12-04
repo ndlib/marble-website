@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import ContentLeftSidebar from './'
 import Sidebar from './Sidebar'
 import MainSide from './MainSide'
-const wrapper = shallow(<ContentLeftSidebar className='testClass'><div>Some Content</div></ContentLeftSidebar>)
+const wrapper = shallow(<ContentLeftSidebar className='testClass' sidebarContent={''}><div>Some Content</div></ContentLeftSidebar>)
 
 test('It renders a Sidebar and MainSide', () => {
   expect(wrapper.find(Sidebar).exists()).toBeTruthy()

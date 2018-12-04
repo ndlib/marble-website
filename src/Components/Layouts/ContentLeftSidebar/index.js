@@ -6,17 +6,14 @@ import Sidebar from './Sidebar'
 const ContentLeftSidebar = ({
   className,
   sidebarTitle,
-  sidebarItems,
-  sidebarText,
+  sidebarContent,
   children,
 }) => {
   return (
     <div className={`contentLeftSidebar ${className}`}>
       <Sidebar
         title={sidebarTitle}
-        items={sidebarItems}
-        text={sidebarText}
-      />
+      >{sidebarContent}</Sidebar>
       <MainSide>{children}</MainSide>
     </div>
   )
@@ -24,12 +21,8 @@ const ContentLeftSidebar = ({
 
 ContentLeftSidebar.propTypes = {
   className: PropTypes.string,
-  sidebarText: PropTypes.string,
-  sidebarItems: PropTypes.array,
+  sidebarContent: PropTypes.node.isRequired,
   sidebarTitle: PropTypes.string,
-  children: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.array,
-  ]).isRequired,
+  children: PropTypes.node.isRequired,
 }
 export default ContentLeftSidebar

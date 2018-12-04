@@ -16,7 +16,7 @@ const CardList = ({ items, start, perPage }) => {
                 key={item['@id']}
                 title={item.label}
                 image={null}
-                url={`/collection${item['@id'].replace(MANIFEST_BASE_URL, '/')}`}
+                url={targetUrl(item)}
               />)
           })
         }
@@ -35,6 +35,14 @@ CardList.propTypes = {
 const itemsForDisplay = (items, start, perPage) => {
   // use Math.min and array length so we don't overshoot the end of the array
   return items.slice(start, Math.min(start + perPage, items.length))
+}
+
+const targetUrl = (item) => {
+  if (item['@id'].indexOf(MANIFEST_BASE_URL) > -1) {
+    return `/collection/${item['@id'].replace(MANIFEST_BASE_URL, '')}`
+  } else {
+    return `/item/${item['@id'].replace('https://wellcomelibrary.org/iiif/', '').replace('/manifest', '')}`
+  }
 }
 
 export default CardList

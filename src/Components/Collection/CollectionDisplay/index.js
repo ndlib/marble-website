@@ -21,7 +21,7 @@ export const CollectionDisplay = ({ currentManifest, match }) => {
       />
       <ContentLeftSidebar
         sidebarTitle={currentManifest.data.label}
-        sidebarText={currentManifest.data.description}
+        sidebarContent={currentManifest.data.description}
       >
         { /* add pagination component */ }
         <CardList

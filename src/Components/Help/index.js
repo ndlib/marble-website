@@ -1,13 +1,14 @@
 import React from 'react'
 import HelpText from './HelpText'
 import ContentLeftSidebar from 'Components/Layouts/ContentLeftSidebar'
+import LinkList from 'Components/Shared/LinkList'
 import { topics } from 'Configurations/Help'
 
 const Help = () => {
   return (
     <ContentLeftSidebar
       sidebarTitle='Help'
-      sidebarItems={topics}
+      sidebarContent={<LinkList items={topics} />}
     >
       <HelpText />
     </ContentLeftSidebar>
