@@ -21,11 +21,6 @@ test('Sidebar renders text', () => {
 })
 
 test('Sidebar renders component', () => {
-  const wrapper = mount(<Sidebar children='some text' />)
-  expect(wrapper.find('.sideBar').text()).toEqual('some text')
-})
-
-test('Sidebar renders component', () => {
   const Dummy = () => {
     return (<div>Fancy Component</div>)
   }
