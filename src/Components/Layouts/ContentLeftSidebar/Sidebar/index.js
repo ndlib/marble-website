@@ -1,29 +1,17 @@
 import React from 'react'
 import { PropTypes } from 'prop-types'
-import { HashLink as Link } from 'react-router-hash-link'
 import './style.css'
 
-const Sidebar = ({ title, items, text }) => {
+const Sidebar = ({ title, children }) => {
   return (
     <div className='sideBar'>
       { title ? <h2>{title}</h2> : null }
-      {
-        items ? items.map(item => {
-          return (
-            <Link
-              to={item.link}
-              key={item.link}
-            >{item.title}</Link>
-          )
-        }) : null
-      }
-      { text ? <div className='sideTextContent'>{ text }</div> : null}
+      {children}
     </div>
   )
 }
 Sidebar.propTypes = {
   title: PropTypes.string,
-  items: PropTypes.array,
-  text: PropTypes.string,
+  children: PropTypes.node,
 }
 export default Sidebar
