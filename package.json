@@ -83,6 +83,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "lint": "node node_modules/eslint/bin/eslint.js ./src",
     "test": "node scripts/test.js",
     "test-inline": "node scripts/test-inline.js"
   },
