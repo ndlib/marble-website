@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
 import PropTypes from 'prop-types'
 
-import { changePage } from 'Store/actions/searchActions'
+import { updatePage } from 'Store/actions/searchActions'
 
 const options = [
   { value: 10, label: '10/page' },
@@ -31,7 +31,7 @@ const mapStateToProps = (state) => {
 
 const handleChange = (e, terms, history, dispatch) => {
   (history.push('/search?terms=' + terms + '&perpage=' + e.value + '&page=1'))
-  dispatch(changePage(e.value, terms, 1))
+  dispatch(updatePage(e.value, terms, 1))
 }
 
 PerPage.propTypes = {

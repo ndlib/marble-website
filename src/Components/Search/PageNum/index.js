@@ -4,7 +4,7 @@ import './style.css'
 import { withRouter } from 'react-router'
 import PropTypes from 'prop-types'
 
-import { changePage } from 'Store/actions/searchActions'
+import { updatePage } from 'Store/actions/searchActions'
 
 let pagenav = ''
 let pageprev = ''
@@ -34,7 +34,7 @@ export const PageNum = ({ dispatch, nextpage, page, terms, perpage, history }) =
 
 const nextPage = (terms, history, dispatch, perpage, pageNum) => {
   (history.push('/search?terms=' + terms + '&perpage=' + perpage + '&page=' + pageNum))
-  dispatch(changePage(perpage, terms, pageNum))
+  dispatch(updatePage(perpage, terms, pageNum))
 }
 
 const mapStateToProps = (state) => {

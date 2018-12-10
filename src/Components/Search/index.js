@@ -8,7 +8,7 @@ import SearchBox from './SearchBox'
 import Results from './Results'
 import PerPage from './PerPage'
 import PageNum from './PageNum'
-import { changePage } from 'Store/actions/searchActions'
+import { updatePage } from 'Store/actions/searchActions'
 import ErrorBoundary from 'Components/Shared/ErrorBoundary'
 
 class Search extends Component {
@@ -40,13 +40,14 @@ const mapDispatchToProps = dispatch => {
 }
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
-  let values = queryString.parse(ownProps.location.search)
-  let terms = stateProps.terms || values.terms
-  let page = stateProps.page || values.page
-  let perpage = stateProps.perpage || values.perpage
+  if (ownProps.location.search) {
+    let values = queryString.parse(ownProps.location.search)
+    let terms = stateProps.terms || values.terms
+    let page = stateProps.page || values.page
+    let perpage = stateProps.perpage || values.perpage
 
-  dispatchProps.dispatch(changePage(perpage, terms, page))
-
+    dispatchProps.dispatch(updatePage(perpage, terms, page))
+  }
   return { ...stateProps, ...dispatchProps, ...ownProps }
 }
 
