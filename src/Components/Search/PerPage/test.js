@@ -13,7 +13,7 @@ const thunk = ({ dispatch, getState }) => next => action => {
 const create = () => {
   const store = {
     getState: jest.fn(() => ({})),
-    dispatch: jest.fn()
+    dispatch: jest.fn(),
   }
   const next = jest.fn()
   const invoke = action => thunk(store)(next)(action)
