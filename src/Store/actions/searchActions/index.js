@@ -7,7 +7,7 @@ export const PAGE_CHANGE = 'PAGE_CHANGE'
 const searchBaseURL = PRIMO_BASE_URL
 let searchCriteria = '?inst=NDU&search_scope=spec_coll'
 
-export const changePage = (results, terms, page) => {
+export const updatePage = (results, terms, page) => {
   return dispatch => {
     dispatch(pageChange(results, page))
     dispatch(submitSearch(results, terms, page))
