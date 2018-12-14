@@ -1,11 +1,11 @@
 // Reducer to be tested
-import searchReducer from './searchReducer'
+import searchReducer from './'
 import {
   SUBMIT_SEARCH,
   RESULTS_READY,
   CLEAR_SEARCH,
-  PER_PAGE_CHANGE,
-} from '../actions/searchActions'
+  PAGE_CHANGE,
+} from 'Store/actions/searchActions'
 
 describe('SUBMIT_SEARCH', () => {
   test('base test', () => {
@@ -48,10 +48,10 @@ describe('CLEAR_SEARCH reducer', () => {
   })
 })
 
-describe('PER_PAGE_CHANGE reducer', () => {
+describe('PAGE_CHANGE reducer', () => {
   test('base test', () => {
-    const action = { type: 'PER_PAGE_CHANGE' }
-    const testState = { perpage: undefined }
+    const action = { type: 'PAGE_CHANGE', perpage:12, page:2 }
+    const testState = { perpage: 12, page:2 }
 
     expect(searchReducer(undefined, action)).toEqual(testState)
   })
