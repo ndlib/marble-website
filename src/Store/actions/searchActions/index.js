@@ -1,11 +1,12 @@
 import { PRIMO_BASE_URL } from 'Configurations/apis'
+import fetchJson from 'Functions/fetchJSON'
 export const SUBMIT_SEARCH = 'SUBMIT_SEARCH'
 export const RESULTS_READY = 'RESULTS_READY'
 export const CLEAR_SEARCH = 'CLEAR_SEARCH'
 export const PAGE_CHANGE = 'PAGE_CHANGE'
 
 const searchBaseURL = PRIMO_BASE_URL
-let searchCriteria = '?inst=NDU&search_scope=spec_coll'
+export const searchCriteria = '?inst=NDU&search_scope=spec_coll'
 
 export const updatePage = (results, terms, page) => {
   return dispatch => {
@@ -16,34 +17,22 @@ export const updatePage = (results, terms, page) => {
 
 export const submitSearch = (results, terms, page) => {
   return dispatch => {
-    dispatch(startSearch(String(terms)))
-
     if (!page) {
       page = 1
     }
     if (!results) {
       results = 10
     }
+    dispatch(startSearch(String(terms), parseInt(page, 10)))
 
-    let offset = '&offset=' + String(parseInt(results, 10) * parseInt(page, 10))
+    let offset = '&offset=' + String(parseInt(results, 10) * parseInt(page - 1, 10))
     let searchterm = '&q=any,contains,' + String(terms)
     let perpage = '&limit=' + String(parseInt(results, 10) + 1)
     let url = encodeURI(searchBaseURL + searchCriteria + searchterm + perpage + offset)
     let nextpage = false
 
-    return fetch(
-      url, {
-        method: 'get',
-      })
-      .then(response => {
-        if (response.status >= 200 && response.status < 400) {
-          return response.json()
-        } else {
-          throw new Error(response.statusText)
-        }
-      })
+    return fetchJson(url)
       .then(json => {
-        console.log(json)
         if (json.docs.length > results) {
           nextpage = true
           json.docs.splice(-1, 1)

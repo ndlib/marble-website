@@ -4,7 +4,6 @@ import Select from 'react-select'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
 import PropTypes from 'prop-types'
-
 import { updatePage } from 'Store/actions/searchActions'
 
 const options = [
@@ -29,7 +28,7 @@ const mapStateToProps = (state) => {
   return { terms: state.searchReducer.terms }
 }
 
-const handleChange = (e, terms, history, dispatch) => {
+export const handleChange = (e, terms, history, dispatch) => {
   (history.push('/search?terms=' + terms + '&perpage=' + e.value + '&page=1'))
   dispatch(updatePage(e.value, terms, 1))
 }
