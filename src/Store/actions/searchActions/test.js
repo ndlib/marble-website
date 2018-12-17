@@ -51,7 +51,7 @@ test('docs length is greater than results', () => {
   fetchMock.get('*', {
     docs:['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'],
   }).catch()
-  return store.dispatch(submitSearch('','terms', '')).then(() => {
+  return store.dispatch(submitSearch('', 'terms', '')).then(() => {
     expect(store.getActions()).toEqual(expectedActions)
   })
 })
