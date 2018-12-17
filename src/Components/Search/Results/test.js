@@ -7,14 +7,12 @@ import { shallow, mount } from 'enzyme'
 import {
   Results,
   validateDoc,
-  mapValidResults
 } from './'
 import ErrorBoundary from 'Components/Shared/ErrorBoundary'
 
 const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)
 let store, wrapper
-const dispatch = jest.fn()
 
 beforeEach(() => {
   store = mockStore({})

@@ -2,8 +2,7 @@ import React from 'react'
 import Select from 'react-select'
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
-import fetchMock from 'fetch-mock'
-import { mount, shallow } from 'enzyme'
+import { mount } from 'enzyme'
 import {
   PerPage,
   handleChange
