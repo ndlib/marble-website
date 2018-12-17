@@ -4,7 +4,6 @@ import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 import { mount } from 'enzyme'
 import { SearchBox } from './'
-import configureStore from 'redux-mock-store'
 
 const history = createMemoryHistory('/search')
 const middlewares = [thunk]
@@ -26,7 +25,7 @@ test('Search component contains a form, an input, and a button', () => {
 })
 
 test('Search Box dispatches the searchAction#submitSearch function with the value of the input field', () => {
-  wrapper.find('input').simulate('change', { target: { value: 'test' }})
+  wrapper.find('input').simulate('change', { target: { value: 'test' } })
   wrapper.find('form').simulate('submit', { e: wrapper.find('button').at(0), dispatch: dispatch })
   expect(dispatch).toHaveBeenCalled()
 })

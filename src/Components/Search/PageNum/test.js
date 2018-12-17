@@ -8,7 +8,7 @@ let store, wrapper
 
 test('Objects will render when called', () => {
   store = mockStore({})
-  wrapper = mount(<PageNum store={store} page={2} nextpage={true} />)
+  wrapper = mount(<PageNum store={store} page={2} nextpage=true />)
   expect(wrapper.find('div').exists()).toBeTruthy()
   expect(wrapper.text()).toEqual(expect.stringContaining('<'))
   expect(wrapper.text()).toEqual(expect.stringContaining('>'))
@@ -16,7 +16,7 @@ test('Objects will render when called', () => {
 
 test('Objects will not render when not called', () => {
   store = mockStore({})
-  wrapper = mount(<PageNum store={store} page={1} nextpage={false} />)
+  wrapper = mount(<PageNum store={store} page={1} nextpage=false />)
   expect(wrapper.find('div').exists()).toBeTruthy()
   expect(wrapper.text()).toEqual(expect.not.stringContaining('<'))
   expect(wrapper.text()).toEqual(expect.not.stringContaining('>'))
