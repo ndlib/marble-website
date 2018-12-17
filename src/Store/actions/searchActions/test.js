@@ -53,7 +53,11 @@ test('docs length is greater than results', () => {
   let url = encodeURI(PRIMO_BASE_URL + searchCriteria + '&q=any,conains,terms&limit=4&offset=0')
   const expectedActions = [{type: SUBMIT_SEARCH, terms: 'terms', page: 1}, {type: 'RESULTS_READY', nextpage: true, results: {docs: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']}}]
   fetchMock.get('*', {
+<<<<<<< HEAD
     docs:['a','b','c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k']
+=======
+    docs: ['a','b','c','d', 'e', 'f', 'g', 'h', 'i', 'j', 'k']
+>>>>>>> d58f0d4864381000a0a76b061389fe54b26b2a8f
   }).catch()
   return store.dispatch(submitSearch('','terms', '')).then(() => {
     expect (store.getActions()).toEqual(expectedActions)

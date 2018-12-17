@@ -1,5 +1,5 @@
 import { PRIMO_BASE_URL } from 'Configurations/apis'
-import fetchJSON from 'Functions/fetchJSON'
+import fetchJson from 'Functions/fetchJSON'
 export const SUBMIT_SEARCH = 'SUBMIT_SEARCH'
 export const RESULTS_READY = 'RESULTS_READY'
 export const CLEAR_SEARCH = 'CLEAR_SEARCH'
@@ -31,7 +31,7 @@ export const submitSearch = (results, terms, page) => {
     let url = encodeURI(searchBaseURL + searchCriteria + searchterm + perpage + offset)
     let nextpage = false
 
-    return fetchJSON(url)
+    return fetchJson(url)
       .then(json => {
         if (json.docs.length > results) {
           nextpage = true
@@ -42,7 +42,7 @@ export const submitSearch = (results, terms, page) => {
         dispatch(returnResults(json, nextpage))
       })
       .catch(e => {
-        console.error(e)
+        console.log(e)
       })
   }
 }
