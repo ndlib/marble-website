@@ -1,7 +1,6 @@
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 import fetchMock from 'fetch-mock'
-import { PRIMO_BASE_URL } from 'Configurations/apis'
 
 import {
   SUBMIT_SEARCH,
@@ -19,8 +18,7 @@ import {
 
 const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)
-const dispatch = jest.fn()
-const store  = mockStore({})
+const store = mockStore({})
 
 beforeEach(() => {
   store.clearActions()
@@ -44,16 +42,15 @@ test('pageChange dispatches the correct payload', () => {
 
 test('updatePage dispatches', () => {
   store.dispatch(updatePage(20, 'terms', 2))
-  const expectedActions = [{type: PAGE_CHANGE, perpage: 20, page: 2 },
-      { type: SUBMIT_SEARCH, terms: 'terms', page: 2 }]
+  const expectedActions = [{ type: PAGE_CHANGE, perpage: 20, page: 2 },
+    { type: SUBMIT_SEARCH, terms: 'terms', page: 2 }]
   expect(store.getActions()).toEqual(expectedActions)
 })
 
 test('docs length is greater than results', () => {
-  let url = encodeURI(PRIMO_BASE_URL + searchCriteria + '&q=any,conains,terms&limit=4&offset=0')
-  const expectedActions = [{type: SUBMIT_SEARCH, terms: 'terms', page: 1}, {type: 'RESULTS_READY', nextpage: true, results: {docs: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']}}]
+  const expectedActions = [{ type: SUBMIT_SEARCH, terms: 'terms', page: 1 }, { type: 'RESULTS_READY', nextpage: true, results: { docs: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'] }}]
   fetchMock.get('*', {
-    docs:['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k']
+    docs:['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k']
   }).catch()
   return store.dispatch(submitSearch('','terms', '')).then(() => {
     expect (store.getActions()).toEqual(expectedActions)
