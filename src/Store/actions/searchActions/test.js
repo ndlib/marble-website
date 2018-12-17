@@ -49,9 +49,9 @@ test('updatePage dispatches', () => {
 test('docs length is greater than results', () => {
   const expectedActions = [{ type: SUBMIT_SEARCH, terms: 'terms', page: 1 }, { type: 'RESULTS_READY', nextpage: true, results: { docs: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'] } }]
   fetchMock.get('*', {
-    docs:['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', ]
+    docs:['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'],
   }).catch()
   return store.dispatch(submitSearch('','terms', '')).then(() => {
-    expect (store.getActions()).toEqual(expectedActions)
+    expect(store.getActions()).toEqual(expectedActions)
   })
 })

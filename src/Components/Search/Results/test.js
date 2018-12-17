@@ -3,10 +3,7 @@ import React from 'react'
 import thunk from 'redux-thunk'
 import configureMockStore from 'redux-mock-store'
 import { mount } from 'enzyme'
-import {
-  Results,
-  validateDoc,
-} from './'
+import { Results } from './'
 import ErrorBoundary from 'Components/Shared/ErrorBoundary'
 
 const middlewares = [thunk]
