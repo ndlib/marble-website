@@ -11,7 +11,7 @@ export const Results = ({ searchResults, page, perpage }) => {
     mapValidResults(searchResults, (doc, index) =>
       <ErrorBoundary key={index}>
         <div className='container' key={doc.id}>
-          <div id='entry'>
+          <div key={doc.id} id='entry'>
             <span>{(perpage * (page - 1)) + index + 1 }</span>
             <span id='title'>{doc.title}</span>
             <div className='label'>Owner:<span id='owner'>Special Collections</span></div>
