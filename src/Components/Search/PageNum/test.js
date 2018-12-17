@@ -8,7 +8,7 @@ let store, wrapper
 
 test('Objects will render when called', () => {
   store = mockStore({})
-  wrapper = mount(<PageNum store={store} page={2} nextpage={true} />)
+  wrapper = mount(<PageNum store={store} page={2} nextpage />)
   expect(wrapper.find('div').exists()).toBeTruthy()
   expect(wrapper.text()).toEqual(expect.stringContaining('<'))
   expect(wrapper.text()).toEqual(expect.stringContaining('>'))
