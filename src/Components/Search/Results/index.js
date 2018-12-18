@@ -11,7 +11,7 @@ export const Results = ({ searchResults, page, perpage }) => {
     mapValidResults(searchResults, (doc, index) =>
       <ErrorBoundary key={index}>
         <div className='container' key={doc.id}>
-          <div id='entry'>
+          <div key={doc.id} id='entry'>
             <span>{(perpage * (page - 1)) + index + 1 }</span>
             <span id='title'>{doc.title}</span>
             <div className='label'>Owner:<span id='owner'>Special Collections</span></div>
@@ -26,7 +26,7 @@ export const Results = ({ searchResults, page, perpage }) => {
   )
 }
 
-const mapStateToProps = (state) => {
+export const mapStateToProps = (state) => {
   return { perpage: state.searchReducer.perpage,
     page: state.searchReducer.page,
     searchResults: (state.searchReducer.results && state.searchReducer.results.docs)
@@ -34,7 +34,7 @@ const mapStateToProps = (state) => {
 }
 
 // validates if each record can be displayed.
-const validateDoc = (doc, index, rowDisplayFunction) => {
+export const validateDoc = (doc, index, rowDisplayFunction) => {
   if (!doc) {
     return {}
   }
@@ -42,7 +42,7 @@ const validateDoc = (doc, index, rowDisplayFunction) => {
 }
 
 // validates if the search result itself can be mapped.
-const mapValidResults = (searchResults, rowDisplayFunction) => {
+export const mapValidResults = (searchResults, rowDisplayFunction) => {
   if (!searchResults && !searchResults.map) {
     return {}
   }

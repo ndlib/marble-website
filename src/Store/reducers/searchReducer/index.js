@@ -3,13 +3,14 @@ import {
   RESULTS_READY,
   CLEAR_SEARCH,
   PAGE_CHANGE,
-} from '../actions/searchActions'
+} from 'Store/actions/searchActions'
 
 export default(state = {}, action) => {
   switch (action.type) {
     case SUBMIT_SEARCH:
       return {
         ...state,
+        page: action.page,
         terms: action.terms,
         searching: true,
         results: [],

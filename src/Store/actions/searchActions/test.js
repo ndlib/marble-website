@@ -1,43 +1,57 @@
-import configureStore from 'redux-mock-store'
-import * as searchActions from './'
+import configureMockStore from 'redux-mock-store'
+import thunk from 'redux-thunk'
+import fetchMock from 'fetch-mock'
 
-const mockStore = configureStore()
-const store = mockStore()
+import {
+  SUBMIT_SEARCH,
+  RESULTS_READY,
+  CLEAR_SEARCH,
+  PAGE_CHANGE,
+  updatePage,
+  submitSearch,
+  startSearch,
+  clearSearch,
+  returnResults,
+  pageChange,
+} from 'Store/actions/searchActions'
 
-describe('searchActions', () => {
-  beforeEach(() => { // Runs before each test in the suite
-    store.clearActions()
-  })
+const middlewares = [thunk]
+const mockStore = configureMockStore(middlewares)
+const store = mockStore({})
 
-  test('startSearch dispatches the correct payload', () => {
-    const expected = {
-      type: searchActions.SUBMIT_SEARCH,
-      terms: 'terms',
-    }
+beforeEach(() => {
+  store.clearActions()
+})
 
-    store.dispatch(searchActions.startSearch('terms'))
-    expect(store.getActions()[0]).toEqual(expected)
-  })
+test('startSearch dispatches the correct payload', () => {
+  expect(startSearch('terms', 1)).toEqual({ type: SUBMIT_SEARCH, terms: 'terms', page: 1 })
+})
 
-  test('returnSearch dispatches the correct payload', () => {
-    const expected = {
-      type: searchActions.RESULTS_READY,
-      results: 'results',
-    }
+test('returnResults dispatches the correct payload', () => {
+  expect(returnResults('results', false)).toEqual({ type: RESULTS_READY, results: 'results', nextpage: false })
+})
 
-    store.dispatch(searchActions.returnResults('results'))
-    expect(store.getActions()[0]).toEqual(expected)
-  })
+test('clearSearch dispatches the correct payload', () => {
+  expect(clearSearch()).toEqual({ page: 1, type: CLEAR_SEARCH, terms: '', results: [] })
+})
 
-  test('clearSearch dispatches the correct payload', () => {
-    const expected = {
-      page: 1,
-      type: searchActions.CLEAR_SEARCH,
-      terms: '',
-      results: [],
-    }
+test('pageChange dispatches the correct payload', () => {
+  expect(pageChange(20, 2)).toEqual({ type: PAGE_CHANGE, perpage: 20, page: 2 })
+})
 
-    store.dispatch(searchActions.clearSearch())
-    expect(store.getActions()[0]).toEqual(expected)
+test('updatePage dispatches', () => {
+  store.dispatch(updatePage(20, 'terms', 2))
+  const expectedActions = [{ type: PAGE_CHANGE, perpage: 20, page: 2 },
+    { type: SUBMIT_SEARCH, terms: 'terms', page: 2 }]
+  expect(store.getActions()).toEqual(expectedActions)
+})
+
+test('docs length is greater than results', () => {
+  const expectedActions = [{ type: SUBMIT_SEARCH, terms: 'terms', page: 1 }, { type: 'RESULTS_READY', nextpage: true, results: { docs: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'] } }]
+  fetchMock.get('*', {
+    docs:['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'],
+  }).catch()
+  return store.dispatch(submitSearch('', 'terms', '')).then(() => {
+    expect(store.getActions()).toEqual(expectedActions)
   })
 })

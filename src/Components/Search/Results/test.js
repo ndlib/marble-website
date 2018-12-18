@@ -1,17 +1,20 @@
 
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import thunk from 'redux-thunk'
+import configureMockStore from 'redux-mock-store'
+import { mount } from 'enzyme'
 import { Results } from './'
-import configureStore from 'redux-mock-store'
 import ErrorBoundary from 'Components/Shared/ErrorBoundary'
 
-const mockStore = configureStore()
+const middlewares = [thunk]
+const mockStore = configureMockStore(middlewares)
 let store, wrapper
+
 beforeEach(() => {
   store = mockStore({})
   wrapper = mount(<Results searchResults={[]} store={store} />)
 })
-test('ResultsComponent Renders a default ', () => {
+test('Results renders a default ', () => {
   expect(wrapper.exists()).toBeTruthy()
 })
 

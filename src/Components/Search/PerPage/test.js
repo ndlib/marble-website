@@ -1,35 +1,21 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import { PerPage } from './'
 import Select from 'react-select'
+import { mount } from 'enzyme'
+import {
+  PerPage,
+  handleChange,
+} from './'
+import { createMemoryHistory } from 'history'
 
-const thunk = ({ dispatch, getState }) => next => action => {
-  if (typeof action === 'function') {
-    return action(dispatch, getState)
-  }
-  return next(action)
-}
-
-const create = () => {
-  const store = {
-    getState: jest.fn(() => ({})),
-    dispatch: jest.fn(),
-  }
-  const next = jest.fn()
-  const invoke = action => thunk(store)(next)(action)
-  return { store, next, invoke }
-}
+const history = createMemoryHistory('/search')
+const dispatch = jest.fn()
+const wrapper = mount(<PerPage />)
 
 test('PerPage has React Select', () => {
-  const sc = shallow(<PerPage />)
-  expect(sc.find(Select).exists()).toBeTruthy()
+  expect(wrapper.find('Select').exists()).toBeTruthy()
 })
 
-test('PerPage dispatches with value', () => {
-  const { store, invoke } = create()
-  invoke((dispatch, getState) => {
-    dispatch('TEST DISPATCH')
-    getState()
-  })
-  expect(store.dispatch).toHaveBeenCalledWith('TEST DISPATCH')
+test('PerPage dispatches handleChange with updated values', () => {
+  dispatch(handleChange('this', 'terms', history, dispatch))
+  expect(dispatch).toHaveBeenCalled()
 })
