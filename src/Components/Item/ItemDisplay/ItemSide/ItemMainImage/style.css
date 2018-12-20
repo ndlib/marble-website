@@ -1,0 +1,24 @@
+.itemImage {
+  margin: 0 0 10px;
+  position: relative;
+}
+
+.itemImage img {
+  height: var(--sidebar-width);
+  object-fit: cover;
+  object-position: center;
+  width: var(--sidebar-width);
+}
+
+.itemImage .expandIcon {
+  bottom: .25em;
+  right: .25em;
+  position: absolute;
+}
+
+@media (max-width: 780px) {
+  .itemImage img {
+    height: calc(100vw - 40px);;
+    width: calc(100vw - 40px);
+  }
+}

@@ -1,0 +1,9 @@
+.actionButtons {
+  text-align: right;
+}
+
+.actionButton {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
