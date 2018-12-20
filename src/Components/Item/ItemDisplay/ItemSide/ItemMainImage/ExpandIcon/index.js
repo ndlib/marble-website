@@ -1,0 +1,15 @@
+import React from 'react'
+
+const ExpandIcon = () => {
+  return (
+    <div className='expandIcon'>
+      <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'
+        x='0px' y='0px' viewBox='0 0 24 24'>
+        <path d='M15,3l2.3,2.3l-2.9,2.9l1.4,1.4l2.9-2.9L21,9V3H15z M9,21l-2.3-2.3l2.9-2.9l-1.4-1.4l-2.9,2.9 L3,15v6H9z' />
+        <path fill='none' d='M0,0h24v24H0V0z' />
+      </svg>
+    </div>
+  )
+}
+
+export default ExpandIcon

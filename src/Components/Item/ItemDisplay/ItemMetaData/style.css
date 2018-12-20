@@ -1,0 +1,30 @@
+.itemId {
+  font-size: small;
+}
+dl.metaData dt {
+  display: inline-block;
+  text-align: right;
+  width: 160px;
+}
+dl.metaData dt:after {
+  content: ':'
+}
+dl.metaData dd {
+  display: inline;
+  margin-inline-start: 1em;
+  line-height: 2em;
+}
+dl.metaData dd:after {
+  content: "\A";
+  white-space: pre;
+
+}
+
+@media ( max-width: 780px) {
+  dl.metaData dt {
+    width: auto;
+  }
+  dl.metaData dd {
+    line-height: 1.5em;
+  }
+}
