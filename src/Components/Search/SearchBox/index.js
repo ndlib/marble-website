@@ -32,7 +32,7 @@ export const SearchBox = ({ dispatch, Searchbar, history, perpage }) => {
 
 const formSearchSubmit = (e, input, perpage, dispatch) => {
   e.preventDefault()
-  e.dispatch(updatePage(perpage, input.value, 1))
+  dispatch(updatePage(perpage, input.value, 1))
 }
 
 SearchBox.propTypes = {

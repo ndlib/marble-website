@@ -11,7 +11,7 @@ let pageprev = ''
 let pagenext = ''
 export const PageNum = ({ dispatch, nextpage, page, terms, perpage, history }) => {
   if (page > 1) {
-    pageprev = <div className='pageLink' onClick={() => nextPage(terms, history, dispatch, perpage, (parseInt(page, 10) - 1))}> &lt; </div>
+    pageprev = <button className='pageLink' onClick={() => nextPage(terms, history, dispatch, perpage, (parseInt(page, 10) - 1))}> &lt; </button>
   } else {
     pageprev = ''
   }
@@ -19,7 +19,7 @@ export const PageNum = ({ dispatch, nextpage, page, terms, perpage, history }) =
     pagenav = <div className='pageLink'>Page {page}</div>
   }
   if (nextpage) {
-    pagenext = <div className='pageLink' onClick={() => nextPage(terms, history, dispatch, perpage, (parseInt(page, 10) + 1))}> &gt; </div>
+    pagenext = <button className='pageLink' onClick={() => nextPage(terms, history, dispatch, perpage, (parseInt(page, 10) + 1))}> &gt; </button>
   } else {
     pagenext = ''
   }
