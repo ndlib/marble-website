@@ -10,7 +10,7 @@ import { updatePage } from 'Store/actions/searchActions'
 export const SearchBox = ({ dispatch, Searchbar, history, perpage }) => {
   let input
   if (perpage === undefined) {
-    perpage = 10
+    perpage = 12
   }
   return (
     <form id='SearchComponent' onSubmit={e => {

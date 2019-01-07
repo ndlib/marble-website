@@ -17,7 +17,7 @@ class Search extends Component {
     return (
       <React.Fragment>
         <SearchBox Searchbar={values.terms} />
-        <PerPage perpage={values.perpage || 10} />
+        <PerPage perpage={values.perpage || 12} />
         <PageNum page={values.page || 1} />
         <ErrorBoundary>
           <Results />
