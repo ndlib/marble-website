@@ -21,7 +21,7 @@ export const submitSearch = (results, terms, page) => {
       page = 1
     }
     if (!results) {
-      results = 10
+      results = 12
     }
     dispatch(startSearch(String(terms), parseInt(page, 10)))
 

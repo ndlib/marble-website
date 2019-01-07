@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-
 import ErrorBoundary from 'Components/Shared/ErrorBoundary'
 
 import './style.css'
+import bookIMG from './book.svg'
+import fileIMG from './file.svg'
 
 export const Results = ({ searchResults, page, perpage }) => {
   return (
@@ -13,6 +14,7 @@ export const Results = ({ searchResults, page, perpage }) => {
         <div className='container' key={doc.id}>
           <div key={doc.id} id='entry'>
             <span>{(perpage * (page - 1)) + index + 1 }</span>
+            <span><img src={doc['@TYPE'] === 'book' ? bookIMG : fileIMG} /></span>
             <span id='title'>{doc.title}</span>
             <div className='label'>Owner:<span id='owner'>Special Collections</span></div>
             <div className='label'>Creator:<span id='author'>{doc.creator}</span></div>
