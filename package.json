@@ -19,6 +19,7 @@
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
     "sentry": "^0.1.2",
+    "typy": "^3.0.0",
     "url-loader": "1.1.1"
   },
   "devDependencies": {
