@@ -13,19 +13,29 @@ export const Results = ({ searchResults, page, perpage }) => {
       <ErrorBoundary key={index}>
         <div className='container' key={doc.id}>
           <div key={doc.id} id='entry'>
-            <span>{(perpage * (page - 1)) + index + 1 }</span>
-            <span><img src={doc['@TYPE'] === 'book' ? bookIMG : fileIMG} /></span>
-            <span id='title'>{doc.title}</span>
-            <div className='label'>Owner:<span id='owner'>Special Collections</span></div>
-            <div className='label'>Creator:<span id='author'>{doc.creator}</span></div>
-            <div className='label'>Date:<span id='date'>{doc.date}</span></div>
-            <div className='label'>Format:<span id='type'>{doc['@TYPE']}</span></div>
-            <div className='label'>Collection:<span id='owner'>{doc.sourceId}</span></div>
+            { doc.delivery.link.find(thumbnailAvailable)
+              ? <span id='thumbnail'><img src={doc.delivery.link.find(thumbnailAvailable).linkURL} /></span>
+              : <span id='thumbnail'><img src={doc['@TYPE'] === 'book' ? bookIMG : fileIMG} /></span>
+            }
+            <span id='resultnum'>{ (perpage * (page - 1)) + index + 1 } <span id='title'>{doc.title}</span></span>
+            <span id='details'>
+              <div><span className='label'>Owner:</span><span id='owner'>Special Collections</span></div>
+              <div><span className='label'>Creator:</span><span id='author'>{doc.creator}</span></div>
+              <div><span className='label'>Date:</span><span id='date'>{doc.date}</span></div>
+              <div><span className='label'>Format:</span><span id='type'>{doc['@TYPE']}</span></div>
+              { doc.delivery.holding[0]
+                ? <div><span className='label'>Collection:</span><span id='location'>{doc.delivery.holding[0].subLocation}</span></div>
+                : null }
+            </span>
             <div id='description'>{doc.description}</div>
           </div>
-        </div>
+        </div> {console.log(doc)}
       </ErrorBoundary>)
   )
+}
+
+const thumbnailAvailable = (links) => {
+  return links.linkURL.includes('JPG&client=primo')
 }
 
 export const mapStateToProps = (state) => {
