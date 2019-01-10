@@ -6,7 +6,7 @@ export const CLEAR_SEARCH = 'CLEAR_SEARCH'
 export const PAGE_CHANGE = 'PAGE_CHANGE'
 
 const searchBaseURL = PRIMO_BASE_URL
-export const searchCriteria = '?inst=NDU&search_scope=spec_coll'
+export const searchCriteria = '?inst=NDU&search_scope=spec_coll&view=full'
 
 export const updatePage = (results, terms, page) => {
   return dispatch => {
