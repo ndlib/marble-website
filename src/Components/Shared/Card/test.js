@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 import { Link, MemoryRouter } from 'react-router-dom'
-import Card from './'
+import { Card } from './'
 import { DEFAULT_ITEM_IMAGE } from 'Configurations/customizations'
 
 const mountWithRouter = node => mount(<MemoryRouter>{node}</MemoryRouter>)

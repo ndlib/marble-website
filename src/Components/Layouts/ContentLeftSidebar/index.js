@@ -21,7 +21,7 @@ const ContentLeftSidebar = ({
 
 ContentLeftSidebar.propTypes = {
   className: PropTypes.string,
-  sidebarContent: PropTypes.node.isRequired,
+  sidebarContent: PropTypes.node,
   sidebarTitle: PropTypes.string,
   children: PropTypes.node.isRequired,
 }

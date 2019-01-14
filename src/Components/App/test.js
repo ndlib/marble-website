@@ -7,7 +7,7 @@ import Home from 'Components/Home'
 import About from 'Components/About'
 import Help from 'Components/Help'
 import Search from 'Components/Search'
-import Collection from 'Components/Collection'
+import ManifestView from 'Components/ManifestView'
 import NotFound from 'Components/Shared/NotFound'
 jest.mock('react-router-dom', () => {
   const ReactRouterDom = require.requireActual('react-router-dom')
@@ -41,10 +41,7 @@ test('Should render only About page in Page component for /about', () => {
     </MemoryRouter>
   )
   expect(wrapper.find(Page).exists()).toBeTruthy()
-  expect(wrapper.find(Home).exists()).toBeFalsy()
   expect(wrapper.find(About).exists()).toBeTruthy()
-  expect(wrapper.find(Help).exists()).toBeFalsy()
-  expect(wrapper.find(Search).exists()).toBeFalsy()
   expect(wrapper.find(NotFound).exists()).toBeFalsy()
 })
 
@@ -55,10 +52,7 @@ test('Should render only Help page in Page component for /help', () => {
     </MemoryRouter>
   )
   expect(wrapper.find(Page).exists()).toBeTruthy()
-  expect(wrapper.find(Home).exists()).toBeFalsy()
-  expect(wrapper.find(About).exists()).toBeFalsy()
   expect(wrapper.find(Help).exists()).toBeTruthy()
-  expect(wrapper.find(Search).exists()).toBeFalsy()
   expect(wrapper.find(NotFound).exists()).toBeFalsy()
 })
 
@@ -69,9 +63,6 @@ test('Should render only Search page in Page component for /search', () => {
     </MemoryRouter>
   )
   expect(wrapper.find(Page).exists()).toBeTruthy()
-  expect(wrapper.find(Home).exists()).toBeFalsy()
-  expect(wrapper.find(About).exists()).toBeFalsy()
-  expect(wrapper.find(Help).exists()).toBeFalsy()
   expect(wrapper.find(Search).exists()).toBeTruthy()
   expect(wrapper.find(NotFound).exists()).toBeFalsy()
 })
@@ -97,17 +88,17 @@ test('Should render NotFound page in Page component for /collection', () => {
     </MemoryRouter>
   )
 
-  expect(wrapper.find(Collection).exists()).toBeFalsy()
+  expect(wrapper.find(ManifestView).exists()).toBeFalsy()
   expect(wrapper.find(NotFound).exists()).toBeTruthy()
 })
 
 test('Should render a Collection page in Page component for /collection/:manifestId', () => {
   wrapper = mount(
-    <MemoryRouter initialEntries={[ '/collection/b19974760' ]}>
+    <MemoryRouter initialEntries={[ '/collection/xyz' ]}>
       <App />
     </MemoryRouter>
   )
 
-  expect(wrapper.find(Collection).exists()).toBeTruthy()
+  expect(wrapper.find(ManifestView).exists()).toBeTruthy()
   expect(wrapper.find(NotFound).exists()).toBeFalsy()
 })

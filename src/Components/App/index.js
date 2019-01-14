@@ -15,8 +15,7 @@ import Home from 'Components/Home'
 import About from 'Components/About'
 import Help from 'Components/Help'
 import Search from 'Components/Search'
-import Collection from 'Components/Collection'
-import Item from 'Components/Item'
+import ManifestView from 'Components/ManifestView'
 import NotFound from 'Components/Shared/NotFound'
 
 import 'Configurations/customizations.css'
@@ -44,8 +43,7 @@ const App = () => {
               <Route exact path='/about' component={About} />
               <Route exact path='/help/:topic?' component={Help} />
               <Route exact path='/search' component={Search} />
-              <Route exact path='/collection/:manifestId/:start?' component={Collection} />
-              <Route exact path='/item/:itemManifestId/:collectionManifestId?' component={Item} />
+              <Route exact path='/:context/:contextId' component={ManifestView} />
               <Route component={NotFound} />
             </Switch>
           </Page>
