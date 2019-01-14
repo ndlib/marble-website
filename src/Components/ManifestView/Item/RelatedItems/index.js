@@ -34,6 +34,12 @@ export const RelatedItems = ({ currentManifest, match }) => {
 
 RelatedItems.propTypes = {
   currentManifest: PropTypes.object.isRequired,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      context: PropTypes.string.isRequired,
+      contextId: PropTypes.string.isRequired,
+    }),
+  }),
 }
 
 export default withRouter(RelatedItems)
