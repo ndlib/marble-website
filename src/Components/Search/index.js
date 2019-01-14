@@ -8,6 +8,7 @@ import SearchBox from './SearchBox'
 import Results from './Results'
 import PerPage from './PerPage'
 import PageNum from './PageNum'
+import ResultsView from './ResultsView'
 import { updatePage } from 'Store/actions/searchActions'
 import ErrorBoundary from 'Components/Shared/ErrorBoundary'
 
@@ -17,6 +18,7 @@ class Search extends Component {
     return (
       <React.Fragment>
         <SearchBox Searchbar={values.terms} />
+        <ResultsView view={values.view || 'list'} />
         <PerPage perpage={values.perpage || 12} />
         <PageNum page={values.page || 1} />
         <ErrorBoundary>

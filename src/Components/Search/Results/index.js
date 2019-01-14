@@ -34,6 +34,7 @@ export const Results = ({ searchResults, page, perpage }) => {
   )
 }
 
+// return valid thumbnail
 const thumbnailAvailable = (links) => {
   return links.linkURL.includes('JPG&client=primo')
 }

@@ -14,11 +14,11 @@ const options = [
   { value: 60, label: '60/page' },
 ]
 
-export const PerPage = ({ dispatch, terms, perpage, history }) => {
+export const PerPage = ({ dispatch, terms, perpage, history, view }) => {
   return (
     <React.Fragment>
       <div className='perpage'>
-        <Select options={options} onChange={e => handleChange(e, terms, history, dispatch)} placeholder={perpage + '/page'} selectedValue={perpage} />
+        <Select options={options} onChange={e => handleChange(e, terms, history, dispatch, view)} placeholder={perpage + '/page'} selectedValue={perpage} />
       </div>
     </React.Fragment>
   )
@@ -28,15 +28,15 @@ const mapStateToProps = (state) => {
   return { terms: state.searchReducer.terms }
 }
 
-export const handleChange = (e, terms, history, dispatch) => {
-  (history.push('/search?terms=' + terms + '&perpage=' + e.value + '&page=1'))
+export const handleChange = (e, terms, history, dispatch, view) => {
+  (history.push('/search?terms=' + terms + '&perpage=' + e.value + '&page=1&view=' + view))
   dispatch(updatePage(e.value, terms, 1))
 }
 
 PerPage.propTypes = {
   dispatch: PropTypes.func,
   terms: PropTypes.string,
-  perpage: PropTypes.number,
+  perpage: PropTypes.string,
   history: PropTypes.object,
 }
 

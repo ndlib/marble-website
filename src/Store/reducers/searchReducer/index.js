@@ -3,6 +3,7 @@ import {
   RESULTS_READY,
   CLEAR_SEARCH,
   PAGE_CHANGE,
+  VIEW_CHANGE,
 } from 'Store/actions/searchActions'
 
 export default(state = {}, action) => {
@@ -36,6 +37,11 @@ export default(state = {}, action) => {
         ...state,
         perpage: action.perpage,
         page: action.page,
+      }
+    case VIEW_CHANGE:
+      return {
+        ...state,
+        view: action.view,
       }
 
     default:

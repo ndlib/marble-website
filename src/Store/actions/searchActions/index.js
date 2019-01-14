@@ -4,6 +4,7 @@ export const SUBMIT_SEARCH = 'SUBMIT_SEARCH'
 export const RESULTS_READY = 'RESULTS_READY'
 export const CLEAR_SEARCH = 'CLEAR_SEARCH'
 export const PAGE_CHANGE = 'PAGE_CHANGE'
+export const VIEW_CHANGE = 'VIEW_CHANGE'
 
 const searchBaseURL = PRIMO_BASE_URL
 export const searchCriteria = '?inst=NDU&search_scope=spec_coll&view=full'
@@ -69,6 +70,7 @@ export const clearSearch = () => {
     terms: '',
     results: [],
     page : 1,
+    view : 'list',
   }
 }
 
@@ -77,5 +79,12 @@ export const pageChange = (perpage, page) => {
     type: PAGE_CHANGE,
     perpage: perpage,
     page: page,
+  }
+}
+
+export const viewChange = (view) => {
+  return {
+    type: VIEW_CHANGE,
+    view: view,
   }
 }

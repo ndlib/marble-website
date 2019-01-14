@@ -37,7 +37,7 @@ const formSearchSubmit = (e, input, perpage, dispatch) => {
 
 SearchBox.propTypes = {
   dispatch: PropTypes.func,
-  Searchbar: PropTypes.func,
+  Searchbar: PropTypes.string,
   history: PropTypes.object,
   perpage: PropTypes.string,
 }
