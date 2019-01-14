@@ -11,7 +11,7 @@ let pageprev = ''
 let pagenext = ''
 export const PageNum = ({ dispatch, nextpage, page, terms, perpage, history }) => {
   if (page > 1) {
-    pageprev = <button className='pageLink' onClick={() => nextPage(terms, history, dispatch, perpage, (parseInt(page, 10) - 1))}> &lt; </button>
+    pageprev = <button className='pageLink' onClick={() => changePage(terms, history, dispatch, perpage, (parseInt(page, 10) - 1))}> &lt; </button>
   } else {
     pageprev = ''
   }
@@ -19,7 +19,7 @@ export const PageNum = ({ dispatch, nextpage, page, terms, perpage, history }) =
     pagenav = <div className='pageLink'>Page {page}</div>
   }
   if (nextpage) {
-    pagenext = <button className='pageLink' onClick={() => nextPage(terms, history, dispatch, perpage, (parseInt(page, 10) + 1))}> &gt; </button>
+    pagenext = <button className='pageLink' onClick={() => changePage(terms, history, dispatch, perpage, (parseInt(page, 10) + 1))}> &gt; </button>
   } else {
     pagenext = ''
   }
@@ -32,7 +32,7 @@ export const PageNum = ({ dispatch, nextpage, page, terms, perpage, history }) =
   )
 }
 
-const nextPage = (terms, history, dispatch, perpage, pageNum) => {
+const changePage = (terms, history, dispatch, perpage, pageNum) => {
   (history.push('/search?terms=' + terms + '&perpage=' + perpage + '&page=' + pageNum))
   dispatch(updatePage(perpage, terms, pageNum))
 }
@@ -51,7 +51,7 @@ PageNum.propTypes = {
   nextpage: PropTypes.bool,
   page: PropTypes.number,
   terms: PropTypes.string,
-  perpage: PropTypes.number,
+  perpage: PropTypes.string,
   history: PropTypes.object,
 }
 
