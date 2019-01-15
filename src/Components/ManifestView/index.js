@@ -2,9 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
-import Collection from './Collection'
-import Item from './Item'
-import Viewer from './Viewer'
+import ManifestDisplayRouter from './ManifestDisplayRouter'
+
 import {
   getManifest,
   STATUS_READY,
@@ -20,16 +19,10 @@ export const ManifestView = ({ manifests, match }) => {
   if (currentManifest) {
     switch (currentManifest.status) {
       case STATUS_READY:
-        switch (context) {
-          case 'collection':
-            return <Collection currentManifest={currentManifest} />
-          case 'item':
-            return <Item currentManifest={currentManifest} />
-          case 'viewer':
-            return <Viewer currentManifest={currentManifest} />
-          default:
-            return <NotFound />
-        }
+        return <ManifestDisplayRouter
+          context={context}
+          currentManifest={currentManifest}
+        />
       case STATUS_ERROR:
         return <NotFound />
       default:
