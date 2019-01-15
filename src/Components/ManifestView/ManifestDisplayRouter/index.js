@@ -25,9 +25,7 @@ const ManifestDisplayRouter = ({ context, currentManifest }) => {
 
 ManifestDisplayRouter.propTypes = {
   context: PropTypes.string.isRequired,
-  currentManifest: PropTypes.shape({
-    status: PropTypes.string.isRequired,
-  }).isRequired,
+  currentManifest: PropTypes.object.isRequired,
 }
 
 export default ManifestDisplayRouter
