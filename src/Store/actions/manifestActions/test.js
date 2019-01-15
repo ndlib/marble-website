@@ -28,9 +28,9 @@ test('manifestError', () => {
   expect(manifestError('123')).toEqual({ type: RECEIVE_MANIFEST_ERROR, id: '123' })
 })
 
-test('getManifest', () => {
+test('getManifest for collection', () => {
   const store = mockStore({ manifests: {} })
-  fetchMock.get(`${MANIFEST_BASE_URL}${'456'}`, {
+  fetchMock.get(`${MANIFEST_BASE_URL}collection/${'456'}`, {
     body: { content: ['do something'] },
   })
   const expectedActions = [
@@ -38,7 +38,23 @@ test('getManifest', () => {
     { id: '456', type: RECEIVE_MANIFEST, data: { content: ['do something'] } },
   ]
 
-  return store.dispatch(getManifest('456')).then(() => {
+  return store.dispatch(getManifest('collection', '456')).then(() => {
+    // return of async actions
+    expect(store.getActions()).toEqual(expectedActions)
+  })
+})
+
+test('getManifest for item', () => {
+  const store = mockStore({ manifests: {} })
+  fetchMock.get(`${MANIFEST_BASE_URL}${'654'}/manifest`, {
+    body: { content: ['do something'] },
+  })
+  const expectedActions = [
+    { id: '654', type: FETCH_MANIFEST },
+    { id: '654', type: RECEIVE_MANIFEST, data: { content: ['do something'] } },
+  ]
+
+  return store.dispatch(getManifest('item', '654')).then(() => {
     // return of async actions
     expect(store.getActions()).toEqual(expectedActions)
   })
@@ -47,7 +63,7 @@ test('getManifest', () => {
 test('getManifest with error', () => {
   console.error = jest.fn()
   const store = mockStore({ manifests: {} })
-  fetchMock.get(`${MANIFEST_BASE_URL}${'789'}`, {
+  fetchMock.get(`${MANIFEST_BASE_URL}collection/${'789'}`, {
     status: 404,
   })
   const expectedActions = [
@@ -55,8 +71,17 @@ test('getManifest with error', () => {
     { id: '789', type: RECEIVE_MANIFEST_ERROR },
   ]
 
-  return store.dispatch(getManifest('789')).then(() => {
+  return store.dispatch(getManifest('collection', '789')).then(() => {
     // return of async actions
     expect(store.getActions()).toEqual(expectedActions)
   })
+})
+
+test('getManifest with invalid context', () => {
+  console.error = jest.fn()
+  const store = mockStore({ manifests: {} })
+  const expectedAction = { id: '987', type: RECEIVE_MANIFEST_ERROR }
+
+  // return of async actions
+  expect(store.dispatch(getManifest('badcontext', '987'))).toEqual(expectedAction)
 })

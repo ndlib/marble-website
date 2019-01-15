@@ -1,14 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router'
 import { DEFAULT_ITEM_IMAGE } from 'Configurations/customizations'
+import urlContext from 'Functions/urlContext'
 import './style.css'
 
-const Card = ({ title, image, url }) => {
+export const Card = ({ title, image, url, match }) => {
   if (title && url) {
     return (
       <div className='card'>
-        <Link to={url}>
+        <Link to={urlContext(url, match)}>
           <img
             className='cardImage'
             src={image || DEFAULT_ITEM_IMAGE}
@@ -26,5 +28,11 @@ Card.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string,
   url: PropTypes.string.isRequired,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      context: PropTypes.string,
+      contextId: PropTypes.string,
+    }),
+  }),
 }
-export default Card
+export default withRouter(Card)

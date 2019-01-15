@@ -7,10 +7,18 @@ export const STATUS_FETCHING = 'STATUS_FETCHING'
 export const STATUS_READY = 'STATUS_READY'
 export const STATUS_ERROR = 'STATUS_ERROR'
 
-export const getManifest = (id) => {
+export const getManifest = (context, id) => {
   return dispatch => {
     dispatch(fetchManifest(id))
-    return fetchJSON(`${MANIFEST_BASE_URL}${id}`)
+    let url
+    if (context === 'collection') {
+      url = `${MANIFEST_BASE_URL}collection/${id}`
+    } else if (context === 'item' || context === 'viewer') {
+      url = `${MANIFEST_BASE_URL}${id}/manifest`
+    } else {
+      return dispatch(manifestError(id, 'invalid context'))
+    }
+    return fetchJSON(url)
       .then(json => dispatch(receiveManifest(id, json)))
       .catch(error => dispatch(manifestError(id, error)))
   }
