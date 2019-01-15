@@ -3,10 +3,11 @@ import { shallow } from 'enzyme'
 import { Link } from 'react-router-dom'
 import { ItemMainImage } from './'
 import { DEFAULT_ITEM_IMAGE } from 'Configurations/customizations'
+import { ITEM_CONTEXT } from 'Constants/viewingContexts'
 import urlContext from 'Functions/urlContext'
 const match = {
   params: {
-    context: 'item',
+    context: ITEM_CONTEXT,
     contextId: '123',
   },
 }

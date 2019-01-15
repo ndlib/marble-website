@@ -11,6 +11,10 @@ import {
   manifestError,
 } from 'Store/actions/manifestActions'
 import { MANIFEST_BASE_URL } from 'Configurations/apis.js'
+import {
+  COLLECTION_CONTEXT,
+  ITEM_CONTEXT,
+} from 'Constants/viewingContexts'
 
 const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)
@@ -38,7 +42,7 @@ test('getManifest for collection', () => {
     { id: '456', type: RECEIVE_MANIFEST, data: { content: ['do something'] } },
   ]
 
-  return store.dispatch(getManifest('collection', '456')).then(() => {
+  return store.dispatch(getManifest(COLLECTION_CONTEXT, '456')).then(() => {
     // return of async actions
     expect(store.getActions()).toEqual(expectedActions)
   })
@@ -54,7 +58,7 @@ test('getManifest for item', () => {
     { id: '654', type: RECEIVE_MANIFEST, data: { content: ['do something'] } },
   ]
 
-  return store.dispatch(getManifest('item', '654')).then(() => {
+  return store.dispatch(getManifest(ITEM_CONTEXT, '654')).then(() => {
     // return of async actions
     expect(store.getActions()).toEqual(expectedActions)
   })
@@ -71,7 +75,7 @@ test('getManifest with error', () => {
     { id: '789', type: RECEIVE_MANIFEST_ERROR },
   ]
 
-  return store.dispatch(getManifest('collection', '789')).then(() => {
+  return store.dispatch(getManifest(COLLECTION_CONTEXT, '789')).then(() => {
     // return of async actions
     expect(store.getActions()).toEqual(expectedActions)
   })

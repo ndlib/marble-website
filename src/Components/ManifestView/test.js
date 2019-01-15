@@ -3,21 +3,21 @@ import { shallow } from 'enzyme'
 import { ManifestView } from './'
 import NotFound from 'Components/Shared/NotFound'
 import Loading from 'Components/Shared/Loading'
-import Collection from './Collection'
-import Item from './Item'
-import Viewer from './Viewer'
+import ManifestDisplayRouter from './ManifestDisplayRouter'
 import {
   STATUS_FETCHING,
   STATUS_READY,
   STATUS_ERROR,
 } from 'Store/actions/manifestActions'
-
+import {
+  COLLECTION_CONTEXT,
+} from 'Constants/viewingContexts'
 let wrapper
 
 test('Returns Loading when not ready', () => {
   const match = {
     params: {
-      context: 'collection',
+      context: COLLECTION_CONTEXT,
       contextId: '123',
     },
   }
@@ -31,7 +31,7 @@ test('Returns Loading when not ready', () => {
 test('Returns NotFound when not found', () => {
   const match = {
     params: {
-      context: 'collection',
+      context: COLLECTION_CONTEXT,
       contextId: '456',
     },
   }
@@ -42,10 +42,10 @@ test('Returns NotFound when not found', () => {
   expect(wrapper.find(NotFound).exists()).toBeTruthy()
 })
 
-describe('Returns a view when ready', () => {
+test('Returns ManifestDisplayRouter when ready', () => {
   let match = {
     params: {
-      context: 'collection',
+      context: COLLECTION_CONTEXT,
       contextId: '789',
     },
   }
@@ -53,26 +53,6 @@ describe('Returns a view when ready', () => {
     '789': { status: STATUS_READY },
 
   }
-  test('Collection', () => {
-    wrapper = shallow(<ManifestView match={match} manifests={manifests} />)
-    expect(wrapper.find(Collection).exists()).toBeTruthy()
-  })
-
-  test('Item', () => {
-    match.params.context = 'item'
-    wrapper = shallow(<ManifestView match={match} manifests={manifests} />)
-    expect(wrapper.find(Item).exists()).toBeTruthy()
-  })
-
-  test('Viewer', () => {
-    match.params.context = 'viewer'
-    wrapper = shallow(<ManifestView match={match} manifests={manifests} />)
-    expect(wrapper.find(Viewer).exists()).toBeTruthy()
-  })
-
-  test('Bad Context', () => {
-    match.params.context = 'badcontext'
-    wrapper = shallow(<ManifestView match={match} manifests={manifests} />)
-    expect(wrapper.find(NotFound).exists()).toBeTruthy()
-  })
+  wrapper = shallow(<ManifestView match={match} manifests={manifests} />)
+  expect(wrapper.find(ManifestDisplayRouter).exists()).toBeTruthy()
 })
