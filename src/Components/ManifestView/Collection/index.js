@@ -5,16 +5,10 @@ import ContentLeftSidebar from 'Components/Layouts/ContentLeftSidebar'
 import CardList from 'Components/Shared/CardList'
 import CollectionImage from './CollectionImage'
 
-export const Collection = ({ currentManifest, match }) => {
-  let start = 0
-  if (match && match.params && match.params.start) {
-    start = parseInt(match.params.start, 10)
-  }
-  const perPage = 12 // TEMP VARIABLE USE STORE SETTINGS
-  let items = defineItems(currentManifest.data)
+const Collection = ({ currentManifest }) => {
+  const items = defineItems(currentManifest.data)
   return (
     <React.Fragment>
-      { /* add search component */ }
       <CollectionImage
         image={currentManifest.data.image}
         altText={currentManifest.data.label}
@@ -23,11 +17,10 @@ export const Collection = ({ currentManifest, match }) => {
         sidebarTitle={currentManifest.data.label}
         sidebarContent={currentManifest.data.description}
       >
-        { /* add pagination component */ }
         <CardList
           items={items}
-          start={start}
-          perPage={perPage}
+          start={0}
+          perPage={items.length}
         />
       </ContentLeftSidebar>
     </React.Fragment>
@@ -36,11 +29,6 @@ export const Collection = ({ currentManifest, match }) => {
 
 Collection.propTypes = {
   currentManifest: PropTypes.object.isRequired,
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      start: PropTypes.string,
-    }).isRequired,
-  }).isRequired,
 }
 
 export const defineItems = (data) => {
@@ -50,4 +38,4 @@ export const defineItems = (data) => {
   return data.manifests
 }
 
-export default withRouter(Collection)
+export default Collection

@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { Collection, defineItems } from './'
+import Collection, { defineItems } from './'
 import CollectionImage from './CollectionImage'
 import ContentLeftSidebar from 'Components/Layouts/ContentLeftSidebar'
 import CardList from 'Components/Shared/CardList'
@@ -38,19 +38,7 @@ const manifest = {
 }
 
 test('Renders the subcomponents', () => {
-  const match = {
-    params: {
-      start: '2',
-    },
-  }
-  const wrapper = shallow(<Collection currentManifest={manifest} match={match} perPage={5} />)
-  expect(wrapper.find(CollectionImage).exists()).toBeTruthy()
-  expect(wrapper.find(ContentLeftSidebar).exists()).toBeTruthy()
-  expect(wrapper.find(CardList).exists()).toBeTruthy()
-})
-
-test('Renders without start value in match', () => {
-  const wrapper = shallow(<Collection currentManifest={manifest} match={{ params: {} }} perPage={5} />)
+  const wrapper = shallow(<Collection currentManifest={manifest} />)
   expect(wrapper.find(CollectionImage).exists()).toBeTruthy()
   expect(wrapper.find(ContentLeftSidebar).exists()).toBeTruthy()
   expect(wrapper.find(CardList).exists()).toBeTruthy()
