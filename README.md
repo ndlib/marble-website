@@ -6,6 +6,10 @@
 
 This website provides an interface to search and browse digital collections and items based on [IIIF Manifests](https://iiif.io/) and is built on industry tested technologies including [React](https://reactjs.org/) and [Redux](https://redux.js.org/).
 
+## Demo
+
+* https://mellon-unified.library.nd.edu/
+
 ## Building
 ### Requirements
 
