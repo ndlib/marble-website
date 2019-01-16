@@ -10,10 +10,12 @@
   width: var(--sidebar-width);
 }
 
-.itemImage .expandIcon {
+.itemImage img.expandIcon {
   bottom: .25em;
+  height: 24px;
   right: .25em;
   position: absolute;
+  width: 24px;
 }
 
 @media (max-width: 780px) {

@@ -4,5 +4,5 @@ import ExpandIcon from './'
 
 const wrapper = shallow(<ExpandIcon />)
 test('Renders an svg element', () => {
-  expect(wrapper.find('svg').props().xmlns).toEqual('http://www.w3.org/2000/svg')
+  expect(wrapper.find('img').props().alt).toEqual('Open in Universal Viewer')
 })

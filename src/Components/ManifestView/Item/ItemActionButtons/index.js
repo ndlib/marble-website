@@ -1,9 +1,10 @@
 import React from 'react'
 import ActionButton from './ActionButton'
-import DownloadIcon from './DownloadIcon'
-import BookmarkIcon from './BookmarkIcon'
-import BookmarkActiveIcon from './BookmarkActiveIcon'
-import ShareIcon from './ShareIcon'
+import print from './Icons/baseline-print-24px.svg'
+import share from './Icons/baseline-share-24px.svg'
+import bookmark from './Icons/baseline-bookmark_border-24px.svg'
+import bookmarkActive from './Icons/baseline-bookmark-24px.svg'
+import download from './Icons/baseline-save_alt-24px.svg'
 import './style.css'
 
 const ItemActionButtons = () => {
@@ -12,21 +13,25 @@ const ItemActionButtons = () => {
       <ActionButton
         name='download'
         action={downloadAction}
-        icon={DownloadIcon}
+        icon={download}
       />
       <ActionButton
         name='bookmark'
         action={bookmarkAction}
-        icon={BookmarkIcon}
-        activeIcon={BookmarkActiveIcon}
+        icon={bookmark}
+        activeIcon={bookmarkActive}
         isActive
       />
       <ActionButton
         name='share'
         action={shareAction}
-        icon={ShareIcon}
+        icon={share}
       />
-
+      <ActionButton
+        name='print'
+        action={printAction}
+        icon={print}
+      />
     </div>
   )
 }
@@ -41,5 +46,8 @@ export const bookmarkAction = () => {
 
 export const shareAction = () => {
   console.log('share')
+}
+export const printAction = () => {
+  console.log('print')
 }
 export default ItemActionButtons

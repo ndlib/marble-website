@@ -2,25 +2,21 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import ActionButton from './'
 
-const FakeIcon = () => {
-  return (<div>SVG MARKUP HERE</div>)
-}
-const FakeActiveIcon = () => {
-  return (<div>DIFFERENT SVG MARKUP HERE</div>)
-}
+const fakeIcon = 'SVG MARKUP HERE'
+const fakeActiveIcon = 'DIFFERENT SVG MARKUP HERE'
 const action = jest.fn()
 const basicWrapper = shallow(
   <ActionButton
     name='test'
     action={action}
-    icon={FakeIcon}
+    icon={fakeIcon}
   />
 )
 
 test('simple test', () => {
   expect(basicWrapper.find('button')).toBeTruthy()
   expect(basicWrapper.find('.actionButton.test')).toBeTruthy()
-  expect(basicWrapper.find('div').text()).toEqual('SVG MARKUP HERE')
+  expect(basicWrapper.find('img').prop('src')).toEqual('SVG MARKUP HERE')
 })
 
 test('simulate click event', () => {
@@ -33,10 +29,11 @@ test('test of isActive', () => {
     <ActionButton
       name='test'
       action={action}
-      icon={FakeIcon}
-      activeIcon={FakeActiveIcon}
+      icon={fakeIcon}
+      activeIcon={fakeActiveIcon}
       isActive
     />
   )
-  expect(wrapper.find('div').text()).toEqual('DIFFERENT SVG MARKUP HERE')
+  console.log('|||||', wrapper.debug())
+  expect(wrapper.find('img').prop('src')).toEqual('DIFFERENT SVG MARKUP HERE')
 })

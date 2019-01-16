@@ -1,5 +1,4 @@
 import React from 'react'
-import { withRouter } from 'react-router'
 import PropTypes from 'prop-types'
 import ContentLeftSidebar from 'Components/Layouts/ContentLeftSidebar'
 import CardList from 'Components/Shared/CardList'
