@@ -14,8 +14,8 @@ export const Results = ({ searchResults, page, perpage }) => {
         <div className='container' key={doc.id}>
           <div key={doc.id} id='entry'>
             { doc.delivery.link.find(thumbnailAvailable)
-              ? <span id='thumbnail'><img src={doc.delivery.link.find(thumbnailAvailable).linkURL} /></span>
-              : <span id='thumbnail'><img src={doc['@TYPE'] === 'book' ? bookIMG : fileIMG} /></span>
+              ? <span id='thumbnail'><img src={doc.delivery.link.find(thumbnailAvailable).linkURL} alt='thumbnail' /></span>
+              : <span id='thumbnail'><img src={doc['@TYPE'] === 'book' ? bookIMG : fileIMG} alt='thumbail' /></span>
             }
             <span id='resultnum'>{ (perpage * (page - 1)) + index + 1 } <span id='title'>{doc.title}</span></span>
             <span id='details'>

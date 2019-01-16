@@ -38,6 +38,7 @@ PerPage.propTypes = {
   terms: PropTypes.string,
   perpage: PropTypes.string,
   history: PropTypes.object,
+  view: PropTypes.string,
 }
 
 export default withRouter(connect(mapStateToProps)(PerPage))
