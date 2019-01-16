@@ -32,7 +32,7 @@ test('returnResults dispatches the correct payload', () => {
 })
 
 test('clearSearch dispatches the correct payload', () => {
-  expect(clearSearch()).toEqual({ page: 1, type: CLEAR_SEARCH, terms: '', results: [] })
+  expect(clearSearch()).toEqual({ page: 1, type: CLEAR_SEARCH, terms: '', results: [], view: 'list' })
 })
 
 test('pageChange dispatches the correct payload', () => {
@@ -47,9 +47,9 @@ test('updatePage dispatches', () => {
 })
 
 test('docs length is greater than results', () => {
-  const expectedActions = [{ type: SUBMIT_SEARCH, terms: 'terms', page: 1 }, { type: 'RESULTS_READY', nextpage: true, results: { docs: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'] } }]
+  const expectedActions = [{ type: SUBMIT_SEARCH, terms: 'terms', page: 1 }, { type: 'RESULTS_READY', nextpage: true, results: { docs: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l'] } }]
   fetchMock.get('*', {
-    docs:['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'],
+    docs:['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'],
   }).catch()
   return store.dispatch(submitSearch('', 'terms', '')).then(() => {
     expect(store.getActions()).toEqual(expectedActions)

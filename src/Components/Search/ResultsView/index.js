@@ -21,8 +21,8 @@ export const ResultsView = ({ dispatch, terms, view, history }) => {
   return (
     <React.Fragment>
       <div className='resultsview'>
-        <input type='image' src={listIMG} className={list} onClick={e => changeView(e, 'list')} />
-        <input type='image' src={gridIMG} className={grid} onClick={e => changeView(e, 'grid')} />
+        <input type='image' src={listIMG} className={list} />
+        <input type='image' src={gridIMG} className={grid} />
       </div>
     </React.Fragment>
   )
@@ -32,14 +32,9 @@ const mapStateToProps = (state) => {
   return { view: state.searchReducer.view }
 }
 
-export const changeView = (e, clicked) => {
-  if (clicked === 'list') {
-    list = 'selected'
-    grid = 'other'
-  } else {
-    grid = 'selected'
-    list = 'other'
-  }
+export const changeView = (e, dispatch, terms, clicked, history) => {
+  (history.push('/search?terms=' + terms + '&perpage=12&page=1&view=' + clicked))
+  dispatch(updatePage(e.value, terms, 1))
 }
 
 ResultsView.propTypes = {
