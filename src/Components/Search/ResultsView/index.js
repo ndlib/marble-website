@@ -3,7 +3,6 @@ import './style.css'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
 import PropTypes from 'prop-types'
-import { updatePage } from 'Store/actions/searchActions'
 
 import listIMG from './list.png'
 import gridIMG from './grid.png'
