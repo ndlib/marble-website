@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-const ActionButton = ({ name, action, icon, activeIcon, isActive }) => {
+const ActionButton = ({ name, action, icon, activeIcon, isActive, altText }) => {
   return (
     <button
       className={`actionButton ${name}`}
@@ -8,19 +8,16 @@ const ActionButton = ({ name, action, icon, activeIcon, isActive }) => {
         action()
       }}
     >
-      {
-        isActive
-          ? activeIcon()
-          : icon()
-      }
+      <img src={isActive ? activeIcon : icon} alt={altText || name} />
     </button>
   )
 }
 ActionButton.propTypes = {
   name: PropTypes.string.isRequired,
+  altText: PropTypes.string,
   action: PropTypes.func.isRequired,
-  icon: PropTypes.func.isRequired,
-  activeIcon: PropTypes.func,
+  icon: PropTypes.string.isRequired,
+  activeIcon: PropTypes.string,
   isActive: PropTypes.bool,
 }
 export default ActionButton

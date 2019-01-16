@@ -12,7 +12,7 @@ const wrapper = shallow(<ItemActionButtons />)
 
 test('Renders 3 actions buttons and an wrapper', () => {
   expect(wrapper.find('actionButton')).toBeTruthy()
-  expect(wrapper.find(ActionButton).length).toEqual(3)
+  expect(wrapper.find(ActionButton).length).toEqual(4)
 })
 
 const spyOnLog = jest.spyOn(console, 'log')

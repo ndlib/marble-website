@@ -6,6 +6,7 @@ import { withRouter } from 'react-router'
 import ExpandIcon from './ExpandIcon'
 import { DEFAULT_ITEM_IMAGE } from 'Configurations/customizations'
 import urlContext from 'Functions/urlContext'
+import { VIEWER_CONTEXT } from 'Constants/viewingContexts'
 import './style.css'
 
 export const ItemMainImage = ({ currentManifest, match }) => {
@@ -14,7 +15,7 @@ export const ItemMainImage = ({ currentManifest, match }) => {
     "data.sequences[0].canvases[0].images[0].resource['@id']"
   ).safeString || DEFAULT_ITEM_IMAGE
   return (
-    <Link to={urlContext(`/viewer/${typy(match, 'params.contextId').safeString}`, match)}>
+    <Link to={urlContext(`/${VIEWER_CONTEXT}/${typy(match, 'params.contextId').safeString}`, match)}>
       <div className='itemImage'>
         <img
           src={image}
