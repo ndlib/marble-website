@@ -17,8 +17,3 @@ beforeEach(() => {
 test('Results renders a default ', () => {
   expect(wrapper.exists()).toBeTruthy()
 })
-
-test('Results contains ErrorBoundary', () => {
-  const sc = mount(<Results searchResults={['Hello', 'There']} />)
-  expect(sc.find(ErrorBoundary).exists()).toBeTruthy()
-})
