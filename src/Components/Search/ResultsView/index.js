@@ -1,6 +1,5 @@
 import React from 'react'
 import './style.css'
-import Select from 'react-select'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
 import PropTypes from 'prop-types'
@@ -10,7 +9,7 @@ import listIMG from './list.png'
 import gridIMG from './grid.png'
 
 let grid, list
-export const ResultsView = ({ dispatch, terms, view, history }) => {
+export const ResultsView = ({ view }) => {
   if (view === 'grid') {
     grid = 'selected'
     list = 'other'
@@ -21,8 +20,8 @@ export const ResultsView = ({ dispatch, terms, view, history }) => {
   return (
     <React.Fragment>
       <div className='resultsview'>
-        <input type='image' src={listIMG} className={list} />
-        <input type='image' src={gridIMG} className={grid} />
+        <input type='image' src={listIMG} className={list} alt='listview' />
+        <input type='image' src={gridIMG} className={grid} alt='gridview'/>
       </div>
     </React.Fragment>
   )
@@ -32,7 +31,7 @@ const mapStateToProps = (state) => {
   return { view: state.searchReducer.view }
 }
 
-export const changeView = (e, dispatch, terms, clicked, history) => {
+export const changeView = (e, clicked) => {
   (history.push('/search?terms=' + terms + '&perpage=12&page=1&view=' + clicked))
   dispatch(updatePage(e.value, terms, 1))
 }
