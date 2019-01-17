@@ -2,34 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import ErrorBoundary from 'Components/Shared/ErrorBoundary'
+import Result from './Result'
 
 import './style.css'
-import bookIMG from './book.svg'
-import fileIMG from './file.svg'
 
 export const Results = ({ searchResults, page, perpage }) => {
   return (
     mapValidResults(searchResults, (doc, index) =>
       <ErrorBoundary key={index}>
-        <div className='container' key={doc.id}>
-          <div key={doc.id} id='entry'>
-            { doc.delivery.link.find(thumbnailAvailable)
-              ? <span id='thumbnail'><img src={doc.delivery.link.find(thumbnailAvailable).linkURL} alt='thumbnail' /></span>
-              : <span id='thumbnail'><img src={doc['@TYPE'] === 'book' ? bookIMG : fileIMG} alt='thumbail' /></span>
-            }
-            <span id='resultnum'>{ (perpage * (page - 1)) + index + 1 } <span id='title'>{doc.title}</span></span>
-            <span id='details'>
-              <div><span className='label'>Owner:</span><span id='owner'>Special Collections</span></div>
-              <div><span className='label'>Creator:</span><span id='author'>{doc.creator}</span></div>
-              <div><span className='label'>Date:</span><span id='date'>{doc.date}</span></div>
-              <div><span className='label'>Format:</span><span id='type'>{doc['@TYPE']}</span></div>
-              { doc.delivery.holding[0]
-                ? <div><span className='label'>Collection:</span><span id='location'>{doc.delivery.holding[0].subLocation}</span></div>
-                : null }
-            </span>
-            <div id='description'>{doc.description}</div>
-          </div>
-        </div>
+        <Result
+          thumbnailAvailable={thumbnailAvailable}
+          doc={doc}
+          page={page}
+          perpage={perpage}
+          index={index}
+        />
       </ErrorBoundary>)
   )
 }
@@ -40,10 +27,11 @@ const thumbnailAvailable = (links) => {
 }
 
 export const mapStateToProps = (state) => {
-  return { perpage: state.searchReducer.perpage,
+  return {
+    perpage: state.searchReducer.perpage,
     page: state.searchReducer.page,
-    searchResults: (state.searchReducer.results && state.searchReducer.results.docs)
-      ? state.searchReducer.results.docs : [] }
+    searchResults: (state.searchReducer.results && state.searchReducer.results.docs) ? state.searchReducer.results.docs
+      : [] }
 }
 
 // validates if each record can be displayed.

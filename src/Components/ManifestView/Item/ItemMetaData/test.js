@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import ItemMetaData from './'
-import MetaDataField from './MetaDataField'
+import MetaDataField from 'Components/Shared/MetaDataField'
 
 const manifest = {
   data: {
