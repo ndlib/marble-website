@@ -9,10 +9,10 @@ export const VIEW_CHANGE = 'VIEW_CHANGE'
 const searchBaseURL = PRIMO_BASE_URL
 export const searchCriteria = '?inst=NDU&search_scope=spec_coll&view=full'
 
-export const updatePage = (results, terms, page) => {
+export const updatePage = (perpage, terms, page) => {
   return dispatch => {
-    dispatch(pageChange(results, page))
-    dispatch(submitSearch(results, terms, page))
+    dispatch(pageChange(parseInt(perpage, 10), page))
+    dispatch(submitSearch(parseInt(perpage, 10), terms, page))
   }
 }
 

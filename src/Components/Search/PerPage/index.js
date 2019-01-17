@@ -41,7 +41,7 @@ export const handleChange = (e, terms, history, dispatch, view) => {
 PerPage.propTypes = {
   dispatch: PropTypes.func,
   terms: PropTypes.string,
-  perpage: PropTypes.string,
+  perpage: PropTypes.number,
   history: PropTypes.object,
   view: PropTypes.string,
 }

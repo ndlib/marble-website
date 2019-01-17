@@ -29,7 +29,7 @@ export const Results = ({ searchResults, page, perpage }) => {
             </span>
             <div id='description'>{doc.description}</div>
           </div>
-        </div> {console.log(doc)}
+        </div>
       </ErrorBoundary>)
   )
 }

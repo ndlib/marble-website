@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
 import queryString from 'query-string'
@@ -12,22 +12,20 @@ import ResultsView from './ResultsView'
 import { updatePage } from 'Store/actions/searchActions'
 import ErrorBoundary from 'Components/Shared/ErrorBoundary'
 
-class Search extends Component {
-  render () {
-    let values = queryString.parse(this.props.location.search)
-    return (
-      <React.Fragment>
-        <SearchBox Searchbar={values.terms} />
-        <ResultsView view={values.view || 'list'} />
-        <PerPage perpage={values.perpage || 12} />
-        <PageNum page={values.page || 1} />
-        <ErrorBoundary>
-          <Results />
-        </ErrorBoundary>
-        <PageNum page={values.page || 1} />
-      </React.Fragment>
-    )
-  }
+const Search = (props) => {
+  let values = queryString.parse(props.location.search)
+  return (
+    <React.Fragment>
+      <SearchBox Searchbar={values.terms} />
+      <ResultsView view={values.view || 'list'} />
+      <PerPage perpage={parseInt(values.perpage, 10) || 12} />
+      <PageNum page={parseInt(values.page, 10) || 1} />
+      <ErrorBoundary>
+        <Results />
+      </ErrorBoundary>
+      <PageNum page={parseInt(values.page, 10) || 1} />
+    </React.Fragment>
+  )
 }
 
 const mapStateToProps = (state) => {
