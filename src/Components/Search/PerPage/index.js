@@ -18,7 +18,12 @@ export const PerPage = ({ dispatch, terms, perpage, history, view }) => {
   return (
     <React.Fragment>
       <div className='perpage'>
-        <Select options={options} onChange={e => handleChange(e, terms, history, dispatch, view)} placeholder={perpage + '/page'} selectedValue={perpage} />
+        <Select
+          options={options}
+          onChange={e => handleChange(e, terms, history, dispatch, view)}
+          placeholder={perpage + '/page'}
+          selectedValue={perpage}
+        />
       </div>
     </React.Fragment>
   )
@@ -29,7 +34,7 @@ const mapStateToProps = (state) => {
 }
 
 export const handleChange = (e, terms, history, dispatch, view) => {
-  (history.push('/search?terms=' + terms + '&perpage=' + e.value + '&page=1&view=' + view))
+  history.push(`/search?terms=${terms}&perpage=${e.value}&page=1&view=${view}`)
   dispatch(updatePage(e.value, terms, 1))
 }
 

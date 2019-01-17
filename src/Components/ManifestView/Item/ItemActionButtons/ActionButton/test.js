@@ -34,6 +34,5 @@ test('test of isActive', () => {
       isActive
     />
   )
-  console.log('|||||', wrapper.debug())
   expect(wrapper.find('img').prop('src')).toEqual('DIFFERENT SVG MARKUP HERE')
 })

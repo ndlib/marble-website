@@ -33,7 +33,7 @@ export const PageNum = ({ dispatch, nextpage, page, terms, perpage, history }) =
 }
 
 const changePage = (terms, history, dispatch, perpage, pageNum) => {
-  (history.push('/search?terms=' + terms + '&perpage=' + perpage + '&page=' + pageNum))
+  history.push(`/search?terms=${terms}&perpage=${perpage}&page=${pageNum}`)
   dispatch(updatePage(perpage, terms, pageNum))
 }
 
@@ -51,7 +51,7 @@ PageNum.propTypes = {
   nextpage: PropTypes.bool,
   page: PropTypes.number,
   terms: PropTypes.string,
-  perpage: PropTypes.string,
+  perpage: PropTypes.number,
   history: PropTypes.object,
 }
 

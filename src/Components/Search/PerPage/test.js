@@ -12,7 +12,7 @@ const dispatch = jest.fn()
 const wrapper = mount(<PerPage />)
 
 test('PerPage has React Select', () => {
-  expect(wrapper.find('Select').exists()).toBeTruthy()
+  expect(wrapper.find(Select).exists()).toBeTruthy()
 })
 
 test('PerPage dispatches handleChange with updated values', () => {

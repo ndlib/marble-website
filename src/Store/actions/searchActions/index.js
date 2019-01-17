@@ -18,18 +18,14 @@ export const updatePage = (results, terms, page) => {
 
 export const submitSearch = (results, terms, page) => {
   return dispatch => {
-    if (!page) {
-      page = 1
-    }
-    if (!results) {
-      results = 12
-    }
+    page = page || 1
+    results = results || 12
     dispatch(startSearch(String(terms), parseInt(page, 10)))
 
-    let offset = '&offset=' + String(parseInt(results, 10) * parseInt(page - 1, 10))
-    let searchterm = '&q=any,contains,' + String(terms)
-    let perpage = '&limit=' + String(parseInt(results, 10) + 1)
-    let url = encodeURI(searchBaseURL + searchCriteria + searchterm + perpage + offset)
+    const offset = `&offset=${String(parseInt(results, 10) * parseInt(page - 1, 10))}`
+    const searchterm = `&q=any,contains,${String(terms)}`
+    const perpage = `&limit=${String(parseInt(results, 10) + 1)}`
+    const url = encodeURI(`${searchBaseURL}${searchCriteria}${searchterm}${perpage}${offset}`)
     let nextpage = false
 
     return fetchJson(url)

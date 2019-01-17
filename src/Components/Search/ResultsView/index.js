@@ -4,8 +4,8 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
 import PropTypes from 'prop-types'
 
-import listIMG from './list.png'
-import gridIMG from './grid.png'
+import listIcon from 'Static/icons/svg/baseline-view_list-24px.svg'
+import gridIcon from 'Static/icons/svg/baseline-view_module-24px.svg'
 
 let grid, list
 export const ResultsView = ({ view }) => {
@@ -19,8 +19,8 @@ export const ResultsView = ({ view }) => {
   return (
     <React.Fragment>
       <div className='resultsview'>
-        <input type='image' src={listIMG} className={list} alt='listview' />
-        <input type='image' src={gridIMG} className={grid} alt='gridview' />
+        <input type='image' src={listIcon} className={list} alt='listview' />
+        <input type='image' src={gridIcon} className={grid} alt='gridview' />
       </div>
     </React.Fragment>
   )
