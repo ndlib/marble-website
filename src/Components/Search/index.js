@@ -16,9 +16,10 @@ class Search extends Component {
     console.log(this.props)
   }
   componentWillReceiveProps (nextProps) {
-    const values = queryString.parse(this.props.location.search)
+    const values = queryString.parse(nextProps.location.search)
     const { dispatch } = this.props
-    if (this.props.match !== nextProps.match) {
+    if (this.props.location !== nextProps.location) {
+      console.log(nextProps)
       this.props.dispatch(submitSearch(values.perpage, values.terms, values.page))
     }
   }
@@ -37,24 +38,10 @@ const mapStateToProps = (state) => {
   return { ...state }
 }
 
-const mapDispatchToProps = dispatch => {
-  return { dispatch }
-}
-
-const mergeProps = (stateProps, dispatchProps, ownProps) => {
-  if (ownProps.location.search) {
-    let values = queryString.parse(ownProps.location.search)
-    let terms = values.terms || stateProps.searchReducer.terms
-    let page = values.page || stateProps.searchReducer.page
-    let perpage = values.perpage || stateProps.searchReducer.perpage
-  }
-  return { ...stateProps, ...dispatchProps, ...ownProps }
-}
-
 Search.propTypes = {
   location: PropTypes.shape({
     search: PropTypes.string,
   }),
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps, mergeProps)(Search))
+export default withRouter(connect(mapStateToProps)(Search))
