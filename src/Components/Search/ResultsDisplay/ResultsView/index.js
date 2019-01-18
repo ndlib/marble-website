@@ -7,22 +7,18 @@ import PropTypes from 'prop-types'
 import listIcon from 'Static/icons/svg/baseline-view_list-24px.svg'
 import gridIcon from 'Static/icons/svg/baseline-view_module-24px.svg'
 
-let grid, list
 export const ResultsView = ({ view }) => {
+  let gridClass = 'other'
+  let listClass = 'selected'
   if (view === 'grid') {
-    grid = 'selected'
-    list = 'other'
-  } else {
-    grid = 'other'
-    list = 'selected'
+    gridClass = 'selected'
+    listClass = 'other'
   }
   return (
-    <React.Fragment>
-      <div className='resultsview'>
-        <input type='image' src={listIcon} className={list} alt='listview' />
-        <input type='image' src={gridIcon} className={grid} alt='gridview' />
-      </div>
-    </React.Fragment>
+    <div className='resultsview'>
+      <input type='image' src={listIcon} className={listClass} alt='listview' />
+      <input type='image' src={gridIcon} className={gridClass} alt='gridview' />
+    </div>
   )
 }
 

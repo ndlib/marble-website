@@ -9,7 +9,9 @@ import { updatePage } from 'Store/actions/searchActions'
 let pagenav = ''
 let pageprev = ''
 let pagenext = ''
-export const PageNum = ({ dispatch, nextpage, page, terms, perpage, history }) => {
+export const PageNum = ({ dispatch, searchReducer, history }) => {
+  let { perpage, nextpage, page, terms } = searchReducer
+  page = parseInt(page, 10) || 1
   if (page > 1) {
     pageprev = <button className='pageLink' onClick={() => changePage(terms, history, dispatch, perpage, (parseInt(page, 10) - 1))}> &lt; </button>
   } else {
@@ -24,11 +26,9 @@ export const PageNum = ({ dispatch, nextpage, page, terms, perpage, history }) =
     pagenext = ''
   }
   return (
-    <React.Fragment>
-      <div className='pagenum'>
-        {pageprev}{pagenav}{pagenext}
-      </div>
-    </React.Fragment>
+    <div className='pagenum'>
+      {pageprev}{pagenav}{pagenext}
+    </div>
   )
 }
 
@@ -38,21 +38,19 @@ const changePage = (terms, history, dispatch, perpage, pageNum) => {
 }
 
 const mapStateToProps = (state) => {
-  return {
-    perpage: state.searchReducer.perpage,
-    nextpage: state.searchReducer.nextpage,
-    page: state.searchReducer.page,
-    terms: state.searchReducer.terms,
-  }
+  return { ...state }
+  // {
+  //   perpage: state.searchReducer.perpage,
+  //   nextpage: state.searchReducer.nextpage,
+  //   page: state.searchReducer.page,
+  //   terms: state.searchReducer.terms,
+  // }
 }
 
 PageNum.propTypes = {
-  dispatch: PropTypes.func,
-  nextpage: PropTypes.bool,
-  page: PropTypes.number,
-  terms: PropTypes.string,
-  perpage: PropTypes.number,
-  history: PropTypes.object,
+  dispatch: PropTypes.func.isRequired,
+  searchReducer: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
 }
 
 export default withRouter(connect(mapStateToProps)(PageNum))

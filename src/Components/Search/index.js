@@ -5,25 +5,15 @@ import queryString from 'query-string'
 import PropTypes from 'prop-types'
 
 import SearchBox from './SearchBox'
-import Results from './Results'
-import PerPage from './PerPage'
-import PageNum from './PageNum'
-import ResultsView from './ResultsView'
+import ResultsDisplay from './ResultsDisplay'
 import { updatePage } from 'Store/actions/searchActions'
-import ErrorBoundary from 'Components/Shared/ErrorBoundary'
 
 const Search = (props) => {
   let values = queryString.parse(props.location.search)
   return (
     <React.Fragment>
       <SearchBox Searchbar={values.terms} />
-      <ResultsView view={values.view || 'list'} />
-      <PerPage perpage={parseInt(values.perpage, 10) || 12} />
-      <PageNum page={parseInt(values.page, 10) || 1} />
-      <ErrorBoundary>
-        <Results />
-      </ErrorBoundary>
-      <PageNum page={parseInt(values.page, 10) || 1} />
+      <ResultsDisplay />
     </React.Fragment>
   )
 }

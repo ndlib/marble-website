@@ -19,7 +19,7 @@ export const SearchBox = ({ dispatch, Searchbar, history, perpage }) => {
       <div id='Search'>
         <button id='SearchSubmit' onClick={
           () => {
-            history.push(`/search?terms==${input.value}=&perpage==${perpage}=&page=1`)
+            history.push(`/search?terms=${input.value}&perpage=${perpage}&page=1`)
           }
         }><img id='SearchIMG' src={searchImage} alt='Search' value='submit' /></button>
         <input ref={node => (input = node)} type='text' id='Searchbar' placeholder={

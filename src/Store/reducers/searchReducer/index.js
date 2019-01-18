@@ -6,7 +6,13 @@ import {
   VIEW_CHANGE,
 } from 'Store/actions/searchActions'
 
-export default(state = {}, action) => {
+export default(state = {
+  searching: false,
+  results: [],
+  terms: null,
+  page: 1,
+  perpage: 12,
+}, action) => {
   switch (action.type) {
     case SUBMIT_SEARCH:
       return {
