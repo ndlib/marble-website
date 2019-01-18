@@ -11,13 +11,11 @@ import { submitSearch } from 'Store/actions/searchActions'
 class Search extends Component {
   componentDidMount () {
     const values = queryString.parse(this.props.location.search)
-    const { dispatch } = this.props
-    dispatch(submitSearch(values.perpage, values.terms, values.page))
+    this.props.dispatch(submitSearch(values.perpage, values.terms, values.page))
     console.log(this.props)
   }
   componentWillReceiveProps (nextProps) {
     const values = queryString.parse(nextProps.location.search)
-    const { dispatch } = this.props
     if (this.props.location !== nextProps.location) {
       console.log(nextProps)
       this.props.dispatch(submitSearch(values.perpage, values.terms, values.page))
@@ -34,14 +32,15 @@ class Search extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return { ...state }
-}
-
 Search.propTypes = {
   location: PropTypes.shape({
     search: PropTypes.string,
   }),
+  dispatch: PropTypes.func.isRequired,
+}
+
+const mapStateToProps = (state) => {
+  return { ...state }
 }
 
 export default withRouter(connect(mapStateToProps)(Search))
