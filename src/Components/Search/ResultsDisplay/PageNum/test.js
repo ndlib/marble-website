@@ -1,22 +1,26 @@
 import React from 'react'
 import { mount } from 'enzyme'
 import { PageNum } from './'
-import configureStore from 'redux-mock-store'
-const mockStore = configureStore()
 
-let store, wrapper
+let wrapper
 
 test('Objects will render when called', () => {
-  store = mockStore({})
-  wrapper = mount(<PageNum store={store} page={2} nextpage />)
+  const searchReducer = {
+    page: 2,
+    nextpage: true,
+  }
+  wrapper = mount(<PageNum searchReducer={searchReducer} />)
   expect(wrapper.find('div').exists()).toBeTruthy()
   expect(wrapper.text()).toEqual(expect.stringContaining('<'))
   expect(wrapper.text()).toEqual(expect.stringContaining('>'))
 })
 
 test('Objects will not render when not called', () => {
-  store = mockStore({})
-  wrapper = mount(<PageNum store={store} page={1} nextpage={false} />)
+  const searchReducer = {
+    page: undefined,
+    nextpage: false,
+  }
+  wrapper = mount(<PageNum searchReducer={searchReducer} />)
   expect(wrapper.find('div').exists()).toBeTruthy()
   expect(wrapper.text()).toEqual(expect.not.stringContaining('<'))
   expect(wrapper.text()).toEqual(expect.not.stringContaining('>'))
