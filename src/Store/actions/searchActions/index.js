@@ -9,28 +9,21 @@ export const VIEW_CHANGE = 'VIEW_CHANGE'
 const searchBaseURL = PRIMO_BASE_URL
 export const searchCriteria = '?inst=NDU&search_scope=spec_coll&view=full'
 
-export const updatePage = (perpage, terms, page) => {
-  return dispatch => {
-    dispatch(pageChange(parseInt(perpage, 10), page))
-    dispatch(submitSearch(parseInt(perpage, 10), terms, page))
-  }
-}
-
-export const submitSearch = (results, terms, page) => {
+export const submitSearch = (perpage, terms, page) => {
   return dispatch => {
     page = page || 1
-    results = results || 12
-    dispatch(startSearch(String(terms), parseInt(page, 10)))
+    perpage = perpage || 12
+    dispatch(startSearch(String(terms), parseInt(page, 10), parseInt(perpage, 10)))
 
-    const offset = `&offset=${String(parseInt(results, 10) * parseInt(page - 1, 10))}`
+    const offset = `&offset=${String(parseInt(perpage, 10) * parseInt(page - 1, 10))}`
     const searchterm = `&q=any,contains,${String(terms)}`
-    const perpage = `&limit=${String(parseInt(results, 10) + 1)}`
-    const url = encodeURI(`${searchBaseURL}${searchCriteria}${searchterm}${perpage}${offset}`)
+    const limit = `&limit=${String(parseInt(perpage, 10) + 1)}`
+    const url = encodeURI(`${searchBaseURL}${searchCriteria}${searchterm}${limit}${offset}`)
     let nextpage = false
 
     return fetchJson(url)
       .then(json => {
-        if (json.docs.length > results) {
+        if (json.docs.length > perpage) {
           nextpage = true
           json.docs.splice(-1, 1)
         } else {
@@ -44,11 +37,12 @@ export const submitSearch = (results, terms, page) => {
   }
 }
 
-export const startSearch = (terms, page) => {
+export const startSearch = (terms, page, perpage) => {
   return {
     type: SUBMIT_SEARCH,
     terms: terms,
     page : page,
+    perpage: perpage,
   }
 }
 

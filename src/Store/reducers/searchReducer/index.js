@@ -18,6 +18,7 @@ export default(state = {
       return {
         ...state,
         page: action.page,
+        perpage: action.perpage,
         terms: action.terms,
         searching: true,
         results: [],

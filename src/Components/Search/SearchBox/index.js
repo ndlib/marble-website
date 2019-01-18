@@ -5,17 +5,13 @@ import PropTypes from 'prop-types'
 import './style.css'
 import searchImage from './search.png'
 
-import { updatePage } from 'Store/actions/searchActions'
-
-export const SearchBox = ({ dispatch, Searchbar, history, perpage }) => {
+export const SearchBox = ({ Searchbar, history, perpage }) => {
   let input
   if (perpage === undefined) {
     perpage = 12
   }
   return (
-    <form id='SearchComponent' onSubmit={e => {
-      formSearchSubmit(e, input, perpage, dispatch)
-    }} >
+    <div id='SearchComponent' >
       <div id='Search'>
         <button id='SearchSubmit' onClick={
           () => {
@@ -28,17 +24,11 @@ export const SearchBox = ({ dispatch, Searchbar, history, perpage }) => {
       <div id='AdvancedSearch'>
         <a href='*'>Advanced Search</a>
       </div>
-    </form>
+    </div>
   )
 }
 
-const formSearchSubmit = (e, input, perpage, dispatch) => {
-  e.preventDefault()
-  dispatch(updatePage(perpage, input.value, 1))
-}
-
 SearchBox.propTypes = {
-  dispatch: PropTypes.func,
   Searchbar: PropTypes.string,
   history: PropTypes.object,
   perpage: PropTypes.string,

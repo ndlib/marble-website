@@ -19,7 +19,6 @@ beforeEach(() => {
 })
 
 test('Search component contains a form, an input, and a button', () => {
-  expect(wrapper.find('form').exists()).toBeTruthy()
   expect(wrapper.find('input').exists()).toBeTruthy()
   expect(wrapper.find('button').exists()).toBeTruthy()
 })
