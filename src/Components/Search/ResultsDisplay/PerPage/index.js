@@ -1,9 +1,10 @@
 import React from 'react'
-import './style.css'
+import PropTypes from 'prop-types'
 import Select from 'react-select'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
-import PropTypes from 'prop-types'
+import searchUrl from 'Functions/searchUrl'
+import './style.css'
 
 const options = [
   { value: 12, label: '12/page' },
@@ -13,8 +14,8 @@ const options = [
   { value: 60, label: '60/page' },
 ]
 
-export const PerPage = ({ searchReducer, history, view }) => {
-  let { terms, perpage } = searchReducer
+export const PerPage = ({ searchReducer, history }) => {
+  let { terms, perpage, view } = searchReducer
   perpage = parseInt(perpage, 10) || 12
   return (
     <div className='perpage'>
@@ -33,12 +34,11 @@ const mapStateToProps = (state) => {
 }
 
 export const handleChange = (e, terms, history, view) => {
-  history.push(`/search?terms=${terms}&perpage=${e.value}&page=1&view=${view}`)
+  history.push(searchUrl(terms, e.value, 1, view))
 }
 
 PerPage.propTypes = {
   history: PropTypes.object,
-  view: PropTypes.string,
   searchReducer: PropTypes.object.isRequired,
 }
 

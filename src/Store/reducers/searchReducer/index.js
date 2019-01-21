@@ -12,6 +12,7 @@ export default(state = {
   terms: null,
   page: 1,
   perpage: 12,
+  view: 'list',
 }, action) => {
   switch (action.type) {
     case SUBMIT_SEARCH:

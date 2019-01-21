@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
 import { Link } from 'react-router-dom'
+import searchUrl from 'Functions/searchUrl'
 
 const PaginationButton = ({ targetPage, label, searchReducer }) => {
-  let { perpage, terms } = searchReducer
+  let { perpage, terms, view } = searchReducer
   return (
-    <Link to={`/search?terms=${terms}&perpage=${perpage}&page=${targetPage}`}>
+    <Link to={searchUrl(terms, perpage, targetPage, view)}>
       <button
         className='pageLink'
       > {label} </button>

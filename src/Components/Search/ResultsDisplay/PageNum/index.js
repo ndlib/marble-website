@@ -9,11 +9,12 @@ export const PageNum = ({ searchReducer }) => {
   page = parseInt(page, 10) || 1
 
   const pageprev = (page > 1)
-    ? <PaginationButton label='&lt;' targetPage={parseInt(page, 10) - 1} />
+    ? <PaginationButton label='&lt;' targetPage={page - 1} />
     : ''
 
   const pagenav = <div className='pageLink'>Page {page}</div>
-  const pagenext = nextpage ? <PaginationButton label='&gt;' targetPage={parseInt(page, 10) + 1} /> : ''
+
+  const pagenext = nextpage ? <PaginationButton label='&gt;' targetPage={page + 1} /> : ''
 
   return (
     <div className='pagenum'>

@@ -22,10 +22,10 @@ class Search extends Component {
   }
 
   render () {
-    let values = queryString.parse(this.props.location.search)
+    const values = queryString.parse(this.props.location.search)
     return (
       <React.Fragment>
-        <SearchBox Searchbar={values.terms} />
+        <SearchBox terms={values.terms} />
         <ResultsDisplay />
       </React.Fragment>
     )
