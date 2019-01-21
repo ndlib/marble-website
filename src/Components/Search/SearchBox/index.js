@@ -44,7 +44,6 @@ SearchBox.propTypes = {
 }
 
 export const pushHistory = (history, terms, perpage, view) => {
-  console.log('view', view)
   history.push(searchUrl(terms, perpage, 1, view))
 }
 const mapStateToProps = (state) => {

@@ -8,7 +8,6 @@ const searchReducer = {
 const wrapper = shallow(<SearchBox searchReducer={searchReducer} />)
 
 test('Search component contains an input, and a button', () => {
-  console.log(wrapper.debug())
   expect(wrapper.find('input').exists()).toBeTruthy()
   expect(wrapper.find('button').exists()).toBeTruthy()
 })
