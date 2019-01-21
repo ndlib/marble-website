@@ -23,7 +23,7 @@ export const submitSearch = (perpage, terms, page) => {
 
     return fetchJson(url)
       .then(json => {
-        if (json.docs.length > perpage) {
+        if (json.docs && json.docs.length > perpage) {
           nextpage = true
           json.docs.splice(-1, 1)
         } else {

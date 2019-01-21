@@ -8,13 +8,13 @@ import './style.css'
 
 export const SearchBox = ({ terms, history, searchReducer }) => {
   let input
-  const perpage = searchReducer.perpage
+  const { perpage, view } = searchReducer
   return (
     <div id='SearchComponent' >
       <div id='Search'>
         <button id='SearchSubmit' onClick={
           () => {
-            pushHistory(history, input.value, perpage, searchReducer.value)
+            pushHistory(history, input.value, perpage, view)
           }
         }><img id='SearchIMG' src={searchImage} alt='Search' value='submit' /></button>
         <input
@@ -25,7 +25,7 @@ export const SearchBox = ({ terms, history, searchReducer }) => {
             !terms ? 'Search the Collection' : terms}
           onKeyDown={(e) => {
             if (e.keyCode === 13) {
-              pushHistory(history, input.value, perpage, searchReducer.view)
+              pushHistory(history, input.value, perpage, view)
             }
           }}
         />
@@ -39,7 +39,7 @@ export const SearchBox = ({ terms, history, searchReducer }) => {
 
 SearchBox.propTypes = {
   terms: PropTypes.string,
-  history: PropTypes.object,
+  history: PropTypes.object.isRequired,
   searchReducer: PropTypes.object.isRequired,
 }
 
