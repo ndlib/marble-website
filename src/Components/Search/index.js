@@ -12,15 +12,15 @@ class Search extends Component {
   componentDidMount () {
     const values = queryString.parse(this.props.location.search)
     this.props.dispatch(submitSearch(values.perpage, values.terms, values.page))
-    console.log(this.props)
   }
-  componentWillReceiveProps (nextProps) {
-    const values = queryString.parse(nextProps.location.search)
-    if (this.props.location !== nextProps.location) {
-      console.log(nextProps)
+
+  componentDidUpdate (prevProps) {
+    const values = queryString.parse(this.props.location.search)
+    if (this.props.location !== prevProps.location) {
       this.props.dispatch(submitSearch(values.perpage, values.terms, values.page))
     }
   }
+
   render () {
     let values = queryString.parse(this.props.location.search)
     return (
