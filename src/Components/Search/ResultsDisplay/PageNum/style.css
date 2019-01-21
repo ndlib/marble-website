@@ -1,4 +1,5 @@
 .pagenum{
+  margin: 12px;
   margin-left : auto;
   margin-right : auto;
   font-size: 12px;
@@ -8,5 +9,5 @@
 
 .pageLink {
   display: inline;
-
+  border : none;
 }

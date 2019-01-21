@@ -5,56 +5,42 @@ import queryString from 'query-string'
 import PropTypes from 'prop-types'
 
 import SearchBox from './SearchBox'
-import Results from './Results'
-import PerPage from './PerPage'
-import PageNum from './PageNum'
-import { updatePage } from 'Store/actions/searchActions'
-import ErrorBoundary from 'Components/Shared/ErrorBoundary'
+import ResultsDisplay from './ResultsDisplay'
+import { submitSearch } from 'Store/actions/searchActions'
 
 class Search extends Component {
+  componentDidMount () {
+    const values = queryString.parse(this.props.location.search)
+    this.props.dispatch(submitSearch(values.perpage, values.terms, values.page))
+  }
+
+  componentDidUpdate (prevProps) {
+    const values = queryString.parse(this.props.location.search)
+    if (this.props.location !== prevProps.location) {
+      this.props.dispatch(submitSearch(values.perpage, values.terms, values.page))
+    }
+  }
+
   render () {
-    let values = queryString.parse(this.props.location.search)
+    const values = queryString.parse(this.props.location.search)
     return (
       <React.Fragment>
-        <SearchBox Searchbar={values.terms} />
-        <PerPage perpage={values.perpage} />
-        <PageNum page={values.page} />
-        <ErrorBoundary>
-          <Results />
-        </ErrorBoundary>
+        <SearchBox terms={values.terms} />
+        <ResultsDisplay />
       </React.Fragment>
     )
   }
-}
-
-const mapStateToProps = (state) => {
-  return {
-    perpage: state.searchReducer.perpage,
-    page: state.searchReducer.page,
-    terms: state.searchReducer.terms,
-  }
-}
-
-const mapDispatchToProps = dispatch => {
-  return { dispatch }
-}
-
-const mergeProps = (stateProps, dispatchProps, ownProps) => {
-  if (ownProps.location.search) {
-    let values = queryString.parse(ownProps.location.search)
-    let terms = stateProps.terms || values.terms
-    let page = stateProps.page || values.page
-    let perpage = stateProps.perpage || values.perpage
-
-    dispatchProps.dispatch(updatePage(perpage, terms, page))
-  }
-  return { ...stateProps, ...dispatchProps, ...ownProps }
 }
 
 Search.propTypes = {
   location: PropTypes.shape({
     search: PropTypes.string,
   }),
+  dispatch: PropTypes.func.isRequired,
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps, mergeProps)(Search))
+const mapStateToProps = (state) => {
+  return { ...state }
+}
+
+export default withRouter(connect(mapStateToProps)(Search))

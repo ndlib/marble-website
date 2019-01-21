@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import MetaDataField from './MetaDataField'
+import MetaDataField from 'Components/Shared/MetaDataField'
 import './style.css'
 
 const ItemMetaData = ({ currentManifest }) => {

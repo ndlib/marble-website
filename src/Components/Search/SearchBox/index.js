@@ -1,45 +1,53 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import PropTypes from 'prop-types'
-import './style.css'
+import searchUrl from 'Functions/searchUrl'
 import searchImage from './search.png'
+import './style.css'
 
-import { updatePage } from 'Store/actions/searchActions'
-
-export const SearchBox = ({ dispatch, Searchbar, history, perpage }) => {
+export const SearchBox = ({ terms, history, searchReducer }) => {
   let input
-  if (perpage === undefined) {
-    perpage = 10
-  }
+  const { perpage, view } = searchReducer
   return (
-    <form id='SearchComponent' onSubmit={e => {
-      formSearchSubmit(e, input, perpage, dispatch)
-    }} >
+    <div id='SearchComponent' >
       <div id='Search'>
         <button id='SearchSubmit' onClick={
-          () => (history.push('/search?terms=' + input.value + '&perpage=' + perpage + '&page=1'))
+          () => {
+            pushHistory(history, input.value, perpage, view)
+          }
         }><img id='SearchIMG' src={searchImage} alt='Search' value='submit' /></button>
-        <input ref={node => (input = node)} type='text' id='Searchbar' placeholder={
-          !Searchbar ? 'Search the Collection' : Searchbar} />
+        <input
+          ref={node => (input = node)}
+          type='text'
+          id='Searchbar'
+          placeholder={
+            !terms ? 'Search the Collection' : terms}
+          onKeyDown={(e) => {
+            if (e.keyCode === 13) {
+              pushHistory(history, input.value, perpage, view)
+            }
+          }}
+        />
       </div>
       <div id='AdvancedSearch'>
         <a href='*'>Advanced Search</a>
       </div>
-    </form>
+    </div>
   )
 }
 
-const formSearchSubmit = (e, input, perpage, dispatch) => {
-  e.preventDefault()
-  e.dispatch(updatePage(perpage, input.value, 1))
-}
-
 SearchBox.propTypes = {
-  dispatch: PropTypes.func,
-  Searchbar: PropTypes.func,
-  history: PropTypes.object,
-  perpage: PropTypes.string,
+  terms: PropTypes.string,
+  history: PropTypes.object.isRequired,
+  searchReducer: PropTypes.object.isRequired,
 }
 
-export default withRouter(connect()(SearchBox))
+export const pushHistory = (history, terms, perpage, view) => {
+  console.log('view', view)
+  history.push(searchUrl(terms, perpage, 1, view))
+}
+const mapStateToProps = (state) => {
+  return { ...state }
+}
+export default withRouter(connect(mapStateToProps)(SearchBox))

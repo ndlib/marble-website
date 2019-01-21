@@ -1,10 +1,10 @@
 import React from 'react'
 import ActionButton from './ActionButton'
-import print from './Icons/baseline-print-24px.svg'
-import share from './Icons/baseline-share-24px.svg'
-import bookmark from './Icons/baseline-bookmark_border-24px.svg'
-import bookmarkActive from './Icons/baseline-bookmark-24px.svg'
-import download from './Icons/baseline-save_alt-24px.svg'
+import print from 'Static/icons/svg/baseline-print-24px.svg'
+import share from 'Static/icons/svg/baseline-share-24px.svg'
+import bookmark from 'Static/icons/svg/baseline-bookmark_border-24px.svg'
+import bookmarkActive from 'Static/icons/svg/baseline-bookmark-24px.svg'
+import download from 'Static/icons/svg/baseline-save_alt-24px.svg'
 import './style.css'
 
 const ItemActionButtons = () => {

@@ -9,10 +9,14 @@ import { createMemoryHistory } from 'history'
 
 const history = createMemoryHistory('/search')
 const dispatch = jest.fn()
-const wrapper = mount(<PerPage />)
+const searchReducer = {
+  terms: [],
+  perpage: 1,
+}
+const wrapper = mount(<PerPage searchReducer={searchReducer} />)
 
 test('PerPage has React Select', () => {
-  expect(wrapper.find('Select').exists()).toBeTruthy()
+  expect(wrapper.find(Select).exists()).toBeTruthy()
 })
 
 test('PerPage dispatches handleChange with updated values', () => {

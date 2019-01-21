@@ -8,7 +8,6 @@ import RelatedItems from './RelatedItems'
 export const Item = ({ currentManifest }) => {
   return (
     <React.Fragment>
-      { /* add search component */ }
       <ContentLeftSidebar
         sidebarContent={
           <ItemSide currentManifest={currentManifest} />

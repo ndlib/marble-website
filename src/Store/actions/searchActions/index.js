@@ -4,36 +4,26 @@ export const SUBMIT_SEARCH = 'SUBMIT_SEARCH'
 export const RESULTS_READY = 'RESULTS_READY'
 export const CLEAR_SEARCH = 'CLEAR_SEARCH'
 export const PAGE_CHANGE = 'PAGE_CHANGE'
+export const VIEW_CHANGE = 'VIEW_CHANGE'
 
 const searchBaseURL = PRIMO_BASE_URL
-export const searchCriteria = '?inst=NDU&search_scope=spec_coll'
+export const searchCriteria = '?inst=NDU&search_scope=spec_coll&view=full'
 
-export const updatePage = (results, terms, page) => {
+export const submitSearch = (perpage, terms, page) => {
   return dispatch => {
-    dispatch(pageChange(results, page))
-    dispatch(submitSearch(results, terms, page))
-  }
-}
+    page = page || 1
+    perpage = perpage || 12
+    dispatch(startSearch(String(terms), parseInt(page, 10), parseInt(perpage, 10)))
 
-export const submitSearch = (results, terms, page) => {
-  return dispatch => {
-    if (!page) {
-      page = 1
-    }
-    if (!results) {
-      results = 10
-    }
-    dispatch(startSearch(String(terms), parseInt(page, 10)))
-
-    let offset = '&offset=' + String(parseInt(results, 10) * parseInt(page - 1, 10))
-    let searchterm = '&q=any,contains,' + String(terms)
-    let perpage = '&limit=' + String(parseInt(results, 10) + 1)
-    let url = encodeURI(searchBaseURL + searchCriteria + searchterm + perpage + offset)
+    const offset = `&offset=${String(parseInt(perpage, 10) * parseInt(page - 1, 10))}`
+    const searchterm = `&q=any,contains,${String(terms)}`
+    const limit = `&limit=${String(parseInt(perpage, 10) + 1)}`
+    const url = encodeURI(`${searchBaseURL}${searchCriteria}${searchterm}${limit}${offset}`)
     let nextpage = false
 
     return fetchJson(url)
       .then(json => {
-        if (json.docs.length > results) {
+        if (json.docs && json.docs.length > perpage) {
           nextpage = true
           json.docs.splice(-1, 1)
         } else {
@@ -47,11 +37,12 @@ export const submitSearch = (results, terms, page) => {
   }
 }
 
-export const startSearch = (terms, page) => {
+export const startSearch = (terms, page, perpage) => {
   return {
     type: SUBMIT_SEARCH,
     terms: terms,
     page : page,
+    perpage: perpage,
   }
 }
 
@@ -69,6 +60,7 @@ export const clearSearch = () => {
     terms: '',
     results: [],
     page : 1,
+    view : 'list',
   }
 }
 
@@ -77,5 +69,12 @@ export const pageChange = (perpage, page) => {
     type: PAGE_CHANGE,
     perpage: perpage,
     page: page,
+  }
+}
+
+export const viewChange = (view) => {
+  return {
+    type: VIEW_CHANGE,
+    view: view,
   }
 }

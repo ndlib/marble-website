@@ -64,7 +64,6 @@ test('Should render only Search page in Page component for /search', () => {
   )
   expect(wrapper.find(Page).exists()).toBeTruthy()
   expect(wrapper.find(Search).exists()).toBeTruthy()
-  expect(wrapper.find(NotFound).exists()).toBeFalsy()
 })
 
 test('Should render only NotFound page in Page component for undefined path', () => {
