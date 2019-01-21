@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import PaginationButton from './PaginationButton'
 
 export const PageNum = ({ searchReducer }) => {
-  let { nextpage, page } = searchReducer
+  let { page } = searchReducer
   page = parseInt(page, 10) || 1
 
   return (
