@@ -4,23 +4,20 @@ import MetaDataField from 'Components/Shared/MetaDataField'
 import './style.css'
 
 const ItemMetaData = ({ currentManifest }) => {
-  const { label, metadata } = currentManifest.data
+  const { metadata } = currentManifest.data
   return (
-    <React.Fragment>
-      <h1>{label}</h1>
-      <dl className='metaData'>
-        {
-          metadata.map(md => {
-            return (
-              <MetaDataField
-                key={`${md.label}${md.value}`}
-                metadata={md}
-              />
-            )
-          })
-        }
-      </dl>
-    </React.Fragment>
+    <dl className='metaData'>
+      {
+        metadata.map(md => {
+          return (
+            <MetaDataField
+              key={`${md.label}${md.value}`}
+              metadata={md}
+            />
+          )
+        })
+      }
+    </dl>
   )
 }
 

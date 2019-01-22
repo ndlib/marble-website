@@ -16,10 +16,6 @@ const manifest = {
 
 const wrapper = shallow(<ItemMetaData currentManifest={manifest} />)
 
-test('renders label', () => {
-  expect(wrapper.find('h1').text()).toEqual('test label')
-})
-
 test('renders 3 metadata fields', () => {
   expect(wrapper.find('.metadata')).toBeTruthy()
   expect(wrapper.find(MetaDataField).length).toEqual(3)
