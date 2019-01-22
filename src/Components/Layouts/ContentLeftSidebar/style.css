@@ -8,7 +8,7 @@
 
 .mainSide {
   display: inline-block;
-  margin-left: 1rem;
+  margin: 0 0 0 1rem;
   vertical-align: top;
   width: calc(100% - var(--sidebar-width) - 1rem);
 }
@@ -21,10 +21,16 @@
 }
 
 @media (max-width: 780px) {
-  .sideBar {
+  .sideBar,
+  .evenSplit .sideBar {
+    display: block;
     width: 100%;
   }
-  .mainSide {
+  .mainSide,
+  .evenSplit .mainSide {
+    display: block;
+    margin: 0;
     width: 100%;
+
   }
 }
