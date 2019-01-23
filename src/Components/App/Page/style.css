@@ -1,12 +1,12 @@
 .mainContent {
-  margin: 0 auto;
+  margin: 1rem auto;
   min-height: 90vh;
   width: var(--inner-page-width);
 }
 
 @media (max-width: 780px) {
   .mainContent {
-    margin: 0 20px;
+    margin: 1rem 20px;
     width: calc(100% - 40px);
   }
 }

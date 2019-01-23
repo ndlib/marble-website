@@ -1,7 +1,13 @@
 {
   "name": "mellon-website",
   "version": "0.1.0",
-  "private": true,
+  "keywords": [
+    "IIIF",
+    "manifest",
+    "redux",
+    "react"
+  ],
+  "description": "A customizable React and Redux based front-end to present collections of IIIF manifests.",
   "dependencies": {
     "@sentry/browser": "^4.3.0",
     "query-string": "^6.2.0",

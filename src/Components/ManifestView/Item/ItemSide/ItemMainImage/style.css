@@ -4,18 +4,20 @@
 }
 
 .itemImage img {
-  height: var(--sidebar-width);
+  cursor: pointer;
+  height: auto;
   object-fit: cover;
   object-position: center;
   width: var(--sidebar-width);
+  width: 100%;
 }
 
 .itemImage img.expandIcon {
-  bottom: .25em;
-  height: 24px;
-  right: .25em;
+  bottom: .75rem;
+  height: 36px;
+  right: .75rem;
   position: absolute;
-  width: 24px;
+  width: 36px;
 }
 
 @media (max-width: 780px) {

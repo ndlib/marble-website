@@ -1,0 +1,36 @@
+.sideBar {
+ display: inline-block;
+ width: var(--sidebar-width);
+}
+.sideBar a {
+  display: block;
+}
+
+.mainSide {
+  display: inline-block;
+  margin: 0 0 0 1rem;
+  vertical-align: top;
+  width: calc(100% - var(--sidebar-width) - 1rem);
+}
+
+.evenSplit .sideBar {
+  width: calc(var(--inner-page-width) * .45)
+}
+.evenSplit .mainSide {
+  width: calc(var(--inner-page-width) * .55 - 1rem);
+}
+
+@media (max-width: 780px) {
+  .sideBar,
+  .evenSplit .sideBar {
+    display: block;
+    width: 100%;
+  }
+  .mainSide,
+  .evenSplit .mainSide {
+    display: block;
+    margin: 0;
+    width: 100%;
+
+  }
+}

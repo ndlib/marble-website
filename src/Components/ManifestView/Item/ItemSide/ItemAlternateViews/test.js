@@ -27,7 +27,7 @@ test('renders the list of alternates', () => {
   expect(wrapper.find(AlternateImage).length).toEqual(2)
 })
 
-test('truncates list at 3', () => {
+test('truncates list at MAX_IMAGES', () => {
   const manifest = {
     data: {
       sequences: [
