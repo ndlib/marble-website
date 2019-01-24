@@ -4,8 +4,7 @@ import { MemoryRouter } from 'react-router-dom'
 import App from './'
 import Page from './Page'
 import Home from 'Components/Home'
-import About from 'Components/About'
-import Help from 'Components/Help'
+import StaticPage from 'Components/StaticPage'
 import Search from 'Components/Search'
 import ManifestView from 'Components/ManifestView'
 import NotFound from 'Components/Shared/NotFound'
@@ -28,8 +27,6 @@ test('Should render only Home page in Page component for /', () => {
   )
   expect(wrapper.find(Page).exists()).toBeTruthy()
   expect(wrapper.find(Home).exists()).toBeTruthy()
-  expect(wrapper.find(About).exists()).toBeFalsy()
-  expect(wrapper.find(Help).exists()).toBeFalsy()
   expect(wrapper.find(Search).exists()).toBeFalsy()
   expect(wrapper.find(NotFound).exists()).toBeFalsy()
 })
@@ -41,7 +38,7 @@ test('Should render only About page in Page component for /about', () => {
     </MemoryRouter>
   )
   expect(wrapper.find(Page).exists()).toBeTruthy()
-  expect(wrapper.find(About).exists()).toBeTruthy()
+  expect(wrapper.find(StaticPage).exists()).toBeTruthy()
   expect(wrapper.find(NotFound).exists()).toBeFalsy()
 })
 
@@ -52,7 +49,7 @@ test('Should render only Help page in Page component for /help', () => {
     </MemoryRouter>
   )
   expect(wrapper.find(Page).exists()).toBeTruthy()
-  expect(wrapper.find(Help).exists()).toBeTruthy()
+  expect(wrapper.find(StaticPage).exists()).toBeTruthy()
   expect(wrapper.find(NotFound).exists()).toBeFalsy()
 })
 
@@ -74,8 +71,6 @@ test('Should render only NotFound page in Page component for undefined path', ()
   )
   expect(wrapper.find(Page).exists()).toBeTruthy()
   expect(wrapper.find(Home).exists()).toBeFalsy()
-  expect(wrapper.find(About).exists()).toBeFalsy()
-  expect(wrapper.find(Help).exists()).toBeFalsy()
   expect(wrapper.find(Search).exists()).toBeFalsy()
   expect(wrapper.find(NotFound).exists()).toBeTruthy()
 })

@@ -5,7 +5,7 @@ import partner1 from 'Configurations/About/Text/partner1.md'
 import partner2 from 'Configurations/About/Text/partner2.md'
 import partner3 from 'Configurations/About/Text/partner3.md'
 import './style.css'
-const AboutMain = () => {
+const About = () => {
   return (
     <React.Fragment>
       <div id='introduction' />
@@ -29,4 +29,4 @@ const AboutMain = () => {
   )
 }
 
-export default AboutMain
+export default About

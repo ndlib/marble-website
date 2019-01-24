@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown'
 import { withRouter } from 'react-router'
 import { topics } from 'Configurations/Help'
 
-const HelpText = ({ history }) => {
+const Help = ({ history }) => {
   // Get the topic slug from the url. If there there is no slug, show first topic in list.
   let topic
   if (
@@ -38,9 +38,9 @@ const HelpText = ({ history }) => {
   }
 }
 
-HelpText.propTypes = {
+Help.propTypes = {
   match: PropTypes.shape(
     { params: PropTypes.object }
   ),
 }
-export default withRouter(HelpText)
+export default withRouter(Help)
