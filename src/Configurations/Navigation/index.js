@@ -1,7 +1,7 @@
 export const navigationLinks = [
   {
     title: 'Browse',
-    link: '/search',
+    link: '/browse',
   },
   {
     title: 'Exhibitions',

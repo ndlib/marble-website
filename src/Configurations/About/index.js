@@ -1,4 +1,4 @@
-export const sections = [
+export const topics = [
   {
     title: 'Introduction',
     link: '#introduction',

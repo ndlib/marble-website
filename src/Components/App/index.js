@@ -12,12 +12,19 @@ import * as Sentry from '@sentry/browser'
 
 import Page from './Page'
 import Home from 'Components/Home'
-import About from 'Components/About'
-import Help from 'Components/Help'
+import StaticPage from 'Components/StaticPage'
 import Search from 'Components/Search'
 import ManifestView from 'Components/ManifestView'
 import NotFound from 'Components/Shared/NotFound'
-
+import {
+  ABOUT_CONTEXT,
+  HELP_CONTEXT,
+} from 'Constants/pageContexts'
+import {
+  COLLECTION_CONTEXT,
+  ITEM_CONTEXT,
+  VIEWER_CONTEXT,
+} from 'Constants/viewingContexts'
 import 'Configurations/customizations.css'
 import { SENTRY_DSN } from 'Configurations/apis.js'
 import './style.css'
@@ -40,10 +47,9 @@ const App = () => {
           <Page>
             <Switch>
               <Route exact path='/' component={Home} />
-              <Route exact path='/about' component={About} />
-              <Route exact path='/help/:topic?' component={Help} />
               <Route exact path='/search' component={Search} />
-              <Route exact path='/:context/:contextId' component={ManifestView} />
+              <Route exact path={`/:pageType(${ABOUT_CONTEXT}|${HELP_CONTEXT})/:topic?`} component={StaticPage} />
+              <Route exact path={`/:context(${COLLECTION_CONTEXT}|${ITEM_CONTEXT}|${VIEWER_CONTEXT})/:contextId`} component={ManifestView} />
               <Route component={NotFound} />
             </Switch>
           </Page>
