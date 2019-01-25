@@ -1,6 +1,7 @@
 import { MANIFEST_BASE_URL } from 'Configurations/apis.js'
 import fetchJSON from 'Functions/fetchJSON'
 import {
+  BROWSE_CONTEXT,
   COLLECTION_CONTEXT,
   ITEM_CONTEXT,
   VIEWER_CONTEXT,
@@ -16,7 +17,7 @@ export const getManifest = (context, id) => {
   return dispatch => {
     dispatch(fetchManifest(id))
     let url
-    if (context === COLLECTION_CONTEXT) {
+    if (context === COLLECTION_CONTEXT || context === BROWSE_CONTEXT) {
       url = `${MANIFEST_BASE_URL}collection/${id}`
     } else if (context === ITEM_CONTEXT || context === VIEWER_CONTEXT) {
       url = `${MANIFEST_BASE_URL}${id}/manifest`

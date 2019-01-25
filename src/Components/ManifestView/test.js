@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { ManifestView } from './'
+import { ManifestView, mergeProps } from './'
 import NotFound from 'Components/Shared/NotFound'
 import Loading from 'Components/Shared/Loading'
 import ManifestDisplayRouter from './ManifestDisplayRouter'
@@ -10,8 +10,10 @@ import {
   STATUS_ERROR,
 } from 'Store/actions/manifestActions'
 import {
+  BROWSE_CONTEXT,
   COLLECTION_CONTEXT,
 } from 'Constants/viewingContexts'
+import { DEFAULT_BROWSE_MANIFEST_ID } from 'Configurations/customizations.js'
 let wrapper
 
 test('Returns Loading when not ready', () => {
@@ -55,4 +57,22 @@ test('Returns ManifestDisplayRouter when ready', () => {
   }
   wrapper = shallow(<ManifestView match={match} manifests={manifests} />)
   expect(wrapper.find(ManifestDisplayRouter).exists()).toBeTruthy()
+})
+
+test('Uses DEFAULT_BROWSE_MANIFEST_ID as contextId for BROWSE_CONTEXT with no contextId', () => {
+  const stateProps = {
+    manifests: [],
+  }
+  const dispatchProps = {
+    dispatch: jest.fn(),
+  }
+  const ownProps = {
+    match: {
+      params: {
+        context: BROWSE_CONTEXT,
+      },
+    },
+  }
+  const props = mergeProps(stateProps, dispatchProps, ownProps)
+  expect(props.match.params.contextid === DEFAULT_BROWSE_MANIFEST_ID)
 })

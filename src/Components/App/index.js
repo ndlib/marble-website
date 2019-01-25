@@ -21,6 +21,7 @@ import {
   HELP_CONTEXT,
 } from 'Constants/pageContexts'
 import {
+  BROWSE_CONTEXT,
   COLLECTION_CONTEXT,
   ITEM_CONTEXT,
   VIEWER_CONTEXT,
@@ -49,7 +50,8 @@ const App = () => {
               <Route exact path='/' component={Home} />
               <Route exact path='/search' component={Search} />
               <Route exact path={`/:pageType(${ABOUT_CONTEXT}|${HELP_CONTEXT})/:topic?`} component={StaticPage} />
-              <Route exact path={`/:context(${COLLECTION_CONTEXT}|${ITEM_CONTEXT}|${VIEWER_CONTEXT})/:contextId`} component={ManifestView} />
+              <Route exact path={`/:context(${BROWSE_CONTEXT})`} component={ManifestView} />
+              <Route exact path={`/:context(${BROWSE_CONTEXT}|${COLLECTION_CONTEXT}|${ITEM_CONTEXT}|${VIEWER_CONTEXT})/:contextId`} component={ManifestView} />
               <Route component={NotFound} />
             </Switch>
           </Page>
