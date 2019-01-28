@@ -32,3 +32,5 @@ export const DEPARTMENT_HOME_PAGE = 'https://provost.nd.edu/'
 // Default images for collections missing an image
 export const DEFAULT_COLLECTION_IMAGE = defaultItemImage
 export const DEFAULT_ITEM_IMAGE = defaultItemImage
+
+export const DEFAULT_BROWSE_MANIFEST_ID = 'b19974760'

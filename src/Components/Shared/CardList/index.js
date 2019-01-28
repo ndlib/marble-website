@@ -5,6 +5,8 @@ import NotFound from 'Components/Shared/NotFound'
 
 import pageUrlFromAtId from 'Functions/pageUrlFromAtId'
 const CardList = ({ items, start, perPage }) => {
+  // if we don't have a perPage limit, show all the things
+  perPage = perPage || items.length
   // make sure we have items and we're not trying to start after the array end
   if (items && start < items.length) {
     return (
@@ -29,7 +31,11 @@ const CardList = ({ items, start, perPage }) => {
 CardList.propTypes = {
   items: PropTypes.array.isRequired,
   start: PropTypes.number.isRequired,
-  perPage: PropTypes.number.isRequired,
+  perPage: PropTypes.number,
+}
+
+CardList.defaultProps = {
+  start: 0,
 }
 
 const itemsForDisplay = (items, start, perPage) => {

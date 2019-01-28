@@ -1,11 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import SearchBox from 'Components/Search/SearchBox'
 
 const Home = () => {
   return (
     <React.Fragment>
-      <div><Link to='/search'>Search Page</Link></div>
-      <div><Link to='/collection/b19974760'>Test Collection</Link></div>
+      <SearchBox />
     </React.Fragment>
   )
 }

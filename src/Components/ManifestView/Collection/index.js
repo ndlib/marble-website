@@ -16,11 +16,7 @@ const Collection = ({ currentManifest }) => {
         sidebarTitle={currentManifest.data.label}
         sidebarContent={currentManifest.data.description}
       >
-        <CardList
-          items={items}
-          start={0}
-          perPage={items.length}
-        />
+        <CardList items={items} />
       </ContentLeftSidebar>
     </React.Fragment>
   )
