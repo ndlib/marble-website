@@ -28,9 +28,7 @@ This website provides an interface to search and browse digital collections and 
 
 `yarn test`
 
-or
-
-`yarn test -- --coverage` to get a local coverage report: [Coverage Markers](https://github.com/kentaro-m/coverage-markers) in [Atom](https://atom.io/).
+[Coverage Markers](https://github.com/kentaro-m/coverage-markers) in [Atom](https://atom.io/).
 
 ## Deployment
 
