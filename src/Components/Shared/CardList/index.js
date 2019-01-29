@@ -4,7 +4,7 @@ import Card from 'Components/Shared/Card'
 import NotFound from 'Components/Shared/NotFound'
 
 import pageUrlFromAtId from 'Functions/pageUrlFromAtId'
-const CardList = ({ items, start, perPage }) => {
+const CardList = ({ items, start, perPage, className }) => {
   // if we don't have a perPage limit, show all the things
   perPage = perPage || items.length
   // make sure we have items and we're not trying to start after the array end
@@ -15,6 +15,7 @@ const CardList = ({ items, start, perPage }) => {
           itemsForDisplay(items, start, perPage).map(item => {
             return (
               <Card
+                className={className}
                 key={item['@id']}
                 title={item.label}
                 image={null}
@@ -32,6 +33,7 @@ CardList.propTypes = {
   items: PropTypes.array.isRequired,
   start: PropTypes.number.isRequired,
   perPage: PropTypes.number,
+  className: PropTypes.string,
 }
 
 CardList.defaultProps = {

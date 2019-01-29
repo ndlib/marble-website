@@ -6,10 +6,10 @@ import { DEFAULT_ITEM_IMAGE } from 'Configurations/customizations'
 import urlContext from 'Functions/urlContext'
 import './style.css'
 
-export const Card = ({ title, image, url, match }) => {
+export const Card = ({ title, image, url, className, match }) => {
   if (title && url) {
     return (
-      <div className='card'>
+      <div className={`card ${className}`}>
         <Link to={urlContext(url, match)}>
           <img
             className='cardImage'
@@ -28,6 +28,7 @@ Card.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string,
   url: PropTypes.string.isRequired,
+  className: PropTypes.string,
   match: PropTypes.shape({
     params: PropTypes.shape({
       context: PropTypes.string,

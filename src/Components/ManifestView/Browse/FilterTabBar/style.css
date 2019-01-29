@@ -1,0 +1,17 @@
+.filterTabs {
+  width: 100%;
+}
+
+.filterTabs .filterTab {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 2rem 0 0;
+  padding: .25rem;
+  min-width: 40px;
+  text-decoration: none;
+}
+
+.filterTabs .filterTab.active {
+  border-bottom: 3px solid var(--body-text-color);
+}
