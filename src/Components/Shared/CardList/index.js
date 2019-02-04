@@ -10,7 +10,7 @@ const CardList = ({ items, start, perPage, className }) => {
   // make sure we have items and we're not trying to start after the array end
   if (items && start < items.length) {
     return (
-      <React.Fragment>
+      <div className='cardList'>
         {
           itemsForDisplay(items, start, perPage).map(item => {
             return (
@@ -23,7 +23,7 @@ const CardList = ({ items, start, perPage, className }) => {
               />)
           })
         }
-      </React.Fragment>
+      </div>
     )
   }
   return <NotFound />
