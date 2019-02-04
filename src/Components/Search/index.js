@@ -1,46 +1,22 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { withRouter } from 'react-router'
-import queryString from 'query-string'
-import PropTypes from 'prop-types'
+import React from 'react'
+import Results from './Results'
+import PerPage from './PerPage'
+import PageNum from './PageNum'
+import ResultsView from './ResultsView'
 
-import SearchBox from './SearchBox'
-import ResultsDisplay from './ResultsDisplay'
-import { submitSearch } from 'Store/actions/searchActions'
-
-class Search extends Component {
-  componentDidMount () {
-    const values = queryString.parse(this.props.location.search)
-    this.props.dispatch(submitSearch(values.perpage, values.terms, values.page))
-  }
-
-  componentDidUpdate (prevProps) {
-    const values = queryString.parse(this.props.location.search)
-    if (this.props.location !== prevProps.location) {
-      this.props.dispatch(submitSearch(values.perpage, values.terms, values.page))
-    }
-  }
-
-  render () {
-    const values = queryString.parse(this.props.location.search)
+const Search = () => {
+  if (window.location.search) {
     return (
       <React.Fragment>
-        <SearchBox terms={values.terms} />
-        <ResultsDisplay />
+        <ResultsView />
+        <PerPage />
+        <PageNum />
+        <Results />
+        <PageNum />
       </React.Fragment>
     )
   }
+  return null
 }
 
-Search.propTypes = {
-  location: PropTypes.shape({
-    search: PropTypes.string,
-  }),
-  dispatch: PropTypes.func.isRequired,
-}
-
-const mapStateToProps = (state) => {
-  return { ...state }
-}
-
-export default withRouter(connect(mapStateToProps)(Search))
+export default Search
