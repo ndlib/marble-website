@@ -1,10 +1,11 @@
 import React from 'react'
-import SearchBox from 'Components/Search/SearchBox'
 
 const Home = () => {
   return (
     <React.Fragment>
-      <SearchBox />
+      {
+        /// Nothing to see here yet.
+      }
     </React.Fragment>
   )
 }

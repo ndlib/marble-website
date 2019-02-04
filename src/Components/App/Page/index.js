@@ -5,6 +5,7 @@ import './style.css'
 import Header from './Header'
 import NavBar from './NavBar'
 import Footer from './Footer'
+import SearchBox from 'Components/Shared/SearchBox'
 
 const Page = ({ children }) => {
   return (
@@ -12,6 +13,7 @@ const Page = ({ children }) => {
       <Header />
       <NavBar />
       <div className='mainContent'>
+        <SearchBox />
         {children}
       </div>
       <Footer />
