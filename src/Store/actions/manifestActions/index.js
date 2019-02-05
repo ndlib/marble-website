@@ -17,12 +17,17 @@ export const getManifest = (context, id) => {
   return dispatch => {
     dispatch(fetchManifest(id))
     let url
-    if (context === COLLECTION_CONTEXT || context === BROWSE_CONTEXT) {
-      url = `${MANIFEST_BASE_URL}collection/${id}`
-    } else if (context === ITEM_CONTEXT || context === VIEWER_CONTEXT) {
-      url = `${MANIFEST_BASE_URL}${id}/manifest`
-    } else {
-      return dispatch(manifestError(id, 'invalid context'))
+    switch (context) {
+      case COLLECTION_CONTEXT:
+      case BROWSE_CONTEXT:
+        url = `${MANIFEST_BASE_URL}collection/${id}`
+        break
+      case ITEM_CONTEXT:
+      case VIEWER_CONTEXT:
+        url = `${MANIFEST_BASE_URL}${id}/manifest`
+        break
+      default:
+        return dispatch(manifestError(id, 'invalid context'))
     }
     return fetchJSON(url)
       .then(json => dispatch(receiveManifest(id, json)))
