@@ -12,7 +12,7 @@ export const Page = ({ children, location }) => {
   const contentClass = location.pathname === '/' ? 'home mainContent' : 'mainContent'
 
   return (
-    <div >
+    <React.Fragment>
       <Header />
       <NavBar />
       <div className={contentClass}>
@@ -20,7 +20,7 @@ export const Page = ({ children, location }) => {
         {children}
       </div>
       <Footer />
-    </div>
+    </React.Fragment>
   )
 }
 
