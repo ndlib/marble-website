@@ -11,9 +11,7 @@ export const SearchField = ({ submitSearch, history, searchReducer, dispatch }) 
       type='text'
       className='searchbar'
       placeholder='Search the Collection'
-      onChange={(e) => {
-        dispatch(updateInput(e.target.value))
-      }}
+      onChange={(e) => dispatch(updateInput(e.target.value))}
       value={rawInput}
       onKeyDown={(e) => {
         // Submit on enter key press
