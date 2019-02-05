@@ -1,38 +1,38 @@
-#Search{
+.search{
   border: 2px solid #eee;
 
 }
 
-#SearchComponent {
+.searchComponent {
   width:600px;
   padding: 12px;
   margin-left: auto;
   margin-right: auto;
 }
 
-#Searchbar {
-    width:500px;
-    height:40px;
-    border: none;
-    font: 16px helvetica;
-    vertical-align: top
+.searchbar {
+  width:500px;
+  height:40px;
+  border: none;
+  font: 16px helvetica;
+  vertical-align: top
 }
 
-#AdvancedSearch {
+.advancedSearch {
   text-align: right;
 }
 
-#AdvancedSearch a {
+.advancedSearch a {
   text-decoration: none;
   color: #000;
 }
 
-#SearchIMG {
+.searchIcon {
   width: 30px;
   height: 30px;
   padding: 4px;
 }
 
-#SearchSubmit {
+.submitSearch {
   border:none
 }

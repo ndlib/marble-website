@@ -15,16 +15,24 @@ const SearchBox = ({
   let input
   const { rawInput, perpage, view } = searchReducer
   return (
-    <div id='SearchComponent' >
-      <div id='Search'>
-        <button id='SearchSubmit' onClick={
-          () => {
-            pushHistory(history, rawInput, perpage, view)
-          }
-        }><img id='SearchIMG' src={searchImage} alt='Search' value='submit' /></button>
+    <div className='searchComponent' >
+      <div className='search'>
+        <button
+          className='submitSearch'
+          onClick={
+            () => {
+              pushHistory(history, rawInput, perpage, view)
+            }
+          }>
+          <img
+            className='searchIcon'
+            src={searchImage}
+            alt='Search'
+            value='submit' />
+        </button>
         <input
           type='text'
-          id='Searchbar'
+          className='searchbar'
           placeholder='Search the Collection'
           onChange={(e) => {
             dispatch(updateInput(e.target.value))
@@ -37,7 +45,7 @@ const SearchBox = ({
           }}
         />
       </div>
-      <div id='AdvancedSearch'>
+      <div className='advancedSearch'>
         <a href='*'>Advanced Search</a>
       </div>
     </div>
