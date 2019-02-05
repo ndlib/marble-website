@@ -6,7 +6,6 @@ import {
   SUBMIT_SEARCH,
   RESULTS_READY,
   CLEAR_SEARCH,
-  PAGE_CHANGE,
   updatePage,
   submitSearch,
   startSearch,
@@ -33,17 +32,6 @@ test('startSearch dispatches the correct payload', () => {
 //
 // test('clearSearch dispatches the correct payload', () => {
 //   expect(clearSearch()).toEqual({ page: 1, type: CLEAR_SEARCH, terms: '', results: [], view: 'list' })
-// })
-//
-// test('pageChange dispatches the correct payload', () => {
-//   expect(pageChange(20, 2)).toEqual({ type: PAGE_CHANGE, perpage: 20, page: 2 })
-// })
-//
-// test('updatePage dispatches', () => {
-//   store.dispatch(updatePage(20, 'terms', 2))
-//   const expectedActions = [{ type: PAGE_CHANGE, perpage: 20, page: 2 },
-//     { type: SUBMIT_SEARCH, terms: 'terms', page: 2 }]
-//   expect(store.getActions()).toEqual(expectedActions)
 // })
 //
 // test('docs length is greater than results', () => {

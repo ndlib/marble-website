@@ -4,7 +4,6 @@ import {
   SUBMIT_SEARCH,
   RESULTS_READY,
   CLEAR_SEARCH,
-  PAGE_CHANGE,
 } from 'Store/actions/searchActions'
 
 describe('SUBMIT_SEARCH', () => {
@@ -43,15 +42,6 @@ describe('CLEAR_SEARCH reducer', () => {
   test('base test', () => {
     const action = { type: CLEAR_SEARCH }
     const testState = { nextpage: false, page: 1, results: [], searching: false, terms: [] }
-
-    // expect(searchReducer(undefined, action)).toEqual(testState)
-  })
-})
-
-describe('PAGE_CHANGE reducer', () => {
-  test('base test', () => {
-    const action = { type: PAGE_CHANGE, perpage:12, page:2 }
-    const testState = { perpage: 12, page:2 }
 
     // expect(searchReducer(undefined, action)).toEqual(testState)
   })

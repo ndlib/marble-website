@@ -33,7 +33,7 @@ const mapDispatchToProps = dispatch => {
 
 export const mergeProps = (stateProps, dispatchProps, ownProps) => {
   const values = queryString.parse(ownProps.location.search)
-  if (shouldDispatchSearch(stateProps.searchReducer.status, values.terms, stateProps.searchReducer.page, values.page)) {
+  if (shouldDispatchSearch(stateProps.searchReducer, values.terms, stateProps.searchReducer.page, values.page)) {
     dispatchProps.dispatch(
       submitSearch(values.perpage, values.terms, values.page || 1)
     )
@@ -41,14 +41,17 @@ export const mergeProps = (stateProps, dispatchProps, ownProps) => {
   return { ...stateProps, ...dispatchProps, ...ownProps }
 }
 
-export const shouldDispatchSearch = (status, terms, page, targetPage) => {
+export const shouldDispatchSearch = (searchReducer, terms, page, targetPage) => {
   // Not currently fetching
   // Has some terms
-  // Current page of results in store is not the same as target page of results
+  // Current page of results is changing or terms are changing
   return (
-    status !== STATUS_SEARCH_FETCHING &&
+    searchReducer.status !== STATUS_SEARCH_FETCHING &&
     terms &&
-    parseInt(page, 10) !== parseInt(targetPage, 10)
+    (
+      parseInt(page, 10) !== parseInt(targetPage, 10) ||
+      searchReducer.terms !== terms
+    )
   )
 }
 export default withRouter(connect(

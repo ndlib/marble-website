@@ -3,6 +3,7 @@ import fetchJson from 'Functions/fetchJSON'
 export const SUBMIT_SEARCH = 'SUBMIT_SEARCH'
 export const RESULTS_READY = 'RESULTS_READY'
 export const RESULTS_ERROR = 'RESULTS_ERROR'
+export const UPDATE_INPUT = 'UPDATE_INPUT'
 export const CLEAR_SEARCH = 'CLEAR_SEARCH'
 export const PAGE_CHANGE = 'PAGE_CHANGE'
 export const VIEW_CHANGE = 'VIEW_CHANGE'
@@ -66,6 +67,13 @@ export const returnError = (error) => {
     error: error,
   }
 }
+
+export const updateInput = (rawInput) => {
+  return {
+    type: UPDATE_INPUT,
+    rawInput: rawInput,
+  }
+}
 export const clearSearch = () => {
   return {
     type: CLEAR_SEARCH,
@@ -73,14 +81,6 @@ export const clearSearch = () => {
     results: [],
     page : 1,
     view : 'list',
-  }
-}
-
-export const pageChange = (perpage, page) => {
-  return {
-    type: PAGE_CHANGE,
-    perpage: perpage,
-    page: page,
   }
 }
 
