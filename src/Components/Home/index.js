@@ -1,10 +1,19 @@
 import React from 'react'
+import './style.css'
 
 const Home = () => {
   return (
     <React.Fragment>
       {
-        /// Nothing to see here yet.
+        <div className='banner'>
+          <img src='head.png' className='bannerImage' />
+          <div className='imageCaption'>
+            <div className='captionFrame'>
+              <h1>Image Title</h1>
+              <p>Image Caption</p>
+            </div>
+          </div>
+        </div>
       }
     </React.Fragment>
   )
