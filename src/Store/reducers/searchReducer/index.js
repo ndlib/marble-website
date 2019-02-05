@@ -1,16 +1,21 @@
 import {
   SUBMIT_SEARCH,
   RESULTS_READY,
+  RESULTS_ERROR,
   CLEAR_SEARCH,
   PAGE_CHANGE,
   VIEW_CHANGE,
+  STATUS_SEARCH_FETCHING,
+  STATUS_SEARCH_READY,
+  STATUS_SEARCH_ERROR,
+  STATUS_SEARCH_EMPTY,
 } from 'Store/actions/searchActions'
 
 export default(state = {
-  searching: false,
+  status: STATUS_SEARCH_EMPTY,
   results: [],
   terms: null,
-  page: 1,
+  page: null,
   perpage: 12,
   view: 'list',
 }, action) => {
@@ -18,6 +23,7 @@ export default(state = {
     case SUBMIT_SEARCH:
       return {
         ...state,
+        status: STATUS_SEARCH_FETCHING,
         page: action.page,
         perpage: action.perpage,
         terms: action.terms,
@@ -27,15 +33,22 @@ export default(state = {
     case RESULTS_READY:
       return {
         ...state,
-        searching: false,
+        status: STATUS_SEARCH_READY,
         results: action.results,
         nextpage: action.nextpage,
+      }
+    case RESULTS_ERROR:
+      return {
+        ...state,
+        status: STATUS_SEARCH_ERROR,
+        results: {},
+        error: action.error,
       }
     case CLEAR_SEARCH:
       return {
         ...state,
+        status: STATUS_SEARCH_EMPTY,
         terms: [],
-        searching: false,
         results: [],
         nextpage: false,
         page: 1,
