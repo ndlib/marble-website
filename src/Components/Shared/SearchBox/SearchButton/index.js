@@ -9,11 +9,8 @@ export const SearchButton = ({ history, searchReducer, submitSearch }) => {
   return (
     <button
       className='submitSearch'
-      onClick={
-        () => {
-          submitSearch(history, rawInput, perpage, view)
-        }
-      }>
+      onClick={() => submitSearch(history, rawInput, perpage, view)}
+    >
       <img
         className='searchIcon'
         src={searchImage}
