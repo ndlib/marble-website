@@ -16,7 +16,7 @@ const SearchBox = ({
   const { rawInput, perpage, view } = searchReducer
   return (
     <div className='searchComponent' >
-      <div className='search'>
+      <div className='searchField'>
         <button
           className='submitSearch'
           onClick={
