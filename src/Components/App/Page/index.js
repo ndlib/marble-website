@@ -9,14 +9,13 @@ import Footer from './Footer'
 import SearchBox from 'Components/Shared/SearchBox'
 
 export const Page = ({ children, location }) => {
-  // create a css class for page based on url
-  const pageClass = location.pathname === '/' ? 'home' : location.pathname.substring(1).replace('/', ' ')
+  const contentClass = location.pathname === '/' ? 'home mainContent' : 'mainContent'
 
   return (
-    <div className={pageClass}>
+    <div >
       <Header />
       <NavBar />
-      <div className='mainContent'>
+      <div className={contentClass}>
         <SearchBox />
         {children}
       </div>
