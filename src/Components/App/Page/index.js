@@ -10,7 +10,7 @@ import SearchBox from 'Components/Shared/SearchBox'
 
 export const Page = ({ children, location }) => {
   // create a css class for page based on url
-  const pageClass = location.pathname == '/' ? 'home' : location.pathname.substring(1).replace('/', ' ')
+  const pageClass = location.pathname === '/' ? 'home' : location.pathname.substring(1).replace('/', ' ')
 
   return (
     <div className={pageClass}>
