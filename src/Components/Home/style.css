@@ -1,0 +1,60 @@
+.mainContent {
+	width: 1280px;
+}
+
+.banner {
+	position: relative;
+	height: 363px;
+}
+
+.bannerImage {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.imageCaption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 5;
+	color: #fff;
+	box-sizing: border-box;
+	font-weight: bold;
+}
+
+.imageCaption h1 {
+	margin: 0;
+	font-size: 24px;
+	text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.45);
+}
+
+.imageCaption p {
+	text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.45);
+	font-size: 16px;
+	margin-top: 8px;
+}
+
+.captionFrame {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+/*
+
+.mainContent {
+	position: relative;
+	margin-top: 0;
+}
+
+#SearchComponent {
+	position: absolute;
+	top: 335px;
+	z-index: 200;
+	left: 342px;
+}
+*/
