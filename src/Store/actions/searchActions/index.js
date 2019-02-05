@@ -2,9 +2,15 @@ import { PRIMO_BASE_URL } from 'Configurations/apis'
 import fetchJson from 'Functions/fetchJSON'
 export const SUBMIT_SEARCH = 'SUBMIT_SEARCH'
 export const RESULTS_READY = 'RESULTS_READY'
+export const RESULTS_ERROR = 'RESULTS_ERROR'
+export const UPDATE_INPUT = 'UPDATE_INPUT'
 export const CLEAR_SEARCH = 'CLEAR_SEARCH'
 export const PAGE_CHANGE = 'PAGE_CHANGE'
 export const VIEW_CHANGE = 'VIEW_CHANGE'
+export const STATUS_SEARCH_FETCHING = 'STATUS_SEARCH_FETCHING'
+export const STATUS_SEARCH_READY = 'STATUS_SEARCH_READY'
+export const STATUS_SEARCH_ERROR = 'STATUS_SEARCH_ERROR'
+export const STATUS_SEARCH_EMPTY = 'STATUS_SEARCH_EMPTY'
 
 const searchBaseURL = PRIMO_BASE_URL
 export const searchCriteria = '?inst=NDU&search_scope=spec_coll&view=full'
@@ -32,6 +38,7 @@ export const submitSearch = (perpage, terms, page) => {
         dispatch(returnResults(json, nextpage))
       })
       .catch(e => {
+        dispatch(returnError(e))
         console.error(e)
       })
   }
@@ -54,6 +61,19 @@ export const returnResults = (results, nextpage) => {
   }
 }
 
+export const returnError = (error) => {
+  return {
+    type: RESULTS_ERROR,
+    error: error,
+  }
+}
+
+export const updateInput = (rawInput) => {
+  return {
+    type: UPDATE_INPUT,
+    rawInput: rawInput,
+  }
+}
 export const clearSearch = () => {
   return {
     type: CLEAR_SEARCH,
@@ -61,14 +81,6 @@ export const clearSearch = () => {
     results: [],
     page : 1,
     view : 'list',
-  }
-}
-
-export const pageChange = (perpage, page) => {
-  return {
-    type: PAGE_CHANGE,
-    perpage: perpage,
-    page: page,
   }
 }
 
