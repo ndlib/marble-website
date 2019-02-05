@@ -6,7 +6,11 @@ const Home = () => {
     <React.Fragment>
       {
         <div className='banner'>
-          <img src='head.png' className='bannerImage' />
+          <img
+            src='head.png'
+            className='bannerImage'
+            alt='home page banner'
+          />
           <div className='imageCaption'>
             <div className='captionFrame'>
               <h1>Image Title</h1>
