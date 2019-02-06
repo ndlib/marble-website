@@ -5,9 +5,7 @@ import typy from 'typy'
 import Loading from 'Components/Shared/Loading'
 import NotFound from 'Components/Shared/NotFound'
 import Result from './Result'
-import {
-  STATUS_SEARCH_READY,
-} from 'Store/actions/searchActions'
+import { STATUS_SEARCH_READY } from 'Store/actions/searchActions'
 
 import './style.css'
 

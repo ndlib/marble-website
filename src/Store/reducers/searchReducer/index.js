@@ -11,6 +11,7 @@ import {
   STATUS_SEARCH_EMPTY,
 } from 'Store/actions/searchActions'
 
+// eslint-disable-next-line complexity
 export default(state = {
   status: STATUS_SEARCH_EMPTY,
   results: [],

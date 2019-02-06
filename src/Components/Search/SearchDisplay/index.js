@@ -1,11 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import { withRouter } from 'react-router'
 import Results from './Results'
 import PerPage from './PerPage'
 import PageNum from './PageNum'
 import ResultsView from './ResultsView'
 
-const SearchDisplay = () => {
-  if (window.location.search) {
+export const SearchDisplay = ({ location }) => {
+  if (location.search) {
     return (
       <React.Fragment>
         <ResultsView />
@@ -19,4 +21,7 @@ const SearchDisplay = () => {
   return null
 }
 
-export default SearchDisplay
+SearchDisplay.propTypes = {
+  location: PropTypes.object.isRequired,
+}
+export default withRouter(SearchDisplay)
