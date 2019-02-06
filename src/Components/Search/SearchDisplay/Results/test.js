@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { Results } from './'
+import { Results, mapStateToProps } from './'
 import Result from './Result'
 import Loading from 'Components/Shared/Loading'
 import NotFound from 'Components/Shared/NotFound'
@@ -27,4 +27,10 @@ test('test no results', () => {
   }
   const wrapper = shallow(<Results searchReducer={searchReducer} />)
   expect(wrapper.find(Result).length).toEqual(2)
+})
+
+test('mapStateToProps', () => {
+  const state = { state: 'props' }
+  const stateProps = mapStateToProps(state)
+  expect(stateProps).toEqual(state)
 })

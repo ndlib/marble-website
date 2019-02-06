@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { Link } from 'react-router-dom'
-import { PaginationButton, getSettings } from './'
+import { PaginationButton, getSettings, mapStateToProps } from './'
 
 test('getSettings prev', () => {
   const result = getSettings(true, 5)
@@ -40,4 +40,10 @@ test('Renders null otherwise', () => {
   }
   const wrapper = shallow(<PaginationButton currentPage={1} searchReducer={searchReducer} prev />)
   expect(wrapper.find(Link).exists()).toBeFalsy()
+})
+
+test('mapStateToProps', () => {
+  const state = { state: 'props' }
+  const stateProps = mapStateToProps(state)
+  expect(stateProps).toEqual(state)
 })

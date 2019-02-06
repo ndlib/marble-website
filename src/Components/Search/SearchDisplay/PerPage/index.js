@@ -34,7 +34,7 @@ PerPage.propTypes = {
   searchReducer: PropTypes.object.isRequired,
 }
 
-const mapStateToProps = (state) => {
+export const mapStateToProps = (state) => {
   return { ...state }
 }
 

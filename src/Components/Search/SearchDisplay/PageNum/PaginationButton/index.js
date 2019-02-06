@@ -29,7 +29,7 @@ PaginationButton.propTypes = {
   currentPage: PropTypes.number.isRequired,
 }
 
-const mapStateToProps = (state) => {
+export const mapStateToProps = (state) => {
   return { ...state }
 }
 

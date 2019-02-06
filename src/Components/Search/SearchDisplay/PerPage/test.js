@@ -4,6 +4,7 @@ import { shallow } from 'enzyme'
 import {
   PerPage,
   handleChange,
+  mapStateToProps,
 } from './'
 import { createMemoryHistory } from 'history'
 
@@ -25,4 +26,10 @@ test('PerPage has React Select', () => {
 test('PerPage dispatches handleChange with updated values', () => {
   dispatch(handleChange('this', 'terms', history, dispatch))
   expect(dispatch).toHaveBeenCalled()
+})
+
+test('mapStateToProps', () => {
+  const state = { state: 'props' }
+  const stateProps = mapStateToProps(state)
+  expect(stateProps).toEqual(state)
 })
