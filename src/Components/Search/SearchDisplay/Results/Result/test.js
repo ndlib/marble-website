@@ -6,7 +6,7 @@ import ResultThumbnail from './ResultThumbnail'
 import ResultMetaData from './ResultMetaData'
 
 const doc = {
-  creator: [ 'CREATOR'],
+  creator: ['CREATOR'],
   date: 'a date',
   '@TYPE': 'book',
   delivery: {
