@@ -44,17 +44,29 @@
 	margin: 0 auto;
 }
 
-/*
 
-.mainContent {
+.mainContent.home {
 	position: relative;
 	margin-top: 0;
 }
 
-#SearchComponent {
+.home .submitSearch {
+	height: 62px;
+}
+
+.home .searchComponent {
 	position: absolute;
 	top: 335px;
 	z-index: 200;
-	left: 342px;
+	left: 280px;
 }
-*/
+
+.home .searchComponent {
+	width: 700px;
+}
+
+.home .searchbar {
+	width: 630px;
+	height: 60px;
+}
+

@@ -14,9 +14,11 @@ export const Result = ({ doc, index }) => {
         doc={doc}
       />
       <ResultIndex index={index} />
-      <h2>{doc.title}</h2>
-      <ResultMetaData metadata={metadata} />
-      <div className='description'>{doc.description}</div>
+      <div className='itemData'>
+        <h2>{doc.title}</h2>
+        <ResultMetaData metadata={metadata} />
+        <div className='description'>{doc.description}</div>
+      </div>
     </div>
   )
 }
