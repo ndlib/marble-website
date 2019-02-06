@@ -23,12 +23,21 @@ const format = [
   { value: 'Sculpture', label: 'Sculpture' },
 ]
 
+const language = [
+  { value: 'English', label: 'English' },
+  { value: 'French', label: 'French' },
+  { value: 'Latin', label: 'Latin' },
+  { value: 'Italian', label: 'Italian' },
+  { value: 'Spanish', label: 'Spanish' },
+  { value: 'Chinese', label: 'Chinese' },
+  { value: 'Multiple', label: 'Multiple Languages' },
+]
+
 const options = [
 
 ]
 
 export const Facets = ({ searchReducer }) => {
-  let { terms, view } = searchReducer
   return (
     <div className='facets'>
       <Select
@@ -46,13 +55,12 @@ export const Facets = ({ searchReducer }) => {
         placeholder='Creation'
         className='facet'
       />
+      <div className='facet'>Date
+        <div className='date'>From <input type='text' /></div>
+        <div className='date'>To <input type='text' /></div>
+      </div>
       <Select
-        options={options}
-        placeholder='Date'
-        className='facet'
-      />
-      <Select
-        options={options}
+        options={language}
         placeholder='Language'
         className='facet'
       />
