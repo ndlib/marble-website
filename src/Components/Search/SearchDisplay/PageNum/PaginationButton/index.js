@@ -5,7 +5,7 @@ import { withRouter } from 'react-router'
 import { Link } from 'react-router-dom'
 import searchUrl from 'Functions/searchUrl'
 
-const PaginationButton = ({ currentPage, prev, searchReducer }) => {
+export const PaginationButton = ({ currentPage, prev, searchReducer }) => {
   let { perpage, terms, view, nextpage } = searchReducer
   const settings = getSettings(prev, currentPage)
 

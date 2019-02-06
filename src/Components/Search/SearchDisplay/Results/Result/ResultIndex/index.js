@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 export const ResultIndex = ({ searchReducer, index }) => {
   const { page, perpage } = searchReducer
   return (
-    <span className='resultnum'>{ (perpage * (page - 1)) + index + 1 }</span>
+    <span className='resultnum'>{ displayNumber(perpage, page, index) }</span>
   )
 }
 
@@ -16,6 +16,10 @@ ResultIndex.propTypes = {
 
 const mapStateToProps = (state) => {
   return { ...state }
+}
+
+export const displayNumber = (perpage, page, index) => {
+  return (perpage * (page - 1)) + index + 1
 }
 
 export default connect(mapStateToProps)(ResultIndex)

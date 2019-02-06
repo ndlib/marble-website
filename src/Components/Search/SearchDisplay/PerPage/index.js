@@ -29,17 +29,17 @@ export const PerPage = ({ searchReducer, history }) => {
   )
 }
 
+PerPage.propTypes = {
+  history: PropTypes.object,
+  searchReducer: PropTypes.object.isRequired,
+}
+
 const mapStateToProps = (state) => {
   return { ...state }
 }
 
 export const handleChange = (e, terms, history, view) => {
   history.push(searchUrl(terms, e.value, 1, view))
-}
-
-PerPage.propTypes = {
-  history: PropTypes.object,
-  searchReducer: PropTypes.object.isRequired,
 }
 
 export default withRouter(connect(mapStateToProps)(PerPage))
