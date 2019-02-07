@@ -2,13 +2,6 @@ import React from 'react'
 import { shallow, mount } from 'enzyme'
 import ErrorBoundary from './'
 
-jest.mock('@sentry/browser', () => {
-  return {
-    withScope: jest.fn(),
-    captureException: jest.fn(),
-  }
-})
-
 const TestComponent = (props) => {
   return <div>{props.testProp}</div>
 }
