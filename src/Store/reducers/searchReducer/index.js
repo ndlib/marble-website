@@ -11,8 +11,7 @@ import {
   STATUS_SEARCH_EMPTY,
 } from 'Store/actions/searchActions'
 
-// eslint-disable-next-line complexity
-export default(state = {
+export const defaultState = {
   status: STATUS_SEARCH_EMPTY,
   results: [],
   rawInput: '',
@@ -20,7 +19,9 @@ export default(state = {
   page: null,
   perpage: 12,
   view: 'list',
-}, action) => {
+}
+// eslint-disable-next-line complexity
+export default(state = defaultState, action) => {
   switch (action.type) {
     case SUBMIT_SEARCH:
       return {
@@ -30,7 +31,6 @@ export default(state = {
         perpage: action.perpage,
         rawInput: action.terms,
         terms: action.terms,
-        searching: true,
         results: [],
       }
     case RESULTS_READY:
@@ -44,7 +44,7 @@ export default(state = {
       return {
         ...state,
         status: STATUS_SEARCH_ERROR,
-        results: {},
+        results: [],
         error: action.error,
       }
     case UPDATE_INPUT:
@@ -53,14 +53,7 @@ export default(state = {
         rawInput: action.rawInput,
       }
     case CLEAR_SEARCH:
-      return {
-        ...state,
-        status: STATUS_SEARCH_EMPTY,
-        terms: [],
-        results: [],
-        nextpage: false,
-        page: 1,
-      }
+      return { ...defaultState }
     case VIEW_CHANGE:
       return {
         ...state,

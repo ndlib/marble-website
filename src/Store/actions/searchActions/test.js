@@ -26,14 +26,14 @@ test('startSearch dispatches the correct payload', () => {
   expect(startSearch('terms', 1)).toEqual({ type: SUBMIT_SEARCH, terms: 'terms', page: 1 })
 })
 
-// test('returnResults dispatches the correct payload', () => {
-//   expect(returnResults('results', false)).toEqual({ type: RESULTS_READY, results: 'results', nextpage: false })
-// })
-//
-// test('clearSearch dispatches the correct payload', () => {
-//   expect(clearSearch()).toEqual({ page: 1, type: CLEAR_SEARCH, terms: '', results: [], view: 'list' })
-// })
-//
+test('returnResults dispatches the correct payload', () => {
+  expect(returnResults('results', false)).toEqual({ type: RESULTS_READY, results: 'results', nextpage: false })
+})
+
+test('clearSearch dispatches the correct payload', () => {
+  expect(clearSearch()).toEqual({ page: 1, type: CLEAR_SEARCH, terms: '', results: [], view: 'list' })
+})
+
 // test('docs length is greater than results', () => {
 //   const expectedActions = [{ type: SUBMIT_SEARCH, terms: 'terms', page: 1 }, { type: 'RESULTS_READY', nextpage: true, results: { docs: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l'] } }]
 //   fetchMock.get('*', {
