@@ -10,7 +10,7 @@ export const SearchField = ({ submitSearch, history, searchReducer, dispatch }) 
     <input
       type='text'
       className='searchbar'
-      placeholder='Search the Collection'
+      placeholder='Search the Collections'
       onChange={(e) => dispatch(updateInput(e.target.value))}
       value={rawInput}
       onKeyDown={(e) => {
