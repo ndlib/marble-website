@@ -22,11 +22,6 @@ import { defaultState } from '../../reducers/searchReducer'
 
 const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)
-const store = mockStore({})
-
-beforeEach(() => {
-  store.clearActions()
-})
 
 test('startSearch dispatches the correct payload', () => {
   expect(startSearch('terms', 1)).toEqual({ type: SUBMIT_SEARCH, terms: 'terms', page: 1 })
@@ -78,6 +73,21 @@ describe('Test submitSearch', () => {
     ]
 
     return store.dispatch(submitSearch(2, 'a b c', 1)).then(() => {
+      expect(store.getActions()).toEqual(expectedActions)
+    })
+  })
+
+  test('submitSearch with error', () => {
+    console.error = jest.fn()
+    const store = mockStore({ ...defaultState })
+    fetchMock.get(buildSearchUrl(1, 'error', 1), { throws: new Error('i am error'),
+    })
+    const expectedActions = [
+      { type: SUBMIT_SEARCH, page: 1, perpage: 1, terms: 'error' },
+      { type: RESULTS_ERROR, error: new Error('i am error') },
+    ]
+
+    return store.dispatch(submitSearch(1, 'error', 1)).then(() => {
       expect(store.getActions()).toEqual(expectedActions)
     })
   })
