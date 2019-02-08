@@ -15,10 +15,15 @@ const ResultThumbnail = ({ doc }) => {
 }
 
 // return valid thumbnail
-const imageFromDoc = (doc) => {
-  const link = typy(doc, 'delivery.link').safeObject.find((link) => {
-    return link.linkURL.includes('JPG&client=primo')
-  }) || {}
+export const imageFromDoc = (doc) => {
+  let link = {}
+  if (typy(doc, 'delivery.link').isArray) {
+    link = doc.delivery.link.find(
+      (l) => {
+        return l.linkURL.includes('JPG&client=primo')
+      }
+    ) || {}
+  }
 
   if (!link.linkURL) {
     link.linkURL = noImage

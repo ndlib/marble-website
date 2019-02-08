@@ -5,25 +5,18 @@ import { withRouter } from 'react-router'
 import { Link } from 'react-router-dom'
 import searchUrl from 'Functions/searchUrl'
 
-const PaginationButton = ({ currentPage, prev, searchReducer }) => {
+export const PaginationButton = ({ currentPage, prev, searchReducer }) => {
   let { perpage, terms, view, nextpage } = searchReducer
-
-  // Assumes being the next page unless 'prev' prop passed
-  let label = '>'
-  let targetPage = currentPage + 1
-  if (prev) {
-    label = '<'
-    targetPage = currentPage - 1
-  }
+  const settings = getSettings(prev, currentPage)
 
   // Do not render if no nextPage on next link OR
   // Do not render if currently on 1st page and prev
   if ((!prev && nextpage) || (prev && currentPage > 1)) {
     return (
-      <Link to={searchUrl(terms, perpage, targetPage, view)}>
+      <Link to={searchUrl(terms, perpage, settings.targetPage, view)}>
         <button
           className='pageLink'
-        > {label} </button>
+        > {settings.label} </button>
       </Link>
     )
   }
@@ -36,7 +29,21 @@ PaginationButton.propTypes = {
   currentPage: PropTypes.number.isRequired,
 }
 
-const mapStateToProps = (state) => {
+export const mapStateToProps = (state) => {
   return { ...state }
 }
+
+export const getSettings = (prev, currentPage) => {
+  let label = '>'
+  let targetPage = currentPage + 1
+  if (prev) {
+    label = '<'
+    targetPage = currentPage - 1
+  }
+  return {
+    label: label,
+    targetPage: targetPage,
+  }
+}
+
 export default withRouter(connect(mapStateToProps)(PaginationButton))

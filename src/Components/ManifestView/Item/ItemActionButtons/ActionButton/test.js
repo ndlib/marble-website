@@ -5,7 +5,7 @@ import ActionButton from './'
 const fakeIcon = 'SVG MARKUP HERE'
 const fakeActiveIcon = 'DIFFERENT SVG MARKUP HERE'
 const action = jest.fn()
-const basicWrapper = shallow(
+const wrapper = shallow(
   <ActionButton
     name='test'
     action={action}
@@ -14,13 +14,13 @@ const basicWrapper = shallow(
 )
 
 test('simple test', () => {
-  expect(basicWrapper.find('button')).toBeTruthy()
-  expect(basicWrapper.find('.actionButton.test')).toBeTruthy()
-  expect(basicWrapper.find('img').prop('src')).toEqual('SVG MARKUP HERE')
+  expect(wrapper.find('button')).toBeTruthy()
+  expect(wrapper.find('.actionButton.test')).toBeTruthy()
+  expect(wrapper.find('img').prop('src')).toEqual('SVG MARKUP HERE')
 })
 
 test('simulate click event', () => {
-  basicWrapper.find('button').simulate('click')
+  wrapper.find('button').simulate('click')
   expect(action).toHaveBeenCalled()
 })
 

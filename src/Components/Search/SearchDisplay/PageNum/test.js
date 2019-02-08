@@ -1,27 +1,22 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { PageNum } from './'
+import { PageNum, mapStateToProps } from './'
+import PaginationButton from './PaginationButton'
 
 let wrapper
 
 test('Objects will render when called', () => {
   const searchReducer = {
     page: 2,
-    nextpage: true,
   }
   wrapper = shallow(<PageNum searchReducer={searchReducer} />)
-  // expect(wrapper.find('div').exists()).toBeTruthy()
-  // expect(wrapper.text()).toEqual(expect.stringContaining('<'))
-  // expect(wrapper.text()).toEqual(expect.stringContaining('>'))
+  expect(wrapper.find('.pagenum').exists()).toBeTruthy()
+  expect(wrapper.find(PaginationButton).length).toEqual(2)
+  expect(wrapper.find('.pageLink').text()).toEqual('Page 2')
 })
 
-test('Objects will not render when not called', () => {
-  const searchReducer = {
-    page: undefined,
-    nextpage: false,
-  }
-  wrapper = shallow(<PageNum searchReducer={searchReducer} />)
-  // expect(wrapper.find('div').exists()).toBeTruthy()
-  // expect(wrapper.text()).toEqual(expect.not.stringContaining('<'))
-  // expect(wrapper.text()).toEqual(expect.not.stringContaining('>'))
+test('mapStateToProps', () => {
+  const state = { state: 'props' }
+  const stateProps = mapStateToProps(state)
+  expect(stateProps).toEqual(state)
 })

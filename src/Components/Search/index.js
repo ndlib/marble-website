@@ -7,6 +7,7 @@ import Loading from 'Components/Shared/Loading'
 import NotFound from 'Components/Shared/NotFound'
 import {
   submitSearch,
+  STATUS_SEARCH_EMPTY,
   STATUS_SEARCH_FETCHING,
   STATUS_SEARCH_READY,
   STATUS_SEARCH_ERROR,
@@ -14,6 +15,8 @@ import {
 
 export const Search = ({ searchReducer }) => {
   switch (searchReducer.status) {
+    case STATUS_SEARCH_EMPTY:
+      return null
     case STATUS_SEARCH_READY:
       return <SearchDisplay />
     case STATUS_SEARCH_ERROR:

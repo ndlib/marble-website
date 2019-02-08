@@ -5,7 +5,7 @@ import ResultIndex from './ResultIndex'
 import ResultThumbnail from './ResultThumbnail'
 import ResultMetaData from './ResultMetaData'
 
-export const Result = ({ doc, index }) => {
+const Result = ({ doc, index }) => {
   let metadata = buildMetadata(doc)
 
   return (
