@@ -18,7 +18,7 @@ test('test no results', () => {
   expect(wrapper.find(NotFound).exists()).toBeTruthy()
 })
 
-test('test no results', () => {
+test('test some results', () => {
   const searchReducer = {
     status: STATUS_SEARCH_READY,
     results: {
