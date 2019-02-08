@@ -1,58 +1,78 @@
 // Reducer to be tested
-import searchReducer from './'
+import searchReducer, { defaultState } from './'
 import {
   SUBMIT_SEARCH,
   RESULTS_READY,
+  RESULTS_ERROR,
   CLEAR_SEARCH,
-  PAGE_CHANGE,
+  VIEW_CHANGE,
+  UPDATE_INPUT,
+  STATUS_SEARCH_FETCHING,
+  STATUS_SEARCH_READY,
+  STATUS_SEARCH_ERROR,
 } from 'Store/actions/searchActions'
 
 describe('SUBMIT_SEARCH', () => {
   test('base test', () => {
-    const action = { type: SUBMIT_SEARCH, terms: 'terms' }
-    const testState = { results: [], searching: true, terms: 'terms' }
+    const action = {
+      type: SUBMIT_SEARCH,
+      terms: 'terms',
+      page: 2,
+      perpage: 5,
 
-    // expect(searchReducer(undefined, action)).toEqual(testState)
-  })
+    }
+    const testState = {
+      ...defaultState,
+      results: [],
+      status: STATUS_SEARCH_FETCHING,
+      rawInput: 'terms',
+      terms: 'terms',
+      page: 2,
+      perpage: 5,
+    }
 
-  test('allows nil term value', () => {
-    const action = { type: SUBMIT_SEARCH }
-    const testState = { results: [], searching: true, terms: undefined }
-
-    // expect(searchReducer(undefined, action)).toEqual(testState)
+    expect(searchReducer(undefined, action)).toEqual(testState)
   })
 })
 
 describe('RESULTS_READY reducer', () => {
   test('base test', () => {
     const action = { type: RESULTS_READY, results: 'results' }
-    const testState = { results: 'results', searching: false }
+    const testState = { ...defaultState, results: 'results', status: STATUS_SEARCH_READY }
 
-    // expect(searchReducer(undefined, action)).toEqual(testState)
+    expect(searchReducer(undefined, action)).toEqual(testState)
   })
 
   test('allows nil results value', () => {
     const action = { type: RESULTS_READY }
-    const testState = { nextpage: undefined, results: undefined, searching: false, terms: undefined }
+    const testState = { ...defaultState, nextpage: undefined, results: undefined, status: STATUS_SEARCH_READY, terms: null }
 
-    // expect(searchReducer(undefined, action)).toEqual(testState)
+    expect(searchReducer(undefined, action)).toEqual(testState)
   })
 })
 
 describe('CLEAR_SEARCH reducer', () => {
   test('base test', () => {
     const action = { type: CLEAR_SEARCH }
-    const testState = { nextpage: false, page: 1, results: [], searching: false, terms: [] }
 
-    // expect(searchReducer(undefined, action)).toEqual(testState)
+    expect(searchReducer(undefined, action)).toEqual(defaultState)
   })
 })
 
-describe('PAGE_CHANGE reducer', () => {
-  test('base test', () => {
-    const action = { type: PAGE_CHANGE, perpage:12, page:2 }
-    const testState = { perpage: 12, page:2 }
+test('view change', () => {
+  const action = { type: VIEW_CHANGE, view: 'newView' }
+  const testState = { ...defaultState, view: 'newView' }
+  expect(searchReducer(undefined, action)).toEqual(testState)
+})
 
-    // expect(searchReducer(undefined, action)).toEqual(testState)
-  })
+test('update input', () => {
+  const action = { type: UPDATE_INPUT, rawInput: 'xyz' }
+  const testState = { ...defaultState, rawInput: 'xyz' }
+  expect(searchReducer(undefined, action)).toEqual(testState)
+})
+
+test('RESULTS_ERROR', () => {
+  const action = { type: RESULTS_ERROR, error: 'i am error' }
+  const testState = { ...defaultState, results: [], error: 'i am error', status: STATUS_SEARCH_ERROR }
+  expect(searchReducer(undefined, action)).toEqual(testState)
 })

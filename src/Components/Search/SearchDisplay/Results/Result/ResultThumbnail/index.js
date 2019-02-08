@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import typy from 'typy'
-import bookIMG from './book.svg'
-import fileIMG from './file.svg'
+import noImage from 'Configurations/Logos/no.image.svg'
 
 const ResultThumbnail = ({ doc }) => {
   const image = imageFromDoc(doc)
@@ -12,24 +11,22 @@ const ResultThumbnail = ({ doc }) => {
       alt='thumbnail'
       className='thumbnail'
     />
-
   )
 }
 
 // return valid thumbnail
-const imageFromDoc = (doc) => {
-  const link = typy(doc, 'delivery.link').safeObject.find((link) => {
-    return link.linkURL.includes('JPG&client=primo')
-  }) || {}
+export const imageFromDoc = (doc) => {
+  let link = {}
+  if (typy(doc, 'delivery.link').isArray) {
+    link = doc.delivery.link.find(
+      (l) => {
+        return l.linkURL.includes('JPG&client=primo')
+      }
+    ) || {}
+  }
 
   if (!link.linkURL) {
-    switch (doc['@TYPE']) {
-      case 'book':
-        link.linkURL = bookIMG
-        break
-      default:
-        link.linkURL = fileIMG
-    }
+    link.linkURL = noImage
   }
   return link.linkURL
 }

@@ -1,51 +1,59 @@
 import {
   SUBMIT_SEARCH,
   RESULTS_READY,
+  RESULTS_ERROR,
+  UPDATE_INPUT,
   CLEAR_SEARCH,
-  PAGE_CHANGE,
   VIEW_CHANGE,
+  STATUS_SEARCH_FETCHING,
+  STATUS_SEARCH_READY,
+  STATUS_SEARCH_ERROR,
+  STATUS_SEARCH_EMPTY,
 } from 'Store/actions/searchActions'
 
-export default(state = {
-  searching: false,
+export const defaultState = {
+  status: STATUS_SEARCH_EMPTY,
   results: [],
+  rawInput: '',
   terms: null,
-  page: 1,
+  page: null,
   perpage: 12,
   view: 'list',
-}, action) => {
+}
+// eslint-disable-next-line complexity
+export default(state = defaultState, action) => {
   switch (action.type) {
     case SUBMIT_SEARCH:
       return {
         ...state,
+        status: STATUS_SEARCH_FETCHING,
         page: action.page,
         perpage: action.perpage,
+        rawInput: action.terms,
         terms: action.terms,
-        searching: true,
         results: [],
       }
     case RESULTS_READY:
       return {
         ...state,
-        searching: false,
+        status: STATUS_SEARCH_READY,
         results: action.results,
         nextpage: action.nextpage,
       }
-    case CLEAR_SEARCH:
+    case RESULTS_ERROR:
       return {
         ...state,
-        terms: [],
-        searching: false,
+        status: STATUS_SEARCH_ERROR,
         results: [],
-        nextpage: false,
-        page: 1,
+        error: action.error,
       }
-    case PAGE_CHANGE:
+    case UPDATE_INPUT:
       return {
         ...state,
-        perpage: action.perpage,
-        page: action.page,
+        rawInput: action.rawInput,
       }
+    case CLEAR_SEARCH:
+      return { ...defaultState }
     case VIEW_CHANGE:
       return {
         ...state,

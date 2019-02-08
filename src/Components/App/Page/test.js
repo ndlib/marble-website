@@ -1,11 +1,14 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Page from './'
+import { Page } from './'
 import Header from './Header'
 import NavBar from './NavBar'
 import Footer from './Footer'
 
-const wrapper = shallow(<Page><div className='childContent'>Some Content</div></Page>)
+const location = {
+  pathname: '/',
+}
+const wrapper = shallow(<Page location={location}><div className='childContent'>Some Content</div></Page>)
 
 test('Page renders Header, NavBar, Footer and specified child content', () => {
   expect(wrapper.find(Header).exists()).toBeTruthy()

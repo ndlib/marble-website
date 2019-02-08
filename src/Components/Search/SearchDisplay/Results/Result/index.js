@@ -5,7 +5,7 @@ import ResultIndex from './ResultIndex'
 import ResultThumbnail from './ResultThumbnail'
 import ResultMetaData from './ResultMetaData'
 
-export const Result = ({ doc, index }) => {
+const Result = ({ doc, index }) => {
   let metadata = buildMetadata(doc)
 
   return (
@@ -14,9 +14,11 @@ export const Result = ({ doc, index }) => {
         doc={doc}
       />
       <ResultIndex index={index} />
-      <h2>{doc.title}</h2>
-      <ResultMetaData metadata={metadata} />
-      <div className='description'>{doc.description}</div>
+      <div className='itemData'>
+        <h2>{doc.title}</h2>
+        <ResultMetaData metadata={metadata} />
+        <div className='description'>{doc.description}</div>
+      </div>
     </div>
   )
 }
