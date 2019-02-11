@@ -13,16 +13,23 @@ export const Results = ({ searchReducer }) => {
   if (searchReducer.status !== STATUS_SEARCH_READY) {
     return <Loading />
   } else if (typy(searchReducer, 'results.docs').safeObject) {
-    return searchReducer.results.docs.map((doc, index) => {
-      return (
-        <Result
-          key={index}
-          doc={doc}
-          index={index}
-        />
-      )
-    })
+    return (
+      <div className='cardList'>
+        {
+          searchReducer.results.docs.map((doc, index) => {
+            return (
+              <Result
+                key={index}
+                doc={doc}
+                index={index}
+              />
+            )
+          })
+        }
+      </div>
+    )
   }
+
   return <NotFound title='No Results Were Found' message='No matching search results were found.' />
 }
 
