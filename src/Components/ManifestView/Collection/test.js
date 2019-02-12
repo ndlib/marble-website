@@ -39,7 +39,7 @@ const manifest = {
 
 const reducer = {}
 test('Renders the subcomponents', () => {
-  const wrapper = shallow(<Collection currentManifest={manifest} searchReducer={reducer} />)
+  const wrapper = shallow(<Collection currentManifest={manifest} manifestReducer={reducer} />)
   expect(wrapper.find(CollectionImage).exists()).toBeTruthy()
   expect(wrapper.find(ContentLeftSidebar).exists()).toBeTruthy()
   expect(wrapper.find(CardList).exists()).toBeTruthy()

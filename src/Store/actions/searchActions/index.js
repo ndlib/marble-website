@@ -6,7 +6,7 @@ export const RESULTS_ERROR = 'RESULTS_ERROR'
 export const UPDATE_INPUT = 'UPDATE_INPUT'
 export const CLEAR_SEARCH = 'CLEAR_SEARCH'
 export const PAGE_CHANGE = 'PAGE_CHANGE'
-export const VIEW_CHANGE = 'VIEW_CHANGE'
+export const SEARCH_VIEW_CHANGE = 'SEARCH_VIEW_CHANGE'
 export const STATUS_SEARCH_FETCHING = 'STATUS_SEARCH_FETCHING'
 export const STATUS_SEARCH_READY = 'STATUS_SEARCH_READY'
 export const STATUS_SEARCH_ERROR = 'STATUS_SEARCH_ERROR'
@@ -85,7 +85,7 @@ export const clearSearch = () => {
 
 export const viewChange = (view) => {
   return {
-    type: VIEW_CHANGE,
+    type: SEARCH_VIEW_CHANGE,
     view: view,
   }
 }

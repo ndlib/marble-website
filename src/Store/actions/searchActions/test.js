@@ -7,7 +7,7 @@ import {
   RESULTS_READY,
   RESULTS_ERROR,
   CLEAR_SEARCH,
-  VIEW_CHANGE,
+  SEARCH_VIEW_CHANGE,
   submitSearch,
   buildSearchUrl,
   startSearch,
@@ -36,7 +36,7 @@ test('clearSearch dispatches the correct payload', () => {
 })
 
 test('viewChange dispatches the correct payload', () => {
-  expect(viewChange('grid')).toEqual({ type: VIEW_CHANGE, view: 'grid' })
+  expect(viewChange('grid')).toEqual({ type: SEARCH_VIEW_CHANGE, view: 'grid' })
 })
 
 test('return dispatches the correct payload', () => {

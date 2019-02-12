@@ -4,7 +4,7 @@ import {
   RESULTS_ERROR,
   UPDATE_INPUT,
   CLEAR_SEARCH,
-  VIEW_CHANGE,
+  SEARCH_VIEW_CHANGE,
   STATUS_SEARCH_FETCHING,
   STATUS_SEARCH_READY,
   STATUS_SEARCH_ERROR,
@@ -54,7 +54,7 @@ export default(state = defaultState, action) => {
       }
     case CLEAR_SEARCH:
       return { ...defaultState }
-    case VIEW_CHANGE:
+    case SEARCH_VIEW_CHANGE:
       return {
         ...state,
         view: action.view,

@@ -6,14 +6,14 @@ import { Link } from 'react-router-dom'
 import searchUrl from 'Functions/searchUrl'
 
 export const PaginationButton = ({ currentPage, prev, searchReducer }) => {
-  let { perpage, terms, view, nextpage } = searchReducer
+  let { perpage, terms, nextpage } = searchReducer
   const settings = getSettings(prev, currentPage)
 
   // Do not render if no nextPage on next link OR
   // Do not render if currently on 1st page and prev
   if ((!prev && nextpage) || (prev && currentPage > 1)) {
     return (
-      <Link to={searchUrl(terms, perpage, settings.targetPage, view)}>
+      <Link to={searchUrl(terms, perpage, settings.targetPage)}>
         <button
           className='pageLink'
         > {settings.label} </button>

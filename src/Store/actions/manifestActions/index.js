@@ -8,6 +8,7 @@ import {
 } from 'Constants/viewingContexts'
 export const FETCH_MANIFEST = 'FETCH_MANIFEST'
 export const RECEIVE_MANIFEST = 'RECEIVE_MANIFEST'
+export const MANIFEST_VIEW_CHANGE = 'MANIFEST_VIEW_CHANGE'
 export const RECEIVE_MANIFEST_ERROR = 'RECEIVE_MANIFEST_ERROR'
 export const STATUS_FETCHING = 'STATUS_FETCHING'
 export const STATUS_READY = 'STATUS_READY'
@@ -55,5 +56,12 @@ export const manifestError = (id, error) => {
   return {
     type: RECEIVE_MANIFEST_ERROR,
     id: id,
+  }
+}
+
+export const viewChange = (view) => {
+  return {
+    type: MANIFEST_VIEW_CHANGE,
+    view: view,
   }
 }

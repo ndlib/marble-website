@@ -44,8 +44,8 @@ const mapStateToProps = (state) => {
   return { ...state }
 }
 
-export const handleChange = (e, terms, history, view) => {
-  history.push(searchUrl(terms, e.value, 1, view))
+export const handleChange = (e, terms, history) => {
+  history.push(searchUrl(terms, e.value, 1))
 }
 
 Facets.propTypes = {

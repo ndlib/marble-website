@@ -18,8 +18,8 @@ const SearchBox = () => {
   )
 }
 
-export const submitSearch = (history, rawInput, perpage, view) => {
-  history.push(searchUrl(rawInput, perpage, 1, view))
+export const submitSearch = (history, rawInput, perpage) => {
+  history.push(searchUrl(rawInput, perpage, 1))
   return history
 }
 

@@ -7,8 +7,8 @@ import searchUrl from 'Functions/searchUrl'
 
 test('Push the right thing onto the history', () => {
   const history = []
-  const newHistory = submitSearch(history, 'abc', 1, 'view')
-  expect(newHistory).toEqual([searchUrl('abc', 1, 1, 'view')])
+  const newHistory = submitSearch(history, 'abc', 1)
+  expect(newHistory).toEqual([searchUrl('abc', 1, 1)])
 })
 
 test('renders the expected classes and subcomponents', () => {
