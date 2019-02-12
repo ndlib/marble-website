@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Collection, { defineItems } from './'
+import { Collection, defineItems } from './'
 import CollectionImage from './CollectionImage'
 import ContentLeftSidebar from 'Components/Layouts/ContentLeftSidebar'
 import CardList from 'Components/Shared/CardList'
@@ -37,8 +37,9 @@ const manifest = {
   },
 }
 
+const reducer = {}
 test('Renders the subcomponents', () => {
-  const wrapper = shallow(<Collection currentManifest={manifest} />)
+  const wrapper = shallow(<Collection currentManifest={manifest} searchReducer={reducer} />)
   expect(wrapper.find(CollectionImage).exists()).toBeTruthy()
   expect(wrapper.find(ContentLeftSidebar).exists()).toBeTruthy()
   expect(wrapper.find(CardList).exists()).toBeTruthy()

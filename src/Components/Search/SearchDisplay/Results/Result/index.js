@@ -1,25 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import typy from 'typy'
-import ResultIndex from './ResultIndex'
-import ResultThumbnail from './ResultThumbnail'
+// import ResultIndex from './ResultIndex'
+import { imageFromDoc } from './ResultThumbnail'
 import ResultMetaData from './ResultMetaData'
+import Card from 'Components/Shared/Card'
 
 const Result = ({ doc, index }) => {
   let metadata = buildMetadata(doc)
 
   return (
-    <div className='resultEntry'>
-      <ResultThumbnail
-        doc={doc}
-      />
-      <ResultIndex index={index} />
-      <div className='itemData'>
-        <h2>{doc.title}</h2>
-        <ResultMetaData metadata={metadata} />
-        <div className='description'>{doc.description}</div>
-      </div>
-    </div>
+    <Card
+      title={doc.title}
+      image={imageFromDoc(doc)}
+      // FIX ME: hard coding a url here
+      // We need to determine what the manifest ID is and how to get it.
+      url='/item/b19974760-5831'
+    >
+      <ResultMetaData metadata={metadata} />
+      <div className='description'>{doc.description}</div>
+    </Card>
   )
 }
 

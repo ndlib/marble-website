@@ -4,6 +4,7 @@ import typy from 'typy'
 import Result, { buildMetadata } from './'
 import ResultThumbnail from './ResultThumbnail'
 import ResultMetaData from './ResultMetaData'
+import Card from 'Components/Shared/Card'
 
 const doc = {
   creator: ['CREATOR'],
@@ -21,9 +22,7 @@ const doc = {
 const wrapper = shallow(<Result doc={doc} index={5} />)
 
 test('Renders a result', () => {
-  expect(wrapper.find('.resultEntry').exists()).toBeTruthy()
-  expect(wrapper.find('h2').exists()).toBeTruthy()
-  expect(wrapper.find(ResultThumbnail).exists()).toBeTruthy()
+  expect(wrapper.find(Card).exists()).toBeTruthy()
   expect(wrapper.find(ResultMetaData).exists()).toBeTruthy()
   expect(wrapper.find('.description').exists()).toBeTruthy()
 })
