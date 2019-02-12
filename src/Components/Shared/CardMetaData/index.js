@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import MetaDataField from 'Components/Shared/MetaDataField'
 
-const ResultMetaData = ({ metadata }) => {
+const CardMetaData = ({ metadata }) => {
   return (
     <dl className='details'>
       {
@@ -14,8 +14,8 @@ const ResultMetaData = ({ metadata }) => {
   )
 }
 
-ResultMetaData.propTypes = {
+CardMetaData.propTypes = {
   metadata: PropTypes.array.isRequired,
 }
 
-export default ResultMetaData
+export default CardMetaData

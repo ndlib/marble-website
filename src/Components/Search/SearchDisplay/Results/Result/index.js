@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import typy from 'typy'
 // import ResultIndex from './ResultIndex'
 import { imageFromDoc } from './ResultThumbnail'
-import ResultMetaData from './ResultMetaData'
+import CardMetaData from 'Components/Shared/CardMetaData'
 import Card from 'Components/Shared/Card'
 
-const Result = ({ doc, index }) => {
+const Result = ({ doc }) => {
   let metadata = buildMetadata(doc)
 
   return (
@@ -17,7 +17,7 @@ const Result = ({ doc, index }) => {
       // We need to determine what the manifest ID is and how to get it.
       url='/item/b19974760-5831'
     >
-      <ResultMetaData metadata={metadata} />
+      <CardMetaData metadata={metadata} />
       <div className='description'>{doc.description}</div>
     </Card>
   )
@@ -25,7 +25,6 @@ const Result = ({ doc, index }) => {
 
 Result.propTypes = {
   doc: PropTypes.object.isRequired,
-  index: PropTypes.number.isRequired,
 }
 
 export const buildMetadata = (doc) => {

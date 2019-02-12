@@ -67,7 +67,7 @@ a.card {
   padding: .5rem;
   font: 15px sans-serif;
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: calc(300px + 1rem) 1fr;
 }
 
 .list .card h3 {
@@ -109,6 +109,14 @@ a.card {
   min-height: 1em;
   padding: 0 0 0.5em 0;
 }
+
+.list .card .additional dl ol {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .list .card img {
   max-height: 300px;
   grid-column-start: 1;

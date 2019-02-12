@@ -2,8 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import typy from 'typy'
 import Result, { buildMetadata } from './'
-import ResultThumbnail from './ResultThumbnail'
-import ResultMetaData from './ResultMetaData'
+import CardMetaData from 'Components/Shared/CardMetaData'
 import Card from 'Components/Shared/Card'
 
 const doc = {
@@ -23,7 +22,7 @@ const wrapper = shallow(<Result doc={doc} index={5} />)
 
 test('Renders a result', () => {
   expect(wrapper.find(Card).exists()).toBeTruthy()
-  expect(wrapper.find(ResultMetaData).exists()).toBeTruthy()
+  expect(wrapper.find(CardMetaData).exists()).toBeTruthy()
   expect(wrapper.find('.description').exists()).toBeTruthy()
 })
 
