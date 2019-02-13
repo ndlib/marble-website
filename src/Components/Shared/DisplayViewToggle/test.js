@@ -7,6 +7,7 @@ test('DisplayViewToggle renders', () => {
   const reducer = {}
   const dispatch = jest.fn()
   const wrapper = shallow(<DisplayViewToggle reducer={reducer} dispatch={dispatch} />)
+
   expect(wrapper.find('.displayViewToggle').exists()).toBeTruthy()
   expect(wrapper.find(ToggleButton).length).toEqual(2)
 })
