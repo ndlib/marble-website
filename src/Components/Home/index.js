@@ -1,9 +1,11 @@
 import React from 'react'
+import SearchBox from 'Components/Shared/SearchBox'
 import './style.css'
 
 const Home = () => {
   return (
     <React.Fragment>
+      <SearchBox />
       <div className='banner'>
         <img
           src='head.png'

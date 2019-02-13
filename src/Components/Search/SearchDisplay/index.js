@@ -6,6 +6,7 @@ import Results from './Results'
 import PerPage from './PerPage'
 import PageNum from './PageNum'
 import Facets from './Facets'
+import SearchBox from 'Components/Shared/SearchBox'
 import ContentLeftSidebar from 'Components/Layouts/ContentLeftSidebar'
 import DisplayViewClass from 'Components/Shared/DisplayViewClass'
 import DisplayViewToggle from 'Components/Shared/DisplayViewToggle'
@@ -13,17 +14,20 @@ import DisplayViewToggle from 'Components/Shared/DisplayViewToggle'
 export const SearchDisplay = ({ location, searchReducer }) => {
   if (location.search) {
     return (
-      <ContentLeftSidebar
-        sidebarContent={<Facets />}
-      >
-        <DisplayViewToggle reducer={searchReducer} />
-        <PerPage />
-        <PageNum />
-        <DisplayViewClass reducer={searchReducer}>
-          <Results />
-        </DisplayViewClass>
-        <PageNum />
-      </ContentLeftSidebar>
+      <React.Fragment>
+        <SearchBox />
+        <ContentLeftSidebar
+          sidebarContent={<Facets />}
+        >
+          <DisplayViewToggle reducer={searchReducer} />
+          <PerPage />
+          <PageNum />
+          <DisplayViewClass reducer={searchReducer}>
+            <Results />
+          </DisplayViewClass>
+          <PageNum />
+        </ContentLeftSidebar>
+      </React.Fragment>
     )
   }
   return null
