@@ -16,3 +16,7 @@ code {
 dl dd p {
   margin: 0;
 }
+
+.clearfix {
+  clear: both;
+}

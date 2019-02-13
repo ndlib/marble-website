@@ -5,10 +5,12 @@ import {
   FETCH_MANIFEST,
   RECEIVE_MANIFEST,
   RECEIVE_MANIFEST_ERROR,
+  MANIFEST_VIEW_CHANGE,
   getManifest,
   fetchManifest,
   receiveManifest,
   manifestError,
+  viewChange,
 } from 'Store/actions/manifestActions'
 import { MANIFEST_BASE_URL } from 'Configurations/apis.js'
 import {
@@ -88,4 +90,10 @@ test('getManifest with invalid context', () => {
 
   // return of async actions
   expect(store.dispatch(getManifest('badcontext', '987'))).toEqual(expectedAction)
+})
+
+test('viewChange', () => {
+  const store = mockStore({ view: 'oldView' })
+  const expectedAction = { type: MANIFEST_VIEW_CHANGE, view: 'newView' }
+  expect(store.dispatch(viewChange('newView'))).toEqual(expectedAction)
 })

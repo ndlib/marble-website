@@ -3,13 +3,14 @@ import {
   FETCH_MANIFEST,
   RECEIVE_MANIFEST,
   RECEIVE_MANIFEST_ERROR,
+  MANIFEST_VIEW_CHANGE,
   STATUS_FETCHING,
   STATUS_READY,
   STATUS_ERROR,
 } from 'Store/actions/manifestActions'
 
 test('Should return an initial state', () => {
-  expect(reducer(undefined, {})).toEqual({ manifests: {} })
+  expect(reducer(undefined, {})).toEqual({ manifests: {}, view: 'grid' })
 })
 
 test('Should return fetching', () => {
@@ -22,6 +23,7 @@ test('Should return fetching', () => {
           data: null,
         },
       },
+      view: 'grid',
     }
   )
 })
@@ -36,6 +38,7 @@ test('Should return an error', () => {
           data: null,
         },
       },
+      view: 'grid',
     }
   )
 })
@@ -135,5 +138,20 @@ test('Does not forget existing manifests on new receive', () => {
         'status': STATUS_READY,
       },
     },
+  })
+})
+
+test('Switches view', () => {
+  const initalState = {
+    manifests: {},
+    view: 'oldView',
+  }
+  const receiveAction = {
+    type: MANIFEST_VIEW_CHANGE,
+    view: 'newView',
+  }
+  expect(reducer(initalState, receiveAction)).toEqual({
+    manifests: {},
+    view: 'newView',
   })
 })

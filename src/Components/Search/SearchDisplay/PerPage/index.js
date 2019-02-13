@@ -15,13 +15,13 @@ const options = [
 ]
 
 export const PerPage = ({ searchReducer, history }) => {
-  let { terms, perpage, view } = searchReducer
+  let { terms, perpage } = searchReducer
   perpage = parseInt(perpage, 10) || 12
   return (
     <div className='perpage'>
       <Select
         options={options}
-        onChange={e => handleChange(e, terms, history, view)}
+        onChange={e => handleChange(e, terms, history)}
         placeholder={perpage + '/page'}
         selectedValue={perpage}
       />
@@ -38,8 +38,8 @@ export const mapStateToProps = (state) => {
   return { ...state }
 }
 
-export const handleChange = (e, terms, history, view) => {
-  history.push(searchUrl(terms, e.value, 1, view))
+export const handleChange = (e, terms, history) => {
+  history.push(searchUrl(terms, e.value, 1))
 }
 
 export default withRouter(connect(mapStateToProps)(PerPage))

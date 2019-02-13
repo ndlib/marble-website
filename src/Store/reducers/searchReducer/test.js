@@ -5,7 +5,7 @@ import {
   RESULTS_READY,
   RESULTS_ERROR,
   CLEAR_SEARCH,
-  VIEW_CHANGE,
+  SEARCH_VIEW_CHANGE,
   UPDATE_INPUT,
   STATUS_SEARCH_FETCHING,
   STATUS_SEARCH_READY,
@@ -60,7 +60,7 @@ describe('CLEAR_SEARCH reducer', () => {
 })
 
 test('view change', () => {
-  const action = { type: VIEW_CHANGE, view: 'newView' }
+  const action = { type: SEARCH_VIEW_CHANGE, view: 'newView' }
   const testState = { ...defaultState, view: 'newView' }
   expect(searchReducer(undefined, action)).toEqual(testState)
 })

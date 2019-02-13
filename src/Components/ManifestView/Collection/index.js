@@ -7,7 +7,7 @@ import CollectionImage from './CollectionImage'
 import DisplayViewClass from 'Components/Shared/DisplayViewClass'
 import DisplayViewToggle from 'Components/Shared/DisplayViewToggle'
 
-export const Collection = ({ currentManifest, searchReducer }) => {
+export const Collection = ({ currentManifest, manifestReducer }) => {
   const items = defineItems(currentManifest.data)
   return (
     <React.Fragment>
@@ -19,9 +19,9 @@ export const Collection = ({ currentManifest, searchReducer }) => {
         sidebarTitle={currentManifest.data.label}
         sidebarContent={currentManifest.data.description}
       >
-        <DisplayViewClass reducer={searchReducer}>
-          <DisplayViewToggle reducer={searchReducer} />
-          <br />
+        <DisplayViewClass reducer={manifestReducer}>
+          <DisplayViewToggle reducer={manifestReducer} />
+          <br className='clearfix' />
           <CardList items={items} />
         </DisplayViewClass>
       </ContentLeftSidebar>
@@ -31,7 +31,7 @@ export const Collection = ({ currentManifest, searchReducer }) => {
 
 Collection.propTypes = {
   currentManifest: PropTypes.object.isRequired,
-  searchReducer: PropTypes.object,
+  manifestReducer: PropTypes.object,
 }
 
 export const defineItems = (data) => {

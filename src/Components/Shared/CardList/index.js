@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Card from 'Components/Shared/Card'
 import NotFound from 'Components/Shared/NotFound'
+import CardMetaData from 'Components/Shared/CardMetaData'
 
 import pageUrlFromAtId from 'Functions/pageUrlFromAtId'
 const CardList = ({ items, start, perPage, className }) => {
@@ -20,7 +21,10 @@ const CardList = ({ items, start, perPage, className }) => {
                 title={item.label}
                 image={null}
                 url={pageUrlFromAtId(item['@id'])}
-              />)
+              >
+                <CardMetaData metadata={item.metadata} />
+              </Card>
+            )
           })
         }
       </div>
