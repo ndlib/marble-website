@@ -5,9 +5,15 @@ import typy from 'typy'
 import { imageFromDoc } from './ResultThumbnail'
 import ResultMetaData from './ResultMetaData'
 import Card from 'Components/Shared/Card'
+import { MANIFEST_BASE_URL } from 'Configurations/apis.js'
 
 const Result = ({ doc, index }) => {
   let metadata = buildMetadata(doc)
+  let queryurl = window.location.href
+  let queryterms = queryurl.slice(queryurl.lastIndexOf('?') + 1)
+  let fullid = doc.ilsAPIid
+  let id = fullid.slice(-9)
+  let url = MANIFEST_BASE_URL + 'item/' + id + '?ref=search&' + queryterms
 
   return (
     <Card
@@ -15,7 +21,7 @@ const Result = ({ doc, index }) => {
       image={imageFromDoc(doc)}
       // FIX ME: hard coding a url here
       // We need to determine what the manifest ID is and how to get it.
-      url='/item/b19974760-5831'
+      url={url}
     >
       <ResultMetaData metadata={metadata} />
       <div className='description'>{doc.description}</div>
