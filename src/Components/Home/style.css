@@ -39,6 +39,13 @@
 	margin-top: 8px;
 }
 
+.imageCaption sub {
+
+	font-size: 10px;
+	display: block;
+	line-height: 1.3em;
+}
+
 .captionFrame {
 	max-width: 960px;
 	margin: 0 auto;
