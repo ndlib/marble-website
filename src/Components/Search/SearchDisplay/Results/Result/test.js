@@ -10,6 +10,7 @@ const doc = {
   creator: ['CREATOR'],
   date: 'a date',
   '@TYPE': 'book',
+  ilsAPIid: 'abc',
   delivery: {
     holding: [
       {
