@@ -1,3 +1,6 @@
+.searchBox {
+  border: 1px solid #555;
+}
 .searchField {
   border: 2px solid #eee;
   background: #fff;
