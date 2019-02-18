@@ -31,7 +31,7 @@ test('Renders a result', () => {
 test('Build the correct metadata', () => {
   const metadata = buildMetadata(doc)
   expect(metadata).toEqual([
-    { label: 'Owner', value: 'Special Collections' },
+    { label: 'Owner', value: '' },
     { label: 'Creator', value: typy(doc, 'creator[0]').safeString },
     { label: 'Date', value: typy(doc, 'date').safeString },
     { label: 'Format', value: doc['@TYPE'] },

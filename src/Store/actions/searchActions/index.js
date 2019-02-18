@@ -12,7 +12,7 @@ export const STATUS_SEARCH_READY = 'STATUS_SEARCH_READY'
 export const STATUS_SEARCH_ERROR = 'STATUS_SEARCH_ERROR'
 export const STATUS_SEARCH_EMPTY = 'STATUS_SEARCH_EMPTY'
 
-export const searchCriteria = '?inst=NDU&search_scope=spec_coll&view=full'
+export const searchCriteria = '?vid=NDU&inst=NDU&scope=malc_blended&view=full'
 
 export const submitSearch = (perpage, terms, page) => {
   return dispatch => {

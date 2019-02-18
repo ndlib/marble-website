@@ -12,7 +12,7 @@ export default (url, match, additionalContext) => {
     })
   }
   if (urlContext.indexOf('search') > -1) {
-    let queryurl = window.location.href
+    let queryurl = match.params.location.href
     let queryterms = queryurl.slice(queryurl.lastIndexOf('?') + 1)
     urlContext += queryterms
   }

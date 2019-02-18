@@ -9,11 +9,7 @@ import { MANIFEST_BASE_URL } from 'Configurations/apis.js'
 
 const Result = ({ doc, index }) => {
   let metadata = buildMetadata(doc)
-  let queryurl = window.location.href
-  let queryterms = queryurl.slice(queryurl.lastIndexOf('?') + 1)
-  let fullid = doc.ilsAPIid
-  let id = fullid.slice(-9)
-  let url = MANIFEST_BASE_URL + 'item/' + id + '?ref=search&' + queryterms
+  let url = buildUrl(doc)
 
   return (
     <Card
@@ -34,9 +30,21 @@ Result.propTypes = {
   index: PropTypes.number.isRequired,
 }
 
+export const buildUrl = (doc) => {
+  let queryurl = window.location.href
+  let queryterms = queryurl.slice(queryurl.lastIndexOf('?') + 1)
+  let id = null
+  if (typy(doc, 'ilsAPIid').isString) {
+    let fullid = doc.ilsAPIid
+    id = fullid.slice(-9)
+  }
+  let url = MANIFEST_BASE_URL + 'item/' + id + '?ref=search&' + queryterms
+  return url
+}
+
 export const buildMetadata = (doc) => {
   let metadata = [
-    { label: 'Owner', value: 'Special Collections' },
+    { label: 'Owner', value: typy(doc, 'delivery.bestlocation.subLocation').safeString },
     { label: 'Creator', value: typy(doc, 'creator[0]').safeString },
     { label: 'Date', value: typy(doc, 'date').safeString },
     { label: 'Format', value: doc['@TYPE'] },
