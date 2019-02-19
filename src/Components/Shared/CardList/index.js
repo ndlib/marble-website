@@ -20,8 +20,7 @@ const CardList = ({ items, start, perPage, className }) => {
                 className={className}
                 key={item['@id']}
                 title={item.label}
-                image={typy(item, 'thumbnail[\'@id\']').safeString +
-                '/full/125,/0/default.jpg'}
+                image={typy(item, 'thumbnail[\'@id\']').safeString}
                 url={pageUrlFromAtId(item['@id'])}
               >
                 <CardMetaData metadata={item.metadata} />
