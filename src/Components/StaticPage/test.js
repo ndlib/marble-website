@@ -3,10 +3,12 @@ import { shallow } from 'enzyme'
 import StaticPage from './'
 import About from './About'
 import Help from './Help'
+import Learn from './Learn'
 import NotFound from 'Components/Shared/NotFound'
 import {
   ABOUT_CONTEXT,
   HELP_CONTEXT,
+  LEARN_CONTEXT,
 } from 'Constants/pageContexts'
 
 test('Render About Page', () => {
@@ -27,6 +29,16 @@ test('Render Help Page', () => {
   }
   const wrapper = shallow(<StaticPage match={match} />)
   expect(wrapper.find(Help)).toBeTruthy()
+})
+
+test('Render Learn Page', () => {
+  const match = {
+    params: {
+      pageType: LEARN_CONTEXT,
+    },
+  }
+  const wrapper = shallow(<StaticPage match={match} />)
+  expect(wrapper.find(Learn)).toBeTruthy()
 })
 
 test('Render NotFound Page', () => {
