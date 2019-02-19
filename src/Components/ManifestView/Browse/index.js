@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import typy from 'typy'
 
 import FilterTabBar from './FilterTabBar'
-import CardList from 'Components/Shared/CardList'
+import ManifestCardList from 'Components/Shared/ManifestCardList'
 import './style.css'
 
 const Browse = ({ currentManifest }) => {
@@ -11,7 +11,7 @@ const Browse = ({ currentManifest }) => {
   return (
     <React.Fragment>
       <FilterTabBar />
-      <CardList
+      <ManifestCardList
         items={items}
         className='browseCard'
       />
