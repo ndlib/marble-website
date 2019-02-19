@@ -6,3 +6,7 @@ body {
 a {
   color: var(--body-link-color);
 }
+
+figure {
+	margin: 0;
+}

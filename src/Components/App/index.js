@@ -29,6 +29,7 @@ import {
 import 'Configurations/customizations.css'
 import { SENTRY_DSN } from 'Configurations/apis.js'
 import './style.css'
+import './grid.css'
 
 // setup error reporting
 Sentry.init({

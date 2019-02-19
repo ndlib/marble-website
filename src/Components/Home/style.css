@@ -76,3 +76,31 @@
 	width: 635px;
 	height: 60px;
 }
+
+.featured {
+	margin-top: 5em;
+}
+
+.featured .cell img {
+	width: 100%;
+	display: block;
+}
+
+.featured figure {
+	position: relative;
+}
+
+.featured figcaption {
+	position: absolute;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	display: block;
+	width: 100%;
+	color: #fff;
+	padding: 12px;
+	box-sizing: border-box;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+
