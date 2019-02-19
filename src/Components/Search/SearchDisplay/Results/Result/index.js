@@ -31,14 +31,14 @@ Result.propTypes = {
 }
 
 export const buildUrl = (doc) => {
-  let queryurl = window.location.href
-  let queryterms = queryurl.slice(queryurl.lastIndexOf('?') + 1)
+  const queryurl = window.location.href
+  const queryterms = queryurl.slice(queryurl.lastIndexOf('?') + 1)
   let id = null
   if (typy(doc, 'ilsAPIid').isString) {
     let fullid = doc.ilsAPIid
     id = fullid.slice(-9)
   }
-  let url = MANIFEST_BASE_URL + 'item/' + id + '?ref=search&' + queryterms
+  const url = MANIFEST_BASE_URL + 'item/' + id + '?ref=search&' + queryterms
   return url
 }
 
