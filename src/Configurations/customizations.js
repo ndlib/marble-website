@@ -23,7 +23,7 @@ export const DEPARTMENT_LOGO_HEIGHT = '50px'
 // dimensions for --site-logo-width and --site-logo-height in
 // customizations.css
 export const SITE_LOGO = siteLogoImage
-export const SITE_LOGO_ALT_TEXT = 'Digital Repository Collection'
+export const SITE_LOGO_ALT_TEXT = 'Digital Collections'
 
 // Links
 export const INSTITUTION_HOME_PAGE = 'https://nd.edu'

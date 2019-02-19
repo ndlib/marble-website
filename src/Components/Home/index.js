@@ -19,6 +19,76 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className='featured'>
+        <h2>Featured</h2>
+        <div className='grid-x grid-margin-x'>
+          <div className='cell large-4'>
+            <figure>
+              <img
+                src='01.jpg'
+                className='01'
+                alt='home page banner'
+              />
+              <figcaption>[Title of DEC Exhibition]</figcaption>
+            </figure>
+          </div>
+          <div className='cell large-4'>
+            <figure>
+              <img
+                src='02.jpg'
+                className='02'
+                alt='home page banner'
+              />
+              <figcaption>Highlights</figcaption>
+            </figure>
+          </div>
+          <div className='cell large-4'>
+            <figure>
+              <img
+                src='03.jpg'
+                className='03'
+                alt='home page banner'
+              />
+              <figcaption>Recently Added</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div className='browseBy featured'>
+        <h2>Browse by</h2>
+        <div className='grid-x grid-margin-x'>
+          <div className='cell large-4'>
+            <figure>
+              <img
+                src='04.jpg'
+                className='04'
+                alt='home page banner'
+              />
+              <figcaption>Time Period</figcaption>
+            </figure>
+          </div>
+          <div className='cell large-4'>
+            <figure>
+              <img
+                src='05.jpg'
+                className='05'
+                alt='home page banner'
+              />
+              <figcaption>World Region</figcaption>
+            </figure>
+          </div>
+          <div className='cell large-4'>
+            <figure>
+              <img
+                src='06.jpg'
+                className='06'
+                alt='home page banner'
+              />
+              <figcaption>Theme</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
     </React.Fragment>
   )
 }
