@@ -33,4 +33,5 @@ export const DEPARTMENT_HOME_PAGE = 'https://provost.nd.edu/'
 export const DEFAULT_COLLECTION_IMAGE = defaultItemImage
 export const DEFAULT_ITEM_IMAGE = defaultItemImage
 
-export const DEFAULT_BROWSE_MANIFEST_ID = 'b19974760'
+// export const DEFAULT_BROWSE_MANIFEST_ID = 'b19974760'
+export const DEFAULT_BROWSE_MANIFEST_ID = 'website'

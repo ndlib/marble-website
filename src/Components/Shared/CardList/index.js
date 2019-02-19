@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Card from 'Components/Shared/Card'
 import NotFound from 'Components/Shared/NotFound'
 import CardMetaData from 'Components/Shared/CardMetaData'
+import typy from 'typy'
 
 import pageUrlFromAtId from 'Functions/pageUrlFromAtId'
 const CardList = ({ items, start, perPage, className }) => {
@@ -19,7 +20,8 @@ const CardList = ({ items, start, perPage, className }) => {
                 className={className}
                 key={item['@id']}
                 title={item.label}
-                image={null}
+                image={typy(item, 'thumbnail[\'@id\']').safeString +
+                '/full/125,/0/default.jpg'}
                 url={pageUrlFromAtId(item['@id'])}
               >
                 <CardMetaData metadata={item.metadata} />

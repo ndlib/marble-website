@@ -7,9 +7,9 @@ import './style.css'
 export const FilterTabBar = ({ match }) => {
   const tabs = [
     { label: 'All', target: '/browse' },
-    { label: 'Time', target: '/browse/time' },
-    { label: 'Place', target: '/browse/place' },
-    { label: 'Theme', target: '/browse/theme' },
+    { label: 'Time', target: '/browse/timeperiods' },
+    { label: 'Place', target: '/browse/places' },
+    { label: 'Theme', target: '/browse/themes' },
   ]
   return (
     <nav className='filterTabs'>

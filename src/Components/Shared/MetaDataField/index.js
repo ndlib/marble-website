@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ReactMarkdown from 'react-markdown/with-html'
 
-const MarkDownField = ({ metadata }) => {
+const MarkDownField = ({ metadata, skipHtml }) => {
   const { label, value } = metadata
   return (
     <React.Fragment>
@@ -11,6 +11,7 @@ const MarkDownField = ({ metadata }) => {
         <ReactMarkdown
           source={value}
           escapeHtml={false}
+          skipHtml={skipHtml}
         />
       </dd>
     </React.Fragment>
@@ -19,5 +20,10 @@ const MarkDownField = ({ metadata }) => {
 
 MarkDownField.propTypes = {
   metadata: PropTypes.object.isRequired,
+  skipHtml: PropTypes.bool,
+}
+
+MarkDownField.defaultProps = {
+  skipHtml: false,
 }
 export default MarkDownField

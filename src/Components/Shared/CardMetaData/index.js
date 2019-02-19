@@ -8,7 +8,7 @@ const CardMetaData = ({ metadata }) => {
       <dl className='details'>
         {
           metadata.map((md, index) => {
-            return <MetaDataField metadata={md} key={index} />
+            return <MetaDataField metadata={md} key={index} skipHtml />
           })
         }
       </dl>
