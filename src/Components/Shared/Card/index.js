@@ -5,6 +5,7 @@ import { withRouter } from 'react-router'
 import { DEFAULT_ITEM_IMAGE } from 'Configurations/customizations'
 import urlContext from 'Functions/urlContext'
 import './style.css'
+import IIIFImage from 'Components/Shared/IIIFImage'
 
 export const Card = ({ title, image, url, className, children, match }) => {
   if (title && url) {
@@ -14,11 +15,10 @@ export const Card = ({ title, image, url, className, children, match }) => {
         to={urlContext(url, match)}
         className={displayClass}
       >
-
-        <img
-          className='cardImage'
-          src={image || DEFAULT_ITEM_IMAGE}
-          alt={title}
+        <IIIFImage
+          image={image}
+          settings={{ alt: title }}
+          previewBlur
         />
         <div>
           <h3>{title}</h3>
@@ -34,7 +34,10 @@ export const Card = ({ title, image, url, className, children, match }) => {
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,
-  image: PropTypes.string,
+  image: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.string,
+  ]),
   url: PropTypes.string.isRequired,
   className: PropTypes.string,
   children: PropTypes.node,

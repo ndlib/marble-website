@@ -15,6 +15,7 @@
 }
 
 a.card {
+  overflow: hidden;
   text-decoration: none;
 }
 
