@@ -10,24 +10,35 @@ class IIIFImage extends Component {
     super(props)
     this.state = {
       blur: this.props.previewBlur,
+      src: defaultSrc(this.props.image),
       srcSet: '',
     }
     this.onEnter = this.onEnter.bind(this)
-    if (typeof this.props.image === 'string') {
-      this.state.src = this.props.image
-    } else {
-      this.imageBaseUrl = typy(this.props.image, 'service[\'@id\']').safeObject
-      this.state.src = `${this.imageBaseUrl}/full/25,/0/default.jpg`
-      this.defaultSrcSet = `${this.imageBaseUrl}/full/125,/0/default.jpg 100w, ` +
-      `${this.imageBaseUrl}/full/250,/0/default.jpg 400w, ` +
-      `${this.imageBaseUrl}/full/500,/0/default.jpg 1000w`
-    }
+  }
+
+  componentDidMount () {
+    const src = defaultSrc(this.props.image)
+    checkImage(src).then(r => {
+      if (r.status === 'ok') {
+        this.setState({ src: src })
+      } else {
+        this.setState({
+          src: DEFAULT_ITEM_IMAGE,
+          blur: false,
+        })
+      }
+    })
   }
 
   onEnter () {
+    if (typeof this.props.image !== 'string') {
+      defaultSrcSet(typy(this.props.image, 'service[\'@id\']').safeString, this.props.srcSetOptions).then(result => {
+        this.setState({ srcSet: result })
+        return result
+      })
+    }
     this.setState({
       blur: false,
-      srcSet: this.defaultSrcSet,
     })
   }
 
@@ -42,7 +53,7 @@ class IIIFImage extends Component {
           />
           <img
             src={this.state.src}
-            alt={this.props.settings.alt}
+            alt={this.props.alt}
             className={this.state.blur ? 'blur' : ''}
           />
         </picture>
@@ -56,12 +67,55 @@ IIIFImage.propTypes = {
     PropTypes.object,
     PropTypes.string,
   ]).isRequired,
-  settings: PropTypes.object,
+  alt: PropTypes.string.isRequired,
+  srcSetOptions: PropTypes.array.isRequired,
   previewBlur: PropTypes.bool.isRequired,
 }
 
 IIIFImage.defaultProps = {
   previewBlug: false,
+  srcSetOptions: [
+    { size: 250, rule: '200w' },
+    { size: 500 },
+  ],
 }
 
 export default IIIFImage
+
+const checkImage = async (path) => {
+  return new Promise(resolve => {
+    const img = new Image()
+    img.onload = () => resolve({ path, status: 'ok' })
+    img.onerror = () => resolve({ path, status: 'error' })
+    img.src = path
+  })
+}
+
+const defaultSrc = (image) => {
+  let src
+  if (typeof image === 'string') {
+    src = image
+  } else {
+    const imageBaseUrl = typy(image, 'service[\'@id\']').safeString
+    src = `${imageBaseUrl}/full/125,/0/default.jpg`
+  }
+  return src
+}
+
+const defaultSrcSet = (baseUrl, srcSetOptions) => {
+  const results = srcSetOptions.map(async option => {
+    const url = `${baseUrl}/full/${option.size},/0/default.jpg`
+    return checkImage(url).then(result => {
+      if (result.status === 'ok') {
+        if (option.rule) {
+          return `${url} ${option.rule}`
+        } else {
+          return url
+        }
+      }
+    })
+  })
+  return Promise.all(results).then(async complete => {
+    return complete.join(', ')
+  })
+}

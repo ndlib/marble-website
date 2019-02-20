@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router'
-import { DEFAULT_ITEM_IMAGE } from 'Configurations/customizations'
 import urlContext from 'Functions/urlContext'
 import './style.css'
 import IIIFImage from 'Components/Shared/IIIFImage'
@@ -17,7 +16,7 @@ export const Card = ({ title, image, url, className, children, match }) => {
       >
         <IIIFImage
           image={image}
-          settings={{ alt: title }}
+          alt={title}
           previewBlur
         />
         <div>
