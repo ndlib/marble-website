@@ -42,6 +42,17 @@ test('Should render only About page in Page component for /about', () => {
   expect(wrapper.find(NotFound).exists()).toBeFalsy()
 })
 
+test('Should render only Learn page in Page component for /learn', () => {
+  wrapper = mount(
+    <MemoryRouter initialEntries={[ '/learn' ]}>
+      <App />
+    </MemoryRouter>
+  )
+  expect(wrapper.find(Page).exists()).toBeTruthy()
+  expect(wrapper.find(StaticPage).exists()).toBeTruthy()
+  expect(wrapper.find(NotFound).exists()).toBeFalsy()
+})
+
 test('Should render only Help page in Page component for /help', () => {
   wrapper = mount(
     <MemoryRouter initialEntries={[ '/help' ]}>
