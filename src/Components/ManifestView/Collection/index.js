@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import ContentLeftSidebar from 'Components/Layouts/ContentLeftSidebar'
-import CardList from 'Components/Shared/CardList'
+import ManifestCardList from 'Components/Shared/ManifestCardList'
 import CollectionImage from './CollectionImage'
 import DisplayViewClass from 'Components/Shared/DisplayViewClass'
 import DisplayViewToggle from 'Components/Shared/DisplayViewToggle'
@@ -22,7 +22,7 @@ export const Collection = ({ currentManifest, manifestReducer }) => {
         <DisplayViewClass reducer={manifestReducer}>
           <DisplayViewToggle reducer={manifestReducer} />
           <br className='clearfix' />
-          <CardList items={items} />
+          <ManifestCardList items={items} />
         </DisplayViewClass>
       </ContentLeftSidebar>
     </React.Fragment>

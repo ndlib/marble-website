@@ -15,6 +15,7 @@
 }
 
 a.card {
+  overflow: hidden;
   text-decoration: none;
 }
 
@@ -76,6 +77,7 @@ a.card {
   margin-top: 0;
   padding-left: 1em;
   padding-top: 1em;
+  word-break: unset;
 }
 
 .list .card .additional {

@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import { Collection, defineItems } from './'
 import CollectionImage from './CollectionImage'
 import ContentLeftSidebar from 'Components/Layouts/ContentLeftSidebar'
-import CardList from 'Components/Shared/CardList'
+import ManifestCardList from 'Components/Shared/ManifestCardList'
 
 test('Selects items from collections if multi-part', () => {
   const manifest = {
@@ -42,5 +42,5 @@ test('Renders the subcomponents', () => {
   const wrapper = shallow(<Collection currentManifest={manifest} manifestReducer={reducer} />)
   expect(wrapper.find(CollectionImage).exists()).toBeTruthy()
   expect(wrapper.find(ContentLeftSidebar).exists()).toBeTruthy()
-  expect(wrapper.find(CardList).exists()).toBeTruthy()
+  expect(wrapper.find(ManifestCardList).exists()).toBeTruthy()
 })

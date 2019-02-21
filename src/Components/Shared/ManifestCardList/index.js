@@ -3,9 +3,10 @@ import PropTypes from 'prop-types'
 import Card from 'Components/Shared/Card'
 import NotFound from 'Components/Shared/NotFound'
 import CardMetaData from 'Components/Shared/CardMetaData'
+import typy from 'typy'
 
 import pageUrlFromAtId from 'Functions/pageUrlFromAtId'
-const CardList = ({ items, start, perPage, className }) => {
+const ManifestCardList = ({ items, start, perPage, className }) => {
   // if we don't have a perPage limit, show all the things
   perPage = perPage || items.length
   // make sure we have items and we're not trying to start after the array end
@@ -19,7 +20,7 @@ const CardList = ({ items, start, perPage, className }) => {
                 className={className}
                 key={item['@id']}
                 title={item.label}
-                image={null}
+                image={typy(item, 'thumbnail').safeObject}
                 url={pageUrlFromAtId(item['@id'])}
               >
                 <CardMetaData metadata={item.metadata} />
@@ -33,14 +34,14 @@ const CardList = ({ items, start, perPage, className }) => {
   return <NotFound />
 }
 
-CardList.propTypes = {
+ManifestCardList.propTypes = {
   items: PropTypes.array.isRequired,
   start: PropTypes.number.isRequired,
   perPage: PropTypes.number,
   className: PropTypes.string,
 }
 
-CardList.defaultProps = {
+ManifestCardList.defaultProps = {
   start: 0,
 }
 
@@ -49,4 +50,4 @@ const itemsForDisplay = (items, start, perPage) => {
   return items.slice(start, Math.min(start + perPage, items.length))
 }
 
-export default CardList
+export default ManifestCardList
