@@ -1,4 +1,7 @@
 .home.mainContent {
+  position: relative;
+	margin-top: 0;
+  margin-bottom: 1rem;
 	width: 1280px;
 }
 
@@ -51,12 +54,6 @@
 	margin: 0 auto;
 }
 
-
-.mainContent.home {
-	position: relative;
-	margin-top: 0;
-}
-
 .home .submitSearch {
 	height: 62px;
 }
@@ -102,5 +99,3 @@
 	font-weight: bold;
 	font-size: 24px;
 }
-
-

@@ -1,3 +1,7 @@
+.contentLeftSidebar {
+  margin: 1rem 0;
+}
+
 .sideBar {
  display: inline-block;
  width: var(--sidebar-width);
