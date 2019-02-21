@@ -2,6 +2,7 @@ import React from 'react'
 import { mount } from 'enzyme'
 import { Link, MemoryRouter } from 'react-router-dom'
 import { Card } from './'
+import IIIFImage from 'Components/Shared/IIIFImage'
 
 const mountWithRouter = node => mount(<MemoryRouter>{node}</MemoryRouter>)
 let wrapper
@@ -18,6 +19,7 @@ test('Card renders with all props', () => {
   expect(wrapper.find(Link).props().to).toEqual('/test-url')
   expect(wrapper.find('h3').exists()).toBeTruthy()
   expect(wrapper.find('h3').text()).toEqual('TEST TITLE')
+  expect(wrapper.find(IIIFImage).exists()).toBeTruthy()
 })
 
 test('Card renders null if no title', () => {
