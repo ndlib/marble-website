@@ -81,9 +81,7 @@ export const buildSrcSet = (baseUrl, srcSetOptions) => {
   })
   return Promise.all(setResults).then(async complete => {
     complete = complete.filter(c => {
-      if (c !== 'undefined') {
-        return c
-      }
+      return c !== 'undefined' ? c : null
     })
     return complete.join(',\n ')
   })
