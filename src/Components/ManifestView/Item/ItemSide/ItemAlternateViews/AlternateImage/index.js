@@ -4,6 +4,7 @@ import typy from 'typy'
 import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router'
 import AlternateOverlay from './AlternateOverlay'
+import IIIFImage from 'Components/Shared/IIIFImage'
 import urlContext from 'Functions/urlContext'
 import { VIEWER_CONTEXT } from 'Constants/viewingContexts'
 import './style.css'
@@ -19,16 +20,20 @@ export const AlternateImage = ({ image, index, max, length, match }) => {
         max={max}
         length={length}
       />
-      <img
-        src={image}
+      <IIIFImage
+        image={image}
         alt={`Alternate View ${index}`}
+        previewBlur
       />
     </Link>
   )
 }
 
 AlternateImage.propTypes = {
-  image: PropTypes.string.isRequired,
+  image: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+  ]).isRequired,
   index: PropTypes.number.isRequired,
   max: PropTypes.number.isRequired,
   length: PropTypes.number.isRequired,

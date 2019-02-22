@@ -12,7 +12,7 @@ export const Collection = ({ currentManifest, manifestReducer }) => {
   return (
     <React.Fragment>
       <CollectionImage
-        image={currentManifest.data.image}
+        image={currentManifest.data.thumbnail}
         altText={currentManifest.data.label}
       />
       <ContentLeftSidebar
