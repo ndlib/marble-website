@@ -3508,6 +3508,10 @@ escodegen@^1.11.0, escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
+"eslint-config-hesburgh@https://github.com/ndlib/eslint-config-hesburgh.git":
+  version "1.0.0"
+  resolved "https://github.com/ndlib/eslint-config-hesburgh.git#673e9f8dbf0fe6b1b1ab594d9cf0b14b23c6f796"
+
 eslint-config-react-app@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/eslint-config-react-app/-/eslint-config-react-app-3.0.4.tgz#83f394d765e7d5af623d773e64609e9c9f2cbeb5"
