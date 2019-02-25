@@ -9,24 +9,44 @@ import IIIFImage from 'Components/Shared/IIIFImage'
 export const Card = ({ title, image, url, className, children, match }) => {
   if (title && url) {
     const displayClass = className ? `card ${className}` : 'card'
-    return (
-      <Link
-        to={urlContext(url, match)}
-        className={displayClass}
-      >
-        <IIIFImage
-          image={image}
-          alt={title}
-          previewBlur
-        />
-        <div>
-          <h3>{title}</h3>
-          <div className='additional'>
-            {children}
+    if (match) {
+      return (
+        <Link
+          to={urlContext(url, match)}
+          className={displayClass}
+        >
+          <IIIFImage
+            image={image}
+            alt={title}
+            previewBlur
+          />
+          <div>
+            <h3>{title}</h3>
+            <div className='additional'>
+              {children}
+            </div>
           </div>
-        </div>
-      </Link>
-    )
+        </Link>
+      )
+    } else {
+      return (
+        <a href={url}>
+          className={displayClass}
+        >
+          <IIIFImage
+            image={image}
+            alt={title}
+            previewBlur
+          />
+          <div>
+            <h3>{title}</h3>
+            <div className='additional'>
+              {children}
+            </div>
+          </div>
+        </a>
+      )
+    }
   }
   return null
 }

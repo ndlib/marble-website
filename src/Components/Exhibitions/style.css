@@ -1,36 +1,15 @@
-.sideBar {
- display: inline-block;
- width: var(--sidebar-width);
-}
-.sideBar a {
-  display: block;
+.card {
+  width: calc((var(--inner-page-width) - 1em)/2 - 20px);
 }
 
-.mainSide {
-  display: inline-block;
-  margin: 0 0 0 1rem;
-  vertical-align: top;
-  width: calc(100% - var(--sidebar-width) - 1rem);
+.card img {
+  height: calc((var(--inner-page-width) - 1em)/4 - 40px);
+  margin: 10px;
+  object-fit: cover;
+  object-position: center;
+  width: calc((var(--inner-page-width) - 1em)/2 - 40px);
 }
 
-.evenSplit .sideBar {
-  width: calc(var(--inner-page-width) * .45)
-}
-.evenSplit .mainSide {
-  width: calc(var(--inner-page-width) * .55 - 1rem);
-}
-
-@media (max-width: 780px) {
-  .sideBar,
-  .evenSplit .sideBar {
-    display: block;
-    width: 100%;
-  }
-  .mainSide,
-  .evenSplit .mainSide {
-    display: block;
-    margin: 0;
-    width: 100%;
-
-  }
+.card h3 {
+  word-break: normal;
 }
