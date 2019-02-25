@@ -9,6 +9,7 @@
   ],
   "description": "A customizable React and Redux based front-end to present collections of IIIF manifests.",
   "dependencies": {
+    "@hesburgh-wse/eslint-config-hesburgh": "^1.0.0",
     "@sentry/browser": "^4.3.0",
     "eslint-config-hesburgh": "https://github.com/ndlib/eslint-config-hesburgh.git",
     "query-string": "^6.2.0",

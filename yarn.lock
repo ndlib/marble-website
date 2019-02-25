@@ -878,6 +878,11 @@
   resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.8.2.tgz#576ff7fb1230185b619a75d258cbc98f0867a8dc"
   integrity sha512-rLu3wcBWH4P5q1CGoSSH/i9hrXs7SlbRLkoq9IGuoPYNGQvDJ3pt/wmOM+XgYjIDRMVIdkUWt0RsfzF50JfnCw==
 
+"@hesburgh-wse/eslint-config-hesburgh@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@hesburgh-wse/eslint-config-hesburgh/-/eslint-config-hesburgh-1.0.0.tgz#9731aa0ba3a46a02b72655cb3a994d157c11e21c"
+  integrity sha512-MxSPcKi5e8ruZ4uge/+1t4uDDYW8Y3vGym0e/ni0MfoDuYwI8twsMWpp/JQ+3y10uXO5mnUohU9bQonYLFiNog==
+
 "@sentry/browser@^4.3.0":
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/@sentry/browser/-/browser-4.3.0.tgz#07660b2b17b12a6d8953be20eb8efaa8683fafb9"
