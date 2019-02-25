@@ -9,7 +9,6 @@ export const MAX_IMAGES = 4
 
 const ItemAlternateViews = ({ currentManifest }) => {
   const canvases = typy(currentManifest, 'data.sequences[0].canvases').safeObject
-
   if (Array.isArray(canvases)) {
     // truncate at 3 alternate images
     const originalLength = canvases.length
@@ -18,7 +17,12 @@ const ItemAlternateViews = ({ currentManifest }) => {
       <span className='alternateImages'>
         {
           canvases.map((canvas, index) => {
-            const image = typy(canvases, `[${index}]thumbnail['@id']`).safeObject
+            let image
+            if (typy(canvases, `[${index}]thumbnail`).isObject) {
+              image = typy(canvases, `[${index}]thumbnail`)
+            } else if (typy(canvases, `[${index}]images[0]`).isObject) {
+              image = typy(canvases, `[${index}]images[0]`)
+            }
             return (
               <AlternateImage
                 key={index}

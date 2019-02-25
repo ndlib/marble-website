@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import Waypoint from 'react-waypoint'
 import typy from 'typy'
 import { DEFAULT_ITEM_IMAGE } from 'Configurations/customizations'
+import checkImage from 'Functions/checkImage'
+import Source from './Source'
 import './style.css'
 
 class IIIFImage extends Component {
@@ -10,21 +12,18 @@ class IIIFImage extends Component {
     super(props)
     this.state = {
       blur: this.props.previewBlur,
-      src: defaultSrc(this.props.image),
-      srcSet: '',
+      src: defaultSrc(this.props.image, this.props.defaultSize),
+      srcSetShouldLoad: this.props.srcSetOnLoad,
     }
     this.onEnter = this.onEnter.bind(this)
   }
 
   componentDidMount () {
-    const src = defaultSrc(this.props.image)
+    const src = this.state.src
     checkImage(src).then(r => {
-      if (r.status === 'ok') {
-        this.setState({ src: src })
-      } else {
+      if (r.status !== 'ok') {
         this.setState({
           src: DEFAULT_ITEM_IMAGE,
-          blur: false,
         })
       }
     })
@@ -32,10 +31,7 @@ class IIIFImage extends Component {
 
   onEnter () {
     if (typeof this.props.image !== 'string') {
-      defaultSrcSet(typy(this.props.image, 'service[\'@id\']').safeString, this.props.srcSetOptions).then(result => {
-        this.setState({ srcSet: result })
-        return result
-      })
+      this.setState({ srcSetShouldLoad: true })
     }
     this.setState({
       blur: false,
@@ -44,12 +40,13 @@ class IIIFImage extends Component {
 
   render () {
     return (
-      <Waypoint
-        onEnter={this.onEnter}>
+      <Waypoint onEnter={this.onEnter} >
         <picture>
-          <source
-            type='image/jpeg'
-            srcSet={this.state.srcSet}
+          <Source
+            shouldLoad={this.state.srcSetShouldLoad}
+            image={this.props.image}
+            srcSetOptions={this.props.srcSetOptions}
+            sizes={this.props.sizes}
           />
           <img
             src={this.state.src}
@@ -68,54 +65,37 @@ IIIFImage.propTypes = {
     PropTypes.string,
   ]).isRequired,
   alt: PropTypes.string.isRequired,
+  srcSetOnLoad: PropTypes.bool.isRequired,
   srcSetOptions: PropTypes.array.isRequired,
+  sizes: PropTypes.array.isRequired,
+  defaultSize: PropTypes.number.isRequired,
   previewBlur: PropTypes.bool.isRequired,
 }
 
 IIIFImage.defaultProps = {
-  previewBlug: false,
+  previewBlur: false,
+  srcSetOnLoad: false,
   srcSetOptions: [
-    { size: 250, rule: '200w' },
-    { size: 500 },
+    { size: 250, name: '250w' },
+    { size: 500, name: '500w' },
+    { size: 1000, name: '1000w' },
   ],
+  sizes: [
+    { size: '500px', rule: '(max-width: 550px)' },
+    { size: '250px' },
+  ],
+  defaultSize: 125,
 }
 
 export default IIIFImage
 
-const checkImage = async (path) => {
-  return new Promise(resolve => {
-    const img = new Image()
-    img.onload = () => resolve({ path, status: 'ok' })
-    img.onerror = () => resolve({ path, status: 'error' })
-    img.src = path
-  })
-}
-
-const defaultSrc = (image) => {
+export const defaultSrc = (image, size) => {
   let src
   if (typeof image === 'string') {
     src = image
   } else {
     const imageBaseUrl = typy(image, 'service[\'@id\']').safeString
-    src = `${imageBaseUrl}/full/125,/0/default.jpg`
+    src = `${imageBaseUrl}/full/${size},/0/default.jpg`
   }
   return src
-}
-
-const defaultSrcSet = (baseUrl, srcSetOptions) => {
-  const results = srcSetOptions.map(async option => {
-    const url = `${baseUrl}/full/${option.size},/0/default.jpg`
-    return checkImage(url).then(result => {
-      if (result.status === 'ok') {
-        if (option.rule) {
-          return `${url} ${option.rule}`
-        } else {
-          return url
-        }
-      }
-    })
-  })
-  return Promise.all(results).then(async complete => {
-    return complete.join(', ')
-  })
 }

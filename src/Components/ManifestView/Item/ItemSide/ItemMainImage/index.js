@@ -4,7 +4,7 @@ import typy from 'typy'
 import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router'
 import ExpandIcon from './ExpandIcon'
-import { DEFAULT_ITEM_IMAGE } from 'Configurations/customizations'
+import IIIFImage from 'Components/Shared/IIIFImage'
 import urlContext from 'Functions/urlContext'
 import { VIEWER_CONTEXT } from 'Constants/viewingContexts'
 import './style.css'
@@ -12,14 +12,15 @@ import './style.css'
 export const ItemMainImage = ({ currentManifest, match }) => {
   const image = typy(
     currentManifest,
-    "data.sequences[0].canvases[0].images[0].resource['@id']"
-  ).safeString || DEFAULT_ITEM_IMAGE
+    'data.sequences[0].canvases[0].images[0].resource'
+  ).safeObject
   return (
     <Link to={urlContext(`/${VIEWER_CONTEXT}/${typy(match, 'params.contextId').safeString}`, match)}>
       <div className='itemImage'>
-        <img
-          src={image}
+        <IIIFImage
+          image={image}
           alt={'title'}
+          srcSetOnLoad
         />
         <ExpandIcon />
       </div>

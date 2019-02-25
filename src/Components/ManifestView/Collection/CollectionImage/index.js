@@ -1,20 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { DEFAULT_COLLECTION_IMAGE } from 'Configurations/customizations'
+import IIIFImage from 'Components/Shared/IIIFImage'
 import './style.css'
 const CollectionImage = ({ image, altText }) => {
   return (
     <div className='collectionImage'>
-      <img
-        src={image || DEFAULT_COLLECTION_IMAGE}
-        alt={altText || 'Collection Image'}
+      <IIIFImage
+        image={image}
+        alt={altText || 'Collection'}
+        previewBlur
+        srcSetOnLoad
       />
     </div>
 
   )
 }
 CollectionImage.propTypes = {
-  image: PropTypes.string,
+  image: PropTypes.object.isRequired,
   altText: PropTypes.string,
 }
 export default CollectionImage
