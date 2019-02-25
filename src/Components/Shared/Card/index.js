@@ -9,7 +9,7 @@ import IIIFImage from 'Components/Shared/IIIFImage'
 export const Card = ({ title, image, url, className, children, match }) => {
   if (title && url) {
     const displayClass = className ? `card ${className}` : 'card'
-    if (url.slice('https')) {
+    if (url.includes('https')) {
       return (
         <a href={url}
           className={displayClass}
