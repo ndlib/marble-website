@@ -1,6 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import Source, { buildSrcSet, buildSizes } from './'
+// eslint-disable-next-line no-unused-vars
 import checkImage from 'Functions/checkImage'
 jest.mock('Functions/checkImage', () => ({
   __esModule: true,
