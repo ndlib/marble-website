@@ -54,8 +54,9 @@ const App = () => {
               <Route exact path='/' component={Home} />
               <Route exact path='/search' component={Search} />
               <Route exact path={`/:pageType(${ABOUT_CONTEXT}|${HELP_CONTEXT}|${LEARN_CONTEXT})/:topic?`} component={StaticPage} />
-              <Route exact path={`/:context(${BROWSE_CONTEXT})|${EXHIBITIONS_CONTEXT}`} component={ManifestView} />
+              <Route exact path={`/:context(${BROWSE_CONTEXT})`} component={ManifestView} />
               <Route exact path={`/:context(${BROWSE_CONTEXT}|${COLLECTION_CONTEXT}|${ITEM_CONTEXT}|${VIEWER_CONTEXT})/:contextId`} component={ManifestView} />
+              <Route exact path={`/:context(${EXHIBITIONS_CONTEXT})`} component={Exhibitions} />
               <Route component={NotFound} />
             </Switch>
           </Page>
