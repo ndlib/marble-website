@@ -15,6 +15,7 @@ import Home from 'Components/Home'
 import StaticPage from 'Components/StaticPage'
 import Search from 'Components/Search'
 import ManifestView from 'Components/ManifestView'
+import Exhibitions from 'Components/Exhibitions'
 import NotFound from 'Components/Shared/NotFound'
 import {
   ABOUT_CONTEXT,
@@ -26,6 +27,7 @@ import {
   COLLECTION_CONTEXT,
   ITEM_CONTEXT,
   VIEWER_CONTEXT,
+  EXHIBITIONS_CONTEXT,
 } from 'Constants/viewingContexts'
 import 'Configurations/customizations.css'
 import { SENTRY_DSN } from 'Configurations/apis.js'
@@ -52,7 +54,7 @@ const App = () => {
               <Route exact path='/' component={Home} />
               <Route exact path='/search' component={Search} />
               <Route exact path={`/:pageType(${ABOUT_CONTEXT}|${HELP_CONTEXT}|${LEARN_CONTEXT})/:topic?`} component={StaticPage} />
-              <Route exact path={`/:context(${BROWSE_CONTEXT})`} component={ManifestView} />
+              <Route exact path={`/:context(${BROWSE_CONTEXT})|${EXHIBITIONS_CONTEXT}`} component={ManifestView} />
               <Route exact path={`/:context(${BROWSE_CONTEXT}|${COLLECTION_CONTEXT}|${ITEM_CONTEXT}|${VIEWER_CONTEXT})/:contextId`} component={ManifestView} />
               <Route component={NotFound} />
             </Switch>
