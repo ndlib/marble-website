@@ -34,7 +34,7 @@ describe('Render Source Component', () => {
   })
 
   test('shouldLoad true on load', () => {
-    const wrapper = shallow(<Source shouldLoad image={image} sizes={sizes} srcSetOptions={srcSetOptions} />)
+    shallow(<Source shouldLoad image={image} sizes={sizes} srcSetOptions={srcSetOptions} />)
     expect(setSrcSetSpy).toBeCalled()
   })
 })
