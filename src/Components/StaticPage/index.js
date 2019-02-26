@@ -20,8 +20,6 @@ export const StaticPage = ({ match }) => {
   let content
   switch (pageType) {
     case ABOUT_CONTEXT:
-      title = 'About This Project'
-      topics = require('Configurations/About').topics
       content = <About />
       break
     case HELP_CONTEXT:
@@ -38,14 +36,20 @@ export const StaticPage = ({ match }) => {
       // default should never be called because router in App requires a valid context
       return <NotFound />
   }
-
+  if (topics.length > 0) {
+    return (
+      <ContentLeftSidebar
+        sidebarTitle={title}
+        sidebarContent={<LinkList items={topics} />}
+      >
+        {content}
+      </ContentLeftSidebar>
+    )
+  }
   return (
-    <ContentLeftSidebar
-      sidebarTitle={title}
-      sidebarContent={<LinkList items={topics} />}
-    >
-      {content}
-    </ContentLeftSidebar>
+    <React.Fragment>
+      { content }
+    </React.Fragment>
   )
 }
 

@@ -13,6 +13,11 @@
 */
 export const topics = [
   {
+    title: 'Alpha Prototype Information',
+    link: '/help/alpha-info',
+    textFile: 'alphaInfo',
+  },
+  {
     title: 'Search tips',
     link: '/help/search-tips',
     textFile: 'searchTips',
@@ -27,19 +32,19 @@ export const topics = [
     link: '/help/copyright-and-permissions',
     textFile: 'copyrightAndPermissions',
   },
-  {
-    title: 'Understanding Search Results',
-    link: '/help/understanding-search-results',
-    textFile: 'understandingSearchResults',
-  },
+  // {
+  //   title: 'Understanding Search Results',
+  //   link: '/help/understanding-search-results',
+  //   textFile: 'understandingSearchResults',
+  // },
   {
     title: 'Contact Us',
     link: '/help/contact-us',
     textFile: 'contactUs',
   },
-  {
-    title: 'Advanced Search',
-    link: '/help/advanced-search',
-    textFile: 'advancedSearch',
-  },
+  // {
+  //   title: 'Advanced Search',
+  //   link: '/help/advanced-search',
+  //   textFile: 'advancedSearch',
+  // },
 ]

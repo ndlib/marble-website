@@ -1,1 +1,3 @@
-Utilise below the fold but think outside the box. Synchronising responsive websites to in turn surprise and delight. Funneling customer experience and then improve overall outcomes. Building growth channels to in turn improve overall outcomes. Amplify stakeholder engagement to re-target key demographics. Drive below the line in order to maximise share of voice.
+Coming soon! For our Beta version (April 2020), we will be developing a feature for users to bookmark objects, save those objects in personalized lists or collections, and share those personalized groupings.
+
+If you have ideas about this feature, please contact Abigail Shelton at <ashelto3@nd.edu>.

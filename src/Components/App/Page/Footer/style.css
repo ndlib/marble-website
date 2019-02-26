@@ -16,6 +16,10 @@
   position: relative;
 }
 
+.footerText a {
+  color: var(--footer-text-color);
+  text-decoration: none;
+}
 .footerText p {
   line-height: 1.5em;
   margin: 0 .25em;
