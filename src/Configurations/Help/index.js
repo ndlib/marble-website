@@ -13,8 +13,8 @@
 */
 export const topics = [
   {
-    title: 'Alpha Prototype Information',
-    link: '/help/alpha-info',
+    title: 'Site Information',
+    link: '/help/site-info',
     textFile: 'alphaInfo',
   },
   {
