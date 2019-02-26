@@ -11,7 +11,7 @@
 @media (max-width: 780px) {
   .collectionImage img {
     left: 0;
-    position: absolute;
+    margin: 0 -20px;
     width: 100vw;
   }
   .sideText {
