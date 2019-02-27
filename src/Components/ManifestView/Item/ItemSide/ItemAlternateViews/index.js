@@ -20,7 +20,6 @@ const ItemAlternateViews = ({ currentManifest }) => {
             let image
             if (typy(canvas, `thumbnail`).isObject) {
               image = typy(canvas, `thumbnail`).safeObject
-              console.log(image)
             } else if (typy(canvases, `[${index}].images[0].service['@id']`).isObject) {
               image = typy(canvases, `[${index}].images[0].service['@id']`).safeObject
             }
