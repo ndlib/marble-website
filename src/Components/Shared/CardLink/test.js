@@ -1,8 +1,7 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import { Link, MemoryRouter } from 'react-router-dom'
 import { CardLink } from './'
-import { shallow } from 'enzyme';
 import { MANIFEST_BASE_URL } from 'Configurations/apis.js'
 
 

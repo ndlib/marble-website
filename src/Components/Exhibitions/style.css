@@ -1,8 +1,8 @@
-.card {
+.exhibitionCardList .card {
   width: calc((var(--inner-page-width) - 1em)/2 - 20px);
 }
 
-.card img {
+.exhibitionCardList .card img {
   height: calc((var(--inner-page-width) - 1em)/4 - 40px);
   margin: 10px;
   object-fit: cover;
@@ -10,6 +10,6 @@
   width: calc((var(--inner-page-width) - 1em)/2 - 40px);
 }
 
-.card h3 {
+.exhibitionCardList .card h3 {
   word-break: normal;
 }

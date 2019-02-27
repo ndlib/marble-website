@@ -15,9 +15,8 @@ export default Exhibitions
 
 const ExhibitionCardList = (items, className) => {
   if (items) {
-    console.log(items)
     return (
-      <div className='cardList'>
+      <div className='exhibitionCardList'>
         {
           items.items.map(item => {
             return (
