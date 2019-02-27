@@ -18,10 +18,10 @@ const ItemAlternateViews = ({ currentManifest }) => {
         {
           canvases.map((canvas, index) => {
             let image
-            if (typy(canvases, `[${index}]thumbnail`).isObject) {
-              image = typy(canvases, `[${index}]thumbnail`)
-            } else if (typy(canvases, `[${index}]images[0]`).isObject) {
-              image = typy(canvases, `[${index}]images[0]`)
+            if (typy(canvas, `thumbnail`).isObject) {
+              image = typy(canvas, `thumbnail`).safeObject
+            } else if (typy(canvases, `[${index}].images[0].service['@id']`).isObject) {
+              image = typy(canvases, `[${index}].images[0].service['@id']`).safeObject
             }
             return (
               <AlternateImage
