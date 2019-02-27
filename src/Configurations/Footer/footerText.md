@@ -1,5 +1,5 @@
-© Copyright University of Notre Dame
+[© 2019 University of Notre Dame](https://nd.edu)
 
-Address
+Notre Dame, IN 46556 USA
 
-Something else
+[Contact Us](/help/contact-us)

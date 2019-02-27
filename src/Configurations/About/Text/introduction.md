@@ -1,3 +1,5 @@
-Utilise dark social while remembering to build ROI. Funneling blue-sky thinking so that as an end result, we target the low hanging fruit. Synchronise stakeholder engagement to, consequently, use best practice. Target below the fold to, consequently, be transparent. Leverage brand integration to, consequently, make users into advocates.
+Explore digitized rare materials from the [University of Notre Dame](https://nd.edu), from books to manuscripts, sculptures to paintings, photographs to ephemera.
 
-Considering integrated tech stacks yet gain traction. Build stakeholder management so that we use best practice. Engaging above the fold with the possibility to create actionable insights. Building relevant and engaging content while remembering to infiltrate new markets. Inform dark social and possibly use best practice.
+This collaborative platform is supported by a grant from [The Andrew W. Mellon Foundation](https://mellon.org/). The project aims to help make the cultural heritage collections at the University of Notre Dame more accessible to the campus community and beyond.
+
+For additional information about the cultural holdings of the University of Notre Dame, please see the details provided below.

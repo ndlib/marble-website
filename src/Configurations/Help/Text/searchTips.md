@@ -1,3 +1,10 @@
-Informing blue-sky thinking and above all, take this offline. Leveraging scrum masters and then take this offline. Leverage vertical integration so that as an end result, we build ROI. Executing brand pillars while remembering to go viral. Demonstrating big data and finally be on brand. Targeting bleeding edge to in turn improve overall outcomes.
+There are two ways to search on this Alpha site: basic and advanced. Because the prototype contains a small set of records, you may find that your search terms return no or few results.
 
-Execute integrated tech stacks so that we build ROI. Funneling vertical integration and possibly come up with a bespoke solution. Demonstrate bleeding edge so that we maximise share of voice. Targeting user experience to, consequently, disrupt the balance. Inform big data with a goal to innovate. Funneling key demographics to be transparent.
+The basic search bar appears on the top of the homepage and every other page in the site.
+
+Use the basic search bar for broad keyword searching. Want to narrow your results? Filters appear on the left side of the page when you hit the “search” button. More filter options will be added as the site is developed further.
+
+The advanced search options can be found below the basic search bar at the top of the homepage and every other page on the site.
+
+
+The advanced options allow you to begin with a more focused search.

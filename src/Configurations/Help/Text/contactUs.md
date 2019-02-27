@@ -1,1 +1,1 @@
-Generate user experience and above all, create synergy. Repurposing brand integration so that we increase viewability. Create user stories but surprise and delight. Utilising stakeholder management with a goal to build ROI. Growing a holistic approach and possibly come up with a bespoke solution.
+Your feedback on this Alpha prototype is important. Please contact Abigail Shelton at <ashelto3@nd.edu> to share your thoughts, ideas, and questions. 
