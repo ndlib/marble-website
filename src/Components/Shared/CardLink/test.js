@@ -4,7 +4,6 @@ import { Link, MemoryRouter } from 'react-router-dom'
 import { CardLink } from './'
 import { MANIFEST_BASE_URL } from 'Configurations/apis.js'
 
-
 const mountWithRouter = node => mount(<MemoryRouter>{node}</MemoryRouter>)
 let wrapper
 
