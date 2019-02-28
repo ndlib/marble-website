@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router'
 import urlContext from 'Functions/urlContext'
 import './style.css'
