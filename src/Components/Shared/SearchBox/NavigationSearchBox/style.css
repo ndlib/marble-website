@@ -1,0 +1,30 @@
+.navigationSearchBox.searchBox {
+  border: none;
+  display: flow-root;
+  height: 30px;
+  max-width: 300px;
+  float: right;
+}
+
+.navigationSearchBox.searchBox .submitSearch {
+  background-color: var(--navigation-main-color);
+  display: inline-flex;
+  height: 24px;
+}
+
+.navigationSearchBox.searchBox .searchbar {
+  width: 200px;
+  height: 24px;
+  border: none;
+  border-radius: 20px;
+  display: inline-flex;
+  font-size: .8rem;
+  vertical-align: top;
+  padding-left: 10px;
+}
+
+.navigationSearchBox.searchBox .searchIcon {
+  width: 16px;
+  height: 16px;
+  padding: 4px;
+}

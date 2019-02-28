@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { navigationLinks } from 'Configurations/Navigation'
 import { closeMenu } from 'Store/actions/menuActions'
+import NavigationSearchBox from 'Components/Shared/SearchBox/NavigationSearchBox'
 export const NavigationLinks = ({ dispatch }) => {
   return (
     <nav>
@@ -16,6 +17,7 @@ export const NavigationLinks = ({ dispatch }) => {
           >{navLink.title}</Link>)
         })
       }
+      <NavigationSearchBox />
     </nav>
   )
 }
