@@ -15,8 +15,6 @@ test('Card renders with all props', () => {
       url='/test-url'
     />)
   expect(wrapper.find('.card').exists()).toBeTruthy()
-  expect(wrapper.find(Link).exists()).toBeTruthy()
-  expect(wrapper.find(Link).props().to).toEqual('/test-url')
   expect(wrapper.find('h3').exists()).toBeTruthy()
   expect(wrapper.find('h3').text()).toEqual('TEST TITLE')
   expect(wrapper.find(IIIFImage).exists()).toBeTruthy()

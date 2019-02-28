@@ -5,14 +5,15 @@ import { withRouter } from 'react-router'
 import urlContext from 'Functions/urlContext'
 import './style.css'
 import IIIFImage from 'Components/Shared/IIIFImage'
+import CardLink from 'Components/Shared/CardLink'
 
 export const Card = ({ title, image, url, className, children, match }) => {
   if (title && url) {
     const displayClass = className ? `card ${className}` : 'card'
     return (
-      <Link
-        to={urlContext(url, match)}
-        className={displayClass}
+      <CardLink
+        url={urlContext(url, match)}
+        displayClass={displayClass}
       >
         <IIIFImage
           image={image}
@@ -25,7 +26,7 @@ export const Card = ({ title, image, url, className, children, match }) => {
             {children}
           </div>
         </div>
-      </Link>
+      </CardLink>
     )
   }
   return null
