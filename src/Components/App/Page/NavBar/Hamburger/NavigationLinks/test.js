@@ -18,7 +18,6 @@ const wrapper = mountWithRouter(<NavigationLinks dispatch={dispatch} />)
 const texts = wrapper.find(Link).map(node => node.text())
 
 test('Should render a nav and links supplied by configuration', () => {
-  expect(wrapper.find('nav').exists()).toBeTruthy()
   expect(texts).toEqual(['Do Something', 'Another Thing'])
   expect(texts.length).toEqual(2)
   expect(wrapper.find({ href: '/do-something' }).exists()).toBeTruthy()

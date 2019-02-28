@@ -1,5 +1,4 @@
 import React from 'react'
-import searchUrl from 'Functions/searchUrl'
 import SearchButton from '../SearchButton'
 import SearchField from '../SearchField'
 import './style.css'
