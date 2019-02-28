@@ -11,11 +11,6 @@ export default (url, match, additionalContext) => {
       urlContext += `&${context.label}=${context.value}`
     })
   }
-  if (urlContext.indexOf('search') > -1) {
-    let queryurl = match.params.location.href
-    let queryterms = queryurl.slice(queryurl.lastIndexOf('?') + 1)
-    urlContext += queryterms
-  }
   return `${cleanUrl}${urlContext}`
 }
 export const scrubQuery = (url) => {
