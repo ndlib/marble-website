@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NavigationLinks from './NavigationLinks'
+import NavigationSearchBox from 'Components/Shared/SearchBox/NavigationSearchBox'
 import { connect } from 'react-redux'
 import { toggleMenu } from 'Store/actions/menuActions'
 import './style.css'
@@ -24,7 +25,10 @@ export const Hamburger = ({ dispatch, open }) => {
           <path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z' />
         </svg>
       </span>
-      <NavigationLinks />
+      <nav>
+        <NavigationLinks />
+        <NavigationSearchBox />
+      </nav>
     </div>
   )
 }

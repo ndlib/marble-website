@@ -4,9 +4,10 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { navigationLinks } from 'Configurations/Navigation'
 import { closeMenu } from 'Store/actions/menuActions'
+
 export const NavigationLinks = ({ dispatch }) => {
   return (
-    <nav>
+    <React.Fragment>
       {
         navigationLinks.map(navLink => {
           return (<Link
@@ -16,7 +17,7 @@ export const NavigationLinks = ({ dispatch }) => {
           >{navLink.title}</Link>)
         })
       }
-    </nav>
+    </React.Fragment>
   )
 }
 
