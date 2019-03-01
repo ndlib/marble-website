@@ -10,23 +10,25 @@ import { VIEWER_CONTEXT } from 'Constants/viewingContexts'
 import './style.css'
 
 export const AlternateImage = ({ image, index, max, length, match }) => {
-  return (
-    <Link
-      className='alternateImage'
-      to={urlContext(`/${VIEWER_CONTEXT}/${typy(match, 'params.contextId').safeString}`, match, [{ label: 'cv', value: index }])}
-    >
-      <AlternateOverlay
-        index={index}
-        max={max}
-        length={length}
-      />
-      <IIIFImage
-        image={image}
-        alt={`Alternate View ${index}`}
-        previewBlur
-      />
-    </Link>
-  )
+  if (length > 1) {
+    return (
+      <Link
+        className='alternateImage'
+        to={urlContext(`/${VIEWER_CONTEXT}/${typy(match, 'params.contextId').safeString}`, match, [{ label: 'cv', value: index }])}
+      >
+        <AlternateOverlay
+          index={index}
+          max={max}
+          length={length}
+        />
+        <IIIFImage
+          image={image}
+          alt={`Alternate View ${index}`}
+          previewBlur
+        />
+      </Link>
+    )
+  } return null
 }
 
 AlternateImage.propTypes = {

@@ -8,7 +8,7 @@ const CollectionImage = ({ image, altText }) => {
       <IIIFImage
         image={image}
         alt={altText || 'Collection'}
-        previewBlur
+        previewBlur={false}
         srcSetOnLoad
       />
     </div>

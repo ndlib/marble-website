@@ -6,6 +6,8 @@ import { withRouter } from 'react-router'
 import searchUrl from 'Functions/searchUrl'
 import './style.css'
 import { repo, format, language, options } from 'Configurations/Search/facets'
+// NOTE REMOVE NEXT LINE WHEN WE MAKE THIS FUNCTIONAL
+// eslint-disable-next-line no-unused-vars
 export const Facets = ({ searchReducer }) => {
   return (
     <div className='facets'>

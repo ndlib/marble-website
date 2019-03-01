@@ -20,7 +20,7 @@ const ManifestCardList = ({ items, start, perPage, className }) => {
                 className={className}
                 key={item['@id']}
                 title={item.label}
-                image={typy(item, 'thumbnail').safeObject}
+                image={typy(item, 'thumbnail').safeObject || item.image}
                 url={pageUrlFromAtId(item['@id'])}
               >
                 <CardMetaData metadata={item.metadata} />

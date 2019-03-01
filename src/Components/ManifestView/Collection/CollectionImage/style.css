@@ -1,6 +1,9 @@
 :root {
   --collectionImageHeight: 280px;
 }
+.collectionImage {
+  overflow: hidden;
+}
 .collectionImage img {
   height: var(--collectionImageHeight);
   object-fit: cover;
