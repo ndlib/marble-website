@@ -2,11 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import urlContext from 'Functions/urlContext'
-import { MANIFEST_BASE_URL } from 'Configurations/apis.js'
 import { withRouter } from 'react-router'
 
 export const CardLink = ({ url, displayClass, match, children }) => {
-  if (url.includes(MANIFEST_BASE_URL)) {
+  if (url.indexOf('http') < 0) {
     return (
       <Link
         to={urlContext(url, match)}

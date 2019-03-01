@@ -2,7 +2,6 @@ import React from 'react'
 import { shallow, mount } from 'enzyme'
 import { Link, MemoryRouter } from 'react-router-dom'
 import { CardLink } from './'
-import { MANIFEST_BASE_URL } from 'Configurations/apis.js'
 
 const mountWithRouter = node => mount(<MemoryRouter>{node}</MemoryRouter>)
 let wrapper
@@ -20,7 +19,7 @@ test('CardLink renders Link with MANIFEST_BASE_URL', () => {
   // supress error message of known console.error of missing prop
   wrapper = mountWithRouter(
     <CardLink
-      url={MANIFEST_BASE_URL + '/test-url'}
+      url={'/test-url'}
     />)
   expect(wrapper.find(Link).exists()).toBeTruthy()
 })
