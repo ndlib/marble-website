@@ -9,7 +9,7 @@ const HomeCardGroups = ({ groups }) => {
         groups.map((group, index) => {
           return (
             <HomeCardGroup
-              title={group.title}
+              label={group.label}
               items={group.items}
               key={index}
             />

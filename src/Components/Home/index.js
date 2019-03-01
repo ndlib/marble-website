@@ -6,19 +6,19 @@ import './style.css'
 
 const groups = [
   {
-    title: 'Featured',
+    label: 'Featured',
     items: [
-      { image: '01.jpg', title: '[Title of DEC Exhibition]' },
-      { image: '02.jpg', title: 'Highlights' },
-      { image: '03.jpg', title: 'Recently Added' },
+      { image: '01.jpg', label: '[Title of DEC Exhibition]' },
+      { image: '02.jpg', label: 'Highlights' },
+      { image: '03.jpg', label: 'Recently Added' },
     ],
   },
   {
-    title: 'Browse by',
+    label: 'Browse by',
     items: [
-      { image: '04.jpg', title: 'Time Period' },
-      { image: '05.jpg', title: 'World Region' },
-      { image: '06.jpg', title: 'Theme' },
+      { image: '04.jpg', label: 'Time', target: '/browse/timeperiods' },
+      { image: '05.jpg', label: 'Place', target: '/browse/places' },
+      { image: '06.jpg', label: 'Theme', target: '/browse/themes' },
     ],
   },
 ]
