@@ -1,36 +1,20 @@
 import React from 'react'
 import './style.css'
 import { items } from 'Configurations/Exhibitions'
-import Card from 'Components/Shared/Card'
+import ManifestCardList from 'Components/Shared/ManifestCardList'
+
 const Exhibitions = () => {
   return (
-    <ExhibitionCardList
-      items={items}
-      className='exhibitionCard'
-    />
+    <React.Fragment>
+      <h2>Exhibitions</h2>
+      <div className='exhibitionCardList'>
+        <ManifestCardList
+          items={items}
+          className='exhibitionCard'
+        />
+      </div>
+    </React.Fragment>
   )
 }
 
 export default Exhibitions
-
-const ExhibitionCardList = (items, className) => {
-  if (items) {
-    return (
-      <div className='exhibitionCardList'>
-        {
-          items.items.map(item => {
-            return (
-              <Card
-                className={className}
-                key={item['@id']}
-                title={item.title}
-                image={item.image}
-                url={item.url}
-              />
-            )
-          })
-        }
-      </div>
-    )
-  }
-}
