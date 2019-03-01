@@ -1,10 +1,10 @@
 import React from 'react'
-
+import bannerImage from 'Static/images/snite.png'
 const HomeBanner = () => {
   return (
     <div className='banner'>
       <img
-        src='snite.png'
+        src={bannerImage}
         className='bannerImage'
         alt='home page banner'
       />
