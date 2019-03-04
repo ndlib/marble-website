@@ -4,8 +4,8 @@ export const navigationLinks = [
     link: '/browse',
   },
   {
-    title: 'Exhibitions',
-    link: '/exhibitions',
+    title: 'Exhibits',
+    link: '/exhibits',
   },
   {
     title: 'About',
