@@ -3,6 +3,7 @@ import searchUrl from 'Functions/searchUrl'
 import SearchButton from './SearchButton'
 import SearchField from './SearchField'
 import './style.css'
+import { Link } from 'react-router-dom'
 
 const SearchBox = () => {
   return (
@@ -12,7 +13,7 @@ const SearchBox = () => {
         <SearchField submitSearch={submitSearch} />
       </div>
       <div className='advancedSearch'>
-        <a href='*'>Advanced Search</a>
+        <Link to='/advancedsearch'>Advanced Search</Link>
       </div>
     </div>
   )
