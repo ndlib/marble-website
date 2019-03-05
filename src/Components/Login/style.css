@@ -1,0 +1,41 @@
+.LoginPage input{
+    width: 20vw;
+    display: block;
+    padding: 8px;
+}
+
+.LoginPage div{
+    font-size: var(--default-font-size);
+    text-align: left;
+}
+
+.LoginPage button{
+  background: #777;
+  padding: 8px;
+  display: block;
+  color: #eee;
+  font-size: var(--default-font-size);
+  margin: 10px;
+}
+
+.LoginPage h3 {
+  text-align: left;
+}
+
+#google{
+  background: #d77 url('./google.png') no-repeat left;
+  background-size: 24px 24px;
+  background-position: 8px;
+  width: 200px;
+  color: #000;
+  text-align: right;
+}
+
+#facebook{
+  background: #79d url('./fb.png') no-repeat left;
+  background-size: 24px 24px;
+  background-position: 8px;
+  width: 200px;
+  color: #000;
+  text-align: right;
+}
