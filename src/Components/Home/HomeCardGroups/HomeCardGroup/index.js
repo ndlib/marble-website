@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import IIIFImage from 'Components/Shared/IIIFImage'
-import { Link } from 'react-router-dom'
+import CardLink from 'Components/Shared/CardLink'
 
 const HomeCardGroup = ({ label, items }) => {
   return (
@@ -12,7 +12,7 @@ const HomeCardGroup = ({ label, items }) => {
           items.map((item, index) => {
             return (
               <div className='cell large-4' key={index}>
-                <Link to={item.target || '/'} >
+                <CardLink url={item.target || '/'} >
                   <figure>
                     <IIIFImage
                       image={item.image}
@@ -20,7 +20,7 @@ const HomeCardGroup = ({ label, items }) => {
                     />
                     <figcaption>{item.label}</figcaption>
                   </figure>
-                </Link>
+                </CardLink>
               </div>
 
             )

@@ -14,7 +14,7 @@ const groups = [
   {
     label: 'Featured',
     items: [
-      { image: image1, label: '[Title of DEC Exhibition]' },
+      { image: image1, label: 'In a Civilized Nation: Newspapers, Magazines and the Print Revolution in the 19th-Century Peru', target: 'https://collections.library.nd.edu/3df879828f/in-a-civilized-nation' },
       { image: image2, label: 'Highlights' },
       { image: image3, label: 'Recently Added' },
     ],
@@ -22,9 +22,9 @@ const groups = [
   {
     label: 'Browse by',
     items: [
-      { image: image4, label: 'Time', target: '/browse/timeperiods' },
+      { image: image6, label: 'Time', target: '/browse/timeperiods' },
       { image: image5, label: 'Place', target: '/browse/places' },
-      { image: image6, label: 'Theme', target: '/browse/themes' },
+      { image: image4, label: 'Theme', target: '/browse/themes' },
     ],
   },
 ]

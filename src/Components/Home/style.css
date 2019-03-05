@@ -19,7 +19,7 @@
 
 .imageCaption {
 	position: absolute;
-	bottom: 0;
+	top: 0;
 	left: 0;
 	width: 100%;
 	padding: 10px;
@@ -34,16 +34,33 @@
 	margin: 0;
 	font-size: 24px;
 	text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.45);
+	text-align: center;
+	font-size: 32px;
 }
 
-.imageCaption p {
-	text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.45);
-	font-size: 16px;
+.imageCitation {
 	margin-top: 8px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+
+	padding: 10px;
+
+}
+
+p.citation {
+	text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.65);
+	font-size: 16px;
+	font-weight: bold;
+	text-align: right;
+	color: #fff;
+
+	max-width: 960px;
+	margin: 0 auto;
+
 }
 
 .imageCaption sub {
-
 	font-size: 10px;
 	display: block;
 	line-height: 1.3em;
@@ -60,7 +77,7 @@
 
 .home .searchComponent {
 	position: absolute;
-	top: 335px;
+	top: 135px;
 	z-index: 200;
 	left: 280px;
 }
@@ -98,4 +115,10 @@
 	box-sizing: border-box;
 	font-weight: bold;
 	font-size: 24px;
+}
+
+.advancedSearch a {
+	font-weight: bold;
+	color: #fff;
+	text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.65);
 }
