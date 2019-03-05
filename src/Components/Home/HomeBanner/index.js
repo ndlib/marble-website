@@ -1,9 +1,6 @@
 import React from 'react'
 import bannerImage from 'Static/images/banner.jpg'
-const center = {
-  textAlign: 'center',
-  fontSize: '32px',
-}
+
 const HomeBanner = () => {
   return (
     <div className='banner'>
@@ -14,7 +11,7 @@ const HomeBanner = () => {
       />
       <div className='imageCaption'>
         <div className='captionFrame'>
-          <h1 style={center}>Explore digitized artwork, rare books, artifacts, and archival materials from the Snite Museum of Art and Hesburgh Libraries.</h1>
+          <h1>Explore digitized artwork, rare books, artifacts, and archival materials from the Snite Museum of Art and Hesburgh Libraries.</h1>
         </div>
       </div>
       <div className='imageCitation'>
