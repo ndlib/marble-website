@@ -6,22 +6,22 @@ const AdvancedSearch = () => {
     <div className='advancedSearch'>
       <h3>Advanced Search</h3>
       <div className='ObjectNumber'>
-        Object Number <input type='text' />
+        <label>Object Number</label> <input type='text' />
       </div>
       <div className='title'>
-        Title <input type='text' />
+        <label>Title</label> <input type='text' />
       </div>
       <div className='creator'>
-        Creator <input type='text' />
+        <label>Creator</label> <input type='text' />
       </div>
       <div className='searchdate'>
-        Date <input type='text' />
+        <label>Date</label> <input type='text' />
       </div>
       <div className='keyword'>
-        Keyword(s) <input type='text' />
+        <label>Keyword(s)</label> <input type='text' />
       </div>
       <div className='owner'>
-        Owner <input type='text' />
+        <label>Owner</label> <input type='text' />
       </div>
       <button alt='Search'>Search</button>
     </div>

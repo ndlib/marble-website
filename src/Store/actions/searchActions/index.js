@@ -12,7 +12,7 @@ export const STATUS_SEARCH_READY = 'STATUS_SEARCH_READY'
 export const STATUS_SEARCH_ERROR = 'STATUS_SEARCH_ERROR'
 export const STATUS_SEARCH_EMPTY = 'STATUS_SEARCH_EMPTY'
 
-export const searchCriteria = '?vid=MAR&scope=SNITE&view=full'
+export const searchCriteria = '?vid=MAR&&tab=snite&scope=snite&view=full'
 
 export const submitSearch = (perpage, terms, page) => {
   return dispatch => {
@@ -38,7 +38,7 @@ export const submitSearch = (perpage, terms, page) => {
 
 export const buildSearchUrl = (perpage, terms, page) => {
   const offset = `&offset=${String(parseInt(perpage, 10) * parseInt(page - 1, 10))}`
-  const searchterm = `&q=any,contains,${String(terms)}`
+  const searchterm = `&q=any%2Ccontains%2C${String(terms)}`
   const limit = `&limit=${String(parseInt(perpage, 10) + 1)}`
   return encodeURI(`${PRIMO_BASE_URL}${searchCriteria}${searchterm}${limit}${offset}`)
 }
