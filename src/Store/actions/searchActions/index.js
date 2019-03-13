@@ -38,9 +38,9 @@ export const submitSearch = (perpage, terms, page) => {
 
 export const buildSearchUrl = (perpage, terms, page) => {
   const offset = `&offset=${String(parseInt(perpage, 10) * parseInt(page - 1, 10))}`
-  const searchterm = `&q=any%2Ccontains%2C${String(terms)}`
+  const searchterm = `&q=any,contains,${String(terms)}`
   const limit = `&limit=${String(parseInt(perpage, 10) + 1)}`
-  return encodeURI(`${PRIMO_BASE_URL}${searchCriteria}${searchterm}${limit}${offset}`).replace(/%25/g, '%')
+  return encodeURI(`${PRIMO_BASE_URL}${searchCriteria}${searchterm}${limit}${offset}`)
 }
 
 export const startSearch = (terms, page, perpage) => {
