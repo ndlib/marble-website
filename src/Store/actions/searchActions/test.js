@@ -47,7 +47,7 @@ describe('Test submitSearch', () => {
   test('buildSearchUrl', () => {
     const terms = 'a b c'
     const builtURL = buildSearchUrl(5, terms, 2)
-    const expectedURL = encodeURI(`${PRIMO_BASE_URL}${searchCriteria}&q=any%2Ccontains%2C${terms}&limit=${6}&offset=${5}`).replace(/%25/g, '%')
+    const expectedURL = encodeURI(`${PRIMO_BASE_URL}${searchCriteria}&q=any,contains,${terms}&limit=${6}&offset=${5}`).replace(/%25/g, '%')
     expect(builtURL).toEqual(expectedURL)
   })
 
