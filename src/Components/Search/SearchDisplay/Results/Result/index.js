@@ -11,7 +11,7 @@ const Result = ({ doc }) => {
   let url = buildUrl(doc)
   return (
     <Card
-      title={doc.title}
+      title={doc.pnx.display.title}
       image={imageFromDoc(doc)}
       url={url}
     >
@@ -35,10 +35,10 @@ export const buildUrl = (doc) => {
 
 export const buildMetadata = (doc) => {
   let metadata = [
-    { label: 'Owner', value: typy(doc, 'delivery.bestlocation.subLocation').safeString },
-    { label: 'Creator', value: typy(doc, 'creator[0]').safeString },
-    { label: 'Date', value: typy(doc, 'date').safeString },
-    { label: 'Format', value: doc['@TYPE'] },
+    { label: 'Owner', value: typy(doc, 'pnx.search.scope[0]').safeString },
+    { label: 'Creator', value: typy(doc, 'pnx.display.creator[0]').safeString },
+    { label: 'Date', value: typy(doc, 'pnx.display.creationdate[0]').safeString },
+    { label: 'Format', value: typy(doc, 'pnx.display.format[0]').safeString },
   ]
 
   if (typy(doc, 'delivery.holding[0].subLocation').safeObject) {
