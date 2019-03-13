@@ -6,10 +6,16 @@ import CardMetaData from 'Components/Shared/CardMetaData'
 import Card from 'Components/Shared/Card'
 
 const doc = {
-  creator: ['CREATOR'],
-  date: 'a date',
-  '@TYPE': 'book',
-  ilsAPIid: 'abc',
+  pnx: {
+    display: {
+      creationdate: ['a date'],
+      format: ['book'],
+      ilsAPIid: 'abc',
+    },
+    control: {
+      sourceid: ['CREATOR'],
+    },
+  },
   delivery: {
     holding: [
       {
@@ -30,10 +36,10 @@ test('Renders a result', () => {
 test('Build the correct metadata', () => {
   const metadata = buildMetadata(doc)
   expect(metadata).toEqual([
-    { label: 'Owner', value: '' },
-    { label: 'Creator', value: typy(doc, 'creator[0]').safeString },
-    { label: 'Date', value: typy(doc, 'date').safeString },
-    { label: 'Format', value: doc['@TYPE'] },
+    { label: 'Owner', value: typy(doc, 'pnx.control.sourceid[0]').safeString },
+    { label: 'Creator', value: typy(doc, 'pnx.display.creator[0]').safeString },
+    { label: 'Date', value: typy(doc, 'pnx.display.creationdate[0]').safeString },
+    { label: 'Format', value: typy(doc, 'pnx.display.format[0]').safeString },
     { label: 'Collection', value: doc.delivery.holding[0].subLocation },
   ])
 })
