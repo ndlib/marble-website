@@ -3,6 +3,8 @@ dl.metaData dt {
   clear: left;
   width: 160px;
   text-align: right;
+  font-weight: bold;
+  color: #666;
 }
 dl.metaData dt:after {
   content: ':';
@@ -10,5 +12,4 @@ dl.metaData dt:after {
 dl.metaData dd {
   margin: 0 0 0 170px;
   padding: 0 0 0.5em 0;
-  word-break: break-all;
 }
