@@ -6,6 +6,7 @@ import ManifestCardList from 'Components/Shared/ManifestCardList'
 import CollectionImage from './CollectionImage'
 import DisplayViewClass from 'Components/Shared/DisplayViewClass'
 import DisplayViewToggle from 'Components/Shared/DisplayViewToggle'
+import Breadcrumb from '../Breadcrumb'
 
 export const Collection = ({ currentManifest, manifestReducer }) => {
   const items = defineItems(currentManifest.data)
@@ -15,6 +16,7 @@ export const Collection = ({ currentManifest, manifestReducer }) => {
         image={currentManifest.data.thumbnail}
         altText={currentManifest.data.label}
       />
+      <Breadcrumb />
       <ContentLeftSidebar
         sidebarTitle={currentManifest.data.label}
         sidebarContent={currentManifest.data.description}

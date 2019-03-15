@@ -5,14 +5,15 @@ import ItemActionButtons,
   bookmarkAction,
   shareAction,
   printAction,
+  downloadAction,
 } from './'
 import ActionButton from './ActionButton'
 
 const wrapper = shallow(<ItemActionButtons />)
 
-test('Renders 3 actions buttons and an wrapper', () => {
+test('Renders 4 actions buttons and an wrapper', () => {
   expect(wrapper.find('actionButton')).toBeTruthy()
-  expect(wrapper.find(ActionButton).length).toEqual(3)
+  expect(wrapper.find(ActionButton).length).toEqual(4)
 })
 
 const spyOnLog = jest.spyOn(console, 'log')
@@ -21,7 +22,6 @@ beforeEach(() => {
 })
 
 // TODO test functions (after functions written)
-
 test('bookmarkAction', () => {
   bookmarkAction()
   expect(spyOnLog).toHaveBeenCalled()
@@ -34,5 +34,10 @@ test('shareAction', () => {
 
 test('printAction', () => {
   printAction()
+  expect(spyOnLog).toHaveBeenCalled()
+})
+
+test('downloadAction', () => {
+  downloadAction()
   expect(spyOnLog).toHaveBeenCalled()
 })

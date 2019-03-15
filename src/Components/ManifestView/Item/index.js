@@ -5,21 +5,26 @@ import ItemSide from './ItemSide'
 import ItemTitle from './ItemTitle'
 import ItemActionButtons from './ItemActionButtons'
 import ItemMetaData from './ItemMetaData'
-import ItemDownloads from './ItemDownloads'
+// import ItemDownloads from './ItemDownloads'
+import Breadcrumb from '../Breadcrumb'
 
 export const Item = ({ currentManifest }) => {
   return (
     <React.Fragment>
+      <Breadcrumb />
+      <ItemTitle currentManifest={currentManifest} />
+
       <ContentLeftSidebar
         className='evenSplit'
         sidebarContent={
-          <ItemSide currentManifest={currentManifest} />
+          <React.Fragment>
+            <ItemSide currentManifest={currentManifest} />
+
+          </React.Fragment>
         }
       >
-        <ItemTitle currentManifest={currentManifest} />
         <ItemActionButtons />
         <ItemMetaData currentManifest={currentManifest} />
-        <ItemDownloads currentManifest={currentManifest} />
       </ContentLeftSidebar>
     </React.Fragment>
   )

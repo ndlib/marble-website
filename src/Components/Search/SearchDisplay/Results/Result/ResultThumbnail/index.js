@@ -4,6 +4,7 @@ import typy from 'typy'
 import noImage from 'Configurations/Logos/no.image.svg'
 
 const ResultThumbnail = ({ doc }) => {
+  console.log(doc)
   const image = imageFromDoc(doc)
   return (
     <img
@@ -20,7 +21,7 @@ export const imageFromDoc = (doc) => {
   if (typy(doc, 'delivery.link').isArray) {
     link = doc.delivery.link.find(
       (l) => {
-        return l.linkURL.includes('JPG&client=primo')
+        return l.linkType === 'http://purl.org/pnx/linkType/thumbnail'
       }
     ) || {}
   }
