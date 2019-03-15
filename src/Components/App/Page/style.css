@@ -2,6 +2,7 @@
   margin: 0 auto;
   min-height: 90vh;
   width: var(--inner-page-width);
+  padding-top: 1.8em;
 }
 
 @media (max-width: 780px) {

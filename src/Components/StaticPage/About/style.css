@@ -2,12 +2,10 @@
   display: flex;
 }
 .partners div {
-  text-align: justify;
   width: calc(33.33% - 20px);
   word-break: break-word;
 }
 .partners div a {
-  word-break: break-all;
 }
 .partners .partner1 {
   margin: 0 20px 0 0;

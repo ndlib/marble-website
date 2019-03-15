@@ -15,7 +15,6 @@ code {
 
 dl dd p {
   margin: 0;
-  word-break: break-all;
 }
 
 .clearfix {
@@ -24,4 +23,21 @@ dl dd p {
 
 .picture {
   overflow: hidden;
+}
+
+p {
+  line-height: 1.58;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: .8em;
+}
+
+h3 {
+  font-size: 24px;
 }
