@@ -5,10 +5,8 @@ import ItemSide from './ItemSide'
 import ItemTitle from './ItemTitle'
 import ItemActionButtons from './ItemActionButtons'
 import ItemMetaData from './ItemMetaData'
-import ItemDownloads from './ItemDownloads'
+// import ItemDownloads from './ItemDownloads'
 import Breadcrumb from '../Breadcrumb'
-
-import { Link } from 'react-router-dom'
 
 export const Item = ({ currentManifest }) => {
   return (
