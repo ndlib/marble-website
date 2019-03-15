@@ -23,7 +23,7 @@ test('Get image from doc data', () => {
   const doc = {
     delivery: {
       link: [
-        { linkURL: 'something.JPG&client=primo' },
+        { linkType: 'http://purl.org/pnx/linkType/thumbnail' },
       ],
     },
   }

@@ -4,12 +4,15 @@ import typy from 'typy'
 
 import FilterTabBar from './FilterTabBar'
 import ManifestCardList from 'Components/Shared/ManifestCardList'
+import Breadcrumb from '../Breadcrumb'
 import './style.css'
 
 const Browse = ({ currentManifest }) => {
   const items = typy(currentManifest, 'data.collections').safeObject
   return (
     <React.Fragment>
+      <Breadcrumb />
+      <h1>Browse All Collections</h1>
       <FilterTabBar />
       <ManifestCardList
         items={items}

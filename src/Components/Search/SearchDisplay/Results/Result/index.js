@@ -9,6 +9,7 @@ import Card from 'Components/Shared/Card'
 const Result = ({ doc }) => {
   let metadata = buildMetadata(doc)
   let url = buildUrl(doc)
+  console.log(doc)
   return (
     <Card
       title={doc.pnx.display.title}
@@ -27,8 +28,9 @@ Result.propTypes = {
 
 export const buildUrl = (doc) => {
   let id = null
-  if (typy(doc, 'sourcerecordid').isString) {
-    id = doc.sourcerecordid
+  console.log(doc)
+  if (typy(doc, 'pnx.control.sourcerecordid').isArray) {
+    id = doc.pnx.control.sourcerecordid[0]
   }
   return `/item/${id}`
 }
