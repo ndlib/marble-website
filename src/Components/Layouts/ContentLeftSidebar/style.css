@@ -24,6 +24,10 @@
   width: calc(var(--inner-page-width) * .55 - 1rem);
 }
 
+.sideBar h2 {
+  font-size: 28px;
+}
+
 @media (max-width: 780px) {
   .sideBar,
   .evenSplit .sideBar {

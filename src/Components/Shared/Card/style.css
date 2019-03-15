@@ -20,8 +20,10 @@ a.card {
 }
 
 .card h3 {
-  margin: 0 10px 10px;
+  margin:  10px 10px;
   word-break: break-all;
+  font-size: 18px;
+  line-height: 1;
 }
 
 .card .additional {
