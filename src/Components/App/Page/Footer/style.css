@@ -6,23 +6,30 @@
   bottom: 0;
   left: 0;
 }
+.Footer a {
+  color: var(--footer-text-color);
+  text-decoration: none;
+}
 
 .footerInner {
   width: 100%;
 }
 
-.footerText {
-  padding: 20px 40px;
-  position: relative;
+.footerText,
+.footerCenter,
+.footerLinks {
+  display: inline-block;
+  margin: 2rem 0;
+  vertical-align: top;
+  width: calc(100% / 3);
 }
 
-.footerText a {
-  color: var(--footer-text-color);
-  text-decoration: none;
-}
 .footerText p {
   line-height: 1.5em;
   margin: 0 .25em;
+}
+.footerLinks a {
+  display: block;
 }
 
 @media (max-width: 780px) {

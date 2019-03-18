@@ -7,16 +7,16 @@ export const navigationLinks = [
     title: 'Exhibits',
     link: '/exhibits',
   },
-  {
-    title: 'About',
-    link: '/about',
-  },
-  {
-    title: 'Learn',
-    link: '/learn',
-  },
-  {
-    title: 'Help',
-    link: '/help',
-  },
+  // {
+  //   title: 'About',
+  //   link: '/about',
+  // },
+  // {
+  //   title: 'Learn',
+  //   link: '/learn',
+  // },
+  // {
+  //   title: 'Help',
+  //   link: '/help',
+  // },
 ]

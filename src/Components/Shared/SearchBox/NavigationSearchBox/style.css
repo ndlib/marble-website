@@ -1,23 +1,23 @@
 .navigationSearchBox.searchBox {
   border: none;
-  display: flow-root;
-  height: 30px;
-  max-width: 300px;
+  height: 24px;
+  width: calc(100% - 200px);
   float: right;
+  margin: 22px 8px;
 }
 
 .navigationSearchBox.searchBox .submitSearch {
   background-color: var(--navigation-main-color);
-  display: inline-flex;
+  display: inline-block;
   height: 24px;
+  vertical-align: top;
 }
 
 .navigationSearchBox.searchBox .searchbar {
-  width: 200px;
+  width: calc(100% - 50px);
   height: 24px;
   border: none;
-  border-radius: 20px;
-  display: inline-flex;
+  display: inline-block;
   font-size: .8rem;
   vertical-align: top;
   padding-left: 10px;
@@ -27,4 +27,39 @@
   width: 16px;
   height: 16px;
   padding: 4px;
+}
+
+@media (max-width: 780px){
+
+  .navigationSearchBox.searchBox {
+    border: none;
+    height: 48px;
+    width: calc(100% - 16px);
+    margin: 0;
+    border: solid var(--navigation-main-color);
+    border-width: 16px 8px
+  }
+  .navigationSearchBox.searchBox .submitSearch {
+    background-color: var(--navigation-main-color);
+    display: inline-block;
+    height: 48px;
+    vertical-align: top;
+  }
+
+  .navigationSearchBox.searchBox .searchbar {
+    width: calc(100% - 65px);
+    height: 48px;
+    border: none;
+
+    display: inline-block;
+    font-size: 1.8rem;
+    vertical-align: top;
+    padding-left: 10px;
+  }
+
+  .navigationSearchBox.searchBox .searchIcon {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+  }
 }

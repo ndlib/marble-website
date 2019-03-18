@@ -5,33 +5,47 @@
 .navBarInner {
   align-items: center;
   display: flex;
+  height: 70px;
   justify-content: space-between;
-  width: 100%;
+  width: calc(100vw - 60px);
 }
 
 .navBar nav {
   margin: 0 auto;
+  height: 70px;
+  vertical-align: middle;
+  line-height: 70px;
+  width: 50vw;
 }
-.navBar nav a{
+.navBar a{
   text-decoration: none;
   color : #ffffff;
   font-size : 1rem;
   font-family: Geneva;
   padding: 16px;
 }
-.navBar nav a:hover{
+.navBar a:hover{
   color : #aaaaaa;
 }
 .LoginButton {
-  margin-left : auto;
-  text-align : right;
-  padding : 0 40px;
+  border-left: 1px solid #666;
+  height: 70px;
+  line-height: 70px;
+  margin-left: auto;
+  padding: 0;
+  width: 60px
 }
-.LoginButton button{
-  font-size : 1rem;
-  padding : 10px;
-  height : 40px;
- }
+.LoginButton a {
+  text-align: right;
+  margin: 0;
+  height: 70px;
+  vertical-align: top;
+  line-height: 70px;
+  width: 100%;
+  display: inline-block;
+  padding: 0 10px;
+}
+
 
 .siteTitle {
   margin: 0 40px;
@@ -40,6 +54,6 @@
 @media (min-width: 1280px) {
   .navBarInner {
     margin: 0 auto;
-    width: 1280px;
+    width: 1220px;
   }
 }
