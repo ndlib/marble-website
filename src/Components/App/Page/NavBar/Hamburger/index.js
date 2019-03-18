@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import NavigationLinks from './NavigationLinks'
 import NavigationSearchBox from 'Components/Shared/SearchBox/NavigationSearchBox'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router'
 import { toggleMenu } from 'Store/actions/menuActions'
 import './style.css'
 
@@ -42,4 +43,4 @@ const mapStateToProps = (state) => {
   return { open: state.menuReducer.open }
 }
 
-export default connect(mapStateToProps)(Hamburger)
+export default withRouter(connect(mapStateToProps)(Hamburger))

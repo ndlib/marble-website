@@ -58,7 +58,7 @@ p.citation {
 
 	max-width: 960px;
 	margin: 0 auto;
-	
+
 
 
 
@@ -87,8 +87,8 @@ p.citation sub {
 
 .home .searchComponent {
 	position: absolute;
-	top: 135px;
-	z-index: 200;
+	top: 165px;
+	z-index: 9;
 	left: 280px;
 }
 

@@ -21,15 +21,19 @@
 
   .hamburger.open nav{
     background-color: var(--navigation-main-color);
+    border-top: 1px solid #666;
     display: block;
-    left: calc( 0px - var(--site-logo-width) - 80px);
+    left: calc( 0px - var(--site-logo-width) - 96px);
     position: absolute;
     text-align: left;
     width: 100vw;
-    z-index: 1;
+    z-index: 10;
   }
 
   .hamburger.open nav a {
+    background-color: var(--navigation-main-color);
+    border-bottom: 1px solid #333;
+    font-size: 1.8rem;
     display: block;
     padding: 20px 40px;
   }

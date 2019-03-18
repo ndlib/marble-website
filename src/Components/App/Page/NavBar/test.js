@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import NavBar from './'
+import { NavBar } from './'
 import SiteLogo from './SiteLogo'
 import Hamburger from './Hamburger'
 

@@ -1,18 +1,20 @@
 import React from 'react'
+import { withRouter } from 'react-router'
 import SiteLogo from './SiteLogo'
 import Hamburger from './Hamburger'
+import LoginButton from './LoginButton'
 import './style.css'
 
-const NavBar = () => {
+export const NavBar = () => {
   return (
     <div className='navBar'>
       <div className='navBarInner'>
         <SiteLogo />
         <Hamburger />
-        <div className='LoginButton'><button>Login</button></div>
+        <LoginButton />
       </div>
     </div>
   )
 }
 
-export default NavBar
+export default withRouter(NavBar)
