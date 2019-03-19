@@ -4,6 +4,7 @@ import SearchButton from './SearchButton'
 import SearchField from './SearchField'
 import './style.css'
 import { Link } from 'react-router-dom'
+import imgHelp from './help.svg'
 
 const SearchBox = () => {
   return (
@@ -11,6 +12,7 @@ const SearchBox = () => {
       <div className='searchBox'>
         <SearchButton submitSearch={submitSearch} />
         <SearchField submitSearch={submitSearch} />
+        <Link to='/help/search-tips'><img src={imgHelp} alt='help' /></Link>
       </div>
       <div className='advancedSearch'>
         <Link to='/advancedsearch'>Advanced Search</Link>

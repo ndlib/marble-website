@@ -20,7 +20,8 @@ export const Collection = ({ currentManifest, manifestReducer }) => {
       <ContentLeftSidebar
         sidebarTitle={currentManifest.data.label}
         sidebarContent={currentManifest.data.description}
-      >
+        metadata={currentManifest.data.metadata}>
+
         <DisplayViewClass reducer={manifestReducer}>
           <DisplayViewToggle reducer={manifestReducer} />
           <br className='clearfix' />
