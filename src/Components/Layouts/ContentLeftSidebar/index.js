@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 import MainSide from './MainSide'
 import Sidebar from './Sidebar'
 import DisplayMetadata from './DisplayMetadata'
+import imgIIIF from './iiif.png'
 import './style.css'
 const ContentLeftSidebar = ({
   className,
@@ -10,14 +12,19 @@ const ContentLeftSidebar = ({
   sidebarContent,
   children,
   metadata,
+  manifest,
 }) => {
   return (
     <div className={`contentLeftSidebar ${className}`}>
       <Sidebar
         title={sidebarTitle}
-      >{sidebarContent}</Sidebar>
+      >{sidebarContent}
+        <DisplayMetadata metadata={metadata} />
+        <a href={manifest}>
+          <img src={imgIIIF} />
+        </a>
+      </Sidebar>
       <MainSide>{children}</MainSide>
-      <DisplayMetadata metadata={metadata} />
     </div>
   )
 }
@@ -27,6 +34,6 @@ ContentLeftSidebar.propTypes = {
   sidebarContent: PropTypes.node,
   sidebarTitle: PropTypes.string,
   children: PropTypes.node.isRequired,
-  metadata: PropTypes.node,
+  metadata: PropTypes.object,
 }
 export default ContentLeftSidebar

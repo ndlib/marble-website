@@ -1,11 +1,11 @@
 import React from 'react'
 import { PropTypes } from 'prop-types'
+import MetaDataField from 'Components/Shared/MetaDataField'
 const DisplayMetadata = ({ metadata }) => {
   if (metadata) {
-    metadata.map((meta) => {
-      console.log(meta)
+    return metadata.map((meta) => {
       return (
-        <div className='displayMeta'> {meta.label} : {meta.value} </div>
+        <MetaDataField metadata={meta} />
       )
     })
   }

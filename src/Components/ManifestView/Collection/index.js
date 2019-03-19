@@ -1,7 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import ContentLeftSidebar from 'Components/Layouts/ContentLeftSidebar'
+import
+
+ContentLeftSidebar from 'Components/Layouts/ContentLeftSidebar'
 import ManifestCardList from 'Components/Shared/ManifestCardList'
 import CollectionImage from './CollectionImage'
 import DisplayViewClass from 'Components/Shared/DisplayViewClass'
@@ -20,7 +22,8 @@ export const Collection = ({ currentManifest, manifestReducer }) => {
       <ContentLeftSidebar
         sidebarTitle={currentManifest.data.label}
         sidebarContent={currentManifest.data.description}
-        metadata={currentManifest.data.metadata}>
+        metadata={currentManifest.data.metadata}
+        manifest={currentManifest.data['@id']}>
 
         <DisplayViewClass reducer={manifestReducer}>
           <DisplayViewToggle reducer={manifestReducer} />
