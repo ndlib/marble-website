@@ -1,20 +1,17 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import
-
-ContentLeftSidebar from 'Components/Layouts/ContentLeftSidebar'
+import ContentLeftSidebar from 'Components/Layouts/ContentLeftSidebar'
 import ManifestCardList from 'Components/Shared/ManifestCardList'
 import CollectionImage from './CollectionImage'
 import DisplayViewClass from 'Components/Shared/DisplayViewClass'
 import DisplayViewToggle from 'Components/Shared/DisplayViewToggle'
-import DisplayMetadata from './DisplayMetadata'
 import Breadcrumb from '../Breadcrumb'
-import imgIIIF from './iiif.png'
+import CollectionSidebar from './CollectionSidebar'
 
 export const Collection = ({ currentManifest, manifestReducer }) => {
   const items = defineItems(currentManifest.data)
-  const sidebar = sidebarContent(currentManifest.data)
+  const sidebar = CollectionSidebar(currentManifest.data)
   return (
     <React.Fragment>
       <CollectionImage
@@ -24,8 +21,7 @@ export const Collection = ({ currentManifest, manifestReducer }) => {
       <Breadcrumb />
       <ContentLeftSidebar
         sidebarTitle={currentManifest.data.label}
-        sidebarContent={sidebar}
-        metadata={currentManifest.data.metadata}>
+        sidebarContent={sidebar}>
 
         <DisplayViewClass reducer={manifestReducer}>
           <DisplayViewToggle reducer={manifestReducer} />
@@ -40,19 +36,6 @@ export const Collection = ({ currentManifest, manifestReducer }) => {
 Collection.propTypes = {
   currentManifest: PropTypes.object.isRequired,
   manifestReducer: PropTypes.object,
-}
-
-export const sidebarContent = (data) => {
-  console.log(data)
-  return (
-    <div className='sidebarContent'>
-      {data.description}
-      <DisplayMetadata metadata={data.metadata} />
-      <a href={data['@id']}>
-        <img src={imgIIIF} alt='iiif' />
-      </a>
-    </div>
-  )
 }
 
 export const defineItems = (data) => {
