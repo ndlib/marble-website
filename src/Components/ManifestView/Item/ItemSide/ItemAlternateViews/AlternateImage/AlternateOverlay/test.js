@@ -4,7 +4,7 @@ import AlternateOverlay from './'
 
 test('renders null most of the time', () => {
   const wrapper = shallow(<AlternateOverlay index={0} max={2} length={5} />)
-  expect(wrapper.find('.alternateOveraly').exists()).toBeFalsy()
+  expect(wrapper.find('.alternateOverlay').exists()).toBeFalsy()
 })
 
 test('renders overlay with overlay number', () => {
@@ -14,5 +14,5 @@ test('renders overlay with overlay number', () => {
 })
 test('renders null when length === max', () => {
   const wrapper = shallow(<AlternateOverlay index={0} max={2} length={2} />)
-  expect(wrapper.find('.alternateOveraly').exists()).toBeFalsy()
+  expect(wrapper.find('.alternateOverlay').exists()).toBeFalsy()
 })
