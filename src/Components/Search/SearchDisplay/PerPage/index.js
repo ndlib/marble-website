@@ -15,7 +15,8 @@ const options = [
 ]
 
 export const PerPage = ({ searchReducer, history }) => {
-  let { terms, perpage } = searchReducer
+  const { terms } = searchReducer
+  let { perpage } = searchReducer
   perpage = parseInt(perpage, 10) || 12
   return (
     <div className='perpage'>

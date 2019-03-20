@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import searchUrl from 'Functions/searchUrl'
 
 export const PaginationButton = ({ currentPage, prev, searchReducer }) => {
-  let { perpage, terms, nextpage } = searchReducer
+  const { perpage, terms, nextpage } = searchReducer
   const settings = getSettings(prev, currentPage)
 
   // Do not render if no nextPage on next link OR
