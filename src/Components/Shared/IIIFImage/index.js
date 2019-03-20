@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Waypoint from 'react-waypoint'
 import typy from 'typy'
@@ -7,56 +7,51 @@ import checkImage from 'Functions/checkImage'
 import Source from './Source'
 import './style.css'
 
-class IIIFImage extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      blur: this.props.previewBlur,
-      src: defaultSrc(this.props.image, this.props.defaultSize),
-      srcSetShouldLoad: this.props.srcSetOnLoad,
-    }
-    this.onEnter = this.onEnter.bind(this)
-  }
+export const IIIFImage = ({
+  previewBlur,
+  image,
+  defaultSize,
+  srcSetOnLoad,
+  srcSetOptions,
+  sizes,
+  alt,
+}) => {
+  const [ blur, setBlur ] = useState(previewBlur)
+  const [ src, setSrc ] = useState(defaultSrc(image, defaultSize))
+  const [ srcSetShouldLoad, setSrcSetShouldLoad ] = useState(srcSetOnLoad)
 
-  componentDidMount () {
-    const src = this.state.src
-    checkImage(src).then(r => {
-      if (r.status !== 'ok') {
-        this.setState({
-          src: DEFAULT_ITEM_IMAGE,
-        })
+  useEffect(() => {
+    checkImage(src).then(result => {
+      if (result.status !== 'ok') {
+        setSrc(DEFAULT_ITEM_IMAGE)
       }
     })
-  }
+  })
 
-  onEnter () {
-    if (typeof this.props.image !== 'string') {
-      this.setState({ srcSetShouldLoad: true })
+  const onEnter = () => {
+    if (typeof image !== 'string') {
+      setSrcSetShouldLoad(true)
     }
-    this.setState({
-      blur: false,
-    })
+    setBlur(false)
   }
 
-  render () {
-    return (
-      <Waypoint onEnter={this.onEnter} >
-        <picture>
-          <Source
-            shouldLoad={this.state.srcSetShouldLoad}
-            image={this.props.image}
-            srcSetOptions={this.props.srcSetOptions}
-            sizes={this.props.sizes}
-          />
-          <img
-            src={this.state.src}
-            alt={this.props.alt}
-            className={this.state.blur ? 'blur' : ''}
-          />
-        </picture>
-      </Waypoint>
-    )
-  }
+  return (
+    <Waypoint onEnter={onEnter} >
+      <picture>
+        <Source
+          shouldLoad={srcSetShouldLoad}
+          image={image}
+          srcSetOptions={srcSetOptions}
+          sizes={sizes}
+        />
+        <img
+          src={src}
+          alt={alt}
+          className={blur ? 'blur' : ''}
+        />
+      </picture>
+    </Waypoint>
+  )
 }
 
 IIIFImage.propTypes = {
@@ -90,12 +85,10 @@ IIIFImage.defaultProps = {
 export default IIIFImage
 
 export const defaultSrc = (image, size) => {
-  let src
   if (typeof image === 'string') {
-    src = image
+    return image
   } else {
     const imageBaseUrl = typy(image, 'service[\'@id\']').safeString
-    src = `${imageBaseUrl}/full/${size},/0/default.jpg`
+    return `${imageBaseUrl}/full/${size},/0/default.jpg`
   }
-  return src
 }

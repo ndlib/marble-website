@@ -1,53 +1,37 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import typy from 'typy'
 import checkImage from 'Functions/checkImage'
 
-class Source extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      srcSet: '',
-    }
-    this.setSrcSet = this.setSrcSet.bind(this)
-  }
+const Source = ({
+  image,
+  shouldLoad,
+  srcSetOptions,
+  sizes,
+}) => {
+  const [ srcSet, setSrcSet ] = useState('')
 
-  componentDidMount () {
-    if (this.props.shouldLoad) {
-      this.setSrcSet()
+  useEffect(() => {
+    if (shouldLoad) {
+      buildSrcSet(typy(image, 'service[\'@id\']').safeString, srcSetOptions).then(result => {
+        setSrcSet(result)
+        return result
+      })
     }
-  }
+  })
 
-  componentDidUpdate (prevProps) {
-    if (prevProps.shouldLoad !== this.props.shouldLoad) {
-      this.setSrcSet()
-    }
+  // Only return a source set if the images is not a string and
+  // a valid srcSet has been built
+  if (typeof image !== 'string' && srcSet && srcSet.length > 0) {
+    return (
+      <source
+        type='image/jpeg'
+        srcSet={srcSet}
+        sizes={buildSizes(sizes)}
+      />
+    )
   }
-
-  setSrcSet () {
-    buildSrcSet(typy(this.props.image, 'service[\'@id\']').safeString, this.props.srcSetOptions).then(result => {
-      this.setState({ srcSet: result })
-      return result
-    })
-  }
-
-  render () {
-    // no srcSet needed if we only have a string
-    if (typeof this.props.image === 'string' || !this.props.shouldLoad) {
-      return null
-    }
-    if (this.state.srcSet && this.state.srcSet.length > 0) {
-      return (
-        <source
-          type='image/jpeg'
-          srcSet={this.state.srcSet}
-          sizes={buildSizes(this.props.sizes)}
-        />
-
-      )
-    }
-    return null
-  }
+  return null
 }
 
 Source.propTypes = {
