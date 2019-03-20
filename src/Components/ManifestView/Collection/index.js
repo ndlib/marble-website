@@ -8,10 +8,13 @@ import ManifestCardList from 'Components/Shared/ManifestCardList'
 import CollectionImage from './CollectionImage'
 import DisplayViewClass from 'Components/Shared/DisplayViewClass'
 import DisplayViewToggle from 'Components/Shared/DisplayViewToggle'
+import DisplayMetadata from './DisplayMetadata'
 import Breadcrumb from '../Breadcrumb'
+import imgIIIF from './iiif.png'
 
 export const Collection = ({ currentManifest, manifestReducer }) => {
   const items = defineItems(currentManifest.data)
+  const sidebar = sidebarContent(currentManifest.data)
   return (
     <React.Fragment>
       <CollectionImage
@@ -21,9 +24,8 @@ export const Collection = ({ currentManifest, manifestReducer }) => {
       <Breadcrumb />
       <ContentLeftSidebar
         sidebarTitle={currentManifest.data.label}
-        sidebarContent={currentManifest.data.description}
-        metadata={currentManifest.data.metadata}
-        manifest={currentManifest.data['@id']}>
+        sidebarContent={sidebar}
+        metadata={currentManifest.data.metadata}>
 
         <DisplayViewClass reducer={manifestReducer}>
           <DisplayViewToggle reducer={manifestReducer} />
@@ -38,6 +40,19 @@ export const Collection = ({ currentManifest, manifestReducer }) => {
 Collection.propTypes = {
   currentManifest: PropTypes.object.isRequired,
   manifestReducer: PropTypes.object,
+}
+
+export const sidebarContent = (data) => {
+  console.log(data)
+  return (
+    <div className='sidebarContent'>
+      {data.description}
+      <DisplayMetadata metadata={data.metadata} />
+      <a href={data['@id']}>
+        <img src={imgIIIF} alt='iiif' />
+      </a>
+    </div>
+  )
 }
 
 export const defineItems = (data) => {
