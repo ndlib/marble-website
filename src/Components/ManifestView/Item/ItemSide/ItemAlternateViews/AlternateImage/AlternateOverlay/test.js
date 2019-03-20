@@ -10,5 +10,9 @@ test('renders null most of the time', () => {
 test('renders overlay with overlay number', () => {
   const wrapper = shallow(<AlternateOverlay index={1} max={2} length={5} />)
   expect(wrapper.find('.alternateOverlay').exists()).toBeTruthy()
-  expect(wrapper.find('.alternateOverlay').text()).toEqual('+4')
+  expect(wrapper.find('.alternateOverlay').text()).toEqual('+3')
+})
+test('renders null when length === max', () => {
+  const wrapper = shallow(<AlternateOverlay index={0} max={2} length={2} />)
+  expect(wrapper.find('.alternateOveraly').exists()).toBeFalsy()
 })

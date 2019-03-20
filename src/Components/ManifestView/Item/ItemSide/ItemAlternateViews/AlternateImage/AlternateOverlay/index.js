@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const AlternateOverlay = ({ index, max, length }) => {
-  if (max === index + 1) {
-    const overlayNumber = length - index
+  if (max === index + 1 && max !== length) {
+    const overlayNumber = length - max
     return (
       <div className='alternateOverlay'>+{overlayNumber}</div>
     )
