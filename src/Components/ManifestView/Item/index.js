@@ -19,11 +19,11 @@ export const Item = ({ currentManifest }) => {
         sidebarContent={
           <React.Fragment>
             <ItemSide currentManifest={currentManifest} />
+            <ItemActionButtons />
 
           </React.Fragment>
         }
       >
-        <ItemActionButtons />
         <ItemMetaData currentManifest={currentManifest} />
       </ContentLeftSidebar>
     </React.Fragment>
