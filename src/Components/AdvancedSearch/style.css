@@ -6,15 +6,15 @@
 }
 
 .advancedSearch div{
-  text-align: left;
   font-size: var(--default-font-size);
+  text-align: left;
 }
 
 .advancedSearch button{
   background: #777;
   color: #eee;
-  margin: 10px;
   font-size: var(--default-font-size);
+  margin: 10px;
 }
 
 .advancedSearch h3 {
