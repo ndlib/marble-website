@@ -7,9 +7,11 @@ import CollectionImage from './CollectionImage'
 import DisplayViewClass from 'Components/Shared/DisplayViewClass'
 import DisplayViewToggle from 'Components/Shared/DisplayViewToggle'
 import Breadcrumb from '../Breadcrumb'
+import CollectionSidebar from './CollectionSidebar'
 
 export const Collection = ({ currentManifest, manifestReducer }) => {
   const items = defineItems(currentManifest.data)
+  const sidebar = CollectionSidebar(currentManifest.data)
   return (
     <React.Fragment>
       <CollectionImage
@@ -19,8 +21,8 @@ export const Collection = ({ currentManifest, manifestReducer }) => {
       <Breadcrumb />
       <ContentLeftSidebar
         sidebarTitle={currentManifest.data.label}
-        sidebarContent={currentManifest.data.description}
-      >
+        sidebarContent={sidebar}>
+
         <DisplayViewClass reducer={manifestReducer}>
           <DisplayViewToggle reducer={manifestReducer} />
           <br className='clearfix' />
