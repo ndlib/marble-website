@@ -1,9 +1,11 @@
 .actionButtons {
-  text-align: right;
+  text-align: left;
+  margin-top: 5px;
 }
 
 .actionButton {
   border: none;
   cursor: pointer;
   display: inline-block;
+  margin: 3px;
 }
