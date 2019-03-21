@@ -23,7 +23,7 @@ export const Facets = ({ searchReducer }) => {
       />
       <Select
         options={options}
-        placeholder='Creation'
+        placeholder='Creation Place'
         className='facet'
       />
       <div className='facet'>Date

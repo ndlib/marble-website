@@ -1,23 +1,27 @@
 .advancedSearch input{
-    width: 70vw;
-    display: block;
-    padding: 8px;
+  width: 70vw;
+  display: block;
+  padding: 8px;
+  margin-bottom: 8px;
 }
 
 .advancedSearch div{
-    font-size: var(--default-font-size);
-    text-align: left;
+  text-align: left;
+  font-size: var(--default-font-size);
 }
 
 .advancedSearch button{
   background: #777;
-  padding: 8px;
-
   color: #eee;
-  font-size: var(--default-font-size);
   margin: 10px;
+  font-size: var(--default-font-size);
 }
 
 .advancedSearch h3 {
   text-align: left;
+}
+
+.advancedSearch select{
+  font-size: var(--default-font-size);
+  display: block;
 }

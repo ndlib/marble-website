@@ -5,9 +5,6 @@ const AdvancedSearch = () => {
   return (
     <div className='advancedSearch'>
       <h3>Advanced Search</h3>
-      <div className='ObjectNumber'>
-        <label>Object Number</label> <input type='text' />
-      </div>
       <div className='title'>
         <label>Title</label> <input type='text' />
       </div>
@@ -17,11 +14,19 @@ const AdvancedSearch = () => {
       <div className='searchdate'>
         <label>Date</label> <input type='text' />
       </div>
-      <div className='keyword'>
-        <label>Keyword(s)</label> <input type='text' />
+      <div className='format'>
+        <label>Format</label> <input type='text' />
       </div>
-      <div className='owner'>
-        <label>Owner</label> <input type='text' />
+      <div className='ObjectNumber'>
+        <label>Object Number</label> <input type='text' />
+      </div>
+      <div className='repository'>
+        <label>Repository</label>
+        <select>
+          <option value='snite'>Snite Museum of Art</option>
+          <option value='rbsc'>Rare Books and Special Collections</option>
+          <option value='archives'>University Archives</option>
+        </select>
       </div>
       <button alt='Search'>Search</button>
     </div>
