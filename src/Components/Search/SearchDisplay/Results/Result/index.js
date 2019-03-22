@@ -36,7 +36,6 @@ export const buildUrl = (doc) => {
 
 export const buildMetadata = (doc) => {
   const metadata = [
-    { label: 'Owner', value: typy(doc, 'pnx.control.sourceid[0]').safeString },
     { label: 'Creator', value: typy(doc, 'pnx.display.creator[0]').safeString },
     { label: 'Date', value: typy(doc, 'pnx.display.creationdate[0]').safeString },
     { label: 'Format', value: typy(doc, 'pnx.display.format[0]').safeString },
