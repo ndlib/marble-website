@@ -36,10 +36,10 @@ test('Renders a result', () => {
 test('Build the correct metadata', () => {
   const metadata = buildMetadata(doc)
   expect(metadata).toEqual([
-    { label: 'Owner', value: typy(doc, 'pnx.control.sourceid[0]').safeString },
     { label: 'Creator', value: typy(doc, 'pnx.display.creator[0]').safeString },
     { label: 'Date', value: typy(doc, 'pnx.display.creationdate[0]').safeString },
     { label: 'Format', value: typy(doc, 'pnx.display.format[0]').safeString },
+    { label: 'Repository', value: typy(doc, 'pnx.control.sourceid[0]').safeString },
     { label: 'Collection', value: doc.delivery.holding[0].subLocation },
   ])
 })
