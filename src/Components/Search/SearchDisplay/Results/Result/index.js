@@ -7,8 +7,8 @@ import CardMetaData from 'Components/Shared/CardMetaData'
 import Card from 'Components/Shared/Card'
 
 const Result = ({ doc }) => {
-  let metadata = buildMetadata(doc)
-  let url = buildUrl(doc)
+  const metadata = buildMetadata(doc)
+  const url = buildUrl(doc)
   console.log(doc)
   return (
     <Card
@@ -28,7 +28,6 @@ Result.propTypes = {
 
 export const buildUrl = (doc) => {
   let id = null
-  console.log(doc)
   if (typy(doc, 'pnx.control.sourcerecordid').isArray) {
     id = doc.pnx.control.sourcerecordid[0]
   }
@@ -36,7 +35,8 @@ export const buildUrl = (doc) => {
 }
 
 export const buildMetadata = (doc) => {
-  let metadata = [
+  const metadata = [
+    { label: 'Owner', value: typy(doc, 'pnx.control.sourceid[0]').safeString },
     { label: 'Creator', value: typy(doc, 'pnx.display.creator[0]').safeString },
     { label: 'Date', value: typy(doc, 'pnx.display.creationdate[0]').safeString },
     { label: 'Format', value: typy(doc, 'pnx.display.format[0]').safeString },

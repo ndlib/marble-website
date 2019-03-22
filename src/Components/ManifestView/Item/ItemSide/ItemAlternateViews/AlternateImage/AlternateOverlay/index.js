@@ -2,8 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const AlternateOverlay = ({ index, max, length }) => {
-  if (max === index + 1) {
-    const overlayNumber = length - index
+  // only render on last instance
+  // do not render if total shown equals total available
+  if (max === index + 1 && max !== length) {
+    const overlayNumber = length - max
     return (
       <div className='alternateOverlay'>+{overlayNumber}</div>
     )
