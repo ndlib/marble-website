@@ -9,7 +9,6 @@ import Card from 'Components/Shared/Card'
 const Result = ({ doc }) => {
   const metadata = buildMetadata(doc)
   const url = buildUrl(doc)
-  console.log(doc)
   return (
     <Card
       title={doc.pnx.display.title}
