@@ -13,6 +13,7 @@ export const CardLink = ({ url, displayClass, match, location, children }) => {
       if (key !== 'ref' || key !== 'id') {
         return { label: key, value: q[key] }
       }
+      return null
     })
     searchQuery.push({ label: 'ref', value: 'search' })
   }
