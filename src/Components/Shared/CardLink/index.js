@@ -6,17 +6,7 @@ import { withRouter } from 'react-router'
 import queryString from 'query-string'
 
 export const CardLink = ({ url, displayClass, match, location, children }) => {
-  let searchQuery = null
-  if (location && location.pathname === '/search') {
-    const q = queryString.parse(location.search)
-    searchQuery = Object.keys(q).map(key => {
-      if (key !== 'ref' || key !== 'id') {
-        return { label: key, value: q[key] }
-      }
-      return null
-    })
-    searchQuery.push({ label: 'ref', value: 'search' })
-  }
+  const searchQuery = buildSearchQuery(location)
 
   if (url.indexOf('http') < 0) {
     return (
@@ -46,3 +36,18 @@ CardLink.propTypes = {
 }
 
 export default withRouter(CardLink)
+
+export const buildSearchQuery = (location) => {
+  let searchQuery = null
+  if (location && location.pathname === '/search') {
+    const q = queryString.parse(location.search)
+    searchQuery = Object.keys(q).map(key => {
+      if (key !== 'ref' || key !== 'id') {
+        return { label: key, value: q[key] }
+      }
+      return null
+    })
+    searchQuery.push({ label: 'ref', value: 'search' })
+  }
+  return searchQuery
+}
