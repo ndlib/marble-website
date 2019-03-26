@@ -11,6 +11,7 @@ const doc = {
       creationdate: ['a date'],
       format: ['book'],
       ilsAPIid: 'abc',
+      creator: 'guy'
     },
     control: {
       sourceid: ['CREATOR'],
