@@ -4,7 +4,6 @@ import typy from 'typy'
 import noImage from 'Configurations/Logos/no.image.svg'
 
 const ResultThumbnail = ({ doc }) => {
-  console.log(doc)
   const image = imageFromDoc(doc)
   return (
     <img

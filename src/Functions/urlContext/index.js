@@ -4,11 +4,15 @@ export default (url, match, additionalContext) => {
   const cleanUrl = scrubQuery(url)
   let urlContext = ''
   if (typy(match, 'params.context').isString) {
-    urlContext = `?ref=${typy(match, 'params.context').safeString}&id=${typy(match, 'params.contextId').safeString}`
+    urlContext = `?ref=${typy(match, 'params.context').safeString}`
+    if (typy(match, 'params.contextId').isString) {
+      urlContext += `&id=${typy(match, 'params.contextId').safeString}`
+    }
   }
   if (additionalContext) {
     additionalContext.forEach((context) => {
-      urlContext += `&${context.label}=${context.value}`
+      urlContext === '' ? urlContext = '?' : urlContext += '&'
+      urlContext += `${context.label}=${context.value}`
     })
   }
   return `${cleanUrl}${urlContext}`
