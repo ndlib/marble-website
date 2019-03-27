@@ -41,6 +41,5 @@ test('Build the correct metadata', () => {
     { label: 'Date', value: typy(doc, 'pnx.display.creationdate[0]').safeString },
     { label: 'Format', value: typy(doc, 'pnx.display.format[0]').safeString },
     { label: 'Repository', value: typy(doc, 'pnx.control.sourceid[0]').safeString },
-    { label: 'Collection', value: doc.delivery.holding[0].subLocation },
   ])
 })
