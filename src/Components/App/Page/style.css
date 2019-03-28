@@ -1,7 +1,11 @@
 .mainContent {
-  margin: 0 auto;
+  margin: 0 auto 1.8rem;
   min-height: 90vh;
   width: var(--inner-page-width);
+}
+
+.mainContent.viewer {
+  margin: 0 auto;
 }
 
 @media (max-width: 780px) {
