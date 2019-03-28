@@ -38,6 +38,7 @@ Page.propTypes = {
   location: PropTypes.object.isRequired,
 }
 export default withRouter(Page)
+
 // eslint-disable-next-line complexity
 export const getClass = (pathname) => {
   let contentClass
