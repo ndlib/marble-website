@@ -6,7 +6,7 @@ const Learn = () => {
   return (
     <React.Fragment>
       <div id='learn' />
-      <h1 className='staticTitle'>Learn</h1>
+      <h2 className='staticTitle'>Learn</h2>
       <article>
         <ReactMarkdown source={learn} />
       </article>
