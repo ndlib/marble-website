@@ -1,4 +1,4 @@
-.Footer{
+footer{
   background-color: var(--footer-main-color);
   color: var(--footer-text-color);
   min-height : 64px;
@@ -6,7 +6,7 @@
   bottom: 0;
   left: 0;
 }
-.Footer a {
+footer a {
   color: var(--footer-text-color);
   text-decoration: none;
 }

@@ -5,10 +5,10 @@ import ItemAlternateViews from './ItemAlternateViews'
 
 const ItemSide = ({ currentManifest }) => {
   return (
-    <React.Fragment>
+    <section>
       <ItemMainImage currentManifest={currentManifest} />
       <ItemAlternateViews currentManifest={currentManifest} />
-    </React.Fragment>
+    </section>
   )
 }
 

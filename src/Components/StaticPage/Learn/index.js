@@ -6,8 +6,10 @@ const Learn = () => {
   return (
     <React.Fragment>
       <div id='learn' />
-      <h2>Learn</h2>
-      <ReactMarkdown source={learn} />
+      <h1 className='staticTitle'>Learn</h1>
+      <article>
+        <ReactMarkdown source={learn} />
+      </article>
     </React.Fragment>
   )
 }

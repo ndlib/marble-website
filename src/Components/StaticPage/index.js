@@ -20,6 +20,8 @@ export const StaticPage = ({ match }) => {
   let content
   switch (pageType) {
     case ABOUT_CONTEXT:
+      title = 'About'
+      // topics = require('Configurations/About').topics
       content = <About />
       break
     case HELP_CONTEXT:
@@ -29,7 +31,7 @@ export const StaticPage = ({ match }) => {
       break
     case LEARN_CONTEXT:
       title = 'Learn'
-      topics = require('Configurations/Learn').topics
+      // topics = require('Configurations/Learn').topics
       content = <Learn />
       break
     default:
@@ -38,18 +40,22 @@ export const StaticPage = ({ match }) => {
   }
   if (topics.length > 0) {
     return (
-      <ContentLeftSidebar
-        sidebarTitle={title}
-        sidebarContent={<LinkList items={topics} />}
-      >
-        {content}
-      </ContentLeftSidebar>
+      <article>
+        <h1 className='staticTitle'>{title}</h1>
+        <ContentLeftSidebar
+          sidebarContent={<LinkList items={topics} />}
+        >
+          {content}
+        </ContentLeftSidebar>
+      </article>
     )
   }
   return (
-    <React.Fragment>
-      { content }
-    </React.Fragment>
+    <main id='main'>
+      <article>
+        { content }
+      </article>
+    </main>
   )
 }
 

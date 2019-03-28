@@ -11,6 +11,7 @@ export const Page = ({ children, location }) => {
 
   return (
     <React.Fragment>
+      <a className='skipToMain' href='#main'>Skip to main content</a>
       <Header />
       <NavBar />
       <div className={contentClass}>

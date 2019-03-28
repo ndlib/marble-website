@@ -1,3 +1,8 @@
+nav.breadcrumbs {
+  font-size: .8rem;
+  padding-bottom: 1rem;
+  padding-top: 1.8rem;
+}
 nav.breadcrumbs a {
   text-decoration: none;
 }

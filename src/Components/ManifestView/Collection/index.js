@@ -19,8 +19,9 @@ export const Collection = ({ currentManifest, manifestReducer }) => {
         altText={currentManifest.data.label}
       />
       <Breadcrumb />
+      <h1>{currentManifest.data.label}</h1>
       <ContentLeftSidebar
-        sidebarTitle={currentManifest.data.label}
+
         sidebarContent={sidebar}>
 
         <DisplayViewClass reducer={manifestReducer}>

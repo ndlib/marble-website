@@ -12,12 +12,14 @@ const Browse = ({ currentManifest }) => {
   return (
     <React.Fragment>
       <Breadcrumb />
-      <h1>Browse All Collections</h1>
-      <FilterTabBar />
-      <ManifestCardList
-        items={items}
-        className='browseCard'
-      />
+      <main id='main'>
+        <h1>Browse All Collections</h1>
+        <FilterTabBar />
+        <ManifestCardList
+          items={items}
+          className='browseCard'
+        />
+      </main>
     </React.Fragment>
   )
 }

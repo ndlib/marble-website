@@ -10,7 +10,7 @@ import './style.css'
 
 const ItemActionButtons = () => {
   return (
-    <div className='actionButtons'>
+    <section className='actionButtons'>
       <ActionButton
         name='download'
         action={printAction}
@@ -33,7 +33,7 @@ const ItemActionButtons = () => {
         activeIcon={bookmarkActive}
         isActive
       />
-    </div>
+    </section>
   )
 }
 

@@ -14,17 +14,19 @@ export const Card = ({ title, image, url, className, children, match }) => {
         url={urlContext(url, match)}
         displayClass={displayClass}
       >
-        <IIIFImage
-          image={image}
-          alt={title}
-          previewBlur
-        />
-        <div>
-          <h3>{title}</h3>
-          <div className='additional'>
-            {children}
+        <article>
+          <IIIFImage
+            image={image}
+            alt={title}
+            previewBlur
+          />
+          <div>
+            <h3>{title}</h3>
+            <div className='additional'>
+              {children}
+            </div>
           </div>
-        </div>
+        </article>
       </CardLink>
     )
   }

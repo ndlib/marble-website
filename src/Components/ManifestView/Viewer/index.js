@@ -14,13 +14,16 @@ export const Viewer = ({ currentManifest, history }) => {
     viewerParams = `&cv=${values.cv || 0}`
   }
   return (
-    <iframe
-      allowFullScreen
-      id='universalViewer'
-      title='universal-viewer'
-      sandbox='allow-same-origin allow-scripts allow-pointer-lock allow-popups'
-      src={`${UNIVERSAL_VIEWER_BASE_URL}#?manifest=${typy(currentManifest, 'data[@id]').safeString}${viewerParams}`}
-    />
+    <main id='main'>
+      <h1 className='accessibilityOnly'>{typy(currentManifest, 'data.label').safeString}</h1>
+      <iframe
+        allowFullScreen
+        id='universalViewer'
+        title='universal-viewer'
+        sandbox='allow-same-origin allow-scripts allow-pointer-lock allow-popups'
+        src={`${UNIVERSAL_VIEWER_BASE_URL}#?manifest=${typy(currentManifest, 'data[@id]').safeString}${viewerParams}`}
+      />
+    </main>
   )
 }
 
