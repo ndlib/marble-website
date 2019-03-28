@@ -1,6 +1,7 @@
 import React from 'react'
 import { PropTypes } from 'prop-types'
 import { withRouter } from 'react-router'
+import { HashLink as Link } from 'react-router-hash-link'
 import './style.css'
 import Header from './Header'
 import NavBar from './NavBar'
@@ -19,7 +20,7 @@ export const Page = ({ children, location }) => {
 
   return (
     <React.Fragment>
-      <a className='skipToMain' href='#main'>Skip to main content</a>
+      <Link className='skipToMain' to='#main'>Skip to main content</Link>
       <Header />
       <NavBar />
       <div className={contentClass}>
