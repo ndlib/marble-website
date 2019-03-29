@@ -24,6 +24,21 @@ a.departmentLogo {
   }
 }
 
+.alpha {
+  position: absolute;
+  top: 40px;
+  left: -70px;
+  transform: rotate(-45deg);
+  padding: 8px;
+  background: repeating-linear-gradient(-45deg, #000, #000 10px, #999 10px, #999 20px);
+}
+
+.alpha strong {
+  background: rgba(255, 255, 255, 1);
+  display: block;
+  padding: 8px 80px;
+}
+
 @media (min-width: 1280px) {
   .headerInner {
     margin: 0 auto;
