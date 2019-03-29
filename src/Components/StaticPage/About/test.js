@@ -7,8 +7,8 @@ const wrapper = mount(<About />)
 
 test('About renders introduction section stuff', () => {
   expect(wrapper.find('#introduction').exists()).toBeTruthy()
-  expect(wrapper.find('h2').exists()).toBeTruthy()
-  expect(wrapper.find('h2').first().text()).toEqual('Introduction')
+  expect(wrapper.find('h1').exists()).toBeTruthy()
+  expect(wrapper.find('h1').first().text()).toEqual('Introduction')
   expect(wrapper.find(ReactMarkdown).first().props().source).toEqual('introduction.md')
 })
 

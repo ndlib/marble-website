@@ -4,13 +4,13 @@ import Sidebar from './'
 
 test('Sidebar without a title does not render a title', () => {
   const wrapper = mount(<Sidebar children={null} />)
-  expect(wrapper.find('div').exists()).toBeTruthy()
+  expect(wrapper.find('aside').exists()).toBeTruthy()
   expect(wrapper.find('h2').exists()).toBeFalsy()
 })
 
 test('Sidebar with title renders a title', () => {
   const wrapper = mount(<Sidebar title='TEST TITLE' children={null} />)
-  expect(wrapper.find('div').exists()).toBeTruthy()
+  expect(wrapper.find('aside').exists()).toBeTruthy()
   expect(wrapper.find('h2').exists()).toBeTruthy()
   expect(wrapper.find('h2').text()).toEqual('TEST TITLE')
 })

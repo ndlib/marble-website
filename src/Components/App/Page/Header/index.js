@@ -15,7 +15,7 @@ import HeaderImage from './HeaderImage'
 import './style.css'
 const Header = () => {
   return (
-    <div className='header'>
+    <header className='header'>
       <div className='headerInner'>
         <HeaderImage
           image={INSTITUTION_LOGO}
@@ -33,7 +33,7 @@ const Header = () => {
           linkPath={DEPARTMENT_HOME_PAGE}
         />
       </div>
-    </div>
+    </header>
 
   )
 }

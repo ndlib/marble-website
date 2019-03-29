@@ -10,6 +10,7 @@ const SiteLogo = () => {
   return (
     <div className='siteTitle'>
       <Link to='/'>
+        <h1 className='accessibilityOnly'>Digital Collections</h1>
         <img
           className='siteLogo'
           alt={SITE_LOGO_ALT_TEXT}

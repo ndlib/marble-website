@@ -12,7 +12,7 @@ const ManifestCardList = ({ items, start, perPage, className }) => {
   // make sure we have items and we're not trying to start after the array end
   if (items && start < items.length) {
     return (
-      <div className='cardList'>
+      <section className='cardList'>
         {
           itemsForDisplay(items, start, perPage).map(item => {
             return (
@@ -28,7 +28,7 @@ const ManifestCardList = ({ items, start, perPage, className }) => {
             )
           })
         }
-      </div>
+      </section>
     )
   }
   return <NotFound />

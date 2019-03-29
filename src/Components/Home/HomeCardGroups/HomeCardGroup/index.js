@@ -5,13 +5,13 @@ import CardLink from 'Components/Shared/CardLink'
 
 const HomeCardGroup = ({ label, items }) => {
   return (
-    <div className='featured'>
+    <article className='featured'>
       <h2>{label}</h2>
       <div className='grid-x grid-margin-x'>
         {
           items.map((item, index) => {
             return (
-              <div className='cell large-4' key={index}>
+              <section className='cell large-4' key={index}>
                 <CardLink url={item.target || '/'} >
                   <figure>
                     <IIIFImage
@@ -21,13 +21,13 @@ const HomeCardGroup = ({ label, items }) => {
                     <figcaption>{item.label}</figcaption>
                   </figure>
                 </CardLink>
-              </div>
+              </section>
 
             )
           })
         }
       </div>
-    </div>
+    </article>
   )
 }
 

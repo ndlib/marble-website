@@ -8,7 +8,7 @@ import imgHelp from './help.svg'
 
 const SearchBox = () => {
   return (
-    <div className='searchComponent' >
+    <section className='searchComponent' >
       <div className='searchBox'>
         <SearchButton submitSearch={submitSearch} />
         <SearchField submitSearch={submitSearch} />
@@ -17,7 +17,7 @@ const SearchBox = () => {
       <div className='advancedSearch'>
         <Link to='/advancedsearch'>Advanced Search</Link>
       </div>
-    </div>
+    </section>
   )
 }
 

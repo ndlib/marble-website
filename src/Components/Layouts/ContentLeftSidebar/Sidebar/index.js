@@ -3,10 +3,10 @@ import { PropTypes } from 'prop-types'
 
 const Sidebar = ({ title, children }) => {
   return (
-    <div className='sideBar'>
+    <aside className='sideBar'>
       { title ? <h2>{title}</h2> : null }
       {children}
-    </div>
+    </aside>
   )
 }
 Sidebar.propTypes = {

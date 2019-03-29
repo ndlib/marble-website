@@ -5,7 +5,7 @@ import { HashLink as Link } from 'react-router-hash-link'
 const LinkList = ({ items }) => {
   if (items) {
     return (
-      <React.Fragment>
+      <nav>
         {
           items.map(item => {
             return (
@@ -16,7 +16,7 @@ const LinkList = ({ items }) => {
             )
           })
         }
-      </React.Fragment>
+      </nav>
     )
   }
   return null

@@ -1,4 +1,5 @@
 import React from 'react'
+import SearchBox from 'Components/Shared/SearchBox'
 import bannerImage from 'Static/images/banner.jpg'
 
 const HomeBanner = () => {
@@ -12,6 +13,7 @@ const HomeBanner = () => {
       <div className='imageCaption'>
         <div className='captionFrame'>
           <h1>Explore digitized artwork, rare books, artifacts, and archival materials from the University of Notre Dame.</h1>
+          <SearchBox />
         </div>
       </div>
       <div className='imageCitation'>
