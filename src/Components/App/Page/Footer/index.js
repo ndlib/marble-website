@@ -8,7 +8,7 @@ import { links } from 'Configurations/Footer/links'
 import './style.css'
 const Footer = () => {
   return (
-    <div className='Footer'>
+    <footer>
       <div className='footerInner'>
         <div className='footerText'>
           <ReactMarkdown source={footerText} />
@@ -22,7 +22,7 @@ const Footer = () => {
           </nav>
         </div>
       </div>
-    </div>
+    </footer>
   )
 }
 

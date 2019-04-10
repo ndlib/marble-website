@@ -1,4 +1,4 @@
-.home.mainContent {
+main.home {
   position: relative;
 	margin-top: 0;
   margin-bottom: 1rem;
@@ -8,10 +8,10 @@
 .banner {
 	position: relative;
 	height: 363px;
+  overflow: hidden;
 }
 
 .bannerImage {
-	width: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -22,7 +22,7 @@
 	top: 50px;
 	left: 0;
 	width: 724px;
-	padding: 12px 12px 115px 12px;
+	padding: 12px 12px 12px 12px;
 	background: rgba(0, 0, 0, 0.6);
 	z-index: 5;
 	margin: 0 auto;
@@ -86,13 +86,7 @@ p.citation sub {
 }
 
 .home .searchComponent {
-	position: absolute;
-	top: 165px;
 	z-index: 9;
-	left: 280px;
-}
-
-.home .searchComponent {
 	width: 700px;
 }
 
@@ -127,8 +121,12 @@ p.citation sub {
 	font-size: 24px;
 }
 
-.advancedSearch a {
+.home .advancedSearch a {
 	font-weight: bold;
 	color: #fff;
 	text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.65);
+}
+
+h1.accessibilityOnly {
+  display: none;
 }

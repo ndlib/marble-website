@@ -9,7 +9,7 @@ const About = () => {
   return (
     <React.Fragment>
       <div id='introduction' />
-      <h2>Introduction</h2>
+      <h1 className='staticTitle'>Introduction</h1>
       <ReactMarkdown source={introduction} />
       <div id='partners' />
       <h2>Project Partners</h2>

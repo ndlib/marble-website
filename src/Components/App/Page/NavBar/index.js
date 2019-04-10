@@ -7,13 +7,13 @@ import './style.css'
 
 export const NavBar = () => {
   return (
-    <div className='navBar'>
+    <header className='navBar'>
       <div className='navBarInner'>
         <SiteLogo />
         <Hamburger />
         <LoginButton />
       </div>
-    </div>
+    </header>
   )
 }
 

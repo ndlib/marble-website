@@ -5,15 +5,17 @@ import ManifestCardList from 'Components/Shared/ManifestCardList'
 
 const Exhibitions = () => {
   return (
-    <React.Fragment>
-      <h2>Exhibits</h2>
-      <div className='exhibitionCardList'>
-        <ManifestCardList
-          items={items}
-          className='exhibitionCard'
-        />
-      </div>
-    </React.Fragment>
+    <main id='main'>
+      <article>
+        <h1 className='staticTitle'>Exhibits</h1>
+        <div className='exhibitionCardList'>
+          <ManifestCardList
+            items={items}
+            className='exhibitionCard'
+          />
+        </div>
+      </article>
+    </main>
   )
 }
 

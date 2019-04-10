@@ -1,5 +1,4 @@
 import React from 'react'
-import SearchBox from 'Components/Shared/SearchBox'
 import HomeBanner from './HomeBanner'
 import HomeCardGroups from './HomeCardGroups'
 import image1 from 'Static/images/01.jpg'
@@ -31,9 +30,12 @@ const groups = [
 const Home = () => {
   return (
     <React.Fragment>
-      <SearchBox />
       <HomeBanner />
-      <HomeCardGroups groups={groups} />
+      <main id='main'>
+        <article>
+          <HomeCardGroups groups={groups} />
+        </article>
+      </main>
     </React.Fragment>
   )
 }

@@ -26,11 +26,19 @@ Result.propTypes = {
 }
 
 export const buildUrl = (doc) => {
+  let subset = null
   let id = null
+
   if (typy(doc, 'pnx.control.sourcerecordid').isArray) {
-    id = doc.pnx.control.sourcerecordid[0]
+    if (doc.pnx.control.sourcerecordid[0].endsWith('manifest')) {
+      id = doc.pnx.control.sourcerecordid[0].split('/')
+      subset = '/item/' + id[3]
+    } else {
+      id = doc.pnx.control.sourcerecordid[0].split('/')
+      subset = '/collection/' + id[4]
+    }
   }
-  return `/item/${id}`
+  return subset
 }
 
 export const buildMetadata = (doc) => {

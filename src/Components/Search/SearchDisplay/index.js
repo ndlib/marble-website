@@ -15,6 +15,7 @@ export const SearchDisplay = ({ location, searchReducer }) => {
   if (location.search) {
     return (
       <React.Fragment>
+        <h1 className='staticTitle'>Search Results</h1>
         <SearchBox />
         <ContentLeftSidebar
           sidebarContent={<Facets />}
