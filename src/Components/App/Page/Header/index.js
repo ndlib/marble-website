@@ -33,6 +33,9 @@ const Header = () => {
           linkPath={DEPARTMENT_HOME_PAGE}
         />
       </div>
+      <div className='alpha'>
+        <strong>Alpha Release</strong>
+      </div>
     </header>
 
   )
