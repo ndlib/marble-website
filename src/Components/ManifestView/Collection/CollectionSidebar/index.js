@@ -1,15 +1,13 @@
 import React from 'react'
-import imgIIIF from './iiif.png'
 import DisplayMetadata from '../DisplayMetadata'
+import ManifestLink from '../../ManifestLink'
 
 const CollectionSidebar = (data) => {
   return (
     <React.Fragment>
       {data.description}
       <DisplayMetadata metadata={data.metadata} />
-      <a href={data['@id']}>
-        <img src={imgIIIF} alt='iiif' />
-      </a>
+      <ManifestLink manifestUrl={data['@id']} />
     </React.Fragment>
   )
 }

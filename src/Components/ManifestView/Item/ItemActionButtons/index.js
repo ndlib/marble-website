@@ -1,5 +1,6 @@
 import React from 'react'
 import ActionButton from './ActionButton'
+import ManifestLink from '../../ManifestLink'
 import print from 'Static/icons/svg/baseline-print-24px.svg'
 import share from 'Static/icons/svg/baseline-share-24px.svg'
 import bookmark from 'Static/icons/svg/baseline-bookmark_border-24px.svg'
@@ -8,9 +9,10 @@ import downloadImg from 'Static/icons/svg/baseline-save_alt-24px.svg'
 
 import './style.css'
 
-const ItemActionButtons = () => {
+const ItemActionButtons = ({ manifest }) => {
   return (
     <section className='actionButtons'>
+      <ManifestLink manifestUrl={manifest.data['@id']} />
       <ActionButton
         name='download'
         action={printAction}

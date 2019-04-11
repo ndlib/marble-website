@@ -19,7 +19,7 @@ export const Item = ({ currentManifest }) => {
         sidebarContent={
           <React.Fragment>
             <ItemSide currentManifest={currentManifest} />
-            <ItemActionButtons />
+            <ItemActionButtons manifest={currentManifest} />
 
           </React.Fragment>
         }
