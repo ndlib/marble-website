@@ -12,8 +12,8 @@ export const NavigationSearchBox = ({ location }) => {
   }
   return (
     <div className='navigationSearchBox searchBox'>
-      <SearchButton submitSearch={submitSearch} white />
       <SearchField submitSearch={submitSearch} />
+      <SearchButton submitSearch={submitSearch} white />
     </div>
   )
 }
