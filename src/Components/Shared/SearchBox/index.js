@@ -10,12 +10,18 @@ const SearchBox = () => {
   return (
     <section className='searchComponent' >
       <div className='searchBox'>
-        <SearchButton submitSearch={submitSearch} />
         <SearchField submitSearch={submitSearch} />
-        <Link to='/help/search-tips'><img src={imgHelp} alt='help' /></Link>
+        <SearchButton submitSearch={submitSearch} />
       </div>
       <div className='advancedSearch'>
         <Link to='/advancedsearch'>Advanced Search</Link>
+        <Link to='/help/search-tips'>
+          <img
+            src={imgHelp}
+            alt='help'
+            className='tipImg'
+          />
+        </Link>
       </div>
     </section>
   )

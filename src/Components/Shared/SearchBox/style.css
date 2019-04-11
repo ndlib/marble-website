@@ -14,7 +14,7 @@
 }
 
 .searchbar {
-  width:500px;
+  width: calc(100% - 65px);
   height:40px;
   border: none;
   font: 19px helvetica;
@@ -41,5 +41,6 @@
 }
 
 .submitSearch {
-  border:none
+  border:none;
+  border-left: 1px solid #666;
 }
