@@ -4,6 +4,9 @@ import imgIIIF from './iiif.png'
 import './style.css'
 
 const ManifestLink = ({ manifestUrl }) => {
+  if (!manifestUrl) {
+    return null
+  }
   return (
     <a
       href={manifestUrl}
