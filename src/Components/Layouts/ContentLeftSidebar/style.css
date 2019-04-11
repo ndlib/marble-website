@@ -42,3 +42,11 @@
 
   }
 }
+
+aside dt {
+  font-weight: bold;
+}
+aside dd {
+  margin-inline-start: 1rem;
+  word-break: break-word;
+}

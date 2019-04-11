@@ -5,7 +5,7 @@ import DisplayMetadata from '../DisplayMetadata'
 const CollectionSidebar = (data) => {
   return (
     <React.Fragment>
-      {data.description}
+      <p>{data.description}</p>
       <DisplayMetadata metadata={data.metadata} />
       <a href={data['@id']}>
         <img src={imgIIIF} alt='iiif' />
