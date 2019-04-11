@@ -1,5 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import typy from 'typy'
 import ActionButton from './ActionButton'
+import ManifestLink from '../../ManifestLink'
 import print from 'Static/icons/svg/baseline-print-24px.svg'
 import share from 'Static/icons/svg/baseline-share-24px.svg'
 import bookmark from 'Static/icons/svg/baseline-bookmark_border-24px.svg'
@@ -8,9 +11,10 @@ import downloadImg from 'Static/icons/svg/baseline-save_alt-24px.svg'
 
 import './style.css'
 
-const ItemActionButtons = () => {
+const ItemActionButtons = ({ manifest }) => {
   return (
     <section className='actionButtons'>
+      <ManifestLink manifestUrl={typy(manifest, 'data[\'@id\']').safeString} />
       <ActionButton
         name='download'
         action={printAction}
@@ -37,6 +41,9 @@ const ItemActionButtons = () => {
   )
 }
 
+ItemActionButtons.propTypes = {
+  manifest: PropTypes.object.isRequired,
+}
 export const bookmarkAction = () => {
   console.log('bookmark')
 }

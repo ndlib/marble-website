@@ -9,7 +9,12 @@ import ItemActionButtons,
 } from './'
 import ActionButton from './ActionButton'
 
-const wrapper = shallow(<ItemActionButtons />)
+const manifest = {
+  data: {
+    '@id': 'https://iiif.iiif',
+  },
+}
+const wrapper = shallow(<ItemActionButtons manifest={manifest} />)
 
 test('Renders 4 actions buttons and an wrapper', () => {
   expect(wrapper.find('actionButton')).toBeTruthy()
