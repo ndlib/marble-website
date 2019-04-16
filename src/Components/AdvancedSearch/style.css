@@ -23,5 +23,15 @@
 
 .advancedSearch select{
   font-size: var(--default-font-size);
+  width: 72vw;
+  height: 40px;
   display: block;
+}
+
+.fields button{
+  background: #eee;
+  color: #777;
+  position: absolute;
+  right: 8vw;
+  margin-top: -35px;
 }
