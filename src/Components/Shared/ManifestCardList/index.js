@@ -6,22 +6,29 @@ import CardMetaData from 'Components/Shared/CardMetaData'
 import typy from 'typy'
 
 import pageUrlFromAtId from 'Functions/pageUrlFromAtId'
-const ManifestCardList = ({ items, start, perPage, className }) => {
+const ManifestCardList = ({ items, start, perPage, className, useRawURL }) => {
   // if we don't have a perPage limit, show all the things
   perPage = perPage || items.length
   // make sure we have items and we're not trying to start after the array end
+
   if (items && start < items.length) {
     return (
       <section className='cardList'>
         {
           itemsForDisplay(items, start, perPage).map(item => {
+            let target
+            if (useRawURL) {
+              target = item.url
+            } else {
+              target = pageUrlFromAtId(item['@id'])
+            }
             return (
               <Card
                 className={className}
                 key={item['@id']}
                 title={item.label}
                 image={typy(item, 'thumbnail').safeObject || item.image}
-                url={pageUrlFromAtId(item['@id'])}
+                url={target}
               >
                 <CardMetaData metadata={item.metadata} />
               </Card>
@@ -39,6 +46,7 @@ ManifestCardList.propTypes = {
   start: PropTypes.number.isRequired,
   perPage: PropTypes.number,
   className: PropTypes.string,
+  useRawURL: PropTypes.bool,
 }
 
 ManifestCardList.defaultProps = {
