@@ -3,11 +3,13 @@ import expandIcon from './expandIcon.svg'
 
 const ExpandIcon = () => {
   return (
-    <img
-      src={expandIcon}
-      alt='Open in Universal Viewer'
-      className='expandIcon'
-    />
+    <span className='expandWrapper'>
+      <img
+        src={expandIcon}
+        alt='Open in Universal Viewer'
+        className='expandIcon'
+      />
+    </span>
   )
 }
 

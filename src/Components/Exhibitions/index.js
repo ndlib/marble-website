@@ -12,6 +12,7 @@ const Exhibitions = () => {
           <ManifestCardList
             items={items}
             className='exhibitionCard'
+            useRawURL
           />
         </div>
       </article>
