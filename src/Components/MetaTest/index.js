@@ -1,21 +1,20 @@
 import React from 'react'
-import schema from 'Configurations/Schema/basicschema3.json'
+import schema from 'Configurations/Schema/basicschema2.json'
 import renderer from 'Configurations/Schema/rendering.json'
 
 const MetaTest = () => {
   var metaProp = []
   var metaObj = []
   renderer.sections[0].attributes.forEach(function (field) {
-    switch (field.label) {
-      case 'Title':
-        metaObj.push(<div className={schema[field.key]}> {schema[field.renderer]} </div>)
-        console.log(field)
-        break
-      case 'Description':
-        metaObj.push(<React.Fragment><dt>Description:</dt><dd> {schema[field.renderer]} </dd></React.Fragment>)
-        break
-      default:
-        metaObj.push(<React.Fragment><dt>{field.label}:</dt><dd> {schema[field.renderer]} </dd></React.Fragment>)
+    if (schema[field.key] != null) {
+      switch (field.renderer) {
+        case 'title':
+          metaObj.push(<div className={schema[field.key]}> {schema[field.key]} </div>)
+          break
+        case 'basic':
+        default:
+          metaObj.push(<React.Fragment><dt>{field.label}:</dt><dd> {schema[field.key]} </dd></React.Fragment>)
+      }
     }
   })
   return (

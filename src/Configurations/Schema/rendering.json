@@ -15,6 +15,12 @@
            "label": "Description",
            "renderer": "basic",
            "key": ["description"]
+        },
+        {
+          "id": 4,
+          "label": "AltTitle",
+          "renderer": "basic",
+          "key": ["alternateTitle"]
         }
       ]
     }
