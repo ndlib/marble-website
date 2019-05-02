@@ -3,20 +3,26 @@ import schema from 'Configurations/Schema/basicschema3.json'
 import renderer from 'Configurations/Schema/rendering.json'
 
 const MetaTest = () => {
-  var factory = []
+  var metaProp = []
+  var metaObj = []
   renderer.sections[0].attributes.forEach(function (field) {
     switch (field.label) {
       case 'Title':
-        factory.push(<dt> {schema[field.key]} </dt>)
+        metaObj.push(<div className={schema[field.key]}> {schema[field.renderer]} </div>)
+        console.log(field)
         break
       case 'Description':
-        factory.push(<dd> {schema[field.key]} </dd>)
+        metaObj.push(<React.Fragment><dt>Description:</dt><dd> {schema[field.renderer]} </dd></React.Fragment>)
         break
       default:
-        factory.push(<div> {schema[field.key]} </div>)
+        metaObj.push(<React.Fragment><dt>{field.label}:</dt><dd> {schema[field.renderer]} </dd></React.Fragment>)
     }
   })
-  return factory
+  return (
+    <dl>
+      {metaObj}
+    </dl>
+  )
 }
 
 export default MetaTest
