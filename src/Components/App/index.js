@@ -19,6 +19,7 @@ import Exhibitions from 'Components/Exhibitions'
 import AdvancedSearch from 'Components/AdvancedSearch'
 import LoginPage from 'Components/Login'
 import NotFound from 'Components/Shared/NotFound'
+import MetaTest from 'Components/MetaTest'
 import {
   ABOUT_CONTEXT,
   HELP_CONTEXT,
@@ -57,6 +58,7 @@ const App = () => {
               <Route exact path='/search' component={Search} />
               <Route exact path='/advancedsearch' component={AdvancedSearch} />
               <Route exact path='/login' component={LoginPage} />
+              <Route exact path='/metatest' component={MetaTest} />
               <Route exact path={`/:pageType(${ABOUT_CONTEXT}|${HELP_CONTEXT}|${LEARN_CONTEXT})/:topic?`} component={StaticPage} />
               <Route exact path={`/:context(${BROWSE_CONTEXT})`} component={ManifestView} />
               <Route exact path={`/:context(${BROWSE_CONTEXT}|${COLLECTION_CONTEXT}|${ITEM_CONTEXT}|${VIEWER_CONTEXT})/:contextId`} component={ManifestView} />
