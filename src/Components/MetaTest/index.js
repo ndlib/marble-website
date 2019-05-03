@@ -1,10 +1,11 @@
 import React from 'react'
 import basicschema from 'Configurations/Schema/basicschema2.json'
 import renderer from 'Configurations/Schema/rendering.json'
+import PropTypes from 'prop-types'
 
 const MetaTest = (props) => {
-  let schema = props.schema != null ? props.schema : basicschema
-  var metaObj = []
+  const schema = props.schema != null ? props.schema : basicschema
+  const metaObj = []
   renderer.sections[0].attributes.forEach(function (field) {
     if (schema[field.key] != null) {
       switch (field.renderer) {
@@ -18,10 +19,14 @@ const MetaTest = (props) => {
     }
   })
   return (
-      <dl>
-        {metaObj}
-      </dl>
+    <dl>
+      {metaObj}
+    </dl>
   )
+}
+
+MetaTest.propTypes = {
+  schema: PropTypes.object,
 }
 
 export default MetaTest
