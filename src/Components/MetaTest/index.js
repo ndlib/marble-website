@@ -9,24 +9,18 @@ const MetaTest = (props) => {
     if (schema[field.key] != null) {
       switch (field.renderer) {
         case 'title':
-          metaObj.push(<h1 itemProp='name' className={field.key}> {schema[field.key]} </h1>)
+          metaObj.push(<h1 className={field.key}> {schema[field.key]} </h1>)
           break
         case 'basic':
         default:
-          metaObj.push(<React.Fragment><dt>{field.label}:</dt><dd itemProp={field.key} className={field.key}> {schema[field.key]} </dd></React.Fragment>)
+          metaObj.push(<React.Fragment><dt>{field.label}:</dt><dd className={field.key}> {schema[field.key]} </dd></React.Fragment>)
       }
     }
   })
   return (
-    <div
-      itemScope
-      itemType='http://schema.org/CreativeWork'
-      className='schemaOrgMetadata'
-    >
       <dl>
         {metaObj}
       </dl>
-    </div>
   )
 }
 
